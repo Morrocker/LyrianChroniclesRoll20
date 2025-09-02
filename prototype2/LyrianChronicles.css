@@ -47,10 +47,10 @@ select:focus option {
 }
 
 .section-container {
-  border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-well-border.png")
-    96 314 96 314 fill stretch;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianContainer.png")
+    50 50 50 50 fill stretch;
   border-style: solid;
-  border-width: 32px 101px;
+  border-width: 20px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -262,8 +262,10 @@ select:focus option {
 .sheet-tab-content {
   display: none;
   min-height: 847px;
-  padding-top: 35px;
+  padding:10px;
+  padding-top: 45px;
   width: 100%;
+  box-sizing: border-box;
   /* padding-left: 10px; */
   /* padding-right: 10px; */
 }
