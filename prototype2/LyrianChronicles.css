@@ -262,32 +262,58 @@ select:focus option {
 .sheet-tab-content {
   display: none;
   min-height: 847px;
-  padding:10px;
+  padding: 10px;
   padding-top: 45px;
   width: 100%;
   box-sizing: border-box;
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
 }
 /* TABS END */
 
-/* .charsheet .sheet-lyrian-chronicles .sheet-section-pc .sheet-section-pc-header {
-  background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");
-  background-size: 100% 100%;
-  display: grid;
-  grid-template-areas:
-    ". logo . . ."
-    ". logo . details ."
-    ". name . details ."
-    ". . . . .";
-  grid-template-columns: 18px 289px 38px auto 18px;
-  grid-template-rows: 40px 33px 46px auto;
-  height: 141px;
-  margin-bottom: 5px;
-} */
+/* ATTRIBUTE START */
+.attribute {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  /* width: 50px;
+    height: 50px;
+    margin: 0 5px; */
+}
 
-/* .sheet-section-pc {
-  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianInnerBorder.png")
+.attribute-label {
+    height: 40px;
+    width: 150px;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttributeLabel.png")
     50 50 50 50 fill stretch;
-    background-color: lightgreen;
-} */
+  border-style: solid;
+  border-width: 15px 15px;
+  box-sizing: border-box;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* line-height: 1.5;
+    color: #cccccc;
+    margin-top: 5px;
+    text-align: center; */
+  text-align: center;
+}
+
+.attribute-value {
+  width: 50px;
+  height: 50px;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
+    50 50 50 50 fill stretch;
+  border-style: solid;
+  border-width: 15px 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: center;
+  align-content: center;
+  /* width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 5px; */
+}
+/* ATTRIBUTE END*/
