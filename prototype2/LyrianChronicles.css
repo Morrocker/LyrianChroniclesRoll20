@@ -1,5 +1,31 @@
+/* General CSS for Lyrian Chronicles character sheet */
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  background: #e5fffb;
+  outline: none;
+}
+select:hover,
+select:focus {
+  background: #e5fffb;
+}
+select:hover option,
+select:focus option {
+  background: white;
+}
+
+.common-box {
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/sheet-box-border.png")
+    50 50 50 50 fill stretch;
+  border-style: solid;
+  border-width: 20px 20px;
+  box-sizing: border-box;
+}
+
 .charsheet {
   padding: 0px !important;
+  width: 880px;
 }
 .sheet-lyrian-chronicles {
   background: white;
@@ -14,23 +40,33 @@
   border-width: 30px 30px;
   box-sizing: border-box;
 }
-
 .sheet-section-pc {
   margin: 0 auto;
-  height: 2000px;
-  width: 800px;
-  background-color: aqua;
+  /* height: 2000px; */
+  width: 100%;
 }
+
+.section-container {
+  border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-well-border.png")
+    96 314 96 314 fill stretch;
+  border-style: solid;
+  border-width: 32px 101px;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* General CSS for Lyrian Chronicles character sheet */
+
+/* HEADER */
 .sheet-section-pc-header {
   display: grid;
   grid-template-areas: "logo details";
   grid-template-columns: 350px auto;
   gap: 10px;
   height: 160px;
+  margin-bottom: 40px;
 }
 .sheet-section-pc-header-logo {
   grid-area: logo;
-  background-color: lightblue;
   /* height: 206.5px;
     width: 540px;
     margin-bottom: 10px; */
@@ -39,7 +75,6 @@
   background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");
   width: 100%;
   height: 100%;
-  border: 1px solid black;
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -49,26 +84,190 @@
 
 .sheet-section-pc-header-details {
   grid-area: details;
-  background-color: lightcoral;
-  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianOuterBorder.png")
-    100 100 100 100 fill stretch;
-  border-style: solid;
-  border-width: 30px 30px;
-  box-sizing: border-box;
+}
+.sheet-section-pc-header-details-content {
+  display: grid;
+  grid-template-areas:
+    "name spiritcore experience"
+    "race subrace gender"
+    "age c-weight c-height";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  row-gap: 0px;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  /* background-color: lightcoral; */
+}
+.name {
+  grid-area: name;
+}
+.spiritcore {
+  grid-area: spirit-core;
+}
+.experience {
+  grid-area: experience;
+}
+.race {
+  grid-area: race;
+}
+.subrace {
+  grid-area: subrace;
+}
+.gender {
+  grid-area: gender;
+}
+.age {
+  grid-area: age;
+}
+.weight {
+  grid-area: c-weight;
+}
+.height {
+  grid-area: c-height;
+}
+.sheet-section-pc-header-details-content div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.sheet-section-pc-header-details-content input {
+  margin-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  height: 19px;
+  padding: 0;
+  width: 100% !important;
+  border-color: #cccccc;
+  background-color: white;
+}
+.sheet-section-pc-header-details-content select {
+  margin-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  height: 19px;
+  padding: 0;
+  width: 100%;
+  border-color: #cccccc;
+}
+.sheet-section-pc-header-details-content label {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #cccccc;
+}
+.common-box-header1 {
+  border-bottom: 2px solid #202020;
+  color: #202020;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* HEADER END */
+
+/* TABS START */
+.sheet-tabs {
+  position: relative;
+  width: 100%;
+}
+.sheet-tabs::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.sheet-tab {
+  width: 100%;
+}
+.sheet-tab:nth-of-type(2) > input[type="radio"],
+.sheet-tab:nth-of-type(2) > .sheet-tab-label {
+  margin-left: 16.66667%;
+}
+.sheet-tab:nth-of-type(3) > input[type="radio"],
+.sheet-tab:nth-of-type(3) > .sheet-tab-label {
+  margin-left: 33.33333%;
+}
+.sheet-tab:nth-of-type(4) > input[type="radio"],
+.sheet-tab:nth-of-type(4) > .sheet-tab-label {
+  margin-left: 50%;
+}
+.sheet-tab:nth-of-type(5) > input[type="radio"],
+.sheet-tab:nth-of-type(5) > .sheet-tab-label {
+  margin-left: 66.66667%;
+}
+.sheet-tab:nth-of-type(6) > input[type="radio"],
+.sheet-tab:nth-of-type(6) > .sheet-tab-label {
+  margin-left: 83.33333%;
+}
+.sheet-tab > input[type="radio"] {
+  height: 30px;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 16.66667%;
+  z-index: 1;
+}
+.sheet-tab > input[type="radio"]:hover ~ .sheet-tab-label {
+  background: #979797;
+  border-bottom-color: #ffffff;
+  color: #575757;
+}
+.sheet-tab > .sheet-tab-label {
+  align-items: center;
+  background: #dddddd;
+  border-radius: 6px 6px 0 0;
+  border: 2px solid #dddddd;
+  color: #8a8a8a;
+  display: flex;
+  font-size: 11px;
+  font-variant: small-caps;
+  font-weight: bold;
+  height: 30px;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 16.66667%;
+  border-left-color: white;
+  border-top-color: white;
+  border-right-color: white;
+  border-bottom-color: lightgrey;
 }
 
-.beveled-corner {
-  clip-path: polygon(
-    20px 0,
-    /* top-left */ calc(100% - 20px) 0,
-    /* top-right */ 100% 20px,
-    /* top-right */ 100% calc(100% - 20px),
-    /* bottom-right */ calc(100% - 20px) 100%,
-    /* bottom-right */ 20px 100%,
-    /* bottom-left */ 0 calc(100% - 20px),
-    /* bottom-left */ 0 20px /* top-left */
-  );
+.sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
+  background: white;
+  border-color: #575757;
+  border-bottom-color: white;
+  color: black;
 }
+.sheet-tab > input[type="radio"]:checked {
+  cursor: auto;
+}
+.sheet-tab > input[type="radio"]:checked ~ .sheet-tab-content {
+  display: block;
+}
+.sheet-tab-content {
+  display: none;
+  min-height: 847px;
+  padding-top: 35px;
+  width: 100%;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+}
+/* TABS END */
 
 /* .charsheet .sheet-lyrian-chronicles .sheet-section-pc .sheet-section-pc-header {
   background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");

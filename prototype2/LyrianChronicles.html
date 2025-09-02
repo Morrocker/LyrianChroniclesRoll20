@@ -1,95 +1,117 @@
 <div class="sheet-lyrian-chronicles">
   <div class="sheet-section-pc">
+    <!-- HEADER START -->
     <div class="sheet-section-pc-header">
       <div class="sheet-section-pc-header-logo">
         <div></div>
       </div>
-      <div class="sheet-section-pc-header-details beveled-corner">
-        asdfas
-      </div>
-    </div>
-    <!-- <div class="sheet-section-pc-header">
-      <div class="sheet-section-pc-header-logo">
-        <div></div>
-      </div>
-      <div class="sheet-section-pc-header-name">
-        <input
-          type="text"
-          name="attr_character_name"
-          title="@{character_name}"
-        />
-      </div>
-      <div class="sheet-section-pc-header-details">
-        <div class="sheet-toggle-unchecked">
-          <div class="sheet-section-pc-header-details-panel">
-            <div>
-              <label>Race</label>
-              <select name="attr_race" title="@{race}">
-                <option value="">Choose</option>
-                <option value="Chimera">Chimera</option>
-                <option value="Demon">Demon</option>
-                <option value="Fae">Fae</option>
-                <option value="Human">Human</option>
-                <option value="Youkai">Fighter</option>
-              </select>
-            </div>
-            <div>
-              <label>Sub-race/House</label>
-              <select name="attr_subrace" title="@{subrace}">
-                <option value="">Choose</option>
-                <option value="Ancient-Marionette">Ancient Marionette</option>
-                <option value="Anubis">Anubis</option>
-                <option value="Cait-Sith">Cait-Sith</option>
-                <option value="Catfolt">Catfolk</option>
-                <option value="Dogfolk">Dogfolk</option>
-                <option value="Dryad">Dryad</option>
-                <option value="Dullahan">Dullahan</option>
-                <option value="Harpy">Harpy</option>
-                <option value="High-Fae">High-Fae</option>
-                <option value="Horsefolk">Horsefolk</option>
-                <option value="Jiangshi">Jiangshi</option>
-                <option value="Kitsune">Kitsune</option>
-                <option value="Lamiafolk">Lamiafolk</option>
-                <option value="Lizardfolk">Lizardfolk</option>
-                <option value="Mothfolk">Mothfolk</option>
-                <option value="Nio">Nio</option>
-                <option value="Oni">Oni</option>
-                <option value="Phoenix">Phoenix</option>
-                <option value="Pixie">Pixie</option>
-                <option value="Rabbitfolk">Rabbitfolk</option>
-                <option value="Raijin">Raijin</option>
-                <option value="Ratfolk">Ratfolk</option>
-                <option value="Red-Pandafolk">Red-Pandafolk</option>
-                <option value="Salamander">Salamander</option>
-                <option value="Selkie">Selkie</option>
-                <option value="Slimefolk">Slimefolk</option>
-                <option value="Spiderfolk">Spiderfolk</option>
-                <option value="Tengu">Tengu</option>
-                <option value="Unseelie">Unseelie</option>
-                <option value="Willo-Wisp">Willo Wisp</option>
-                <option value="Wolf-Folk">Wolf-folk</option>
-                <option value="Yuki-Onna">Yuki-Onna</option>
-              </select>
-            </div>
-            <div>
-              <label>Experience</label>
-              <input
-                type="number"
-                name="attr_experience"
-                title="@{experience}"
-              />
-            </div>
-            <div>
-              <label>Spirit Core</label>
-              <input
-                type="number"
-                name="attr_spirit_core"
-                title="@{spirit_core}"
-              />
-            </div>
+      <div class="sheet-section-pc-header-details common-box">
+        <div class="common-box-header1">Character Details</div>
+        <div class="sheet-section-pc-header-details-content">
+          <div class="name">
+            <label>Name</label>
+            <input type="text" name="attr_char_name" title="@{char_name}" />
+          </div>
+          <div class="spirit-core">
+            <label>Spirit Core</label>
+            <input
+              type="number"
+              name="attr_spirit_core"
+              title="@{spirit_core}"
+            />
+          </div>
+          <div class="experience">
+            <label>Experience</label>
+            <input type="number" name="attr_experience" title="@{experience}" />
+          </div>
+          <div class="race">
+            <label>Race</label>
+            <select name="attr_race" title="@{race}">
+              <option value="">Choose</option>
+              <option value="Chimera">Chimera</option>
+              <option value="Demon">Demon</option>
+              <option value="Fae">Fae</option>
+              <option value="Human">Human</option>
+              <option value="Youkai">Youkai</option>
+            </select>
+          </div>
+          <div class="subrace">
+            <label>Sub-race</label>
+            <select name="attr_subrace" title="@{subrace}">
+              <option value="">Choose</option>
+              <option value="Ancient-Marionette">Ancient Marionette</option>
+              <option value="Anubis">Anubis</option>
+              <option value="Cait-Sith">Cait-Sith</option>
+              <option value="Catfolt">Catfolk</option>
+              <option value="Dogfolk">Dogfolk</option>
+              <option value="Dryad">Dryad</option>
+              <option value="Dullahan">Dullahan</option>
+              <option value="Harpy">Harpy</option>
+              <option value="High-Fae">High-Fae</option>
+              <option value="Horsefolk">Horsefolk</option>
+              <option value="Jiangshi">Jiangshi</option>
+              <option value="Kitsune">Kitsune</option>
+              <option value="Lamiafolk">Lamiafolk</option>
+              <option value="Lizardfolk">Lizardfolk</option>
+              <option value="Mothfolk">Mothfolk</option>
+              <option value="Nio">Nio</option>
+              <option value="Oni">Oni</option>
+              <option value="Phoenix">Phoenix</option>
+              <option value="Pixie">Pixie</option>
+              <option value="Rabbitfolk">Rabbitfolk</option>
+              <option value="Raijin">Raijin</option>
+              <option value="Ratfolk">Ratfolk</option>
+              <option value="Red-Pandafolk">Red-Pandafolk</option>
+              <option value="Salamander">Salamander</option>
+              <option value="Selkie">Selkie</option>
+              <option value="Slimefolk">Slimefolk</option>
+              <option value="Spiderfolk">Spiderfolk</option>
+              <option value="Tengu">Tengu</option>
+              <option value="Unseelie">Unseelie</option>
+              <option value="Willo-Wisp">Willo Wisp</option>
+              <option value="Wolf-Folk">Wolf-folk</option>
+              <option value="Yuki-Onna">Yuki-Onna</option>
+            </select>
+          </div>
+          <div class="gender">
+            <label>Gender</label>
+            <input type="text" name="attr_gender" title="@{gender}" />
+          </div>
+          <div class="age">
+            <label>Age</label>
+            <input type="text" name="attr_age" title="@{age}" />
+          </div>
+          <div class="weight">
+            <label>Weight</label>
+            <input type="text" name="attr_char_weight" title="@{char_weight}" />
+          </div>
+          <div class="height">
+            <label>Height</label>
+            <input type="text" name="attr_char_height" title="@{char_height}" />
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+    <!-- HEADER END -->
+    <!-- TABS START -->
+    <div class="sheet-tabs">
+      <div class="sheet-tab">
+        <input type="radio" name="attr_tab" value="core" checked="checked" />
+        <span class="sheet-tab-label">Core</span>
+        <div class="sheet-tab-content">
+          <!-- CORE START -->
+          <div>
+            <div class="section-container">adsfklvcslkjsvdldrij</div>
+          </div>
+          <!-- CORE END -->
+        </div>
+      </div>
+      <div class="sheet-tab">
+        <input type="radio" name="attr_tab" value="other" />
+        <span class="sheet-tab-label">not Core</span>
+        <div class="sheet-tab-content">dfgdfgh</div>
+      </div>
+    </div>
+    <!-- TABS END -->
   </div>
 </div>
