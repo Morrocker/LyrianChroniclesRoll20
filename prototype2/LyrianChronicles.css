@@ -1,0 +1,92 @@
+.charsheet {
+  padding: 0px !important;
+}
+.sheet-lyrian-chronicles {
+  background: white;
+  color: black;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  overflow: scroll;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianOuterBorder.png")
+    100 100 100 100 fill stretch;
+  border-style: solid;
+  border-width: 30px 30px;
+  box-sizing: border-box;
+}
+
+.sheet-section-pc {
+  margin: 0 auto;
+  height: 2000px;
+  width: 800px;
+  background-color: aqua;
+}
+.sheet-section-pc-header {
+  display: grid;
+  grid-template-areas: "logo details";
+  grid-template-columns: 350px auto;
+  gap: 10px;
+  height: 160px;
+}
+.sheet-section-pc-header-logo {
+  grid-area: logo;
+  background-color: lightblue;
+  /* height: 206.5px;
+    width: 540px;
+    margin-bottom: 10px; */
+}
+.sheet-section-pc-header-logo div {
+  background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  background-size: 100%;
+  margin: 0, auto;
+}
+
+.sheet-section-pc-header-details {
+  grid-area: details;
+  background-color: lightcoral;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianOuterBorder.png")
+    100 100 100 100 fill stretch;
+  border-style: solid;
+  border-width: 30px 30px;
+  box-sizing: border-box;
+}
+
+.beveled-corner {
+  clip-path: polygon(
+    20px 0,
+    /* top-left */ calc(100% - 20px) 0,
+    /* top-right */ 100% 20px,
+    /* top-right */ 100% calc(100% - 20px),
+    /* bottom-right */ calc(100% - 20px) 100%,
+    /* bottom-right */ 20px 100%,
+    /* bottom-left */ 0 calc(100% - 20px),
+    /* bottom-left */ 0 20px /* top-left */
+  );
+}
+
+/* .charsheet .sheet-lyrian-chronicles .sheet-section-pc .sheet-section-pc-header {
+  background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-areas:
+    ". logo . . ."
+    ". logo . details ."
+    ". name . details ."
+    ". . . . .";
+  grid-template-columns: 18px 289px 38px auto 18px;
+  grid-template-rows: 40px 33px 46px auto;
+  height: 141px;
+  margin-bottom: 5px;
+} */
+
+/* .sheet-section-pc {
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianInnerBorder.png")
+    50 50 50 50 fill stretch;
+    background-color: lightgreen;
+} */
