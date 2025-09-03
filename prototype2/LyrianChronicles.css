@@ -269,51 +269,268 @@ select:focus option {
 }
 /* TABS END */
 
+.char-attributes-and-derived-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 /* ATTRIBUTE START */
+.char-core-attributes {
+  display: grid;
+  grid-template-areas:
+    "main-stats secondary-stats"
+    "focus fitness"
+    "power cunning"
+    "agility awareness"
+    "toughness presence"
+    ". reason";
+  grid-template-columns: 1fr 1fr;
+  width: 345px;
+  /* height: 100%;
+  width: 100%; */
+}
+.focus {
+  grid-area: focus;
+  padding-right: 5px;
+}
+.power {
+  grid-area: power;
+  padding-right: 5px;
+}
+.agility {
+  grid-area: agility;
+  padding-right: 5px;
+}
+.toughness {
+  grid-area: toughness;
+  padding-right: 5px;
+}
+.cunning {
+  grid-area: cunning;
+  border-left: #afafaf 1px solid;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+.awareness {
+  grid-area: awareness;
+  border-left: #afafaf 1px solid;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+.presence {
+  grid-area: presence;
+  border-left: #afafaf 1px solid;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+.reason {
+  grid-area: reason;
+  border-left: #afafaf 1px solid;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+.fitness {
+  grid-area: fitness;
+  border-left: #afafaf 1px solid;
+  padding-bottom: 2px;
+  padding-left: 5px;
+}
+
+.main-stats {
+  grid-area: main-stats;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-bottom: -5px;
+  color: #717171;
+}
+.secondary-stats {
+  grid-area: secondary-stats;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-bottom: -5px;
+  color: #717171;
+}
+
 .attribute {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: center;
-  /* width: 50px;
-    height: 50px;
-    margin: 0 5px; */
+  justify-content: start;
 }
 
 .attribute-label {
-    height: 40px;
-    width: 150px;
-  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttributeLabel.png")
+  height: 30px;
+  width: 120px;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttributeLabel2.png")
     50 50 50 50 fill stretch;
   border-style: solid;
-  border-width: 15px 15px;
+  border-width: 10px 10px;
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  /* line-height: 1.5;
-    color: #cccccc;
-    margin-top: 5px;
-    text-align: center; */
+  margin-left: -15px;
   text-align: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .attribute-value {
-  width: 50px;
-  height: 50px;
+  width: 37px;
+  height: 37px;
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
     50 50 50 50 fill stretch;
   border-style: solid;
-  border-width: 15px 15px;
+  border-width: 10px 10px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
   justify-content: center;
   align-content: center;
-  /* width: 40px;
-  height: 40px;
-  line-height: 40px;
+  z-index: 10;
+}
+
+.attribute-value input {
+  border: 0;
+  background: transparent;
+  width: 30px !important;
+  height: 50px;
   text-align: center;
-  margin-right: 5px; */
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+  margin-left: -6.5px;
+  margin-top: -4px;
+  color: black;
+}
+/* Hide number input spinners for Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input spinners for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 /* ATTRIBUTE END*/
+
+/* DERIVED ATTRIBUTES START*/
+.char-derived-stats {
+  display: grid;
+  grid-template-areas:
+    "header ."
+    "all-hp fitness"
+    "all-mp cunning"
+    "all-rp awareness"
+    "p1 ."
+    "p2 .";
+  /* grid-template-columns: 1fr 1fr; */
+  /* height: 100%;
+  width: 100%; */
+}
+.derived-stats-header {
+  grid-area: header;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-bottom: -5px;
+  color: #717171;
+}
+
+.all-hp {
+    grid-area: all-hp;
+    height: 40px;
+}
+.all-rp {
+    grid-area: all-rp;
+    height: 40px;
+}
+.all-mp {
+    grid-area: all-mp;
+    height: 40px;
+}
+.p1 {
+    grid-area: p1;
+    height: 40px;
+}
+.p2 {
+    grid-area: p2;
+    height: 40px;
+}
+
+.composite-attribute {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+}
+
+.composite-attribute-label {
+    display: flex;
+  height: 30px;
+  width: 130px;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttributeLabel2.png")
+    50 50 50 50 fill stretch;
+  border-style: solid;
+  border-width: 10px 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: -10px;
+  text-align: center;
+  justify-content: end;
+  line-height: 1;
+}
+
+.composite-attribute-value {
+    display: flex;
+  width: 120px;
+  height: 37px;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
+    50 50 50 50 fill stretch;
+  border-style: solid;
+  border-width: 10px 10px;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: bold;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 10;
+}
+
+.composite-attribute-value input {
+  border: 0;
+  background: transparent;
+  width: 35px !important;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0;
+  margin-left: -6.5px;
+  /* margin-top: -4px; */
+  color: black;
+}
+.composite-attribute-value input:nth-of-type(2) {
+    border-left: #a7a7a7 1px solid;
+    border-radius: 0%;
+}
+.composite-attribute-value input:nth-of-type(3) {
+    border-left: #a7a7a7 1px solid;
+    border-radius: 0%;
+}
+/* DERIVED ATTRIBUTES END */

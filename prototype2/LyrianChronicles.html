@@ -100,19 +100,109 @@
         <span class="sheet-tab-label">Core</span>
         <div class="sheet-tab-content">
           <!-- CORE START -->
-          <div>
-            <div class="section-container">
-              <div class="attribute">
+          <div class="char-attributes-and-derived-stats">
+            <div class="section-container char-core-attributes">
+              <div class="main-stats">Main stats</div>
+              <div class="attribute focus">
+                <div class="attribute-label">Focus</div>
+                <div class="attribute-value">
+                  <input type="number" name="attr_focus" title="@{focus}" />
+                </div>
+              </div>
+              <div class="attribute power">
                 <div class="attribute-label">Power</div>
-
+                <div class="attribute-value">
+                  <input type="number" name="attr_power" title="@{power}" />
+                </div>
+              </div>
+              <div class="attribute agility">
+                <div class="attribute-label">Agility</div>
+                <div class="attribute-value">
+                  <input type="number" name="attr_agility" title="@{agility}" />
+                </div>
+              </div>
+              <div class="attribute toughness">
+                <div class="attribute-label">toughness</div>
                 <div class="attribute-value">
                   <input
                     type="number"
-                    name="attr_power"
-                    title="@{power}"
+                    name="attr_toughness"
+                    title="@{toughness}"
                   />
                 </div>
               </div>
+              <div class="secondary-stats">Secondary stats</div>
+              <div class="attribute fitness">
+                <div class="attribute-label">fitness</div>
+                <div class="attribute-value">
+                  <input type="number" name="attr_fitness" title="@{fitness}" />
+                </div>
+              </div>
+              <div class="attribute cunning">
+                <div class="attribute-label">cunning</div>
+                <div class="attribute-value">
+                  <input type="number" name="attr_cunning" title="@{cunning}" />
+                </div>
+              </div>
+              <div class="attribute awareness">
+                <div class="attribute-label">awareness</div>
+                <div class="attribute-value">
+                  <input
+                    type="number"
+                    name="attr_awareness"
+                    title="@{awareness}"
+                  />
+                </div>
+              </div>
+              <div class="attribute presence">
+                <div class="attribute-label">presence</div>
+                <div class="attribute-value">
+                  <input
+                    type="number"
+                    name="attr_presence"
+                    title="@{presence}"
+                  />
+                </div>
+              </div>
+              <div class="attribute reason">
+                <div class="attribute-label">reason</div>
+                <div class="attribute-value">
+                  <input
+                    type="number"
+                    name="attr_reason"
+                    title="@{reason}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="section-container char-derived-stats">
+              <div class="derived-stats-header">Derived Stats</div>
+              <div class="composite-attribute all-hp">
+                <div class="composite-attribute-label">Max | HP | Temp</div>
+                <div class="composite-attribute-value">
+                  <input type="number" name="attr_max_hp" title="@{map_hp}" />
+                  <input type="number" name="attr_hp" title="@{hp}" />
+                  <input type="number" name="attr_temp_hp" title="@{temp_hp}" />
+                </div>
+              </div>
+              <div class="composite-attribute all-mp">
+                <div class="composite-attribute-label">Max | MP | Temp</div>
+                <div class="composite-attribute-value">
+                  <input type="number" name="attr_max_mp" title="@{map_mp}" />
+                  <input type="number" name="attr_mp" title="@{mp}" />
+                  <input type="number" name="attr_temp_mp" title="@{temp_mp}" />
+                </div>
+              </div>
+              <div class="composite-attribute all-rp">
+                <div class="composite-attribute-label">Max | RP | Temp</div>
+                <div class="composite-attribute-value">
+                  <input type="number" name="attr_max_rp" title="@{map_rp}" />
+                  <input type="number" name="attr_rp" title="@{rp}" />
+                  <input type="number" name="attr_temp_rp" title="@{temp_rp}" />
+                </div>
+              </div>
+              <div class="p1">s</div>
+              <div class="p2">s</div>
             </div>
           </div>
           <!-- CORE END -->
