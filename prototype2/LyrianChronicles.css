@@ -1,6 +1,57 @@
 /* General CSS for Lyrian Chronicles character sheet */
+
+/* ROLL BUTTONS */
+button[type="roll"] {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  line-height: 0.5;
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-align: center;
+}
+button[type="roll"]:hover {
+  color: #b61037;
+}
+button[type="roll"]:focus {
+  color: #b61037;
+  outline: none;
+}
+button[type="roll"]::before {
+  display: none;
+}
+button[type="roll"]:hover {
+  background: none !important;
+}
+button[type="roll"]:active {
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: inherit !important;
+  border: none !important;
+}
+/* ROLL BUTTONS */
+
 input:hover,
 input:focus,
+/* Hide number input spinners for Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input spinners for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
 textarea:hover,
 textarea:focus {
   background: #e5fffb;
@@ -15,13 +66,27 @@ select:focus option {
   background: white;
 }
 
-.common-box {
+/* OTHER START*/
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row.space-between {
+  justify-content: space-between;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+/* OTHER END */
+
+/* .details-box {
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/sheet-box-border.png")
     50 50 50 50 fill stretch;
   border-style: solid;
   border-width: 20px 20px;
   box-sizing: border-box;
-}
+} */
 
 .charsheet {
   padding: 0px !important;
@@ -42,7 +107,6 @@ select:focus option {
 }
 .sheet-section-pc {
   margin: 0 auto;
-  /* height: 2000px; */
   width: 100%;
 }
 
@@ -50,9 +114,19 @@ select:focus option {
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianContainer2.png")
     50 50 50 50 fill stretch;
   border-style: solid;
-  border-width: 20px;
+  border-width: 15px;
   box-sizing: border-box;
   width: 100%;
+}
+.section-container .header {
+  grid-area: header;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  color: #717171;
 }
 /* General CSS for Lyrian Chronicles character sheet */
 
@@ -67,9 +141,6 @@ select:focus option {
 }
 .sheet-section-pc-header-logo {
   grid-area: logo;
-  /* height: 206.5px;
-    width: 540px;
-    margin-bottom: 10px; */
 }
 .sheet-section-pc-header-logo div {
   background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");
@@ -82,10 +153,27 @@ select:focus option {
   margin: 0, auto;
 }
 
-.sheet-section-pc-header-details {
+.header-details-container {
   grid-area: details;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/sheet-box-border.png")
+    50 50 50 50 fill stretch;
+  border-style: solid;
+  border-width: 20px 20px;
+  box-sizing: border-box;
 }
-.sheet-section-pc-header-details-content {
+.header-details-title {
+  border-bottom: 2px solid #202020;
+  color: #202020;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-details-content {
   display: grid;
   grid-template-areas:
     "name spiritcore experience"
@@ -98,7 +186,6 @@ select:focus option {
   width: 100%;
   margin-top: 10px;
   margin-bottom: -10px;
-  /* background-color: lightcoral; */
 }
 .name {
   grid-area: name;
@@ -127,11 +214,11 @@ select:focus option {
 .height {
   grid-area: c-height;
 }
-.sheet-section-pc-header-details-content div {
+.header-details-content div {
   display: flex;
   flex-direction: column-reverse;
 }
-.sheet-section-pc-header-details-content input {
+.header-details-content input {
   margin-bottom: 0;
   border-left: 0;
   border-right: 0;
@@ -144,7 +231,7 @@ select:focus option {
   border-color: #cccccc;
   background-color: white;
 }
-.sheet-section-pc-header-details-content select {
+.header-details-content select {
   margin-bottom: 0;
   border-left: 0;
   border-right: 0;
@@ -156,24 +243,12 @@ select:focus option {
   width: 100%;
   border-color: #cccccc;
 }
-.sheet-section-pc-header-details-content label {
+.header-details-content label {
   font-size: 9px;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.5;
   color: #cccccc;
-}
-.common-box-header1 {
-  border-bottom: 2px solid #202020;
-  color: #202020;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 14px;
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-top: -10px;
-  text-align: center;
-  text-transform: uppercase;
 }
 /* HEADER END */
 
@@ -246,7 +321,6 @@ select:focus option {
   border-right-color: white;
   border-bottom-color: lightgrey;
 }
-
 .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
   background: white;
   border-color: #575757;
@@ -257,27 +331,28 @@ select:focus option {
   cursor: auto;
 }
 .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-content {
-  display: block;
+  display: flex;
 }
 .sheet-tab-content {
-  display: none;
-  min-height: 847px;
+  /* min-height: 847px; */
   padding: 10px;
   padding-top: 45px;
   width: 100%;
   box-sizing: border-box;
+  gap: 10px;
 }
 /* TABS END */
 
-.char-attributes-and-derived-stats {
+.attributes-and-derived-stats-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 310px;
+  gap: 5px;
 }
 
-/* ATTRIBUTE START */
-.char-core-attributes {
+/* ATTRIBUTES START */
+.main-stats-container {
   display: grid;
   grid-template-areas:
     "main-stats secondary-stats"
@@ -287,9 +362,7 @@ select:focus option {
     "toughness presence"
     ". reason";
   grid-template-columns: 1fr 1fr;
-  width: 345px;
-  /* height: 100%;
-  width: 100%; */
+  width: 310px;
 }
 .focus {
   grid-area: focus;
@@ -338,38 +411,28 @@ select:focus option {
   padding-left: 5px;
 }
 
-.main-stats {
+.section-container .header.main {
   grid-area: main-stats;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  padding-bottom: -5px;
-  color: #717171;
 }
-.secondary-stats {
+.section-container .header.secondary {
   grid-area: secondary-stats;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-bottom: -5px;
-  color: #717171;
 }
 
-.attribute {
+.attribute-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: start;
 }
-
-.attribute-label {
+/* .attribute-container.fill{
+    width: 100%;
+} */
+.attribute-container .label {
+  display: flex;
+  color: #717171;
   height: 30px;
-  width: 120px;
-  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttributeLabel2.png")
+  width: 110px;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
     50 50 50 50 fill stretch;
   border-style: solid;
   border-width: 10px 10px;
@@ -377,13 +440,13 @@ select:focus option {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-left: -15px;
+  margin-left: -15px; /*this is to fit the 2 pieces*/
+  padding-left: 10px; /*without this it ends too close to the edge*/
   text-align: center;
-  justify-content: center;
-  line-height: 1;
+  justify-content: start;
+  line-height: 0.5;
 }
-
-.attribute-value {
+.attribute-container .value {
   width: 37px;
   height: 37px;
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
@@ -397,12 +460,11 @@ select:focus option {
   align-content: center;
   z-index: 10;
 }
-
-.attribute-value input {
+.attribute-container .value input {
   border: 0;
   background: transparent;
   width: 30px !important;
-  height: 50px;
+  height: 26px;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -411,94 +473,144 @@ select:focus option {
   margin-top: -4px;
   color: black;
 }
-/* Hide number input spinners for Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Hide number input spinners for Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
 /* ATTRIBUTE END*/
 
 /* DERIVED ATTRIBUTES START*/
-.char-derived-stats {
-  display: grid;
-  grid-template-areas:
-    "header ."
-    "all-hp fitness"
-    "all-mp cunning"
-    "all-rp awareness"
-    "p1 ."
-    "p2 .";
-  /* grid-template-columns: 1fr 1fr; */
-  /* height: 100%;
-  width: 100%; */
-}
-.derived-stats-header {
-  grid-area: header;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  padding-bottom: -5px;
-  color: #717171;
+.gap-5 {
+    gap: 5px
 }
 
 .all-hp {
-    grid-area: all-hp;
-    height: 40px;
+  grid-area: all-hp;
 }
 .all-rp {
-    grid-area: all-rp;
-    height: 40px;
+  grid-area: all-rp;
 }
 .all-mp {
-    grid-area: all-mp;
-    height: 40px;
+  grid-area: all-mp;
 }
-.p1 {
-    grid-area: p1;
-    height: 40px;
+.evasion-dodge {
+  grid-area: evasion-dodge;
 }
-.p2 {
-    grid-area: p2;
-    height: 40px;
+.dodge {
+  grid-area: dodge;
+}
+.guard-block {
+  grid-area: guard-block;
+}
+.block {
+  grid-area: blocking;
+}
+.saving-throw {
+  grid-area: saving-throw;
+}
+.potency-save {
+  grid-area: potency-save;
+}
+.initiative {
+  grid-area: initiative;
 }
 
-.composite-attribute {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: start;
-}
-
-.composite-attribute-label {
-    display: flex;
-  height: 30px;
+.attribute-container .label.composite {
   width: 130px;
-  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttributeLabel2.png")
-    50 50 50 50 fill stretch;
-  border-style: solid;
-  border-width: 10px 10px;
-  box-sizing: border-box;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-left: -10px;
-  text-align: center;
-  justify-content: end;
-  line-height: 1;
+}
+.attribute-container .label.composite2 {
+
+    font-size: 10px;
+  width: 150px;
+}
+.attribute-container .value.composite {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 110px;
+}
+.attribute-container .value.composite2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 65px;
+}
+.attribute-container .value.composite input{
+  margin-left: 0px;
+  font-size: 15px;
+}
+.attribute-container .value.composite2 input {
+    width: 27px !important;
+  margin-left: 0px;
+  font-size: 15px;
+}
+.attribute-container .value.composite2 input:nth-of-type(1) {
+    margin-left: -5px;
+}
+.attribute-container .value.composite input:nth-of-type(2),
+.attribute-container .value.composite2 input:nth-of-type(2) {
+  border-left: #a7a7a7 1px solid;
+  border-radius: 0%;
+}
+.attribute-container .value.composite input:nth-of-type(3),
+.attribute-container .value.composite2 input:nth-of-type(3) {
+  border-left: #a7a7a7 1px solid;
+  border-radius: 0%;
 }
 
-.composite-attribute-value {
-    display: flex;
-  width: 120px;
+.light {
+  grid-area: basic-light-attack;
+}
+.heavy {
+  grid-area: basic-heavy-attack;
+}
+.heavy2 {
+  grid-area: basic-HEAVY-attack;
+}
+.precision {
+  grid-area: basic-precision-attack;
+}
+
+.attribute-container .label.basic-attack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  width: 180px;
+}
+.attribute-container .label button {
+  font-size: 14px !important;
+  line-height: 0.3;
+  text-align: center;
+}
+
+/* .attack-label button {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  font-size: 12px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  line-height: 0.5;
+} */
+/* .attack-label button:hover {
+  background: none !important;
+}
+.attack-label button:active {
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: inherit !important;
+  border: none !important;
+} */
+
+.static-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 5px; */
+}
+.attribute-value.single-block {
+  display: flex;
+  width: 70px;
   height: 37px;
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
     50 50 50 50 fill stretch;
@@ -507,30 +619,20 @@ input[type="number"] {
   box-sizing: border-box;
   font-size: 10px;
   font-weight: bold;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
   z-index: 10;
 }
-
-.composite-attribute-value input {
-  border: 0;
-  background: transparent;
-  width: 35px !important;
-  height: 50px;
-  text-align: center;
-  font-size: 15px;
+.attribute-value.single-block input {
+  margin-top: 3px;
+}
+.small-attribute-label {
+  font-size: 7px;
+  text-transform: uppercase;
   font-weight: bold;
-  padding: 0;
-  margin-left: -6.5px;
-  /* margin-top: -4px; */
-  color: black;
-}
-.composite-attribute-value input:nth-of-type(2) {
-    border-left: #a7a7a7 1px solid;
-    border-radius: 0%;
-}
-.composite-attribute-value input:nth-of-type(3) {
-    border-left: #a7a7a7 1px solid;
-    border-radius: 0%;
+  line-height: 1.5;
+  color: #454545;
+  margin-bottom: -12px;
+  z-index: 30;
 }
 /* DERIVED ATTRIBUTES END */

@@ -5,12 +5,12 @@
       <div class="sheet-section-pc-header-logo">
         <div></div>
       </div>
-      <div class="sheet-section-pc-header-details common-box">
-        <div class="common-box-header1">Character Details</div>
-        <div class="sheet-section-pc-header-details-content">
+      <div class="header-details-container">
+        <div class="header-details-title">Character Details</div>
+        <div class="header-details-content">
           <div class="name">
             <label>Name</label>
-            <input type="text" name="attr_char_name" title="@{char_name}" />
+            <input type="text" name="attr_name" title="@{name}" />
           </div>
           <div class="spirit-core">
             <label>Spirit Core</label>
@@ -98,32 +98,33 @@
       <div class="sheet-tab">
         <input type="radio" name="attr_tab" value="core" checked="checked" />
         <span class="sheet-tab-label">Core</span>
-        <div class="sheet-tab-content">
+        <div class="sheet-tab-content flex-row">
           <!-- CORE START -->
-          <div class="char-attributes-and-derived-stats">
-            <div class="section-container char-core-attributes">
-              <div class="main-stats">Main stats</div>
-              <div class="attribute focus">
-                <div class="attribute-label">Focus</div>
-                <div class="attribute-value">
+          <div class="attributes-and-derived-stats-container">
+            <!-- MAIN STATS START-->
+            <div class="section-container main-stats-container">
+              <!-- <div class="header main">Main stats</div> -->
+              <div class="attribute-container focus">
+                <div class="label">Focus</div>
+                <div class="value">
                   <input type="number" name="attr_focus" title="@{focus}" />
                 </div>
               </div>
-              <div class="attribute power">
-                <div class="attribute-label">Power</div>
-                <div class="attribute-value">
+              <div class="attribute-container power">
+                <div class="label">Power</div>
+                <div class="value">
                   <input type="number" name="attr_power" title="@{power}" />
                 </div>
               </div>
-              <div class="attribute agility">
-                <div class="attribute-label">Agility</div>
-                <div class="attribute-value">
+              <div class="attribute-container agility">
+                <div class="label">Agility</div>
+                <div class="value">
                   <input type="number" name="attr_agility" title="@{agility}" />
                 </div>
               </div>
-              <div class="attribute toughness">
-                <div class="attribute-label">toughness</div>
-                <div class="attribute-value">
+              <div class="attribute-container toughness">
+                <div class="label">toughness</div>
+                <div class="value">
                   <input
                     type="number"
                     name="attr_toughness"
@@ -131,22 +132,22 @@
                   />
                 </div>
               </div>
-              <div class="secondary-stats">Secondary stats</div>
-              <div class="attribute fitness">
-                <div class="attribute-label">fitness</div>
-                <div class="attribute-value">
+              <!-- <div class="header secondary">Secondary stats</div> -->
+              <div class="attribute-container fitness">
+                <div class="label">fitness</div>
+                <div class="value">
                   <input type="number" name="attr_fitness" title="@{fitness}" />
                 </div>
               </div>
-              <div class="attribute cunning">
-                <div class="attribute-label">cunning</div>
-                <div class="attribute-value">
+              <div class="attribute-container cunning">
+                <div class="label">cunning</div>
+                <div class="value">
                   <input type="number" name="attr_cunning" title="@{cunning}" />
                 </div>
               </div>
-              <div class="attribute awareness">
-                <div class="attribute-label">awareness</div>
-                <div class="attribute-value">
+              <div class="attribute-container awareness">
+                <div class="label">awareness</div>
+                <div class="value">
                   <input
                     type="number"
                     name="attr_awareness"
@@ -154,9 +155,9 @@
                   />
                 </div>
               </div>
-              <div class="attribute presence">
-                <div class="attribute-label">presence</div>
-                <div class="attribute-value">
+              <div class="attribute-container presence">
+                <div class="label">presence</div>
+                <div class="value">
                   <input
                     type="number"
                     name="attr_presence"
@@ -164,55 +165,124 @@
                   />
                 </div>
               </div>
-              <div class="attribute reason">
-                <div class="attribute-label">reason</div>
-                <div class="attribute-value">
-                  <input
-                    type="number"
-                    name="attr_reason"
-                    title="@{reason}"
-                  />
+              <div class="attribute-container reason">
+                <div class="label">reason</div>
+                <div class="value">
+                  <input type="number" name="attr_reason" title="@{reason}" />
                 </div>
               </div>
             </div>
-            <div class="section-container char-derived-stats">
-              <div class="derived-stats-header">Derived Stats</div>
-              <div class="composite-attribute all-hp">
-                <div class="composite-attribute-label">Max | HP | Temp</div>
-                <div class="composite-attribute-value">
+            <!-- MAIN STATS END -->
+            <!-- DERIVED STATS START -->
+            <div class="section-container flex-column gap-5">
+              <!-- <div class="header">Derived Stats</div> -->
+              <div class="attribute-container all-hp">
+                <div class="label composite">Max | HP | Temp</div>
+                <div class="value composite">
                   <input type="number" name="attr_max_hp" title="@{map_hp}" />
                   <input type="number" name="attr_hp" title="@{hp}" />
                   <input type="number" name="attr_temp_hp" title="@{temp_hp}" />
                 </div>
               </div>
-              <div class="composite-attribute all-mp">
-                <div class="composite-attribute-label">Max | MP | Temp</div>
-                <div class="composite-attribute-value">
+              <div class="attribute-container all-mp">
+                <div class="label composite">Max | MP | Temp</div>
+                <div class="value composite">
                   <input type="number" name="attr_max_mp" title="@{map_mp}" />
                   <input type="number" name="attr_mp" title="@{mp}" />
                   <input type="number" name="attr_temp_mp" title="@{temp_mp}" />
                 </div>
               </div>
-              <div class="composite-attribute all-rp">
-                <div class="composite-attribute-label">Max | RP | Temp</div>
-                <div class="composite-attribute-value">
+              <div class="attribute-container all-rp">
+                <div class="label composite">Max | RP | Temp</div>
+                <div class="value composite">
                   <input type="number" name="attr_max_rp" title="@{map_rp}" />
                   <input type="number" name="attr_rp" title="@{rp}" />
                   <input type="number" name="attr_temp_rp" title="@{temp_rp}" />
                 </div>
               </div>
-              <div class="p1">s</div>
-              <div class="p2">s</div>
+            </div>
+            <div class="section-container flex-column gap-5">
+              <div class="attribute-container evasion-dodge">
+                <div class="label composite2">evasion | dodge</div>
+                <div class="value composite2">
+                  <input type="number" name="attr_evasion" title="@{evasion}" />
+                  <input type="number" name="attr_dodge" title="@{dodge}" />
+                </div>
+              </div>
+              <div class="attribute-container guard-block">
+                <div class="label composite2">guard | block</div>
+                <div class="value composite2">
+                  <input type="number" name="attr_guard" title="@{guard}" />
+                  <input type="number" name="attr_block" title="@{block}" />
+                </div>
+              </div>
+              <div class="attribute-container potency-save">
+                <div class="label composite2">potency | save bonus</div>
+                <div class="value composite2">
+                  <input type="number" name="attr_guard" title="@{guard}" />
+                  <input type="number" name="attr_block" title="@{block}" />
+                </div>
+              </div>
+            </div>
+            <!-- DERIVED STATS START -->
+          </div>
+          <div class="section-container">
+            <!-- <div class="header">Basic Attacks</div> -->
+            <div class="flex-row space-between">
+              <div class="attribute-container basic-attack light">
+                <div class="label basic-attack">
+                  <button
+                    type="roll"
+                    name="roll_basic_light_attack"
+                    value="&{template:default} {{name=@{name} ❖ Basic Light Attack}} {{Attack Roll = [[1d20+@{focus}]]}} {{Damage Roll= [[2d4+@{power}]]}}"
+                  >
+                    Light Attack
+                  </button>
+                </div>
+              </div>
+              <div class="attribute-container basic-attack heavy">
+                <div class="label basic-attack">
+                  <button
+                    type="roll"
+                    name="roll_basic_heavy_attack"
+                    value="&{template:default} {{name=@{name} ❖ Basic Heavy Attack}} {{Attack Roll = [[1d20+@{focus}]]}} {{Damage Roll= [[4d6+@{power}*2]]}}"
+                  >
+                    heavy Attack
+                  </button>
+                </div>
+              </div>
+              <div class="attribute-container basic-attack heavy2">
+                <div class="label basic-attack">
+                  <button
+                    type="roll"
+                    name="roll_basic_heavy_heavy_attack"
+                    value="&{template:default} {{name=@{name} ❖ Basic Two-Handed Melee Attack}} {{Attack Roll = [[1d20+@{focus}]]}} {{Damage Roll= [[5d6+@{power}*2]]}}"
+                  >
+                    very heavy Attack
+                  </button>
+                </div>
+              </div>
+              <div class="attribute-container basic-attack precision">
+                <div class="label basic-attack">
+                  <button
+                    type="roll"
+                    name="roll_basic_precision_attack"
+                    value="&{template:default} {{name=@{name} ❖ Basic Precision Attack}} {{Attack Roll = [[1d20+@{focus}*2]]}} {{Damage Roll= [[2d4+@{power}]]}}"
+                  >
+                    precision Attack
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <!-- CORE END -->
         </div>
       </div>
-      <div class="sheet-tab">
+      <!-- <div class="sheet-tab">
         <input type="radio" name="attr_tab" value="other" />
         <span class="sheet-tab-label">not Core</span>
         <div class="sheet-tab-content">dfgdfgh</div>
-      </div>
+      </div> -->
     </div>
     <!-- TABS END -->
   </div>
