@@ -38,8 +38,54 @@ button[type="roll"]:active {
 }
 /* ROLL BUTTONS */
 
-input:hover,
-input:focus,
+/* CHECKBOXES */
+.custom-radio-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 15px;
+}
+.custom-radio-checkbox input[type="checkbox"] {
+  display: none;
+}
+.custom-radio-checkbox label {
+  width: 13px ;
+  height: 13px ;
+  border: 2px solid #6c6c6c;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.2s;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+.custom-radio-checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 1.8px;
+  top: 1.8px;
+  width: 6px;
+  height: 6px;
+  background: #6c6c6c;
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+.custom-radio-checkbox input[type="checkbox"]:checked + label:hover::after {
+  background: #b61037;
+}
+.custom-radio-checkbox label:hover {
+  border-color: #b61037;
+}
+.custom-radio-checkbox span {
+  font-size: 11px;
+}
+/* CHECKBOXES */
+
 /* Hide number input spinners for Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -52,6 +98,9 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+input:hover,
+input:focus,
 textarea:hover,
 textarea:focus {
   background: #e5fffb;
@@ -77,6 +126,12 @@ select:focus option {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+.full-width {
+  width: 100%;
+}
+.flex-1 {
+  flex: 1;
 }
 /* OTHER END */
 
@@ -335,6 +390,7 @@ select:focus option {
 }
 .sheet-tab-content {
   /* min-height: 847px; */
+  display: none;
   padding: 10px;
   padding-top: 45px;
   width: 100%;
@@ -343,11 +399,19 @@ select:focus option {
 }
 /* TABS END */
 
-.attributes-and-derived-stats-container {
+.core-left-column {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
   width: 310px;
+  gap: 5px;
+}
+
+.core-right-column {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 490px;
   gap: 5px;
 }
 
@@ -358,9 +422,9 @@ select:focus option {
     "main-stats secondary-stats"
     "focus fitness"
     "power cunning"
-    "agility awareness"
-    "toughness presence"
-    ". reason";
+    "agility reason"
+    "toughness awareness"
+    ". presence";
   grid-template-columns: 1fr 1fr;
   width: 310px;
 }
@@ -418,7 +482,8 @@ select:focus option {
   grid-area: secondary-stats;
 }
 
-.attribute-container {
+.attribute-container,
+.attribute-container2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -427,7 +492,8 @@ select:focus option {
 /* .attribute-container.fill{
     width: 100%;
 } */
-.attribute-container .label {
+.attribute-container .label,
+.attribute-container2 .label {
   display: flex;
   color: #717171;
   height: 30px;
@@ -460,7 +526,8 @@ select:focus option {
   align-content: center;
   z-index: 10;
 }
-.attribute-container .value input {
+.attribute-container .value input,
+.attribute-container2 .value input {
   border: 0;
   background: transparent;
   width: 30px !important;
@@ -477,7 +544,7 @@ select:focus option {
 
 /* DERIVED ATTRIBUTES START*/
 .gap-5 {
-    gap: 5px
+  gap: 5px;
 }
 
 .all-hp {
@@ -512,63 +579,112 @@ select:focus option {
 }
 
 .attribute-container .label.composite {
-    justify-content: center;
+  justify-content: center;
   width: 160px;
 }
-/* .attribute-container .label.composite2 {
-
-    font-size: 10px;
-  width: 150px;
-} */
+.attribute-container .label button[type="roll"] {
+  font-size: 12px !important;
+  margin-left: -3px;
+  line-height: 0.1;
+  text-align: start;
+}
 .attribute-container .value.composite {
   display: flex;
   flex-direction: row;
   justify-content: start;
   width: 160px;
 }
-/* .attribute-container .value.composite2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  width: 65px;
-} */
-.attribute-container .value.composite input{
-    width: 42px !important;
+.attribute-container .value.composite input {
+  width: 42px !important;
   margin-left: 0px;
   font-size: 15px;
 }
-/* .attribute-container .value.composite2 input {
-    width: 27px !important;
-  margin-left: 0px;
-  font-size: 15px;
-}
-.attribute-container .value.composite2 input:nth-of-type(1) {
-    margin-left: -5px;
-} */
-.attribute-container .value.composite input:nth-of-type(2),
-/* .attribute-container .value.composite2 input:nth-of-type(2) {
-  border-left: #a7a7a7 1px solid;
-  border-radius: 0%;
-} */
-.attribute-container .value.composite input:nth-of-type(3),
-/* .attribute-container .value.composite2 input:nth-of-type(3) {
 
+.attribute-container .value.composite input:nth-of-type(2) {
   border-left: #a7a7a7 1px solid;
   border-radius: 0%;
-} */
- .attribute-container .value2{
-      background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/diamond.png");
+}
+.attribute-container .value.composite input:nth-of-type(3) {
+  border-left: #a7a7a7 1px solid;
+  border-radius: 0%;
+}
+.attribute-container2 .value {
+  background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/diamond2.png");
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: flex;
   background-size: 100%;
   margin: 0, auto;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+}
+.attribute-container2 .label {
+  margin-left: -30px;
+  padding-left: 25px;
+  width: 130px;
+}
+.attribute-container2 .label button[type="roll"] {
+  font-size: 12px !important;
+  margin-left: -3px;
+  line-height: 0.1;
+  text-align: start;
+}
+.attribute-container2 .value input {
+  width: 40 !important;
+  margin-top: 0.3px;
+  margin-left: 0px;
+  font-size: 16px;
+}
 
- }
+.derived-stats {
+  display: grid;
+  grid-template-areas:
+    "evasion dodge"
+    "guard blocking"
+    "save-bonus potency"
+    "initiative speed";
+  grid-template-columns: 1fr 1fr;
+  /* width: 310px; */
+  gap: 5px;
+}
 
+.evasion {
+  grid-area: evasion;
+}
+.dodge {
+  grid-area: dodge;
+}
+.guard {
+  grid-area: guard;
+}
+.blocking {
+  grid-area: blocking;
+}
+.save-bonus {
+  grid-area: save-bonus;
+}
+.potency {
+  grid-area: potency;
+}
+.speed {
+  grid-area: speed;
+}
+.initiative {
+  grid-area: initiative;
+}
 
+.section-container.basic-attacks {
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-areas:
+    "basic-light-attack basic-heavy-attack"
+    "basic-precision-attack basic-HEAVY-attack";
+  gap: 5px;
+}
 .light {
   grid-area: basic-light-attack;
 }
@@ -589,12 +705,11 @@ select:focus option {
   margin-left: 0px;
   width: 180px;
 }
-.attribute-container .label button {
+.attribute-container .label.basic-attack button {
   font-size: 14px !important;
   line-height: 0.3;
   text-align: center;
 }
-
 
 .static-stat {
   display: flex;
@@ -631,3 +746,171 @@ select:focus option {
   z-index: 30;
 }
 /* DERIVED ATTRIBUTES END */
+
+/* TABLES START */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
+    50 50 50 50 fill stretch;
+  border-style: solid;
+  border-width: 10px 10px;
+  box-sizing: border-box;
+}
+.table-container .table-name {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  margin-left: -6px;
+  /* margin-right: 12px; */
+  color: #717171;
+  border-bottom: #202020 2px solid;
+  text-align: center;
+  padding: 0px;
+  width: 106%;
+}
+.table-container .headers {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: #717171 1px solid;
+}
+.table-container .headers div {
+  font-size: 10px;
+}
+/* TABLES START */
+
+/* SKILLS TABLE START*/
+.table-container .headers .skill-name {
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
+}
+.table-container .headers .skill-bonus {
+  flex: 2;
+  text-align: center;
+}
+.table-container .headers .skill-points {
+  flex: 2;
+  text-align: center;
+}
+.table-container .skill-row {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-top: #717171 1px solid;
+}
+.table-container .skill-row.no-top {
+  border-top: none !important;
+}
+.table-container .skill-row .skill-name {
+  font-size: inherit;
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
+}
+.table-container .skill-row .skill-name button[type="roll"] {
+  font-size: inherit;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin-left: -5px;
+  margin-right: -2px;
+  line-height: 0.1;
+  text-align: start;
+}
+.table-container .skill-row .skill-bonus {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.table-container .skill-row .skill-points {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.table-container .skill-row .skill-bonus input,
+.table-container .skill-row .skill-points input {
+  border: 0;
+  background: transparent;
+  width: 30px !important;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+  color: black;
+}
+/* SKILLS TABLE END */
+
+/* INJURIES TABLE START*/
+.table-container .injuries-grid {
+  display: grid;
+  grid-template-areas:
+    "head-injury eye-injury"
+    "main-hand-injury off-hand-injury"
+    "leg-injury foot-injury"
+    "muscle-injury laceration-injury"
+    "spirit-circuit-injury wound-injury";
+  width: 100%;
+  gap: 2px;
+  /* padding: 5px 0px; */
+}
+.injuries-grid .head {
+  grid-area: head-injury;
+}
+.injuries-grid .eye {
+  grid-area: eye-injury;
+}
+.injuries-grid .main-hand {
+  grid-area: main-hand-injury;
+}
+.injuries-grid .off-hand {
+  grid-area: off-hand-injury;
+}
+.injuries-grid .leg {
+  grid-area: leg-injury;
+}
+.injuries-grid .foot {
+  grid-area: foot-injury;
+}
+.injuries-grid .muscle {
+  grid-area: muscle-injury;
+}
+.injuries-grid .laceration {
+  grid-area: laceration-injury;
+}
+.injuries-grid .spirit-circuit {
+  grid-area: spirit-circuit-injury;
+}
+.injuries-grid .wound {
+  grid-area: wound-injury;
+}
+.injury-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+/* INJURIES TABLE END*/
+
+/* CLASSES TABLE START */
+.headers .class-name {
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
+}
+.headers .class-tier {
+  flex: 2;
+  text-align: center;
+}
+.headers .class-level {
+  flex: 2;
+  text-align: center;
+}
+.headers .class-xp {
+  flex: 2;
+  text-align: center;
+}
+/* CLASSES TABLE END */

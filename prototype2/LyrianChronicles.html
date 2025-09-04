@@ -95,35 +95,71 @@
     <!-- HEADER END -->
     <!-- TABS START -->
     <div class="sheet-tabs">
+      <!-- CORE START -->
       <div class="sheet-tab">
         <input type="radio" name="attr_tab" value="core" checked="checked" />
         <span class="sheet-tab-label">Core</span>
         <div class="sheet-tab-content flex-row">
-          <!-- CORE START -->
-          <div class="attributes-and-derived-stats-container">
+          <div class="core-left-column">
             <!-- MAIN STATS START-->
             <div class="section-container main-stats-container">
               <!-- <div class="header main">Main stats</div> -->
               <div class="attribute-container focus">
-                <div class="label">Focus</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_focus"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Focus}} {{Focus Value=@{focus}}} {{ Focus Roll=[[1d20+@{focus}]]}}"
+                    tabindex="-1"
+                  >
+                    Focus
+                  </button>
+                </div>
                 <div class="value">
                   <input type="number" name="attr_focus" title="@{focus}" />
                 </div>
               </div>
               <div class="attribute-container power">
-                <div class="label">Power</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_power"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Power}} {{Power Value=@{power}}} {{Power Roll=[[1d20+@{power}]]}}"
+                    tabindex="-1"
+                  >
+                    Power
+                  </button>
+                </div>
                 <div class="value">
                   <input type="number" name="attr_power" title="@{power}" />
                 </div>
               </div>
               <div class="attribute-container agility">
-                <div class="label">Agility</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_agility"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Agility}} {{Agility Value=@{agility}}} {{Agility Roll=[[1d20+@{agility}]]}}"
+                    tabindex="-1"
+                  >
+                    Agility
+                  </button>
+                </div>
                 <div class="value">
                   <input type="number" name="attr_agility" title="@{agility}" />
                 </div>
               </div>
               <div class="attribute-container toughness">
-                <div class="label">toughness</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_toughness"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Toughness}} {{Toughness Value=@{toughness}}}{{Toughness Roll=[[1d20+@{toughness}]]}}"
+                    tabindex="-1"
+                  >
+                    Toughness
+                  </button>
+                </div>
                 <div class="value">
                   <input
                     type="number"
@@ -134,19 +170,61 @@
               </div>
               <!-- <div class="header secondary">Secondary stats</div> -->
               <div class="attribute-container fitness">
-                <div class="label">fitness</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_fitness"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Fitness}} {{Fitness Value=@{fitness}}} {{Fitness Roll=[[1d20+@{fitness}]]}}"
+                    tabindex="-1"
+                  >
+                    Fitness
+                  </button>
+                </div>
                 <div class="value">
                   <input type="number" name="attr_fitness" title="@{fitness}" />
                 </div>
               </div>
               <div class="attribute-container cunning">
-                <div class="label">cunning</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_cunning"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Cunning}} {{Cunning Value=@{cunning}}} {{Cunning Roll=[[1d20+@{cunning}]]}}"
+                    tabindex="-1"
+                  >
+                    Cunning
+                  </button>
+                </div>
                 <div class="value">
                   <input type="number" name="attr_cunning" title="@{cunning}" />
                 </div>
               </div>
+              <div class="attribute-container reason">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_reason"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Reason}} {{Reason Value=@{reason}}} {{Reason Roll=[[1d20+@{reason}]]}}"
+                    tabindex="-1"
+                  >
+                    Reason
+                  </button>
+                </div>
+                <div class="value">
+                  <input type="number" name="attr_reason" title="@{reason}" />
+                </div>
+              </div>
               <div class="attribute-container awareness">
-                <div class="label">awareness</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_awareness"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Awareness}} {{Awareness Value=@{awareness}}} {{Awareness Roll=[[1d20+@{awareness}]]}}"
+                    tabindex="-1"
+                  >
+                    Awareness
+                  </button>
+                </div>
                 <div class="value">
                   <input
                     type="number"
@@ -156,19 +234,22 @@
                 </div>
               </div>
               <div class="attribute-container presence">
-                <div class="label">presence</div>
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_presence"
+                    value="&{template:default} {{name=@{name} ❖ Main status: Presence}} {{Presence Value=@{presence}}} {{Presence Roll=[[1d20+@{presence}]]}}"
+                    tabindex="-1"
+                  >
+                    Presence
+                  </button>
+                </div>
                 <div class="value">
                   <input
                     type="number"
                     name="attr_presence"
                     title="@{presence}"
                   />
-                </div>
-              </div>
-              <div class="attribute-container reason">
-                <div class="label">reason</div>
-                <div class="value">
-                  <input type="number" name="attr_reason" title="@{reason}" />
                 </div>
               </div>
             </div>
@@ -179,7 +260,13 @@
               <div class="attribute-container all-hp">
                 <div class="label composite">Max | HP | Temp</div>
                 <div class="value composite">
-                  <input type="number" name="attr_max_hp" title="@{map_hp}" />
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_max_hp"
+                    title="@{map_hp}"
+                    tabindex="-1"
+                  />
                   <input type="number" name="attr_hp" title="@{hp}" />
                   <input type="number" name="attr_temp_hp" title="@{temp_hp}" />
                 </div>
@@ -187,7 +274,13 @@
               <div class="attribute-container all-mp">
                 <div class="label composite">Max | MP | Temp</div>
                 <div class="value composite">
-                  <input type="number" name="attr_max_mp" title="@{map_mp}" />
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_max_mp"
+                    title="@{map_mp}"
+                    tabindex="-1"
+                  />
                   <input type="number" name="attr_mp" title="@{mp}" />
                   <input type="number" name="attr_temp_mp" title="@{temp_mp}" />
                 </div>
@@ -195,52 +288,194 @@
               <div class="attribute-container all-rp">
                 <div class="label composite">Max | RP | Temp</div>
                 <div class="value composite">
-                  <input type="number" name="attr_max_rp" title="@{map_rp}" />
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_max_rp"
+                    title="@{map_rp}"
+                    tabindex="-1"
+                  />
                   <input type="number" name="attr_rp" title="@{rp}" />
                   <input type="number" name="attr_temp_rp" title="@{temp_rp}" />
                 </div>
               </div>
             </div>
-            <div class="section-container flex-column gap-5">
-              <div class="attribute-container">
-                <div class="label">Evasion</div>
-                <div class="value2">
-                  <input type="number" name="attr_evasion" title="@{evasion}" />
+            <div class="section-container derived-stats gap-5">
+              <div class="attribute-container2 evasion">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_evasion"
+                    value="&{template:default} {{name=@{name} ❖ Basic Defense: Evasion}} {{Evasion Value=@{evasion}}}"
+                    tabindex="-1"
+                  >
+                    evasion
+                  </button>
+                </div>
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_evasion"
+                    title="@{evasion}"
+                    tabindex="-1"
+                  />
                 </div>
               </div>
-              <!-- <div class="attribute-container evasion-dodge">
-                <div class="label composite2">evasion | dodge</div>
-                <div class="value composite2">
-                  <input type="number" name="attr_evasion" title="@{evasion}" />
-                  <input type="number" name="attr_dodge" title="@{dodge}" />
+              <div class="attribute-container2 dodge">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_dodge"
+                    value="&{template:default} {{name=@{name} ❖ Basic Defense: Dodge}} {{ Dodge Value=@{dodge}}}"
+                    tabindex="-1"
+                  >
+                    dodge
+                  </button>
+                </div>
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_dodge"
+                    title="@{dodge}"
+                    tabindex="-1"
+                  />
                 </div>
               </div>
-              <div class="attribute-container guard-block">
-                <div class="label composite2">guard | block</div>
-                <div class="value composite2">
-                  <input type="number" name="attr_guard" title="@{guard}" />
-                  <input type="number" name="attr_block" title="@{block}" />
+              <div class="attribute-container2 guard">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_guard"
+                    value="&{template:default} {{name=@{name} ❖ Basic Defense: Guard}} {{ Guard Value=@{guard}}}"
+                    tabindex="-1"
+                  >
+                    guard
+                  </button>
+                </div>
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_guard"
+                    title="@{guard}"
+                    tabindex="-1"
+                  />
                 </div>
               </div>
-              <div class="attribute-container potency-save">
-                <div class="label composite2">potency | save bonus</div>
-                <div class="value composite2">
-                  <input type="number" name="attr_guard" title="@{guard}" />
-                  <input type="number" name="attr_block" title="@{block}" />
+              <div class="attribute-container2 blocking">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_dodge"
+                    value="&{template:default} {{name=@{name} ❖ Basic Defense: Dodge}} {{ Guard Value=@{dodge}}}"
+                    tabindex="-1"
+                  >
+                    block
+                  </button>
                 </div>
-              </div> -->
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_block"
+                    title="@{block}"
+                    tabindex="-1"
+                  />
+                </div>
+              </div>
+              <div class="attribute-container2 save-bonus">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_saving_throw"
+                    value="&{template:default} {{name=@{name} ❖ Basic Defense: Saving Throw}} {{ Saving Throw Roll=[[2d10+@{save_bonus}]]}}"
+                    tabindex="-1"
+                  >
+                    save bonus
+                  </button>
+                </div>
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_save_bonus"
+                    title="@{save_bonus}"
+                    tabindex="-1"
+                  />
+                </div>
+              </div>
+              <div class="attribute-container2 potency">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_potency"
+                    value="&{template:default} {{name=@{name} ❖ Derived Stat: Potency}} {{ Potency Value=@{potency}}}"
+                    tabindex="-1"
+                  >
+                    potency
+                  </button>
+                </div>
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_potency"
+                    title="@{potency}"
+                    tabindex="-1"
+                  />
+                </div>
+              </div>
+              <div class="attribute-container2 speed">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_speed"
+                    value="&{template:default} {{name=@{name} ❖ Stat: Speed}} {{ Speed=@{speed}ft}}"
+                    tabindex="-1"
+                  >
+                    speed
+                  </button>
+                </div>
+                <div class="value">
+                  <input type="number" name="attr_speed" title="@{speed}" />
+                </div>
+              </div>
+              <div class="attribute-container2 initiative">
+                <div class="label">
+                  <button
+                    type="roll"
+                    name="roll_speed"
+                    value="&{template:default} {{name=@{name} ❖ Stat: Initiative}} {{ Initiative Roll=[[1d4+@{initiative}-@{equipment_penalty}&{tracker}]]}}"
+                    tabindex="-1"
+                  >
+                    initiative
+                  </button>
+                </div>
+                <div class="value">
+                  <input
+                    readonly
+                    type="number"
+                    name="attr_initiative"
+                    title="@{initiative}"
+                    tabindex="-1"
+                  />
+                </div>
+              </div>
             </div>
             <!-- DERIVED STATS START -->
           </div>
-          <div class="section-container">
-            <!-- <div class="header">Basic Attacks</div> -->
-            <div class="flex-row space-between">
+          <div class="core-right-column">
+            <div class="section-container basic-attacks">
+              <!-- <div class="header">Basic Attacks</div> -->
               <div class="attribute-container basic-attack light">
                 <div class="label basic-attack">
                   <button
                     type="roll"
                     name="roll_basic_light_attack"
                     value="&{template:default} {{name=@{name} ❖ Basic Light Attack}} {{Attack Roll = [[1d20+@{focus}]]}} {{Damage Roll= [[2d4+@{power}]]}}"
+                    tabindex="-1"
                   >
                     Light Attack
                   </button>
@@ -252,6 +487,7 @@
                     type="roll"
                     name="roll_basic_heavy_attack"
                     value="&{template:default} {{name=@{name} ❖ Basic Heavy Attack}} {{Attack Roll = [[1d20+@{focus}]]}} {{Damage Roll= [[4d6+@{power}*2]]}}"
+                    tabindex="-1"
                   >
                     heavy Attack
                   </button>
@@ -263,6 +499,7 @@
                     type="roll"
                     name="roll_basic_heavy_heavy_attack"
                     value="&{template:default} {{name=@{name} ❖ Basic Two-Handed Melee Attack}} {{Attack Roll = [[1d20+@{focus}]]}} {{Damage Roll= [[5d6+@{power}*2]]}}"
+                    tabindex="-1"
                   >
                     very heavy Attack
                   </button>
@@ -274,22 +511,889 @@
                     type="roll"
                     name="roll_basic_precision_attack"
                     value="&{template:default} {{name=@{name} ❖ Basic Precision Attack}} {{Attack Roll = [[1d20+@{focus}*2]]}} {{Damage Roll= [[2d4+@{power}]]}}"
+                    tabindex="-1"
                   >
                     precision Attack
                   </button>
                 </div>
               </div>
             </div>
+            <div class="section-container">
+              <div class="flex-row gap-5">
+                <div class="table-container flex-1 r">
+                  <div class="table-name">Skills</div>
+                  <div class="headers">
+                    <div class="skill-name">Name</div>
+                    <div class="skill-bonus">Total</div>
+                    <div class="skill-points">Points</div>
+                  </div>
+                  <div class="skill-row no-top">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_acrobatics"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Acrobatics[Fitness]}} {{Acrobatics Skill Roll=[[1d20+@{fitness}+@{acrobatics_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Acrobatics [Fit]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_acrobatics"
+                        value="@{acrobatics}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_acrobatics_sp"
+                        value="@{acrobatics_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_athletics"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Athletics[Fitness]}} {{Athletics Skill Roll=[[1d20+@{fitness}+@{athletics_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Athletics [Fit]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_athletics"
+                        value="@{athletics}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_athletics_sp"
+                        value="@{athletics_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_riding"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Riding[Fitness]}} {{Riding Skill Roll=[[1d20+@{fitness}+@{riding_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Riding [Fit]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_riding"
+                        value="@{riding}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_riding_sp"
+                        value="@{riding_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_deception"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Deception[Cunning]}} {{Deception Skill Roll=[[1d20+@{cunning}+@{deception_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Deception [Cun]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_deception"
+                        value="@{deception}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_deception_sp"
+                        value="@{deception_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_roguecraft"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Roguecraft[Cunning]}} {{Roguecraft Skill Roll=[[1d20+@{cunning}+@{roguecraft_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Roguecraft [Cun]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_roguecraft"
+                        value="@{roguecraft}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_roguecraft_sp"
+                        value="@{roguecraft_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_stealth"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Stealth[Cunning]}} {{Stealth Skill Roll=[[1d20+@{cunning}+@{stealth_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Stealth [Cun]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_stealth"
+                        value="@{stealth}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_stealth_sp"
+                        value="@{stealth_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_artifice"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Artifice[Reason]}} {{Artifice Skill Roll=[[1d20+@{reason}+@{artifice_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Artifice [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_artifice"
+                        value="@{artifice}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_artifice_sp"
+                        value="@{artifice_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_appraise"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Appraise[Reason]}} {{Appraise Skill Roll=[[1d20+@{reason}+@{appraise_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Appraise [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_appraise"
+                        value="@{appraise}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_appraise_sp"
+                        value="@{appraise_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_common_knowledge"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Common Knowledge[Reason]}} {{Common Knowledge Skill Roll=[[1d20+@{reason}+@{common_knowledge_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Common Knowledge [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_common_knowledge"
+                        value="@{common_knowledge}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_common_knowledge_sp"
+                        value="@{common_knowledge_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_flight"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Flight[Reason]}} {{Flight Skill Roll=[[1d20+@{reason}+@{flight_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Flight [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_flight"
+                        value="@{flight}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_flight_sp"
+                        value="@{flight_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_history"
+                        value="&{template:default} {{name=@{name} ❖ Skill: History[Reason]}} {{History Skill Roll=[[1d20+@{reason}+@{history_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        History [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_history"
+                        value="@{history}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_history_sp"
+                        value="@{history_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_linguistics"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Linguistics[Reason]}} {{Linguistics Skill Roll=[[1d20+@{reason}+@{linguistics_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Linguistics [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_linguistics"
+                        value="@{linguistics}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_linguistics_sp"
+                        value="@{linguistics_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_magic"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Magic[Reason]}} {{Magic Skill Roll=[[1d20+@{reason}+@{magic_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Magic [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_magic"
+                        value="@{magic}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_magic_sp"
+                        value="@{magic_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_medicine"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Medicine[Reason]}} {{Medicine Skill Roll=[[1d20+@{reason}+@{medicine_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Medicine [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_medicine"
+                        value="@{medicine}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_medicine_sp"
+                        value="@{medicine_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_religion"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Religion[Reason]}} {{Religion Skill Roll=[[1d20+@{reason}+@{religion_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Religion [Rea]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_religion"
+                        value="@{religion}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_religion_sp"
+                        value="@{religion_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_animal_husbandry"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Animal Husbandry[Awareness]}} {{Animal Husbandry Skill Roll=[[1d20+@{awareness}+@{animal_husbandry_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Animal Husbandry [Awa]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_animal_husbandry"
+                        value="@{animal_husbandry}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_animal_husbandry_sp"
+                        value="@{animal_husbandry_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_insight"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Insight[Awareness]}} {{Insight Skill Roll=[[1d20+@{awareness}+@{insight_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Insight [Awa]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_insight"
+                        value="@{insight}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_insight_sp"
+                        value="@{insight_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_perception"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Perception[Awareness]}} {{Perception Skill Roll=[[1d20+@{awareness}+@{perception_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Perception [Awa]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_perception"
+                        value="@{perception}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_perception_sp"
+                        value="@{perception_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_survival"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Survival[Awareness]}} {{Survival Skill Roll=[[1d20+@{awareness}+@{survival_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Survival [Awa]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_survival"
+                        value="@{survival}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_survival_sp"
+                        value="@{survival_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_art"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Art[Presence]}} {{Art Skill Roll=[[1d20+@{presence}+@{art_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Art [Pre]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_art"
+                        value="@{art}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_art_sp"
+                        value="@{art_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_intimidation"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Intimidation[Presence]}} {{Intimidation Skill Roll=[[1d20+@{presence}+@{intimidation_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Intimidation [Pre]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_intimidation"
+                        value="@{intimidation}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_intimidation_sp"
+                        value="@{intimidation_sp}"
+                      />
+                    </div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-name">
+                      <button
+                        type="roll"
+                        name="roll_negotiation"
+                        value="&{template:default} {{name=@{name} ❖ Skill: Negotiation[Presence]}} {{Negotiation Skill Roll=[[1d20+@{presence}+@{negotiation_sp}]]}}"
+                        tabindex="-1"
+                      >
+                        Negotiation [Pre]
+                      </button>
+                    </div>
+                    <div class="skill-bonus">
+                      <input
+                        readonly
+                        type="number"
+                        name="attr_negotiation"
+                        value="@{negotiation}"
+                        tabindex="-1"
+                      />
+                    </div>
+                    <div class="skill-points">
+                      <input
+                        type="number"
+                        name="attr_negotiation_sp"
+                        value="@{negotiation_sp}"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- <div class="header">Abilities</div> -->
+                </div>
+                <div class="flex-column flex-1 gap-5">
+                  <div class="table-container">
+                    <div class="table-name">Injuries</div>
+                    <div class="injuries-grid">
+                      <div class="injury-container head">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="head-injury"
+                            type="checkbox"
+                            name="attr_head_injury"
+                            title="@{head_injury}"
+                          />
+                          <label for="head-injury"></label>
+                          <span>Head</span>
+                        </div>
+                      </div>
+                      <div class="injury-container eye">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="eye-injury"
+                            type="checkbox"
+                            name="attr_eye_injury"
+                            title="@{eye_injury}"
+                          />
+                          <label for="eye-injury"></label>
+                          <span>Eye</span>
+                        </div>
+                      </div>
+                      <div class="injury-container main-hand">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="hand-injury"
+                            type="checkbox"
+                            name="attr_main_hand_injury"
+                            title="@{main_hand_injury}"
+                          />
+                          <label for="hand-injury"></label>
+                          <span>Main Hand</span>
+                        </div>
+                      </div>
+                      <div class="injury-container off-hand">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="off-hand-injury"
+                            type="checkbox"
+                            name="attr_off_hand_injury"
+                            title="@{off_hand_injury}"
+                          />
+                          <label for="off-hand-injury"></label>
+                          <span>Off Hand</span>
+                        </div>
+                      </div>
+                      <div class="injury-container leg">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="leg-injury"
+                            type="checkbox"
+                            name="attr_leg_injury"
+                            title="@{leg_injury}"
+                          />
+                          <label for="leg-injury"></label>
+                          <span>Leg</span>
+                        </div>
+                      </div>
+                      <div class="injury-container foot">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="foot-injury"
+                            type="checkbox"
+                            name="attr_foot_injury"
+                            title="@{foot_injury}"
+                          />
+                          <label for="foot-injury"></label>
+                          <span>Foot</span>
+                        </div>
+                      </div>
+                      <div class="injury-container muscle">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="muscle-injury"
+                            type="checkbox"
+                            name="attr_muscle_injury"
+                            title="@{muscle_injury}"
+                          />
+                          <label for="muscle-injury"></label>
+                          <span>Muscle</span>
+                        </div>
+                      </div>
+                      <div class="injury-container laceration">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="laceration-injury"
+                            type="checkbox"
+                            name="attr_laceration_injury"
+                            title="@{laceration_injury}"
+                          />
+                          <label for="laceration-injury"></label>
+                          <span>Laceration</span>
+                        </div>
+                      </div>
+                      <div class="injury-container spirit-circuit">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="spirit-circuit-injury"
+                            type="checkbox"
+                            name="attr_spirit_circuit_injury"
+                            title="@{spirit_circuit_injury}"
+                          />
+                          <label for="spirit-circuit-injury"></label>
+                          <span>Spirit Circuit</span>
+                        </div>
+                      </div>
+                      <div class="injury-container wound">
+                        <div class="custom-radio-checkbox">
+                          <input
+                            id="wound-injury"
+                            type="checkbox"
+                            name="attr_wound_injury"
+                            title="@{wound_injury}"
+                          />
+                          <label for="wound-injury"></label>
+                          <span>Wound</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-container">
+                    <div class="table-name">Pinned Items</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- CORE END -->
         </div>
       </div>
-      <!-- <div class="sheet-tab">
-        <input type="radio" name="attr_tab" value="other" />
-        <span class="sheet-tab-label">not Core</span>
-        <div class="sheet-tab-content">dfgdfgh</div>
-      </div> -->
+      <!-- CORE END -->
+      <div class="sheet-tab">
+        <input type="radio" name="attr_tab" value="features" />
+        <span class="sheet-tab-label">features</span>
+        <div class="sheet-tab-content flex-row">
+          <div class="core-left-column">
+            <div class="section-container">
+              <div class="table-container full-width">
+                <div class="table-name">Classes</div>
+                  <div class="headers">
+                    <div class="class-name">Name</div>
+                    <div class="class-tier">tier</div>
+                    <div class="class-level">Level</div>
+                    <div class="class-xp">XP</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="core-right-column">B</div>
+        </div>
+      </div>
     </div>
     <!-- TABS END -->
+    <script type="text/worker">
+      on("change:focus", function() {
+        getAttrs(["focus"], function(values) {
+          let potency = (parseInt(values.focus, 10) || 0) + 11;
+          setAttrs({ potency:potency });
+        });
+      });
+
+      on("change:power", function() {
+        getAttrs(["power"], function(values) {
+          let mana = (parseInt(values.power, 10) || 0) + 6;
+          setAttrs({ max_mp:mana });
+        });
+      });
+
+      on("change:agility", function() {
+        getAttrs(["agility"], function(values) {
+          let evasion = (parseInt(values.agility, 10) || 0) + 7;
+          let dodge = (parseInt(values.agility, 10) || 0) + 20;
+          let maxrp = (parseInt(values.agility, 10) || 0) + 2;
+          let initiative = (parseInt(values.agility, 10) || 0);
+          setAttrs({ evasion: evasion, dodge: dodge, max_rp: maxrp, initiative: initiative});
+        });
+      });
+
+      on("change:toughness", function() {
+        getAttrs(["toughness","equipment_guard"], function(values) {
+          let maxhp = (parseInt(values.toughness, 10) || 0)*10 + 20;
+          let save = (parseInt(values.toughness, 10) || 0);
+          let guard = (parseInt(values.toughness, 10) || 0) + (parseInt(values.equipment_guard, 10) || 0);
+          let block = (parseInt(values.toughness, 10) || 0)*2 + (parseInt(values.equipment_block, 10) || 0);
+          setAttrs({ max_hp: maxhp, save_bonus: save, guard: guard, block: block });
+        });
+      });
+
+      const fitness_skills = ['acrobatics','athletics','riding'];
+      fitness_skills.forEach(attr => {
+      on(`change:${attr}_sp change:fitness`, function() {
+        getAttrs(["fitness",`${attr}_sp`], function(values) {
+          let total = (parseInt(values.fitness, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
+          let update = {};
+          update[attr] = total;
+          setAttrs(update);
+        });
+      });
+      });
+      const cunning_skills = ['deception','roguecraft','stealth'];
+      cunning_skills.forEach(attr => {
+      on(`change:${attr}_sp  change:cunning`, function() {
+        getAttrs(["cunning",`${attr}_sp`], function(values) {
+          let total = (parseInt(values.cunning, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
+          let update = {};
+          update[attr] = total;
+          setAttrs(update);
+        });
+      });
+      });
+      const reason_skills = ["artifice","appraise","common_knowledge","flight","history","linguistics","magic","medicine","religion"];
+      reason_skills.forEach(attr => {
+      on(`change:${attr}_sp  change:reason`, function() {
+        getAttrs(["reason",`${attr}_sp`], function(values) {
+          let total = (parseInt(values.reason, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
+          let update = {};
+          update[attr] = total;
+          setAttrs(update);
+        });
+      });
+      });
+      const awareness_skills = ['animal_husbandry','insight','perception','survival'];
+      awareness_skills.forEach(attr => {
+      on(`change:${attr}_sp  change:awareness`, function() {
+        getAttrs(["awareness",`${attr}_sp`], function(values) {
+          let total = (parseInt(values.awareness, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
+          let update = {};
+          update[attr] = total;
+          setAttrs(update);
+        });
+      });
+      });
+      const presence_skills = ['art','intimidation','negotiation'];
+      presence_skills.forEach(attr => {
+      on(`change:${attr}_sp  change:presence`, function() {
+        getAttrs(["presence",`${attr}_sp`], function(values) {
+          let total = (parseInt(values.presence, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
+          let update = {};
+          update[attr] = total;
+          setAttrs(update);
+        });
+      });
+      });
+    </script>
   </div>
 </div>
