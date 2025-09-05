@@ -1187,8 +1187,11 @@
   text-transform: capitalize;
   margin-left: -5px;
   margin-right: -2px;
-  line-height: 0.1;
   text-align: start;
+  line-height: 1;
+  max-width: 190px;
+  white-space: normal;
+  word-break: break-word;
 }
 .charsheet .breakthrough-row .breakthrough-cost {
   font-size: inherit;
