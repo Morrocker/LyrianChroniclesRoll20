@@ -1,7 +1,7 @@
 /* General CSS for Lyrian Chronicles character sheet */
 
 /* ROLL BUTTONS */
-button[type="roll"] {
+.charsheet button[type="roll"] {
   background: none;
   border: 0;
   box-shadow: none;
@@ -16,20 +16,20 @@ button[type="roll"] {
   vertical-align: baseline;
   text-align: center;
 }
-button[type="roll"]:hover {
+.charsheet button[type="roll"]:hover {
   color: #b61037;
 }
-button[type="roll"]:focus {
+.charsheet button[type="roll"]:focus {
   color: #b61037;
   outline: none;
 }
-button[type="roll"]::before {
+.charsheet button[type="roll"]::before {
   display: none;
 }
-button[type="roll"]:hover {
+.charsheet button[type="roll"]:hover {
   background: none !important;
 }
-button[type="roll"]:active {
+.charsheet button[type="roll"]:active {
   background: none !important;
   box-shadow: none !important;
   outline: none !important;
@@ -39,18 +39,18 @@ button[type="roll"]:active {
 /* ROLL BUTTONS */
 
 /* CHECKBOXES */
-.custom-radio-checkbox {
+.charsheet .custom-radio-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
   height: 15px;
 }
-.custom-radio-checkbox input[type="checkbox"] {
+.charsheet .custom-radio-checkbox input[type="checkbox"] {
   display: none;
 }
-.custom-radio-checkbox label {
-  width: 13px ;
-  height: 13px ;
+.charsheet .custom-radio-checkbox label {
+  width: 13px;
+  height: 13px;
   border: 2px solid #6c6c6c;
   border-radius: 50%;
   display: inline-block;
@@ -62,7 +62,10 @@ button[type="roll"]:active {
   box-sizing: border-box;
   padding: 0px;
 }
-.custom-radio-checkbox input[type="checkbox"]:checked + label::after {
+.charsheet
+  .custom-radio-checkbox
+  input[type="checkbox"]:checked
+  + label::after {
   content: "";
   position: absolute;
   left: 1.8px;
@@ -75,79 +78,98 @@ button[type="roll"]:active {
   box-sizing: border-box;
   margin-bottom: 0px;
 }
-.custom-radio-checkbox input[type="checkbox"]:checked + label:hover::after {
+.charsheet
+  .custom-radio-checkbox
+  input[type="checkbox"]:checked
+  + label:hover::after {
   background: #b61037;
 }
-.custom-radio-checkbox label:hover {
+.charsheet .custom-radio-checkbox label:hover {
   border-color: #b61037;
 }
-.custom-radio-checkbox span {
+.charsheet .custom-radio-checkbox span {
   font-size: 11px;
 }
 /* CHECKBOXES */
 
 /* Hide number input spinners for Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.charsheet input[type="number"]::-webkit-outer-spin-button,
+.charsheet input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Hide number input spinners for Firefox */
-input[type="number"] {
+.charsheet input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
 
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
+.charsheet input:hover,
+.charsheet input:focus,
+.charsheet textarea:hover,
+.charsheet textarea:focus {
   background: #e5fffb;
   outline: none;
 }
-select:hover,
-select:focus {
+.charsheet select:hover,
+.charsheet select:focus {
   background: #e5fffb;
 }
-select:hover option,
-select:focus option {
+.charsheet select:hover option,
+.charsheet select:focus option {
   background: white;
 }
 
 /* OTHER START*/
-.flex-row {
+.charsheet .flex-row {
   display: flex;
   flex-direction: row;
 }
-.flex-row.space-between {
+.charsheet .flex-row.space-between {
   justify-content: space-between;
 }
-.flex-column {
+.charsheet .flex-column {
   display: flex;
   flex-direction: column;
 }
-.full-width {
+.charsheet .full-width {
   width: 100%;
 }
-.flex-1 {
+.charsheet .flex-1 {
   flex: 1;
 }
+.charsheet .column-reverse {
+  flex-direction: column-reverse;
+}
+.charsheet .row-reverse {
+  flex-direction: row-reverse;
+}
+.charsheet .align-center {
+  align-items: center;
+}
+.charsheet .justify-center {
+  justify-content: center;
+}
+.charsheet .pt-5 {
+  padding-top: 5px;
+}
+.charsheet .pb-5 {
+  padding-bottom: 5px;
+}
+.charsheet .p10 {
+  padding: 10px;
+}
+.charsheet .margin10 {
+  margin: 10px;
+}
 /* OTHER END */
-
-/* .details-box {
-  border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/sheet-box-border.png")
-    50 50 50 50 fill stretch;
-  border-style: solid;
-  border-width: 20px 20px;
-  box-sizing: border-box;
-} */
 
 .charsheet {
   padding: 0px !important;
   width: 880px;
 }
-.sheet-lyrian-chronicles {
+.charsheet .sheet-lyrian-chronicles {
   background: white;
   color: black;
   font-size: 13px;
@@ -160,12 +182,12 @@ select:focus option {
   border-width: 30px 30px;
   box-sizing: border-box;
 }
-.sheet-section-pc {
+.charsheet .sheet-section-pc {
   margin: 0 auto;
   width: 100%;
 }
 
-.section-container {
+.charsheet .section-container {
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianContainer2.png")
     50 50 50 50 fill stretch;
   border-style: solid;
@@ -173,7 +195,7 @@ select:focus option {
   box-sizing: border-box;
   width: 100%;
 }
-.section-container .header {
+.charsheet .section-container .header {
   grid-area: header;
   font-size: 12px;
   font-weight: bold;
@@ -186,7 +208,7 @@ select:focus option {
 /* General CSS for Lyrian Chronicles character sheet */
 
 /* HEADER */
-.sheet-section-pc-header {
+.charsheet .sheet-section-pc-header {
   display: grid;
   grid-template-areas: "logo details";
   grid-template-columns: 350px auto;
@@ -194,10 +216,10 @@ select:focus option {
   height: 160px;
   margin-bottom: 40px;
 }
-.sheet-section-pc-header-logo {
+.charsheet .sheet-section-pc-header-logo {
   grid-area: logo;
 }
-.sheet-section-pc-header-logo div {
+.charsheet .sheet-section-pc-header-logo div {
   background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianChroniclesBanner.png");
   width: 100%;
   height: 100%;
@@ -208,7 +230,7 @@ select:focus option {
   margin: 0, auto;
 }
 
-.header-details-container {
+.charsheet .header-details-container {
   grid-area: details;
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/sheet-box-border.png")
     50 50 50 50 fill stretch;
@@ -216,7 +238,7 @@ select:focus option {
   border-width: 20px 20px;
   box-sizing: border-box;
 }
-.header-details-title {
+.charsheet .header-details-title {
   border-bottom: 2px solid #202020;
   color: #202020;
   font-size: 15px;
@@ -228,7 +250,7 @@ select:focus option {
   text-align: center;
   text-transform: uppercase;
 }
-.header-details-content {
+.charsheet .header-details-content {
   display: grid;
   grid-template-areas:
     "name spiritcore experience"
@@ -242,38 +264,38 @@ select:focus option {
   margin-top: 10px;
   margin-bottom: -10px;
 }
-.name {
+.charsheet .name {
   grid-area: name;
 }
-.spiritcore {
+.charsheet .spiritcore {
   grid-area: spirit-core;
 }
-.experience {
+.charsheet .experience {
   grid-area: experience;
 }
-.race {
+.charsheet .race {
   grid-area: race;
 }
-.subrace {
+.charsheet .subrace {
   grid-area: subrace;
 }
-.gender {
+.charsheet .gender {
   grid-area: gender;
 }
-.age {
+.charsheet .age {
   grid-area: age;
 }
-.weight {
+.charsheet .weight {
   grid-area: c-weight;
 }
-.height {
+.charsheet .height {
   grid-area: c-height;
 }
-.header-details-content div {
+.charsheet .header-details-content div {
   display: flex;
   flex-direction: column-reverse;
 }
-.header-details-content input {
+.charsheet .header-details-content input {
   margin-bottom: 0;
   border-left: 0;
   border-right: 0;
@@ -286,7 +308,7 @@ select:focus option {
   border-color: #cccccc;
   background-color: white;
 }
-.header-details-content select {
+.charsheet .header-details-content select {
   margin-bottom: 0;
   border-left: 0;
   border-right: 0;
@@ -298,7 +320,7 @@ select:focus option {
   width: 100%;
   border-color: #cccccc;
 }
-.header-details-content label {
+.charsheet .header-details-content label {
   font-size: 9px;
   text-transform: uppercase;
   font-weight: bold;
@@ -308,39 +330,39 @@ select:focus option {
 /* HEADER END */
 
 /* TABS START */
-.sheet-tabs {
+.charsheet .sheet-tabs {
   position: relative;
   width: 100%;
 }
-.sheet-tabs::after {
+.charsheet .sheet-tabs::after {
   clear: both;
   content: "";
   display: block;
 }
-.sheet-tab {
+.charsheet .sheet-tab {
   width: 100%;
 }
-.sheet-tab:nth-of-type(2) > input[type="radio"],
-.sheet-tab:nth-of-type(2) > .sheet-tab-label {
+.charsheet .sheet-tab:nth-of-type(2) > input[type="radio"],
+.charsheet .sheet-tab:nth-of-type(2) > .sheet-tab-label {
   margin-left: 16.66667%;
 }
-.sheet-tab:nth-of-type(3) > input[type="radio"],
-.sheet-tab:nth-of-type(3) > .sheet-tab-label {
+.charsheet .sheet-tab:nth-of-type(3) > input[type="radio"],
+.charsheet .sheet-tab:nth-of-type(3) > .sheet-tab-label {
   margin-left: 33.33333%;
 }
-.sheet-tab:nth-of-type(4) > input[type="radio"],
-.sheet-tab:nth-of-type(4) > .sheet-tab-label {
+.charsheet .sheet-tab:nth-of-type(4) > input[type="radio"],
+.charsheet .sheet-tab:nth-of-type(4) > .sheet-tab-label {
   margin-left: 50%;
 }
-.sheet-tab:nth-of-type(5) > input[type="radio"],
-.sheet-tab:nth-of-type(5) > .sheet-tab-label {
+.charsheet .sheet-tab:nth-of-type(5) > input[type="radio"],
+.charsheet .sheet-tab:nth-of-type(5) > .sheet-tab-label {
   margin-left: 66.66667%;
 }
-.sheet-tab:nth-of-type(6) > input[type="radio"],
-.sheet-tab:nth-of-type(6) > .sheet-tab-label {
+.charsheet .sheet-tab:nth-of-type(6) > input[type="radio"],
+.charsheet .sheet-tab:nth-of-type(6) > .sheet-tab-label {
   margin-left: 83.33333%;
 }
-.sheet-tab > input[type="radio"] {
+.charsheet .sheet-tab > input[type="radio"] {
   height: 30px;
   margin: 0;
   opacity: 0;
@@ -349,12 +371,12 @@ select:focus option {
   width: 16.66667%;
   z-index: 1;
 }
-.sheet-tab > input[type="radio"]:hover ~ .sheet-tab-label {
+.charsheet .sheet-tab > input[type="radio"]:hover ~ .sheet-tab-label {
   background: #979797;
   border-bottom-color: #ffffff;
   color: #575757;
 }
-.sheet-tab > .sheet-tab-label {
+.charsheet .sheet-tab > .sheet-tab-label {
   align-items: center;
   background: #dddddd;
   border-radius: 6px 6px 0 0;
@@ -376,19 +398,19 @@ select:focus option {
   border-right-color: white;
   border-bottom-color: lightgrey;
 }
-.sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
+.charsheet .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-label {
   background: white;
   border-color: #575757;
   border-bottom-color: white;
   color: black;
 }
-.sheet-tab > input[type="radio"]:checked {
+.charsheet .sheet-tab > input[type="radio"]:checked {
   cursor: auto;
 }
-.sheet-tab > input[type="radio"]:checked ~ .sheet-tab-content {
+.charsheet .sheet-tab > input[type="radio"]:checked ~ .sheet-tab-content {
   display: flex;
 }
-.sheet-tab-content {
+.charsheet .sheet-tab-content {
   /* min-height: 847px; */
   display: none;
   padding: 10px;
@@ -399,7 +421,7 @@ select:focus option {
 }
 /* TABS END */
 
-.core-left-column {
+.charsheet .core-left-column {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -407,7 +429,7 @@ select:focus option {
   gap: 5px;
 }
 
-.core-right-column {
+.charsheet .core-right-column {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -416,7 +438,7 @@ select:focus option {
 }
 
 /* ATTRIBUTES START */
-.main-stats-container {
+.charsheet .main-stats-container {
   display: grid;
   grid-template-areas:
     "main-stats secondary-stats"
@@ -428,62 +450,62 @@ select:focus option {
   grid-template-columns: 1fr 1fr;
   width: 310px;
 }
-.focus {
+.charsheet .focus {
   grid-area: focus;
   padding-right: 5px;
 }
-.power {
+.charsheet .power {
   grid-area: power;
   padding-right: 5px;
 }
-.agility {
+.charsheet .agility {
   grid-area: agility;
   padding-right: 5px;
 }
-.toughness {
+.charsheet .toughness {
   grid-area: toughness;
   padding-right: 5px;
 }
-.cunning {
+.charsheet .cunning {
   grid-area: cunning;
   border-left: #afafaf 1px solid;
   padding-bottom: 2px;
   padding-left: 5px;
 }
-.awareness {
+.charsheet .awareness {
   grid-area: awareness;
   border-left: #afafaf 1px solid;
   padding-bottom: 2px;
   padding-left: 5px;
 }
-.presence {
+.charsheet .presence {
   grid-area: presence;
   border-left: #afafaf 1px solid;
   padding-bottom: 2px;
   padding-left: 5px;
 }
-.reason {
+.charsheet .reason {
   grid-area: reason;
   border-left: #afafaf 1px solid;
   padding-bottom: 2px;
   padding-left: 5px;
 }
-.fitness {
+.charsheet .fitness {
   grid-area: fitness;
   border-left: #afafaf 1px solid;
   padding-bottom: 2px;
   padding-left: 5px;
 }
 
-.section-container .header.main {
+.charsheet .section-container .header.main {
   grid-area: main-stats;
 }
-.section-container .header.secondary {
+.charsheet .section-container .header.secondary {
   grid-area: secondary-stats;
 }
 
-.attribute-container,
-.attribute-container2 {
+.charsheet .attribute-container,
+.charsheet .attribute-container2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -492,8 +514,8 @@ select:focus option {
 /* .attribute-container.fill{
     width: 100%;
 } */
-.attribute-container .label,
-.attribute-container2 .label {
+.charsheet .attribute-container .label,
+.charsheet .attribute-container2 .label {
   display: flex;
   color: #717171;
   height: 30px;
@@ -512,7 +534,7 @@ select:focus option {
   justify-content: start;
   line-height: 0.5;
 }
-.attribute-container .value {
+.charsheet .attribute-container .value {
   width: 37px;
   height: 37px;
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
@@ -526,8 +548,8 @@ select:focus option {
   align-content: center;
   z-index: 10;
 }
-.attribute-container .value input,
-.attribute-container2 .value input {
+.charsheet .attribute-container .value input,
+.charsheet .attribute-container2 .value input {
   border: 0;
   background: transparent;
   width: 30px !important;
@@ -543,72 +565,72 @@ select:focus option {
 /* ATTRIBUTE END*/
 
 /* DERIVED ATTRIBUTES START*/
-.gap-5 {
+.charsheet .gap-5 {
   gap: 5px;
 }
 
-.all-hp {
+.charsheet .all-hp {
   grid-area: all-hp;
 }
-.all-rp {
+.charsheet .all-rp {
   grid-area: all-rp;
 }
-.all-mp {
+.charsheet .all-mp {
   grid-area: all-mp;
 }
-.evasion-dodge {
+.charsheet .evasion-dodge {
   grid-area: evasion-dodge;
 }
-.dodge {
+.charsheet .dodge {
   grid-area: dodge;
 }
-.guard-block {
+.charsheet .guard-block {
   grid-area: guard-block;
 }
-.block {
+.charsheet .block {
   grid-area: blocking;
 }
-.saving-throw {
+.charsheet .saving-throw {
   grid-area: saving-throw;
 }
-.potency-save {
+.charsheet .potency-save {
   grid-area: potency-save;
 }
-.initiative {
+.charsheet .initiative {
   grid-area: initiative;
 }
 
-.attribute-container .label.composite {
+.charsheet .attribute-container .label.composite {
   justify-content: center;
   width: 160px;
 }
-.attribute-container .label button[type="roll"] {
+.charsheet .attribute-container .label button[type="roll"] {
   font-size: 12px !important;
   margin-left: -3px;
   line-height: 0.1;
   text-align: start;
 }
-.attribute-container .value.composite {
+.charsheet .attribute-container .value.composite {
   display: flex;
   flex-direction: row;
   justify-content: start;
   width: 160px;
 }
-.attribute-container .value.composite input {
+.charsheet .attribute-container .value.composite input {
   width: 42px !important;
   margin-left: 0px;
   font-size: 15px;
 }
 
-.attribute-container .value.composite input:nth-of-type(2) {
+.charsheet .attribute-container .value.composite input:nth-of-type(2) {
   border-left: #a7a7a7 1px solid;
   border-radius: 0%;
 }
-.attribute-container .value.composite input:nth-of-type(3) {
+.charsheet .attribute-container .value.composite input:nth-of-type(3) {
   border-left: #a7a7a7 1px solid;
   border-radius: 0%;
 }
-.attribute-container2 .value {
+.charsheet .attribute-container2 .value {
   background: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/diamond2.png");
   width: 40px;
   height: 40px;
@@ -621,25 +643,25 @@ select:focus option {
   justify-content: center;
   align-items: center;
 }
-.attribute-container2 .label {
+.charsheet .attribute-container2 .label {
   margin-left: -30px;
   padding-left: 25px;
   width: 130px;
 }
-.attribute-container2 .label button[type="roll"] {
+.charsheet .attribute-container2 .label button[type="roll"] {
   font-size: 12px !important;
   margin-left: -3px;
   line-height: 0.1;
   text-align: start;
 }
-.attribute-container2 .value input {
+.charsheet .attribute-container2 .value input {
   width: 40 !important;
   margin-top: 0.3px;
   margin-left: 0px;
   font-size: 16px;
 }
 
-.derived-stats {
+.charsheet .derived-stats {
   display: grid;
   grid-template-areas:
     "evasion dodge"
@@ -651,32 +673,32 @@ select:focus option {
   gap: 5px;
 }
 
-.evasion {
+.charsheet .evasion {
   grid-area: evasion;
 }
-.dodge {
+.charsheet .dodge {
   grid-area: dodge;
 }
-.guard {
+.charsheet .guard {
   grid-area: guard;
 }
-.blocking {
+.charsheet .blocking {
   grid-area: blocking;
 }
-.save-bonus {
+.charsheet .save-bonus {
   grid-area: save-bonus;
 }
-.potency {
+.charsheet .potency {
   grid-area: potency;
 }
-.speed {
+.charsheet .speed {
   grid-area: speed;
 }
-.initiative {
+.charsheet .initiative {
   grid-area: initiative;
 }
 
-.section-container.basic-attacks {
+.charsheet .section-container.basic-attacks {
   display: grid;
   justify-content: space-around;
   align-items: center;
@@ -685,40 +707,40 @@ select:focus option {
     "basic-precision-attack basic-HEAVY-attack";
   gap: 5px;
 }
-.light {
+.charsheet .light {
   grid-area: basic-light-attack;
 }
-.heavy {
+.charsheet .heavy {
   grid-area: basic-heavy-attack;
 }
-.heavy2 {
+.charsheet .heavy2 {
   grid-area: basic-HEAVY-attack;
 }
-.precision {
+.charsheet .precision {
   grid-area: basic-precision-attack;
 }
 
-.attribute-container .label.basic-attack {
+.charsheet .attribute-container .label.basic-attack {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0px;
   width: 180px;
 }
-.attribute-container .label.basic-attack button {
+.charsheet .attribute-container .label.basic-attack button {
   font-size: 14px !important;
   line-height: 0.3;
   text-align: center;
 }
 
-.static-stat {
+.charsheet .static-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* gap: 5px; */
 }
-.attribute-value.single-block {
+.charsheet .attribute-value.single-block {
   display: flex;
   width: 70px;
   height: 37px;
@@ -733,10 +755,10 @@ select:focus option {
   align-content: center;
   z-index: 10;
 }
-.attribute-value.single-block input {
+.charsheet .attribute-value.single-block input {
   margin-top: 3px;
 }
-.small-attribute-label {
+.charsheet .small-attribute-label {
   font-size: 7px;
   text-transform: uppercase;
   font-weight: bold;
@@ -748,7 +770,7 @@ select:focus option {
 /* DERIVED ATTRIBUTES END */
 
 /* TABLES START */
-.table-container {
+.charsheet .table-container {
   display: flex;
   flex-direction: column;
   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/AttibuteVal.png")
@@ -757,7 +779,7 @@ select:focus option {
   border-width: 10px 10px;
   box-sizing: border-box;
 }
-.table-container .table-name {
+.charsheet .table-container .table-name {
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -771,48 +793,48 @@ select:focus option {
   padding: 0px;
   width: 106%;
 }
-.table-container .headers {
+.charsheet .table-container .headers {
   display: flex;
   flex-direction: row;
   width: 100%;
   border-bottom: #717171 1px solid;
 }
-.table-container .headers div {
+.charsheet .table-container .headers div {
   font-size: 10px;
 }
 /* TABLES START */
 
 /* SKILLS TABLE START*/
-.table-container .headers .skill-name {
+.charsheet .table-container .headers .skill-name {
   flex: 6;
   text-align: left;
   padding-left: 5px;
 }
-.table-container .headers .skill-bonus {
+.charsheet .table-container .headers .skill-bonus {
   flex: 2;
   text-align: center;
 }
-.table-container .headers .skill-points {
+.charsheet .table-container .headers .skill-points {
   flex: 2;
   text-align: center;
 }
-.table-container .skill-row {
+.charsheet .table-container .skill-row {
   font-size: 10px;
   display: flex;
   flex-direction: row;
   width: 100%;
   border-top: #717171 1px solid;
 }
-.table-container .skill-row.no-top {
+.charsheet .table-container .skill-row.no-top {
   border-top: none !important;
 }
-.table-container .skill-row .skill-name {
+.charsheet .table-container .skill-row .skill-name {
   font-size: inherit;
   flex: 6;
   text-align: left;
   padding-left: 5px;
 }
-.table-container .skill-row .skill-name button[type="roll"] {
+.charsheet .table-container .skill-row .skill-name button[type="roll"] {
   font-size: inherit;
   font-weight: normal;
   text-transform: capitalize;
@@ -821,18 +843,18 @@ select:focus option {
   line-height: 0.1;
   text-align: start;
 }
-.table-container .skill-row .skill-bonus {
+.charsheet .table-container .skill-row .skill-bonus {
   font-size: inherit;
   flex: 2;
   text-align: center;
 }
-.table-container .skill-row .skill-points {
+.charsheet .table-container .skill-row .skill-points {
   font-size: inherit;
   flex: 2;
   text-align: center;
 }
-.table-container .skill-row .skill-bonus input,
-.table-container .skill-row .skill-points input {
+.charsheet .table-container .skill-row .skill-bonus input,
+.charsheet .table-container .skill-row .skill-points input {
   border: 0;
   background: transparent;
   width: 30px !important;
@@ -844,7 +866,7 @@ select:focus option {
 /* SKILLS TABLE END */
 
 /* INJURIES TABLE START*/
-.table-container .injuries-grid {
+.charsheet .table-container .injuries-grid {
   display: grid;
   grid-template-areas:
     "head-injury eye-injury"
@@ -856,37 +878,37 @@ select:focus option {
   gap: 2px;
   /* padding: 5px 0px; */
 }
-.injuries-grid .head {
+.charsheet .injuries-grid .head {
   grid-area: head-injury;
 }
-.injuries-grid .eye {
+.charsheet .injuries-grid .eye {
   grid-area: eye-injury;
 }
-.injuries-grid .main-hand {
+.charsheet .injuries-grid .main-hand {
   grid-area: main-hand-injury;
 }
-.injuries-grid .off-hand {
+.charsheet .injuries-grid .off-hand {
   grid-area: off-hand-injury;
 }
-.injuries-grid .leg {
+.charsheet .injuries-grid .leg {
   grid-area: leg-injury;
 }
-.injuries-grid .foot {
+.charsheet .injuries-grid .foot {
   grid-area: foot-injury;
 }
-.injuries-grid .muscle {
+.charsheet .injuries-grid .muscle {
   grid-area: muscle-injury;
 }
-.injuries-grid .laceration {
+.charsheet .injuries-grid .laceration {
   grid-area: laceration-injury;
 }
-.injuries-grid .spirit-circuit {
+.charsheet .injuries-grid .spirit-circuit {
   grid-area: spirit-circuit-injury;
 }
-.injuries-grid .wound {
+.charsheet .injuries-grid .wound {
   grid-area: wound-injury;
 }
-.injury-container {
+.charsheet .injury-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -896,21 +918,215 @@ select:focus option {
 /* INJURIES TABLE END*/
 
 /* CLASSES TABLE START */
-.headers .class-name {
+.charsheet .headers .class-name {
   flex: 6;
   text-align: left;
   padding-left: 5px;
 }
-.headers .class-tier {
+.charsheet .headers .class-tier {
   flex: 2;
   text-align: center;
 }
-.headers .class-level {
+.charsheet .headers .class-level {
   flex: 2;
   text-align: center;
 }
-.headers .class-xp {
+.charsheet .headers .class-xp {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .headers .class-delete {
+  flex: 1;
+}
+.charsheet .class-row {
+  font-size: 10px;
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: #717171 1px solid;
+}
+.charsheet .class-row .class-name {
+  font-size: inherit;
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.charsheet .class-row .class-tier {
+  font-size: inherit;
   flex: 2;
   text-align: center;
 }
+.charsheet .class-row .class-level {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.charsheet .class-row .class-level select {
+  margin-bottom: 0;
+  border: none;
+  height: 19px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+.charsheet .class-row .class-xp {
+  font-size: inherit;
+  flex: 3;
+  text-align: center;
+  justify-content: center;
+}
+.charsheet .class-row .class-delete {
+  flex: 1;
+  text-align: center;
+}
+.charsheet .class-row .class-xp input {
+  border: 0;
+  background: transparent;
+  width: 100% !important;
+  text-align: center;
+  padding: 0;
+  color: black;
+  font-size: 10px;
+}
+.charsheet input:checked + .class-row {
+  display: flex;
+}
+
 /* CLASSES TABLE END */
+
+/* TEST3 */
+.charsheet .create-form-btn {
+  width: 90px;
+  height: 15px;
+}
+.charsheet .create-form-btn input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  width: 90px;
+  height: 15px;
+  z-index: 10;
+}
+.charsheet .create-form-btn span {
+  display: flex;
+  font-size: 10px;
+  width: 90px;
+  height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #717171;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  border: #8a8a8a 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+.charsheet .create-form-btn input:hover + span {
+  border-color: #b61037;
+  color: #b61037;
+}
+.charsheet .create-form-btn input:active + span {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+.charsheet .sheet-toggle + .toggable-form {
+  display: none;
+}
+.charsheet .sheet-toggle:checked + .toggable-form {
+  display: flex;
+}
+.charsheet input[type="checkbox"]:checked + .create-form-btn {
+  display: none;
+}
+.charsheet .toggable-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
+  border: #717171 1px solid;
+  border-radius: 5px;
+  align-items: center;
+}
+.charsheet .toggable-form .class-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #717171;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+}
+.charsheet .toggable-form .class-select {
+  flex: 2;
+}
+.charsheet .toggable-form .form-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 5px;
+  justify-content: center;
+  /* align-items: center; */
+}
+.charsheet .toggable-form .form-btns button {
+  width: 90px;
+  height: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #717171;
+  border: #8a8a8a 2px solid;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+.charsheet .toggable-form .form-btns button:hover {
+  border-color: #b61037;
+  color: #b61037;
+}
+.charsheet .toggable-form .form-btns button:active {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+/* RELATED BUT NOT */
+.charsheet .delete-item-btn {
+  width: 20px;
+  height: 20px;
+}
+.charsheet .delete-item-btn input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+.charsheet .delete-item-btn span {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #717171;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+.charsheet .delete-item-btn input:hover + span {
+  border-color: #b61037;
+  color: #b61037;
+}
+.charsheet .delete-item-btn input:active + span {
+  border-color: #ff0000;
+  color: #ff0000;
+}

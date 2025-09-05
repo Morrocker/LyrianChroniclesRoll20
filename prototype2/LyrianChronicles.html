@@ -1290,12 +1290,117 @@
             <div class="section-container">
               <div class="table-container full-width">
                 <div class="table-name">Classes</div>
-                  <div class="headers">
-                    <div class="class-name">Name</div>
-                    <div class="class-tier">tier</div>
-                    <div class="class-level">Level</div>
-                    <div class="class-xp">XP</div>
+                <div class="headers">
+                  <div class="class-name">Name</div>
+                  <div class="class-tier">tier</div>
+                  <div class="class-level">Level</div>
+                  <div class="class-xp">XP</div>
+                  <div class="class-delete"></div>
+                </div>
+                <input type="checkbox" name="attr_sword_show" hidden />
+                <div class="class-row">
+                  <div class="class-name">Sword</div>
+                  <div class="class-tier">2</div>
+                  <div class="class-level">
+                    <select name="attr_sword_level" id="sword-level-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select>
                   </div>
+                  <div class="class-xp flex-row">
+                    <input
+                      readonly
+                      type="number"
+                      name="attr_sword_xp"
+                      value="@{sword_xp}"
+                    />
+                  </div>
+                  <div class="class-delete">
+                    <div class="delete-item-btn">
+                      <input type="checkbox" name="attr_sword_show" />
+                      <span class="pseudo-button">X</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-column gap-5 column-reverse align-center pt-5">
+                  <input
+                    type="checkbox"
+                    name="attr_create_class_btn"
+                    class="sheet-toggle"
+                    hidden
+                  />
+                  <div class="create-form-btn">
+                    <input type="checkbox" name="attr_create_class_btn" />
+                    <span class="pseudo-button">+Add</span>
+                  </div>
+                  <input
+                    type="checkbox"
+                    name="attr_create_class_btn"
+                    class="sheet-toggle"
+                    hidden
+                  />
+                  <div class="toggable-form">
+                    <label class="class-label" for="item-select"
+                      >Add Class:</label
+                    >
+                    <select
+                      class="class-select"
+                      name="attr_class_selected"
+                      id="item-select"
+                    >
+                      <option value="">--Select--</option>
+                      <option value="sword">Sword</option>
+                      <option value="shield">Shield</option>
+                      <option value="potion">Potion</option>
+                    </select>
+                    <div class="form-btns">
+                      <button
+                        type="action"
+                        name="act_add_class"
+                        style="margin-left: 10px"
+                      >
+                        Add
+                      </button>
+                      <div class="create-form-btn cancel">
+                        <input type="checkbox" name="attr_create_class_btn" />
+                        <span class="pseudo-button">Cancel</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <button id="show-create-form">Create</button>
+                <div
+                  id="create-item-form"
+                  style="display: none; margin-top: 10px"
+                >
+                  <form>
+                    <input
+                      type="text"
+                      id="item-name"
+                      placeholder="Name"
+                      name="item-name"
+                      required
+                    />
+                    <input
+                      type="text"
+                      id="item-type"
+                      name="item-type"
+                      placeholder="Type"
+                      required
+                    />
+                    <button type="button">Add</button>
+                    <button type="button" id="cancel-create">Cancel</button>
+                  </form>
+                </div> -->
+                <!-- TEST START -->
+                <!-- TEST END -->
               </div>
             </div>
           </div>
@@ -1304,95 +1409,175 @@
       </div>
     </div>
     <!-- TABS END -->
+    <!-- <script > -->
     <script type="text/worker">
-      on("change:focus", function() {
-        getAttrs(["focus"], function(values) {
+      // Automatically calculate derived stats when base attributes change
+
+      on("change:focus", function () {
+        getAttrs(["focus"], function (values) {
           let potency = (parseInt(values.focus, 10) || 0) + 11;
-          setAttrs({ potency:potency });
+          setAttrs({ potency: potency });
         });
       });
 
-      on("change:power", function() {
-        getAttrs(["power"], function(values) {
+      on("change:power", function () {
+        getAttrs(["power"], function (values) {
           let mana = (parseInt(values.power, 10) || 0) + 6;
-          setAttrs({ max_mp:mana });
+          setAttrs({ max_mp: mana });
         });
       });
 
-      on("change:agility", function() {
-        getAttrs(["agility"], function(values) {
+      on("change:agility", function () {
+        getAttrs(["agility"], function (values) {
           let evasion = (parseInt(values.agility, 10) || 0) + 7;
           let dodge = (parseInt(values.agility, 10) || 0) + 20;
           let maxrp = (parseInt(values.agility, 10) || 0) + 2;
-          let initiative = (parseInt(values.agility, 10) || 0);
-          setAttrs({ evasion: evasion, dodge: dodge, max_rp: maxrp, initiative: initiative});
+          let initiative = parseInt(values.agility, 10) || 0;
+          setAttrs({
+            evasion: evasion,
+            dodge: dodge,
+            max_rp: maxrp,
+            initiative: initiative,
+          });
         });
       });
 
-      on("change:toughness", function() {
-        getAttrs(["toughness","equipment_guard"], function(values) {
-          let maxhp = (parseInt(values.toughness, 10) || 0)*10 + 20;
-          let save = (parseInt(values.toughness, 10) || 0);
-          let guard = (parseInt(values.toughness, 10) || 0) + (parseInt(values.equipment_guard, 10) || 0);
-          let block = (parseInt(values.toughness, 10) || 0)*2 + (parseInt(values.equipment_block, 10) || 0);
-          setAttrs({ max_hp: maxhp, save_bonus: save, guard: guard, block: block });
+      on("change:toughness", function () {
+        getAttrs(["toughness", "equipment_guard"], function (values) {
+          let maxhp = (parseInt(values.toughness, 10) || 0) * 10 + 20;
+          let save = parseInt(values.toughness, 10) || 0;
+          let guard =
+            (parseInt(values.toughness, 10) || 0) +
+            (parseInt(values.equipment_guard, 10) || 0);
+          let block =
+            (parseInt(values.toughness, 10) || 0) * 2 +
+            (parseInt(values.equipment_block, 10) || 0);
+          setAttrs({
+            max_hp: maxhp,
+            save_bonus: save,
+            guard: guard,
+            block: block,
+          });
         });
       });
 
-      const fitness_skills = ['acrobatics','athletics','riding'];
-      fitness_skills.forEach(attr => {
-      on(`change:${attr}_sp change:fitness`, function() {
-        getAttrs(["fitness",`${attr}_sp`], function(values) {
-          let total = (parseInt(values.fitness, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
+      const fitness_skills = ["acrobatics", "athletics", "riding"];
+      fitness_skills.forEach((attr) => {
+        on(`change:${attr}_sp change:fitness`, function () {
+          getAttrs(["fitness", `${attr}_sp`], function (values) {
+            let total =
+              (parseInt(values.fitness, 10) || 0) +
+              (parseInt(values[`${attr}_sp`], 10) || 0);
+            let update = {};
+            update[attr] = total;
+            setAttrs(update);
+          });
+        });
+      });
+      const cunning_skills = ["deception", "roguecraft", "stealth"];
+      cunning_skills.forEach((attr) => {
+        on(`change:${attr}_sp  change:cunning`, function () {
+          getAttrs(["cunning", `${attr}_sp`], function (values) {
+            let total =
+              (parseInt(values.cunning, 10) || 0) +
+              (parseInt(values[`${attr}_sp`], 10) || 0);
+            let update = {};
+            update[attr] = total;
+            setAttrs(update);
+          });
+        });
+      });
+      const reason_skills = [
+        "artifice",
+        "appraise",
+        "common_knowledge",
+        "flight",
+        "history",
+        "linguistics",
+        "magic",
+        "medicine",
+        "religion",
+      ];
+      reason_skills.forEach((attr) => {
+        on(`change:${attr}_sp  change:reason`, function () {
+          getAttrs(["reason", `${attr}_sp`], function (values) {
+            let total =
+              (parseInt(values.reason, 10) || 0) +
+              (parseInt(values[`${attr}_sp`], 10) || 0);
+            let update = {};
+            update[attr] = total;
+            setAttrs(update);
+          });
+        });
+      });
+      const awareness_skills = [
+        "animal_husbandry",
+        "insight",
+        "perception",
+        "survival",
+      ];
+      awareness_skills.forEach((attr) => {
+        on(`change:${attr}_sp  change:awareness`, function () {
+          getAttrs(["awareness", `${attr}_sp`], function (values) {
+            let total =
+              (parseInt(values.awareness, 10) || 0) +
+              (parseInt(values[`${attr}_sp`], 10) || 0);
+            let update = {};
+            update[attr] = total;
+            setAttrs(update);
+          });
+        });
+      });
+      const presence_skills = ["art", "intimidation", "negotiation"];
+      presence_skills.forEach((attr) => {
+        on(`change:${attr}_sp  change:presence`, function () {
+          getAttrs(["presence", `${attr}_sp`], function (values) {
+            let total =
+              (parseInt(values.presence, 10) || 0) +
+              (parseInt(values[`${attr}_sp`], 10) || 0);
+            let update = {};
+            update[attr] = total;
+            setAttrs(update);
+          });
+        });
+      });
+
+      // scripts that MUST be updated on a version change
+
+      // Shows a class selected in the ADD CLASS form
+      on("clicked:add_class", function () {
+        getAttrs(["class_selected"], function (values) {
           let update = {};
-          update[attr] = total;
+          update[`${values.class_selected}_show`] = "on";
+          update["class_selected"] = "";
           setAttrs(update);
         });
       });
-      });
-      const cunning_skills = ['deception','roguecraft','stealth'];
-      cunning_skills.forEach(attr => {
-      on(`change:${attr}_sp  change:cunning`, function() {
-        getAttrs(["cunning",`${attr}_sp`], function(values) {
-          let total = (parseInt(values.cunning, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
-          let update = {};
-          update[attr] = total;
-          setAttrs(update);
+
+      // Udates the class total XP when the level is changed
+      [{ class:"sword", tier:2}].forEach(({class: className, tier}) => {
+        on(`change:${className}_level`, function () {
+          getAttrs([`${className}_level`], function (values) {
+            let level = parseInt(values[`${className}_level`], 10) || 1;
+            let xp = (level - 1) * 100 + tier*100;
+            let update = {};
+            update[`${className}_xp`] = xp;
+            setAttrs(update);
+          });
         });
       });
-      });
-      const reason_skills = ["artifice","appraise","common_knowledge","flight","history","linguistics","magic","medicine","religion"];
-      reason_skills.forEach(attr => {
-      on(`change:${attr}_sp  change:reason`, function() {
-        getAttrs(["reason",`${attr}_sp`], function(values) {
-          let total = (parseInt(values.reason, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
-          let update = {};
-          update[attr] = total;
-          setAttrs(update);
+      
+      // Reset class levels and XP when the class is deleted
+      ["sword"].forEach((className) => {
+        on(`change:${className}_show`, function () {
+          getAttrs([`${className}_show`], function (values) {
+            let update = {};
+            update[`${className}_level`] = 1;
+            update[`${className}_xp`] = 0;
+            setAttrs(update);
+          });
+
         });
-      });
-      });
-      const awareness_skills = ['animal_husbandry','insight','perception','survival'];
-      awareness_skills.forEach(attr => {
-      on(`change:${attr}_sp  change:awareness`, function() {
-        getAttrs(["awareness",`${attr}_sp`], function(values) {
-          let total = (parseInt(values.awareness, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
-          let update = {};
-          update[attr] = total;
-          setAttrs(update);
-        });
-      });
-      });
-      const presence_skills = ['art','intimidation','negotiation'];
-      presence_skills.forEach(attr => {
-      on(`change:${attr}_sp  change:presence`, function() {
-        getAttrs(["presence",`${attr}_sp`], function(values) {
-          let total = (parseInt(values.presence, 10) || 0) + (parseInt(values[`${attr}_sp`], 10) || 0);
-          let update = {};
-          update[attr] = total;
-          setAttrs(update);
-        });
-      });
       });
     </script>
   </div>
