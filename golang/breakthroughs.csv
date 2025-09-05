@@ -1,0 +1,130 @@
+Name,Cost,Requirements,Description
+8 Eyes,100,Must be a spiderfolk,You may have up to 8 Mystic Eyes instead of the regular 2.
+Angelblooded,0,"Must be a human, only a human. Requires GM Approval",You have the blood of angels in you. You may purchase the Angelblooded class.
+Become Fire,200,Must be a Salamander,The RP cost of Consume Fire is reduced to 0.
+Become Ice,200,Must be a Yuki-Onna,The RP cost of Absorb Ice is reduced to 0 the first time you use it per round. Cost is reset back to 0 when it becomes your turn
+Become Lightning,200,Must be a Raijin Youkai,The RP cost of Consume Lightning is reduced to 0 the first time you use it per round. Cost is reset back to 0 when it becomes your turn. Any Power bonus you gain from using Consume Lightning does not stack.
+Blend In,200,Must be a Slimefolk,"You disguise your appearance using magic to be that of another race.  This skill does not allow you to change your appearance at will, but instead lets you appear as you would as a different race.  You choose this race when this breakthrough is picked up and cannot change it.In addition, the first time you use Slime Body while disguised in this way, it costs 0 RP instead of 1 RP.  This effect does not work if the attacker knows that you are a Slimefolk."
+Blessed by Kari,100,Must be a Human,"After using Divine Providence you may use it a second time before resting, but the cost increases to 1 RP. This second use must pick a different option then your first one."
+Bully,50,,You gain a +5 bonus to intimidation skill checks against targets with less Fitness than you.
+Combat Kitty,100,Must be a Cait Sith,"You may use abilities like normal while in cat form. Any abilities that require a specific weapon, armor or similar physical requirement cannot be used."
+Curse of Vampirism,300,Must be taken at character creation or after being killed by a vampire's bite,"You rise as a vampire, an immortal creature that feeds on the blood of living creatures andimmediately gain the Vampire racial style class and its key ability. Your race changes to ‘Vampire’, but you keep the benefits of your previous race.
+
+As a vampire, you no longer age and your physical appearance changes slightly. Your skin becomes more pale and you grow a pair of fangs. You still need to eat, drink and breathe as normal.
+
+A vampire’s spirit core is cracked, making it difficult for it to regenerate mana naturally and requiring it to obtain it from other creatures. You no longer regenerate mana from eating (including potions), resting and can no longer use the Draw Mana encounter conclusion action. You still recover full mana at the start of a new arc.
+
+You are weak to sunlight. Every round you spend in sunlight without proper protection you take 10 true damage and your maximum HP is lowered by 10. Your maximum HP remains lowered until you finish a rest. You may carry a parasol or similar object in one hand to protect yourself from the sun and can do so even in combat.
+
+In addition to these drawbacks, you no longer receive Wounds unless the damage that reduced your HP to 0 was fire, holy or true damage. You also gain 60ft Darkvision. Darkvision lets you see in total darkness, even if there's no source of light."
+Deus Ex Machina,600,,"The first time you would die from a mortal wound at Encounter Conclusion, the mortal wound is removed and you instead receive a normal injury. The benefit of this breakthrough is then lost and you may not choose this breakthrough again after."
+Divine Luck I,300,,"Once per rest, you may roll an additional dice when making a check and take the higher result."
+Divine Luck II,600,Must have purchased Divine Luck I,"Once per arc, you may choose to automatically succeed on a check (if success is possible)."
+Drag along,200,Must be a Lamia,"When you have a target under the effect of ""Just a hug"", you can still move at half of your normal movement speed while under theJust a hugroot effect and you still count as rooted for all other purposes.
+
+When moving, you can drag along the target of Just a hug, but they still count as rooted at your new location.
+
+In addition, your grapple power increases by +1."
+Dual Personality,300,,"Whether through magical or non-magical means, you have more than a single personality or entity within you through either physical or magical means. When under the influence of a Charm, Illusion or other mind-influencing effect you may spend 1 AP to switch personalities/entities and act as normal.
+
+You may only do this once per encounter."
+Early Ascension,300,Must be taken at character creation,You are treated as having 1 class mastered for the purposes of selecting a tier 2 class that has “Any class mastered” or similar requirement. This does not apply to any class that requires a specific class to be mastered and it doesn't automatically qualify you for other requirements such as weapon proficiencies.
+Elemental Affinity,150,,"You gain Elemental Mastery in an element of your choice.
+
+You may pick this breakthrough more than once, choosing a different element each time."
+Elixir Addict,0,Must have used at least 3 elixirs,"You have become used to the effects of drinking elixirs, too used in fact. At the end of your turn in combat, if you do not have an Elixir active you take 6 true damage. The HP cost of drinking all elixirs is reduced by 11.
+
+This breakthrough may be removed during an interlude phase by spending 1 IP."
+Fae Flash Acrobat,50,Must be a Fae,"While using Fae Flash, you may teleport a partial distance and materialize there to redirect your teleport. In a single Fae Step, you may teleport multiple times, reappearing each time you stop, to teleport from that new position. You are still limited by your maximum teleport distance and cannot take any other actions between each teleport."
+Faerie-Chimera Hybrid (Race),200,Must be chosen at character creation. Must choose Faerie or Chimera race,"An extremely rare condition in which a Chimera parent and a Faerie parent produces a child with Chimera traits. The odds are said to be less than 1%.
+
+If your main race is Chimera, you may choose a Fae subrace instead of a Chimera one. If your main race is Fae, you may choose a Chimera subrace instead of a Fae one.
+
+You do not get any of the base traits from the other race and keep the ones from your chosen main race. However, you do get the language from the other race (or a dialect of choosing a chimera subrace)
+
+If you pick High Fae as your subrace, you gain Fae Flash instead of Fae Flash II."
+Faerie Flash Master,100,Must be a Fae,"When using your Faerie Flash ability, you may spend X additional mana to increase your teleport distance by X times your movement speed."
+Fast Metabolism,150,,Once per arc you may eat food and gain the benefits even if you already had gotten the benefits from eating food that day.
+Fast Movement,200,Must be Centaur,Your base movement speed increases by 5ft.
+Fearless,200,,"Whenever you are afflicted by a Fear type condition, you may spend 1 RP or 1 AP to remove it."
+Fight and Flight,200,Must be a Chimera,"When using Fight or Flight, you no longer receive the drawback."
+Flesheater,100,Must be a Jiangshi,"When using Consume Enemy, you may consider that your food for the day and regain mana equal to a normal ration. You cannot gain this benefit if you already regained mana from food that day and using this benefit prevents you from regaining mana from food until you’ve rested."
+Flying Counter,200,Must be a Kitsune,"When using Fading Counter, you may move up to your movement speed instead of 5ft. This movement has Flight and still does not provoke attacks of opportunity."
+Four Paw Sprint,100,Must be a Catfolk,"When spending at least 3 AP of movement, your base movement speed is increased to 40ft instead of 25."
+Greatshield Training,100,You must be proficient with shields,You gain proficiency with Greatshields.
+Heavy Armor Training,100,"You must be proficient with Light, Medium armor",You gain proficiency with Heavy Armor.
+Hide Behind Ally,300,Must be a Pixie,"When occupying the same space as a conscious ally, you may choose to become untargetable to single target attacks. The ally must be willing to take the hits for you, though they may react to these attacks as normal. While occupying the same space as a conscious ally, any effect that triggers upon not being targeted by an enemy (such as Challenge) will not be triggered. Does not work against Attacks of Opportunity."
+Human-Chimera Hybrid (Race),200,Must be chosen at character creation. Must choose Human race,"While most unions of Human and Chimera parents result in the offspring being fully of Human or fully of Chimera, there are rare instances in which the Chimera traits are still present in a human offspring.
+
+Choose one Chimera Subrace and gain all of its features. You do not gain any of the Chimera base traits and instead have the Human ones, including Divine Providence. You do not get the 100 extra exp that humans normally get or human adaptability."
+Improved Demonic Divine Release,300,Must be a Demon,"When activating your divine release you may choose to reduce your max HP by 22. When you do, you do not pay any additional HP cost to activate it and the HP Upkeep is reduced to 0 while above 0 HP.
+
+When you fall below 0 HP, you pay the increased Upkeep cost as normal."
+In Sync,100,Must be a Youkai,"After you use Spiritual Sync, you may cancel the effect for 0 RP at any time. If you do, you regain HP or Mana like it is described in the ability.
+
+In addition, the maximum mana or HP you can spend on Spiritual Sync is doubled."
+Kit Expert,200,,You may reduce the Burden cost of a single kit in your inventory by 2.
+Language Training,100,,"You learn a language of your choice. Rare, dead or similar languages may be unavailable (GM’s discretion).
+
+You may take this breakthrough multiple times, picking a different language each time."
+Large Specimen,100,Must be a Nio,Your size becomes Large.
+Light Armor Training,25,,You gain proficiency with Light Armor and shields.
+Light Sleeper,75,,"When asleep, you may roll Perception rolls as if you were awake to be aware of danger approaching."
+Medium Armor Training,50,You must be proficient with Light Armor,You gain proficiency with Medium Armor.
+Mixed House,100,Must be a Demon,You choose another house to gain the benefit of.
+Mystic Eyes of Faerie Light,100,Must be a Fae,"Your Fae eyes have developed into the Eyes of Faerie Light.  You may purchase the Faerie Light Eyes class.
+
+In addition, you can make a Perception check at +10 bonus to determine if something is an illusion. You are not immune to these illusions however."
+Natural Immunity,100,Must be Ratfolk,"When you successfully resist the effect of a disease or poison (or are immune to the effect), you may choose to become afflicted anyway. You suffer no effects from a disease or poison you choose to accept this way. This poison or disease lasts the normal duration or until the end of the encounter, whichever is shorter."
+On the draw,100,,You gain +1 to your initiative.
+Organized Inventory,100,,Increases your in-combat burden capacity by 1.
+Organized Inventory II,200,Must have the Organized Inventory breakthrough,Your in-combat Burden capacity is increased by 1.
+Organized Inventory III,300,Must have the Organized Inventory II breakthrough,Your in-combat Burden capacity is increased by 1.
+Overrun,200,Must be a Centaur,"When using the Charge or Spear Charge ability your movement speed is increased by 5ft and if your attack made through the Charge ability does damage, it knocks the target prone."
+Panda Martial Arts,100,Must be Red Panda,"You can be in Panda stance at the same time as another stance without either stance ending.
+
+Other rules for stance breaking (such as entering 2 non-panda stances) still apply."
+Photosynthesis,100,Must be Dryad,"By spending at least an hour in the direct sunlight, you may gain the benefits of having eaten food and you do not need to eat or drink for the next 24 hours."
+Power Saving Mode,100,Must be an Ancient Marionette,"If you are at maximum mana during your meal, you only need to consume half the normal amount to be well fed."
+Powerful Ki,200,Must be an Oni,"When using Gravitational Ki, the range increases by 30ft. The push and pull distance increases by up to 10ft. In addition, you may spend 1 AP instead of 1 RP on it."
+Primary Stat Training,400,,"You gain a +1 bonus to Focus, Power, Agility or Toughness.
+
+This breakthrough can be selected multiple times. The effects stack. Each time you take this breakthrough the cost increases by 100, up to a maximum of 700."
+Racial Flight,300,"Must be Phoenix, Mothfolk or Lizardfolk race",You may use Flight.
+Rapid Flash,100,Must be a High Fae,Your Fae Flash gains the Rapid keyword.
+Rich Parents,300,Must be taken at character creation,You start the game with an additional 3000 Clim of funds.
+Secondary Stat Training,200,,"You gain a +1 bonus to Fitness, Cunning, Reason, Awareness or Presence.
+
+This breakthrough can be selected multiple times. The effects stack."
+Skill Training,25,,"You gain a single skill point or two expertise points to spend on a skill. Crafting skills cannot be selected with this training.
+
+You may select this breakthrough multiple times. Its effects can stack."
+Skilled Flier,100,Must have Flight racial ability or Racial Flight breakthrough,"When you are about to lose Height from taking damage due to your Flight ability, you may instead spend 3 Mana to negate losing height from the flight mechanic until the start of your next turn.
+
+Abilities that make you lose height not part of the Flight ability (such as downburst) may still knock you out of the air."
+Slow Starter,300,Must be taken at character creation,"You receive 200 less EXP at character creation to spend on classes and abilities. Every time you get EXP after character creation, you get twice as much. This lasts until you’ve received a total of 500 (1000 when doubled) exp."
+Speciality Weapon Training,100,,"You gain proficiency with a Speciality Weapon group.
+
+This breakthrough can be selected multiple times. You must select a different weapon group each time you select it."
+"Summon Contract: Fortuna, Lady Luck",0,"Must be a summoner, have visited the eidolon","Appearance: Fortuna appears as a beautiful lady wearing clothing of the highest quality. Her clothes change each time she appears, but she always carries with her a parasol designed like a roulette wheel.Desires: Fortuna desires to see gambling. To have people bet their all on impossible odds.Pact Cost: You can never naturally roll 20 again. Every 20 you roll is reduced to 19.Attunement Cost:NoneRe-Summon Cost: Roll a natural 20 (before the pact cost reduces it) on an attack, save or skill check with consequences for failure (GM’s decision).
+
+When you contract Fortuna, you are able to attune to it. While attuned, you gain access to the Draw Luck ability through your Channel Eidolon ability. You summon the Jack of Hearts for your Lesser Eidolon and Fortuna for your Eidolon (The stats for these are listed under monsters)."
+"Summon Contract: Ixilune, The Swarm",0,"Must be a summoner, have visited the eidolon","Appearance:Hot bug lady.Desires:Ixilune desires to consume everything.Pact Cost:You need to eat 1.5x as much food to be fed.Attunement Cost:NoneRe-Summon Cost:Must eat the flesh of a creature of the same (main) race.
+
+When you contract Ixilune, you are able to attune to it. While attuned, you gain access the Distracting Swarm ability through your Channel Eidolon ability. You summon the Devouring Swarm for your Lesser Eidolon and Ixilune for your Eidolon. (The stats for these are listed under monsters.)"
+"Summon Contract: Pipoltr, The Gardener",0,"Must be a summoner, have visited the eidolon","When you contract Pipoltr, you are able to attune to it. While attuned, you gain access the Vine Wall Cover ability through your Channel Eidolon ability. You summon the Rhinoceros Beetle for your Lesser Eidolon and Pipoltr for your Eidolon. (The stats for these are listed under monsters.)"
+Superior Escapist,100,Must be a Rabbitfolk,You may use your Escape Artist when Rooted to remove it in addition to grapples.
+Tengu Defensive Aura,100,Must be a Tengu,"Your resistance to astra corruption is increased by 1 (Your SC is treated as 500 higher when determining if you suffer from astra corruption). In addition, you do not suffer any negative effects when the astra level is raised artificially. (such as from Exousiai's)."
+The Unknown Paladin,200,,"Despite not being human, you fulfill the human requirement to become a Paladin. In addition, your Smite skill's damage type changes to one that represents your chosen Divine. The paladin holy weapon key ability also changes its damage type to the one that represents your chosen Divine."
+Touched by Death,200,Must be taken at character creation or after your HP has dropped below 0 in an encounter,"Near-death experiences sometimes leave people more sensitive to death itself, manifesting in what is called the Shinigami’s Eyes. You may purchase the Shinigami Eyes class.
+
+In addition, you may spend 1 AP to see the HP percentage and weak spots (if any) of all creatures for 1 turn."
+Universal Training,700,,"You gain +1 to any primary stat, +1 to any secondary stat and 5 skill points. You may put these skill points into any normal skill, except crafting and gathering skills.
+
+This breakthrough may be taken multiple times. The effects stack."
+Weapon Training,25,,"You gain proficiency with a weapon group. You may not select Speciality Weapons with this.
+
+This breakthrough can be selected multiple times. You must select a different weapon group each time you select it."
+Wide Circuits I,150,,Your maximum mana increases by 1.
+Wide Circuits II,175,Must have the Wide Circuits breakthrough,Your maximum Mana is increased by 1.
+Wide Circuits III,200,Must have the Wide Circuits II breakthrough,Your maximum Mana is increased by 1.

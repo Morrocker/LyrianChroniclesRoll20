@@ -163,6 +163,9 @@
 .charsheet .margin10 {
   margin: 10px;
 }
+.charsheet .push-to-end {
+  margin-top: auto;
+}
 /* OTHER END */
 
 .charsheet {
@@ -428,12 +431,23 @@
   width: 310px;
   gap: 5px;
 }
-
 .charsheet .core-right-column {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   width: 490px;
+  gap: 5px;
+}
+.charsheet .features-left-column {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 5px;
+}
+.charsheet .features-right-column {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  width: 400px;
   gap: 5px;
 }
 
@@ -778,6 +792,7 @@
   border-style: solid;
   border-width: 10px 10px;
   box-sizing: border-box;
+  min-height: 300px;
 }
 .charsheet .table-container .table-name {
   font-size: 12px;
@@ -792,6 +807,9 @@
   text-align: center;
   padding: 0px;
   width: 106%;
+}
+.charsheet .table-container .table-name.class-table-name{
+    width: 103.5%;
 }
 .charsheet .table-container .headers {
   display: flex;
@@ -996,7 +1014,7 @@
 
 /* CLASSES TABLE END */
 
-/* TEST3 */
+/* CREATE CLASSES FORM START */
 .charsheet .create-form-btn {
   width: 90px;
   height: 15px;
@@ -1093,7 +1111,8 @@
   border-color: #ff0000;
   color: #ff0000;
 }
-/* RELATED BUT NOT */
+/* CREATE CLASSES FORM END */
+
 .charsheet .delete-item-btn {
   width: 20px;
   height: 20px;
@@ -1110,7 +1129,7 @@
   display: flex;
   width: 20px;
   height: 20px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
   color: #717171;
@@ -1121,7 +1140,6 @@
   cursor: pointer;
   margin-top: 0px;
 }
-
 .charsheet .delete-item-btn input:hover + span {
   border-color: #b61037;
   color: #b61037;
@@ -1130,3 +1148,63 @@
   border-color: #ff0000;
   color: #ff0000;
 }
+
+/* BREAKTHROUGHS TABLE START */
+.charsheet .headers .breakthrough-name {
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .headers .breakthrough-cost {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .headers .breakthrough-requirements {
+  flex: 6;
+  text-align: center;
+}
+.charsheet .headers .breakthrough-delete {
+  flex: 1;
+  text-align: center;
+}
+.charsheet .breakthrough-row {
+  font-size: 10px;
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: #717171 1px solid;
+}
+.charsheet .breakthrough-row .breakthrough-name {
+  font-size: inherit;
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.charsheet .breakthrough-row .breakthrough-name button[type="roll"] {
+  font-size: inherit;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: -5px;
+  margin-right: -2px;
+  line-height: 0.1;
+  text-align: start;
+}
+.charsheet .breakthrough-row .breakthrough-cost {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.charsheet .breakthrough-row .breakthrough-requirements {
+  font-size: inherit;
+  flex: 6;
+  text-align: start;
+}
+.charsheet .breakthrough-row .breakthrough-delete {
+  flex: 1;
+  text-align: center;
+}
+.charsheet input:checked + .breakthrough-row {
+  display: flex;
+}
+/* BREAKTHROUGHS TABLE END */
