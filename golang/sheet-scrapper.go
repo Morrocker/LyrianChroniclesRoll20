@@ -59,7 +59,7 @@ func main() {
 
 	fmt.Fprintln(htmlFile, `<!-- All Clases Rows START -->`)
 	for _, class := range classes {
-		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" hidden />`, class.ID)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_cls_%s_show" hidden />`, class.ID)
 		fmt.Fprintln(htmlFile, `<div class="class-row">`)
 		fmt.Fprintf(htmlFile, `<div class="class-name">%s</div>`, class.Name)
 		fmt.Fprintf(htmlFile, `<div class="class-tier">%d</div>`, class.Tier)
@@ -80,7 +80,7 @@ func main() {
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `<div class="class-delete">`)
 		fmt.Fprintln(htmlFile, `<div class="delete-item-btn">`)
-		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" />`, class.ID)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_cls_%s_show" />`, class.ID)
 		fmt.Fprintln(htmlFile, `<span class="pseudo-button">X</span>`)
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `</div>`)
@@ -122,7 +122,7 @@ func main() {
 	var breakthroughs []Breakthrough
 
 	for _, row := range records2 {
-		cost, err := strconv.Atoi(row[2])
+		cost, err := strconv.Atoi(row[1])
 		if err != nil {
 			panic(err)
 		}
@@ -130,12 +130,17 @@ func main() {
 		id = strings.ReplaceAll(id, " ", "_")
 		id = strings.ToLower(id)
 
+		//if id starts with a number, prepend with x
+		if id[0] >= '0' && id[0] <= '9' {
+			id = "x" + id
+		}
+
 		b := Breakthrough{
 			ID:           id,
 			Name:         row[0],
 			Cost:         cost,
-			Requirements: row[3],
-			Description:  row[4],
+			Requirements: strings.ReplaceAll(row[2], `"`, "'"),
+			Description:  strings.ReplaceAll(row[3], `"`, "'"),
 		}
 		breakthroughs = append(breakthroughs, b)
 		fmt.Printf("id: %s, name: %s, cost: %d\n", b.ID, b.Name, cost)
@@ -147,8 +152,6 @@ func main() {
 		//
 
 		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" hidden />`, breakthrough.ID)
-		fmt.Fprintln(htmlFile, `<div class="breakthrough-row">`)
-		fmt.Fprintf(htmlFile, `<div class="breakthrough-name">%s</div>`, breakthrough.Name)
 		fmt.Fprintf(htmlFile, `<div class="breakthrough-row">
                     <div class="breakthrough-name">
                       <button
@@ -157,11 +160,11 @@ func main() {
                         value="&{template:default} {{name=@{name} ❖ Breakthrough: %s}}{{Cost=%d}} {{Requirements=%s}} {{ Description=%s}}"
                         tabindex="-1"
                       >
-                        Angelblooded
+                        %s
                       </button>
-                    </div>`, breakthrough.ID, breakthrough.Name, breakthrough.Cost, breakthrough.Requirements, breakthrough.Description)
+                    </div>`, breakthrough.ID, breakthrough.Name, breakthrough.Cost, breakthrough.Requirements, breakthrough.Description, breakthrough.Name)
 		fmt.Fprintf(htmlFile, `<div class="breakthrough-cost">%d</div>`, breakthrough.Cost)
-		fmt.Fprintln(htmlFile, `<div class="breakthrough-requirements">%s</div>`, breakthrough.Requirements)
+		fmt.Fprintf(htmlFile, `<div class="breakthrough-requirements">%s</div>`, breakthrough.Requirements)
 		fmt.Fprintln(htmlFile, `<div class="breakthrough-delete">`)
 		fmt.Fprintln(htmlFile, `<div class="delete-item-btn">`)
 		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" />`, breakthrough.ID)
@@ -175,6 +178,13 @@ func main() {
 	fmt.Fprintln(htmlFile, "<!-- All Breakthroughs Table List END -->")
 
 	fmt.Fprintln(htmlFile, "<!-- All Breakthroughs Picker List START -->")
+
+	fmt.Fprintln(htmlFile, `<option value="">--Select--</option>`)
+
+	for _, breakthrough := range breakthroughs {
+		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, breakthrough.ID, breakthrough.Name)
+	}
+
 	fmt.Fprintln(htmlFile, "<!-- All Breakthroughs Picker List END -->")
 
 	fmt.Fprintln(htmlFile, "<!-- SCRIPTS TO REPLACE START -->")
