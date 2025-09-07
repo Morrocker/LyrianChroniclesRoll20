@@ -81,7 +81,7 @@ func main() {
 		fmt.Fprintln(htmlFile, `<div class="class-delete">`)
 		fmt.Fprintln(htmlFile, `<div class="delete-item-btn">`)
 		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_cls_%s_show" />`, class.ID)
-		fmt.Fprintln(htmlFile, `<span class="pseudo-button">X</span>`)
+		fmt.Fprintln(htmlFile, `<span class="pseudo-button">✖</span>`)
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `</div>`)
@@ -96,6 +96,8 @@ func main() {
 		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, class.ID, class.Name)
 	}
 	fmt.Fprintln(htmlFile, "<!-- All Clases Picker List END -->")
+
+	// ============================= BREAKTHROUGHS =============================
 
 	f2, err := os.Open("breakthroughs.csv")
 	if err != nil {
@@ -168,7 +170,7 @@ func main() {
 		fmt.Fprintln(htmlFile, `<div class="breakthrough-delete">`)
 		fmt.Fprintln(htmlFile, `<div class="delete-item-btn">`)
 		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" />`, breakthrough.ID)
-		fmt.Fprintln(htmlFile, `<span class="pseudo-button">X</span>`)
+		fmt.Fprintln(htmlFile, `<span class="pseudo-button">✖</span>`)
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `</div>`)
@@ -186,6 +188,165 @@ func main() {
 	}
 
 	fmt.Fprintln(htmlFile, "<!-- All Breakthroughs Picker List END -->")
+
+	// ============================= BREAKTHROUGHS END =============================
+
+	// ============================= ABILITIES START =============================
+
+	f3, err := os.Open("abilities.csv")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	reader3 := csv.NewReader(f3)
+	records3, err := reader3.ReadAll()
+	if err != nil {
+		panic(err)
+	}
+
+	records3 = records3[1:] // Skip header row
+
+	type Ability struct {
+		ID           string
+		Name         string
+		Type         string
+		Keywords     string
+		Range        string
+		Description  string
+		Requirements string
+		Costs        string
+		OtherCosts   string
+		Benefits     string
+	}
+
+	var regularAbilities []Ability
+
+	for _, row := range records3 {
+		if row[2] == "crafting_ability" {
+			continue
+		}
+		ability := Ability{
+			ID:           row[0],
+			Name:         row[1],
+			Type:         row[2],
+			Keywords:     row[3],
+			Range:        row[4],
+			Description:  strings.ReplaceAll(row[5], `"`, "'"),
+			Requirements: strings.ReplaceAll(row[6], `"`, "'"),
+			Costs:        strings.ReplaceAll(row[7], `"`, "'"),
+			OtherCosts:   strings.ReplaceAll(row[8], `"`, "'"),
+			Benefits:     strings.ReplaceAll(row[9], `"`, "'"),
+		}
+		fmt.Printf("id: %s, name: %s, type: %s\n", ability.ID, ability.Name, ability.Type)
+
+		regularAbilities = append(regularAbilities, ability)
+	}
+
+	for _, ability := range regularAbilities {
+		fmt.Fprintf(htmlFile,`<input type="checkbox" name="attr_abil_%s_show" hidden />`, ability.ID)
+		fmt.Fprintln(htmlFile,`<div class="ability-container">`)
+		fmt.Fprintln(htmlFile,`<div class="ability-row">`)
+		fmt.Fprintf(htmlFile,`<div class="ability-name">%s</div>`,ability.Name)
+		fmt.Fprintf(htmlFile,`<div class="ability-range">%s</div>`,ability.Range)
+		fmt.Fprintf(htmlFile,`<div class="ability-costs">%s</div>`,ability.Costs)
+		fmt.Fprintln(htmlFile,`<div class="ability-delete flex-row">`)
+		fmt.Fprintln(htmlFile,`<div class="delete-item-btn thin">`)
+		fmt.Fprintf(htmlFile,`<input type="checkbox" name="attr_abil_%s_favorite"/>`, ability.ID)
+		fmt.Fprintln(htmlFile,`<span class="favorite">★</span></div>`)
+		fmt.Fprintln(htmlFile,`<div class="delete-item-btn thin">`)
+                          <input
+                            type="checkbox"
+                            name="attr_abil_zephyr_warder_show"
+                          /><span class="roll-die">⚂</span>
+                        </div>
+                        <div class="delete-item-btn thin">
+                          <input
+                            type="checkbox"
+                            name="attr_ID_details_show"
+                          /><span class="view-details">ℹ</span>
+                        </div>
+                        <div class="delete-item-btn thin">
+                          <input
+                            type="checkbox"
+                            name="attr_abil_abilityA_show"
+                          /><span class="pseudo-button">✖</span>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="checkbox" name="attr_ID_details_show" hidden />
+                    <div class="ability-details">
+                      <div class="detail-row">
+                        <div class="ability-label">Benefits:</div>
+                      </div>
+                      <div class="detail-row">
+                        <div class="ability-value">
+                          <ul>
+                            <li>
+                              You gain proficiency in 1 common weapon group. In
+                              addition, you gain proficiency in 1 common or
+                              specialized weapon groups.
+                            </li>
+                            <li>
+                              You gain proficiency in 1 armor category of your
+                              choosing. You may also pick the shield or
+                              greatshield.
+                            </li>
+                            <li>You may use Presence Concealment.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="checkbox" name="attr_ID_details_show" hidden />
+                    <div class="ability-details">
+                      <div class="detail-row">
+                        <div class="ability-label">Keywords:</div>
+                        <div class="ability-value">Shield, Spell</div>
+                      </div>
+                      <div class="detail-row">
+                        <div class="ability-label">Range:</div>
+                        <div class="ability-value">40ft</div>
+                      </div>
+                      <div class="detail-row">
+                        <div class="ability-label">Description:</div>
+                        <div class="ability-value">
+                          <div>
+                            You heal the target for an amount equal to half the
+                            temporary HP they have, then all temporary HP on
+                            them is removed. All enemies within 5ft of the
+                            target must make a save against your Potency or be
+                            pushed back 10ft.
+                          </div>
+                          <div>
+                            You may use 1 AP instead of 1 RP for this ability.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="detail-row">
+                        <div class="ability-label">Requirement:</div>
+                        <div class="ability-value">
+                          Target must have temporary HP applied by you.
+                        </div>
+                      </div>
+                      <div class="detail-row">
+                        <div class="ability-label">Costs:</div>
+                        <div class="ability-value">1 RP</div>
+                      </div>
+                    </div>
+	}
+
+	fmt.Fprintln(htmlFile, "<!-- All Abilities Picker List START -->")
+
+	fmt.Fprintln(htmlFile, `<option value="">--Select--</option>`)
+
+	for _, ability := range regularAbilities {
+		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, ability.ID, ability.Name)
+		fmt.Fprintln(htmlFile, "")
+	}
+
+	fmt.Fprintln(htmlFile, "<!-- All abilities Picker List END -->")
+
+	// ============================= ABILITIES END =============================
 
 	fmt.Fprintln(htmlFile, "<!-- SCRIPTS TO REPLACE START -->")
 
