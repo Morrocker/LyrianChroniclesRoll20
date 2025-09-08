@@ -154,6 +154,7 @@ func main() {
 		//
 
 		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" hidden />`, breakthrough.ID)
+		fmt.Fprintln(htmlFile, `<div class="breakthrough-container">`)
 		fmt.Fprintf(htmlFile, `<div class="breakthrough-row">
                     <div class="breakthrough-name">
                       <button
@@ -166,12 +167,38 @@ func main() {
                       </button>
                     </div>`, breakthrough.ID, breakthrough.Name, breakthrough.Cost, breakthrough.Requirements, breakthrough.Description, breakthrough.Name)
 		fmt.Fprintf(htmlFile, `<div class="breakthrough-cost">%d</div>`, breakthrough.Cost)
-		fmt.Fprintf(htmlFile, `<div class="breakthrough-requirements">%s</div>`, breakthrough.Requirements)
+		// fmt.Fprintf(htmlFile, `<div class="breakthrough-requirements">%s</div>`, breakthrough.Requirements)
 		fmt.Fprintln(htmlFile, `<div class="breakthrough-delete">`)
-		fmt.Fprintln(htmlFile, `<div class="delete-item-btn">`)
+		fmt.Fprintln(htmlFile, `<div class="delete-item-btn thin">`)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_details_show" />`, breakthrough.ID)
+		fmt.Fprintln(htmlFile, `<span class="view-details">ℹ</span>`)
+		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintln(htmlFile, `<div class="delete-item-btn thin">`)
 		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_show" />`, breakthrough.ID)
 		fmt.Fprintln(htmlFile, `<span class="pseudo-button">✖</span>`)
 		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_bt_%s_details_show" hidden />`, breakthrough.ID)
+		fmt.Fprintln(htmlFile, `<div class="ability-details">`)
+		fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+		fmt.Fprintln(htmlFile, `<div class="ability-label">XP Cost:</div>`)
+		fmt.Fprintf(htmlFile, `<div class="ability-value">%d</div>`, breakthrough.Cost)
+		fmt.Fprintln(htmlFile, `</div>`)
+		var req string = "--"
+		if breakthrough.Requirements != "" {
+			req = breakthrough.Requirements
+		}
+		fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+		fmt.Fprintln(htmlFile, `<div class="ability-label">Requirement:</div>`)
+		fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, req)
+		fmt.Fprintln(htmlFile, `</div>`)
+
+		fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+		fmt.Fprintln(htmlFile, `<div class="ability-label">Description:</div>`)
+		fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, breakthrough.Description)
+		fmt.Fprintln(htmlFile, `</div>`)
+
 		fmt.Fprintln(htmlFile, `</div>`)
 		fmt.Fprintln(htmlFile, `</div>`)
 
@@ -193,7 +220,7 @@ func main() {
 
 	// ============================= ABILITIES START =============================
 
-	f3, err := os.Open("abilities.csv")
+	f3, err := os.Open("abilities_processed.csv")
 	if err != nil {
 		panic(err)
 	}
@@ -218,6 +245,7 @@ func main() {
 		Costs        string
 		OtherCosts   string
 		Benefits     string
+		AtkTypes     string
 	}
 
 	var regularAbilities []Ability
@@ -236,104 +264,157 @@ func main() {
 			Requirements: strings.ReplaceAll(row[6], `"`, "'"),
 			Costs:        strings.ReplaceAll(row[7], `"`, "'"),
 			OtherCosts:   strings.ReplaceAll(row[8], `"`, "'"),
-			Benefits:     strings.ReplaceAll(row[9], `"`, "'"),
+			Benefits:     strings.ReplaceAll(row[12], `"`, "'"),
+			AtkTypes:     row[18],
 		}
 		fmt.Printf("id: %s, name: %s, type: %s\n", ability.ID, ability.Name, ability.Type)
 
 		regularAbilities = append(regularAbilities, ability)
 	}
 
-	for _, ability := range regularAbilities {
-		fmt.Fprintf(htmlFile,`<input type="checkbox" name="attr_abil_%s_show" hidden />`, ability.ID)
-		fmt.Fprintln(htmlFile,`<div class="ability-container">`)
-		fmt.Fprintln(htmlFile,`<div class="ability-row">`)
-		fmt.Fprintf(htmlFile,`<div class="ability-name">%s</div>`,ability.Name)
-		fmt.Fprintf(htmlFile,`<div class="ability-range">%s</div>`,ability.Range)
-		fmt.Fprintf(htmlFile,`<div class="ability-costs">%s</div>`,ability.Costs)
-		fmt.Fprintln(htmlFile,`<div class="ability-delete flex-row">`)
-		fmt.Fprintln(htmlFile,`<div class="delete-item-btn thin">`)
-		fmt.Fprintf(htmlFile,`<input type="checkbox" name="attr_abil_%s_favorite"/>`, ability.ID)
-		fmt.Fprintln(htmlFile,`<span class="favorite">★</span></div>`)
-		fmt.Fprintln(htmlFile,`<div class="delete-item-btn thin">`)
-                          <input
-                            type="checkbox"
-                            name="attr_abil_zephyr_warder_show"
-                          /><span class="roll-die">⚂</span>
-                        </div>
-                        <div class="delete-item-btn thin">
-                          <input
-                            type="checkbox"
-                            name="attr_ID_details_show"
-                          /><span class="view-details">ℹ</span>
-                        </div>
-                        <div class="delete-item-btn thin">
-                          <input
-                            type="checkbox"
-                            name="attr_abil_abilityA_show"
-                          /><span class="pseudo-button">✖</span>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="checkbox" name="attr_ID_details_show" hidden />
-                    <div class="ability-details">
-                      <div class="detail-row">
-                        <div class="ability-label">Benefits:</div>
-                      </div>
-                      <div class="detail-row">
-                        <div class="ability-value">
-                          <ul>
-                            <li>
-                              You gain proficiency in 1 common weapon group. In
-                              addition, you gain proficiency in 1 common or
-                              specialized weapon groups.
-                            </li>
-                            <li>
-                              You gain proficiency in 1 armor category of your
-                              choosing. You may also pick the shield or
-                              greatshield.
-                            </li>
-                            <li>You may use Presence Concealment.</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="checkbox" name="attr_ID_details_show" hidden />
-                    <div class="ability-details">
-                      <div class="detail-row">
-                        <div class="ability-label">Keywords:</div>
-                        <div class="ability-value">Shield, Spell</div>
-                      </div>
-                      <div class="detail-row">
-                        <div class="ability-label">Range:</div>
-                        <div class="ability-value">40ft</div>
-                      </div>
-                      <div class="detail-row">
-                        <div class="ability-label">Description:</div>
-                        <div class="ability-value">
-                          <div>
-                            You heal the target for an amount equal to half the
-                            temporary HP they have, then all temporary HP on
-                            them is removed. All enemies within 5ft of the
-                            target must make a save against your Potency or be
-                            pushed back 10ft.
-                          </div>
-                          <div>
-                            You may use 1 AP instead of 1 RP for this ability.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="detail-row">
-                        <div class="ability-label">Requirement:</div>
-                        <div class="ability-value">
-                          Target must have temporary HP applied by you.
-                        </div>
-                      </div>
-                      <div class="detail-row">
-                        <div class="ability-label">Costs:</div>
-                        <div class="ability-value">1 RP</div>
-                      </div>
-                    </div>
+	type AbilityAtkCount struct {
+		Name string
+		LAtk bool
+		MAtk bool
+		HAtk bool
 	}
+
+	fmt.Fprintln(htmlFile, "<!-- All Abilities List START -->")
+
+	for _, ability := range regularAbilities {
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_abil_%s_show" hidden />`, ability.ID)
+		fmt.Fprintln(htmlFile, `<div class="ability-container">`)
+		fmt.Fprintln(htmlFile, `<div class="ability-row">`)
+		fmt.Fprintln(htmlFile, `<div class="ability-name">`)
+		fmt.Fprintln(htmlFile, `<button type="action" name="act_post_ability_info"`)
+		fmt.Fprintf(htmlFile, `data-info-label="%s"`, ability.Name)
+		fmt.Fprintf(htmlFile, `data-roll-label="%s"`, ability.Name)
+		if ability.Type == "true_ability" {
+			fmt.Fprintf(htmlFile, `data-info-type="true"`)
+			fmt.Fprintf(htmlFile, `data-info-keywords="%s"`, ability.Keywords)
+			fmt.Fprintf(htmlFile, `data-info-range="%s"`, ability.Range)
+			fmt.Fprintf(htmlFile, `data-info-description="%s"`, ability.Description)
+			fmt.Fprintf(htmlFile, `data-info-requirement="%s"`, ability.Requirements)
+			fmt.Fprintf(htmlFile, `data-info-cost="%s"`, ability.Costs)
+		} else if ability.Type == "key_ability" {
+			fmt.Fprintf(htmlFile, `data-info-type="key"`)
+			fmt.Fprintf(htmlFile, `data-info-benefits="%s"`, ability.Benefits)
+		}
+		// Determine attack types
+		if strings.Contains(ability.AtkTypes, "Light / Heavy / Precise") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-choice="true"`)
+		} else if strings.Contains(ability.AtkTypes, "Light / Heavy") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-choice="true"`)
+		} else if strings.Contains(ability.AtkTypes, "Heavy / Precise") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-choice="true"`)
+		} else if strings.Contains(ability.AtkTypes, "Light + Heavy") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="false"`)
+		} else if strings.Contains(ability.AtkTypes, "Light + Precise") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="true"`)
+		} else if strings.Contains(ability.AtkTypes, "Heavy + Precise") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="true"`)
+		} else if strings.Contains(ability.AtkTypes, "Light") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="false"`)
+		} else if strings.Contains(ability.AtkTypes, "Heavy") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="true"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="false"`)
+		} else if strings.Contains(ability.AtkTypes, "Precise") {
+			fmt.Fprintln(htmlFile, `data-roll-light-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-heavy-atk="false"`)
+			fmt.Fprintln(htmlFile, `data-roll-precise-atk="true"`)
+		}
+		fmt.Fprintf(htmlFile, `tabindex="-1">%s</button>`, ability.Name)
+		fmt.Fprintln(htmlFile, `</div>`)
+		if ability.Range == "Melee Weapon Range" {
+			ability.Range = "MWR"
+		} else if ability.Range == "Ranged Weapon Range" {
+			ability.Range = "RWR"
+		}
+
+		fmt.Fprintf(htmlFile, `<div class="ability-range">%s</div>`, ability.Range)
+		fmt.Fprintf(htmlFile, `<div class="ability-costs">%s</div>`, ability.Costs)
+		fmt.Fprintln(htmlFile, `<div class="ability-delete flex-row">`)
+		fmt.Fprintln(htmlFile, `<div class="delete-item-btn thin">`)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_abil_%s_favorite"/>`, ability.ID)
+		fmt.Fprintln(htmlFile, `<span class="favorite">★</span></div>`)
+		fmt.Fprintln(htmlFile, `<div class="delete-item-btn thin">`)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_%s_details_show"/>`, ability.ID)
+		fmt.Fprintln(htmlFile, `<span class="view-details">ℹ</span></div>`)
+		fmt.Fprintln(htmlFile, `<div class="delete-item-btn thin">`)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_abil_%s_show"/>`, ability.ID)
+		fmt.Fprintln(htmlFile, `<span class="pseudo-button">✖</span></div>`)
+		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintf(htmlFile, `<input type="checkbox" name="attr_%s_details_show" hidden />`, ability.ID)
+		fmt.Fprintln(htmlFile, `<div class="ability-details">`)
+		if ability.Type == "key_ability" {
+			fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+			fmt.Fprintln(htmlFile, `<div class="ability-label">Benefits:</div>`)
+			fmt.Fprintln(htmlFile, `</div>`)
+			fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+			fmt.Fprintln(htmlFile, `<ul class="ability-value">`)
+			splitBenefits := strings.Split(ability.Benefits, ".,")
+			for _, benefit := range splitBenefits {
+				fmt.Fprintf(htmlFile, `<li>%s</li>`, benefit)
+
+			}
+			fmt.Fprintln(htmlFile, `</ul>`)
+			fmt.Fprintln(htmlFile, `</div>`)
+			// fmt.Fprintln(htmlFile, `<div class="ability-value">%s</div>`, ability.Benefits)
+		}
+		if ability.Type == "true_ability" {
+			if ability.Keywords != "" {
+				fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+				fmt.Fprintln(htmlFile, `<div class="ability-label">Keywords:</div>`)
+				fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, ability.Keywords)
+				fmt.Fprintln(htmlFile, `</div>`)
+			}
+			if ability.Range != "" {
+				fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+				fmt.Fprintln(htmlFile, `<div class="ability-label">Range:</div>`)
+				fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, ability.Range)
+				fmt.Fprintln(htmlFile, `</div>`)
+			}
+			fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+			fmt.Fprintln(htmlFile, `<div class="ability-label">Description:</div>`)
+			fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, ability.Description)
+			fmt.Fprintln(htmlFile, `</div>`)
+			if ability.Requirements != "" {
+				fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+				fmt.Fprintln(htmlFile, `<div class="ability-label">Requirement:</div>`)
+				fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, ability.Requirements)
+				fmt.Fprintln(htmlFile, `</div>`)
+			}
+			if ability.Costs != "" {
+				fmt.Fprintln(htmlFile, `<div class="detail-row">`)
+				fmt.Fprintln(htmlFile, `<div class="ability-label">Costs:</div>`)
+				fmt.Fprintf(htmlFile, `<div class="ability-value">%s</div>`, ability.Costs)
+				fmt.Fprintln(htmlFile, `</div>`)
+			}
+		}
+		fmt.Fprintln(htmlFile, `</div>`)
+		fmt.Fprintln(htmlFile, `</div>`)
+	}
+
+	fmt.Fprintln(htmlFile, "<!-- All Abilities List END -->")
 
 	fmt.Fprintln(htmlFile, "<!-- All Abilities Picker List START -->")
 
