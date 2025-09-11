@@ -1,9 +1,0 @@
-    on("change:toughness", function() {
-      getAttrs(["toughness","equipment_guard"], function(values) {
-        let maxhp = (parseInt(values.toughness, 10) || 0)*10 + 20;
-        let save = (parseInt(values.toughness, 10) || 0);
-        let guard = (parseInt(values.toughness, 10) || 0) + (parseInt(values.equipment_guard, 10) || 0);
-        let block = (parseInt(values.toughness, 10) || 0)*2 + (parseInt(values.equipment_block, 10) || 0);
-        setAttrs({ max_hp: maxhp, save_bonus: save, guard: guard, block: block });
-      });
-    });
