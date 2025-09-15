@@ -1,0 +1,15 @@
+<div class="sheet-lyrian-chronicles">
+  <div class="sheet-section-pc">
+    <fieldset class="repeating_example">
+      <input type="text" name="attr_example_text" />
+      <button type="action" name="act_do_something">Do Something</button>
+    </fieldset>
+    <script type="text/worker">
+      on("clicked:repeating_example:do_something", function(eventInfo) {
+          log("Button in repeating row clicked!");
+          log(eventInfo);
+          console.log("AAAA")
+      });
+    </script>
+  </div>
+</div>

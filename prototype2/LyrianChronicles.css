@@ -1,4 +1,8 @@
 /* General CSS for Lyrian Chronicles character sheet */
+.charsheet {
+  position: relative;
+  z-index: 1000; /* or any high value */
+}
 
 /* ROLL BUTTONS */
 .charsheet button[type="action"],
@@ -144,6 +148,9 @@
 }
 .charsheet .flex-1 {
   flex: 1;
+}
+.charsheet .flex-2 {
+  flex: 2;
 }
 .charsheet .column-reverse {
   flex-direction: column-reverse;
@@ -994,187 +1001,7 @@
 }
 /* INJURIES TABLE END*/
 
-/* CLASSES TABLE START */
-.charsheet .headers .class-name {
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-}
-.charsheet .headers .class-tier {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .headers .class-level {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .headers .class-xp {
-  flex: 3;
-  text-align: center;
-}
-.charsheet .headers .class-delete {
-  flex: 1;
-}
-.charsheet .class-row {
-  font-size: 10px;
-  display: none;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: #717171 1px solid;
-}
-.charsheet .class-row .class-name {
-  font-size: inherit;
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-  font-weight: bold;
-}
-.charsheet .class-row .class-tier {
-  font-size: inherit;
-  flex: 2;
-  text-align: center;
-}
-.charsheet .class-row .class-level {
-  font-size: inherit;
-  flex: 2;
-  text-align: center;
-}
-.charsheet .class-row .class-level select {
-  margin-bottom: 0;
-  border: none;
-  height: 19px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 10px;
-}
-.charsheet .class-row .class-xp {
-  font-size: inherit;
-  flex: 3;
-  text-align: center;
-  justify-content: center;
-}
-.charsheet .class-row .class-delete {
-  flex: 1;
-  text-align: center;
-}
-.charsheet .class-row .class-xp input {
-  border: 0;
-  background: transparent;
-  width: 100% !important;
-  text-align: center;
-  padding: 0;
-  color: black;
-  font-size: 10px;
-}
-.charsheet input:checked + .class-row {
-  display: flex;
-}
 
-/* CLASSES TABLE END */
-
-/* CREATE CLASSES FORM START */
-.charsheet .create-form-btn {
-  width: 90px;
-  height: 15px;
-}
-.charsheet .create-form-btn input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
-  width: 90px;
-  height: 15px;
-  z-index: 10;
-}
-.charsheet .create-form-btn span {
-  display: flex;
-  font-size: 10px;
-  width: 90px;
-  height: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #717171;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2px;
-  border: #8a8a8a 2px solid;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 0px;
-}
-
-.charsheet .create-form-btn input:hover + span {
-  border-color: #b61037;
-  color: #b61037;
-}
-.charsheet .create-form-btn input:active + span {
-  border-color: #ff0000;
-  color: #ff0000;
-}
-.charsheet .sheet-toggle + .toggable-form {
-  display: none;
-}
-.charsheet .sheet-toggle:checked + .toggable-form {
-  display: flex;
-}
-.charsheet input[type="checkbox"]:checked + .create-form-btn {
-  display: none;
-}
-.charsheet .toggable-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 5px;
-  border: #717171 1px solid;
-  border-radius: 5px;
-  align-items: center;
-}
-.charsheet .toggable-form .class-label {
-  font-size: 11px;
-  font-weight: bold;
-  color: #717171;
-  text-transform: uppercase;
-  text-align: center;
-  justify-content: center;
-  flex: 1;
-}
-.charsheet .toggable-form .class-select {
-  flex: 2;
-}
-.charsheet .toggable-form .form-btns {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 5px;
-  justify-content: center;
-  /* align-items: center; */
-}
-.charsheet .toggable-form .form-btns button {
-  width: 90px;
-  height: 15px;
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #717171;
-  border: #8a8a8a 2px solid;
-  border-radius: 4px;
-  background: white;
-  cursor: pointer;
-}
-.charsheet .toggable-form .form-btns button:hover {
-  border-color: #b61037;
-  color: #b61037;
-}
-.charsheet .toggable-form .form-btns button:active {
-  border-color: #ff0000;
-  color: #ff0000;
-}
-.charsheet .toggable-form .form-btns button[type="action"]:active {
-  border-color: #ff0000;
-  color: #ff0000;
-}
-/* CREATE CLASSES FORM END */
 
 .charsheet .delete-item-btn {
   width: 20px;
@@ -1228,191 +1055,189 @@
   color: #ff0000;
 }
 
-/* BREAKTHROUGHS TABLE START */
-.charsheet .headers .breakthrough-name {
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-}
-.charsheet .headers .breakthrough-cost {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .headers .breakthrough-requirements {
-  flex: 6;
-  text-align: center;
-}
-.charsheet .headers .breakthrough-delete {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  justify-content: end;
-}
-.charsheet input:checked + .breakthrough-container {
-  display: flex;
-}
-.charsheet .breakthrough-container {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: #717171 1px solid;
-}
-.charsheet .breakthrough-row {
-  font-size: 10px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.charsheet .breakthrough-row .breakthrough-name {
-  font-size: inherit;
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-  font-weight: bold;
-}
-.charsheet .breakthrough-row .breakthrough-name button[type="action"],
-.charsheet .breakthrough-row .breakthrough-name button[type="roll"] {
-  font-size: inherit;
-  font-weight: bold;
-  text-transform: capitalize;
-  margin-left: -5px;
-  margin-right: -2px;
-  text-align: start;
-  line-height: 1;
-  max-width: 190px;
-  white-space: normal;
-  word-break: break-word;
-}
-.charsheet .breakthrough-row .breakthrough-cost {
-  font-size: inherit;
-  flex: 2;
-  text-align: center;
-}
-.charsheet .breakthrough-row .breakthrough-requirements {
-  font-size: inherit;
-  flex: 6;
-  text-align: start;
-}
-.charsheet .breakthrough-row .breakthrough-delete {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  justify-content: end;
-}
-.charsheet .breakthrough-row .breakthrough-delete .view-details {
-  display: inline-block;
-  font-size: 13px;
-  margin-bottom: 1px;
-  vertical-align: -1px;
-}
-.charsheet input:checked + .breakthrough-row {
-  display: flex;
-}
-/* BREAKTHROUGHS TABLE END */
 
-/* ABILITIES TABLE START*/
-.charsheet .table-container.abilities {
-  min-height: 635px;
-}
-.charsheet .table-container.favorites {
-  flex: auto;
-}
-.charsheet .table-container.favorites .ability-row button[type="action"] {
-  text-align: center;
-}
-.charsheet .headers .ability-name {
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-}
-.charsheet .headers .ability-range {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .headers .ability-costs {
-  flex: 3;
-  text-align: center;
-}
-.charsheet .headers .ability-delete {
-  flex: 2;
-  text-align: center;
-}
-.charsheet input:checked + .ability-container {
+
+/* =========================================================================== */
+
+/* GENERAL REPEATING TABLES STYLES START */
+.charsheet .table-container .table-body{
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex:1;
 }
-.charsheet .ability-container {
-  display: none;
+.charsheet .table-container .item-container {
+  display: flex;
   flex-direction: column;
   width: 100%;
   border-bottom: #717171 1px solid;
+  /* margin-bottom: 5px; */
 }
-.charsheet .ability-row {
-  font-size: 10px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.charsheet .ability-row {
-  font-size: 10px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.charsheet .ability-row .ability-name {
-  font-size: inherit;
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
+.charsheet .table-container .table-name2 {
+  font-size: 12px;
   font-weight: bold;
+  text-transform: uppercase;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  color: #717171;
+  border-bottom: #202020 2px solid;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
 }
-.charsheet .ability-row .ability-name button[type="action"],
-.charsheet .ability-row .ability-name button[type="roll"] {
-  font-size: inherit;
+.charsheet .table-container .headers-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: #717171 1px solid;
+}
+.charsheet .table-container .headers-container .header2{
+  font-size: 10px;
+}
+.charsheet .table-container .row-container{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+.charsheet .table-container input[type="checkbox"]:checked + .row-container {
+  display: flex;
+}
+.charsheet .table-container .table-row{
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.charsheet .table-container .table-row  .name-button{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 20px;
+  width: 100%;
+}
+.charsheet .table-container .table-row  .name-button button[type="action"]{
+  opacity: 100;
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  min-height: 20px;
+  z-index: 10;
+}
+.charsheet .table-container .table-row  .name-button span{
+  display: flex;
+  font-size: 10px;
+  width: 100%;
+  min-height: 20px;
+  width: 200px;
   font-weight: bold;
   text-transform: capitalize;
-  margin-left: -5px;
-  margin-right: -2px;
+  color: #202020;
   text-align: start;
-  line-height: 1;
-  max-width: 190px;
-  white-space: normal;
-  word-break: break-word;
+  align-items: center;
+  justify-content: start;
+  padding-top: 2px;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+  box-sizing: border-box;
 }
-.charsheet .ability-row .ability-range {
-  font-size: inherit;
-  flex: 2;
+.charsheet .table-container .table-row  .name-button button:hover + span {
+  color: #b61037;
+}
+.charsheet .table-container .table-row  .name-button button:active + span {
+  color: #ff0000;
+}
+
+.charsheet .table-container .table-row  select{
+  margin-bottom: 0;
+  border: none;
+  height: 20px;
+  padding: 0;
+  width: 100%;
   text-align: center;
+  font-size: 11px;
 }
-.charsheet .ability-row .ability-costs {
-  font-size: inherit;
-  flex: 3;
-  text-align: center;
-}
-.charsheet .ability-row .ability-delete {
-  flex: 2;
-  justify-content: end;
-}
-.charsheet
-  .ability-row
-  .ability-delete
-  input[type="checkbox"]:checked
-  + .favorite {
-  color: gold;
-}
-.charsheet .ability-row .ability-delete .view-details {
+.charsheet .table-container .table-row .actions .view-details{
   display: inline-block;
   font-size: 13px;
   margin-bottom: 1px;
-  vertical-align: -1px;
+  line-height: 0.7;
+  cursor: pointer;
 }
-.charsheet .ability-row .ability-delete .roll-die {
+.charsheet .table-container .table-row .actions .item {
+  width: 20px;
+  height: 20px;
+}
+.charsheet .table-container .table-row .actions .item.thin {
+  width: 13px;
+}
+.charsheet .table-container .table-row .actions .item input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+.charsheet .table-container .table-row .actions .item.thin input[type="checkbox"] {
+  width: 13px;
+  margin-left: 0px;
+}
+.charsheet .table-container .table-row .actions .item span {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #9e9e9e;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+}
+.charsheet .table-container .table-row .actions .item.thin span {
+  width: 13px;
+}
+.charsheet .table-container .table-row .actions .item input:hover + span {
+  border-color: #b61037;
+  color: #b61037;
+}
+.charsheet .table-container .table-row .actions .item input:active + span {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+.charsheet .table-container .table-row .actions .item .favorite{
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.charsheet .table-container .table-row .actions .item input:checked + .favorite{
+  color: rgb(255, 225, 0);
+}
+.charsheet .table-container .table-row .actions .item .info{
   display: inline-block;
   font-size: 15px;
-  vertical-align: -2px;
+  cursor: pointer;
 }
-.charsheet .ability-details {
+.charsheet .table-container .table-row .actions .item input:checked + .info{
+  color: blue;
+}
+.charsheet .table-container .table-row .actions .item .edit{
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.charsheet .table-container .table-row .row-details{
   display: none;
-  /* display: flex; */
+  gap: 5px;
+  width: 100%;
   flex-direction: column;
   font-size: 9px;
   text-align: justify;
@@ -1426,75 +1251,69 @@
   margin-bottom: 5px;
   gap: 8px;
 }
-.charsheet .detail-row {
+.charsheet .table-container .table-row .row-details .details-item{
   display: flex;
   flex-direction: row;
+  width: 100%;
+  align-items: center;
 }
-.charsheet .detail-row .ability-label {
-  flex: 3;
+.charsheet .table-container .table-row .row-details .details-label{
+  flex: 1;
+  font-size: 10px;
+  font-weight: bold;
+}
+.charsheet .table-container .table-row .row-details span{
+  flex: 1;
+  font-size: 10px;
+}
+
+.charsheet .table-container .details-container {
+    display: none;
+  flex-direction: column;
+  font-size: 10px;
+  text-align: justify;
+  padding: 5px;
+  background-color: #f3f3f3;
+  border: #717171 1px solid;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+.charsheet .table-container .details-container .details-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.charsheet .table-container .details-container .details-row .details-label {
+  flex: 1;
   font-weight: bold;
   text-transform: capitalize;
 }
-.charsheet .detail-row .ability-value {
-  flex: 8;
+.charsheet .table-container .details-container .details-row .details-value {
+  flex: 3;
   display: flex;
   flex-direction: column;
   gap: 5px;
   line-height: 1.5;
 }
-.charsheet input:checked + .view-details {
-  color: blue;
+.charsheet .table-container .details-container .details-row .details-label2 {
+  flex: 1;
+  font-weight: bold;
+  text-transform: capitalize;
 }
-.charsheet input:checked + .ability-details {
+.charsheet .table-container .details-container .details-row .details-value2 {
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  gap: 5px;
+  line-height: 1.5;
 }
-/* ABILITIES TABLE END*/
 
-/* INVENTORY TABLE */
-.charsheet .headers .inventory-name {
-  flex: 8;
-  text-align: left;
-  padding-left: 5px;
-}
-.charsheet .headers .inventory-burden {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .headers .inventory-status {
-  flex: 3;
-  text-align: center;
-}
-.charsheet .headers .inventory-slot {
-  flex: 3;
-  text-align: center;
-}
-.charsheet .headers .inventory-delete {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .table-container .classes-list,
-.charsheet .table-container .weapons-list,
-.charsheet .table-container .armors-list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.charsheet .class-container,
-.charsheet .weapon-container,
-.charsheet .armor-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: #717171 1px solid;
-  margin-bottom: 5px;
-}
 .charsheet .form-container{
   display: grid;
-  /* grid-template-areas:
-    "dropdown dropdown dropdown"
-    "name name tier"
-    "close close close"; */
   min-height: 100px;
   padding: 10px;
   padding-top: 5px;
@@ -1505,240 +1324,11 @@
   margin: 5px;
   gap: 5px;
 }
-.charsheet .form-container.armor {
-  /* display: grid; */
-  grid-template-areas:
-    "armor-name armor-name armor-name armor-burden"
-    "armor-guard armor-block armor-evasion armor-dodge"
-    "armor-description armor-description armor-description armor-description"
-    ". armor-close armor-close .";
-  /* width: 100%; */
-  /* min-height: 100px;
-  padding: 10px;
-  border: #717171 1px solid;
-  border-radius: 5px;
-  align-items: center;
-  margin: 5px;
-  gap: 5px; */
-}
-.charsheet input[type="checkbox"]:checked + .armor-form-container {
+.charsheet .table-container input[type="checkbox"]:checked + .form-container {
   display: none;
 }
-.charsheet .armor-form-container .armor-name {
-  display: flex;
-  flex-direction: column;
-  grid-area: armor-name;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-burden {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-burden;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-guard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-guard;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-block;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-evasion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-evasion;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-dodge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-dodge;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-description;
-  width: 100%;
-}
-.charsheet .armor-form-container .armor-close {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-close;
-  height: 20px;
-  width: 100%;
-}
-.charsheet .weapon-form-container .weapon-close {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-close;
-  height: 20px;
-  width: 100%;
-}
-.charsheet .class-form-container .class-close {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: close;
-  height: 20px;
-  width: 100%;
-}
-.charsheet .class-form-container .class-close .create-form-btn,
-.charsheet .weapon-form-container .weapon-close .create-form-btn,
-.charsheet .armor-form-container .armor-close .create-form-btn {
-  width: 70px;
-  height: 20px;
-}
-.charsheet .class-form-container .class-close input[type="checkbox"],
-.charsheet .weapon-form-container .weapon-close input[type="checkbox"],
-.charsheet .armor-form-container .armor-close input[type="checkbox"] {
-  width: 70px !important;
-  height: 20px;
-}
-.charsheet .class-form-container .class-close span,
-.charsheet .weapon-form-container .weapon-close span,
-.charsheet .armor-form-container .armor-close span {
-  font-size: 10px;
-  width: 70px;
-  height: 20px;
-  box-sizing: border-box;
-}
-.charsheet .form-container.weapon{
-  /* display: grid; */
-  grid-template-areas:
-    "weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-burden  weapon-burden"
-    "weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-focus weapon-focus weapon-power weapon-power"
-    "weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description "
-    "weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close";
-  /* width: 100%; */
-  /* min-height: 100px;
-  padding: 10px;
-  border: #717171 1px solid;
-  border-radius: 5px;
-  align-items: center;
-  margin: 5px;
-  gap: 5px; */
-}
-.charsheet .weapon-form-container .weapon-name {
-  display: flex;
-  flex-direction: column;
-  grid-area: weapon-name;
-  width: 100%;
-}
-.charsheet .weapon-form-container .weapon-burden {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-burden;
-  width: 100%;
-}
-.charsheet .weapon-form-container .weapon-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-type;
-  width: 100%;
-}
-.charsheet .weapon-form-container .weapon-type select{
-  margin-bottom: 0;
-  border: none;
-  border-bottom: #cccccc 1px solid;
-  border-radius: 0%;
-  height: 15px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-}
-.charsheet .weapon-form-container .weapon-focus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-focus;
-  width: 100%;
-}
-.charsheet .weapon-form-container .weapon-power {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-power;
-  width: 100%;
-}
-.charsheet .weapon-form-container .weapon-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-description;
-  width: 100%;
-}
-
-.charsheet .form-container.class{
-  /* display: grid; */
-  grid-template-areas:
-    "dropdown dropdown dropdown"
-    "name name tier"
-    "close close close";
-  /* min-height: 100px;
-  padding: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border: #717171 1px solid;
-  border-radius: 5px;
-  align-items: center;
-  margin: 5px;
-  gap: 5px; */
-}
-.charsheet input[type="checkbox"]:checked + .class-form-container {
-  display: none;
-}
-.charsheet .class-form-container .class-name {
-  display: flex;
-  flex-direction: column;
-  grid-area: name;
-  width: 100%;
-}
-.charsheet .class-form-container .class-tier {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: tier;
-  width: 100%;
-}
-.charsheet .class-form-container .class-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: dropdown;
-  width: 100%;
-}
-.charsheet .class-form-container .class-type select{
-  margin-bottom: 0;
-  border: none;
-  border-bottom: #cccccc 1px solid;
-  border-radius: 0%;
-  height: 15px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-}
-
-.charsheet .class-form-container input,
-.charsheet .weapon-form-container input,
-.charsheet .armor-form-container input{
+.charsheet .form-container input[type="number"],
+.charsheet .form-container input[type="text"]{
   margin-bottom: 0;
   border-left: 0;
   border-right: 0;
@@ -1747,20 +1337,13 @@
   border-radius: 0;
   height: 15px;
   padding: 0;
-  width: 50px !important;
+  width: 100%;
   border-color: #cccccc;
   background-color: white;
   text-align: center;
   font-size: 12px;
 }
-.charsheet .class-form-container .class-name input,
-.charsheet .weapon-form-container .weapon-name input,
-.charsheet .armor-form-container .armor-name input{
-  font-size: 13px;
-  width:100% !important;
-}
-.charsheet .weapon-form-container .block-textarea,
-.charsheet .armor-form-container .block-textarea {
+.charsheet .form-container .block-textarea {
   width: 100%;
   min-height: 48px;
   height: 48px;
@@ -1772,9 +1355,7 @@
   box-sizing: border-box;
   font-size: 12px;
 }
-.charsheet .class-form-container label,
-.charsheet .weapon-form-container label,
-.charsheet .armor-form-container label{
+.charsheet .form-container label{
   font-size: 9px;
   text-transform: uppercase;
   font-weight: bold;
@@ -1783,156 +1364,74 @@
   padding: 0px;
   text-align: center;
 }
-
-.charsheet .class-row,
-.charsheet .weapon-row,
-.charsheet .armor-row {
-  font-size: 10px;
-  display: none;
-  flex-direction: row;
-  width: 100%;
-}
-.charsheet input[type="checkbox"]:checked + .class-row,
-.charsheet input[type="checkbox"]:checked + .weapon-row,
-.charsheet input[type="checkbox"]:checked + .armor-row {
-  display: flex;
-}
-.charsheet .class-row .class-name,
-.charsheet .weapon-row .equipment-name,
-.charsheet .armor-row .equipment-name {
-  font-size: 10px;
-  flex: 8;
-  text-align: left;
-  padding-left: 5px;
-  font-weight: bold;
-  cursor: default;
-}
-.charsheet .weapon-row .equipment-burden,
-.charsheet .armor-row .equipment-burden {
-  flex: 2;
-  text-align: center;
-  cursor: default;
-}
-.charsheet .weapon-row .weapon-status,
-.charsheet .armor-row .armor-status{
-  flex:3;
+.charsheet .form-container .picker select{
   margin-bottom: 0;
   border: none;
-  height: 19px;
+  border-bottom: #cccccc 1px solid;
+  border-radius: 0%;
+  height: 15px;
   padding: 0;
   width: 100%;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
 }
-.charsheet .class-row  select{
-  margin-bottom: 0;
-  border: none;
-  height: 20px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 11px;
-}
-.charsheet .class-row .class-actions,
-.charsheet .weapon-row .weapon-actions,
-.charsheet .armor-row .armor-actions{
-  flex: 2;
+.charsheet .form-container .custom-enabler:checked ~ .custom{
   display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 5px;
-}
-.charsheet .weapon-row .weapon-actions .view-details,
-.charsheet .armor-row .armor-actions .view-details {
-  display: inline-block;
-  font-size: 13px;
-  margin-bottom: 1px;
-  line-height: 0.7;
-  cursor: pointer;
-}
-.charsheet .class-row .class-actions .edit-item,
-.charsheet .weapon-row .weapon-actions .edit-item,
-.charsheet .armor-row .armor-actions .edit-item {
-  display: inline-block;
-  font-size: 15px;
-  vertical-align: -2px;
-  cursor: pointer;
 }
 
-/* .charsheet .armor-row .ability-value{
-  flex-direction: row;
-} */
 
-/* INVENTORY TABLE END */
-
-.charsheet input:checked + .weapon-details,
-.charsheet input:checked + .armor-details {
-  display: grid;
-}
-.charsheet .weapon-details,
-.charsheet .armor-details{
-  display: none;
-  grid-template-areas:
-    "armor-burden ."
-    "armor-guard armor-block"
-    "armor-evasion armor-initiative"
-    "armor-description armor-description";
-  gap: 5px;
-  width: 100%;
+.charsheet .form-container .form-close{
+  display: flex;
   flex-direction: column;
-  font-size: 9px;
-  text-align: justify;
-  padding: 5px;
-  background-color: #f3f3f3;
-  border: #717171 1px solid;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  gap: 8px;
-}
-.charsheet .weapon-details .details-item,
-.charsheet .armor-details .details-item{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
   align-items: center;
+  height: 20px;
+  width: 100%;
+  grid-area: close;
 }
-.charsheet .weapon-details .details-label,
-.charsheet .armor-details .details-label{
-  flex: 1;
+.charsheet .form-container .form-close input[type="checkbox"] {
+  opacity: 0;
+  box-sizing: border-box;
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  z-index: 10;
+}
+.charsheet .form-container .form-close span {
+  display: flex;
   font-size: 10px;
+  width: 90px;
+  height: 20px;
   font-weight: bold;
+  text-transform: uppercase;
+  color: #717171;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  border: #8a8a8a 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0px;
+  box-sizing: border-box;
 }
-.charsheet .weapon-details span,
-.charsheet .armor-details span{
-  flex: 1;
-  font-size: 10px;
+.charsheet .form-container .form-close input:hover + span {
+  border-color: #b61037;
+  color: #b61037;
 }
-.charsheet .armor-details .burden{
-  grid-area: armor-burden;
-}
-.charsheet .armor-details .evasion{
-  grid-area: armor-evasion;
-}
-.charsheet .armor-details .initiative{
-  grid-area: armor-initiative;
-}
-.charsheet .armor-details .guard{
-  grid-area: armor-guard;
-}
-.charsheet .armor-details .block{
-  grid-area: armor-block;
-}
-.charsheet .armor-details .description{
-  grid-area: armor-description;
-}
-.charsheet .armor-details .description span{
-  flex:3
+.charsheet .form-container .form-close input:active + span {
+  border-color: #ff0000;
+  color: #ff0000;
 }
 
-
+/* THIS IS TO HANDLE THE AUTO GENERATED REPEATING TABLE CONTROLS */
+.charsheet .table-container .repcontrol {
+  margin-top: auto;
+}
+.charsheet .table-container .repcontrol_del{
+    z-index: 100;
+  position: relative;
+  pointer-events: auto;
+}
 .charsheet .table-container .repcontrol_add,
 .charsheet .table-container .repcontrol_edit {
   font-size: 10px;
@@ -1963,6 +1462,851 @@
   outline: none;
   box-shadow: none;
 }
-.charsheet .table-container .repcontrol {
-  margin-top: auto;
+/* GENERAL REPEATING TABLES STYLES END */
+
+/* =========================================================================== */
+
+/* CLASSES REVAMPED STYLES START */
+
+.charsheet .table-container .headers-container .header2.name {
+  flex: 6;
+  text-align: left;
+  padding-left: 5px;
 }
+.charsheet .table-container .headers-container .header2.tier {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.level {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.xp {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.actions {
+  flex: 1;
+  text-align: center;
+}
+
+.charsheet .table-container .table-row .name{
+  font-size: 10px;
+  flex: 8;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row .tier {
+  flex: 2;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .level{
+  flex:3;
+
+}
+.charsheet .table-container .table-row .xp {
+  flex: 3;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .actions{
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+.charsheet .table-container .form-container.class-grid{
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "close close close close";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.charsheet .table-container .custom-enabler:checked ~ .class-grid {
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "name name name tier"
+    "close close close close";
+}
+.charsheet .form-container .name {
+  display: none;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container .tier {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: tier;
+  width: 100%;
+}
+.charsheet .form-container .picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: dropdown;
+  width: 100%;
+}
+/* CLASSES REVAMPED STYLES END */
+
+/* =========================================================================== */
+
+/* BREAKTHROUGH REVAMPED STYLES START */
+
+.charsheet .table-container .headers-container .header2.name2 {
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .table-container .headers-container .header2.xp2 {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.actions2 {
+  flex: 2;
+  text-align: center;
+}
+
+.charsheet .table-container .table-row .name2{
+  font-size: 10px;
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row .xp2 {
+  flex: 3;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .actions2{
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+.charsheet .table-container .form-container.breakthrough-grid{
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "close close close close";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.charsheet .table-container .custom-enabler:checked ~ .breakthrough-grid {
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "name name name xp"
+    "requirements requirements requirements requirements"
+    "description description description description"
+    "close close close close";
+}
+.charsheet .form-container .picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: dropdown;
+  width: 100%;
+}
+.charsheet .form-container .name {
+  display: none;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container .xp {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: xp;
+  width: 100%;
+}
+.charsheet .form-container .requirements {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: requirements;
+  width: 100%;
+}
+.charsheet .form-container .description {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: description;
+  width: 100%;
+}
+.charsheet .table-container input:checked + .details-container.breakthrough {
+  display: flex;
+}
+
+
+/* BREAKTHROUGH REVAMPED STYLES END */
+
+
+/* ABILITIES REVAMPED STYLES START */
+
+.charsheet .table-container.abilities {
+  min-height: 635px;
+}
+.charsheet .table-container .headers-container .header2.name3 {
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .table-container .headers-container .header2.range3 {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.cost3 {
+  flex: 4;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.actions3 {
+  flex: 3;
+  text-align: center;
+}
+
+.charsheet .table-container .table-row .name3{
+  font-size: 10px;
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row  .name-button.name3 button{
+  width: 150px;
+}
+.charsheet .table-container .table-row  .name-button.name3 span{
+  width: 150px;
+}
+.charsheet .table-container .table-row .range3 {
+  flex: 3;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .range3 span{
+    white-space: nowrap;      /* Prevents wrapping */
+  overflow: hidden;         /* Hides overflow */
+  text-overflow: ellipsis;  /* Shows "..." if text is cut off */
+  display: inline-block;    /* Needed for width to apply */
+  max-width: 55px;
+  vertical-align: middle;
+  height: 100%;
+}
+.charsheet .table-container .table-row .cost3 {
+  flex: 4;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .actions3{
+  flex: 3;
+}
+
+.charsheet .table-container input:checked + input:checked + .details-container.ability {
+  display: flex;
+}
+
+.charsheet .table-container .form-container.ability-grid{
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "rolls rolls rolls rolls"
+    "close close close close";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:10px;
+}
+.charsheet .table-container .custom-enabler:checked ~ .ability-grid {
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "name name name atype"
+    "keywords keywords range costs"
+    "requirements requirements requirements requirements"
+    "description description description description"
+    "rolls rolls rolls rolls"
+    "close close close close";
+}
+.charsheet .form-container .picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: dropdown;
+  width: 100%;
+}
+.charsheet .form-container .name {
+  display: none;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container .picker.atype {
+  display: none;
+  grid-area: atype;
+  width: 100%;
+}
+.charsheet .form-container input:checked + .picker.atype {
+  display: flex;
+}
+.charsheet .form-container .block-textarea.requirements-ba {
+  min-height: 25px;
+  height: 25px;
+}
+.charsheet .form-container .range {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: range;
+  width: 100%;
+}
+.charsheet .form-container .keywords {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: keywords;
+  width: 100%;
+}
+.charsheet .form-container .costs {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: costs;
+  width: 100%;
+}
+.charsheet .form-container .requirements {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: requirements;
+  width: 100%;
+}
+.charsheet .form-container .description {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: description;
+  width: 100%;
+}
+.charsheet .form-container .picker.rolls {
+  display: flex;
+  grid-area: rolls;
+  width: 100%;
+  flex-direction: column;
+}
+.charsheet .form-container .custom-macro {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 5px;
+}
+.charsheet .form-container input:checked + .custom-macro {
+  display: flex;
+}
+.charsheet .form-container .custom-macro .block-textarea {
+  font-size: 10px;
+  margin:0px;
+  min-height: 60px;
+  height: 60px;
+}
+
+
+/* ABILITIES REVAMPED STYLES END */
+
+
+/* FAVORITE ABILITIES REVAMPED STYLES START */
+.charsheet .table-container.favorite-abilities{
+  height: 100%;
+}
+.charsheet .table-container.favorite-abilities input:checked + .item-container{
+  display: flex;
+}
+.charsheet .table-container.favorite-abilities input:checked + .item-container .row-container{
+  display: flex;
+}
+.charsheet .table-container.favorite-abilities .item-container{
+  display: none;
+}
+
+.charsheet .table-container.favorite-abilities .table-row  .name-button.name3 button{
+  width: 192px;
+}
+.charsheet .table-container.favorite-abilities .table-row  .name-button.name3 span{
+  width: 192px;
+  text-align: center;
+  justify-content: center;
+}
+
+.charsheet .table-container.favorite-abilities .repcontrol{
+  display: none;
+}
+
+
+/* FAVORITE ABILITIES REVAMPED STYLES END */
+
+
+/* ARMORS REVAMPED STYLES START  */
+
+.charsheet .table-container .headers-container .header2.name4 {
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .table-container .headers-container .header2.burden4 {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.status4 {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.actions4 {
+  flex: 2;
+  text-align: center;
+}
+
+.charsheet .table-container .table-row .name4{
+  font-size: 10px;
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row .burden4 {
+  flex: 3;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .status4 {
+  flex: 3;
+  text-align: center;
+  cursor: default;
+}
+
+
+.charsheet .table-container .form-container.armor-grid{
+  grid-template-areas:
+    "name name name status status"
+    "burden guard block evasion initiative"
+    "description description description description description"
+    "close close close close close";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap:10px;
+}
+.charsheet .form-container.armor-grid .picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: dropdown;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .name {
+  display: flex;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .burden {
+  flex-direction: column;
+  grid-area: burden;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .status {
+  flex-direction: column;
+  grid-area: status;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .evasion {
+  grid-area: evasion;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .initiative {
+  grid-area: initiative;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .guard {
+  grid-area: guard;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .block {
+  grid-area: block;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .description {
+  display: flex;
+  flex-direction: column;
+  grid-area: description;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .description textarea{
+  margin-bottom: 0px;
+}
+.charsheet .table-container input:checked + .details-container.armor {
+  display: flex;
+}
+
+/* ARMORS REVAMPED STYLES END  */
+
+/* WEAPONS REVAMPED STYLES START  */
+
+.charsheet .table-container .headers-container .header2.name5 {
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .table-container .headers-container .header2.burden5 {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.status5 {
+  flex: 4;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.actions5 {
+  flex: 2;
+  text-align: center;
+}
+
+.charsheet .table-container .table-row .name5{
+  font-size: 10px;
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row .burden5 {
+  flex: 2;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .status5 {
+  flex: 4;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .details-container .details-row .details-label2.flex-2{
+  flex: 2;
+}
+
+
+.charsheet .table-container .form-container.weapon-grid{
+  grid-template-areas:
+    "name name status"
+    "burden focus power"
+    "wpn-type wpn-type wpn-type"
+    "description description description"
+    "close close close";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+}
+.charsheet .form-container.weapon-grid .picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: dropdown;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .name {
+  display: flex;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .burden {
+  flex-direction: column;
+  grid-area: burden;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .status {
+  flex-direction: column;
+  grid-area: status;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .wpn-type {
+  grid-area: wpn-type;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .focus {
+  grid-area: focus;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .power {
+  grid-area: power;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .description {
+  display: flex;
+  flex-direction: column;
+  grid-area: description;
+  width: 100%;
+}
+.charsheet .form-container.weapon-grid .description textarea{
+  margin-bottom: 0px;
+}
+.charsheet .table-container input:checked + .details-container.weapon {
+  display: flex;
+}
+
+/* WEAPONS REVAMPED STYLES END  */
+
+
+
+
+
+/* INVENTORY TABLE */
+.charsheet .headers .inventory-name {
+  flex: 8;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .headers .inventory-burden {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .headers .inventory-status {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .headers .inventory-slot {
+  flex: 3;
+  text-align: center;
+}
+.charsheet .headers .inventory-delete {
+  flex: 2;
+  text-align: center;
+}
+.charsheet .form-container.armor {
+  grid-template-areas:
+    "armor-name armor-name armor-name armor-burden"
+    "armor-guard armor-block armor-evasion armor-dodge"
+    "armor-description armor-description armor-description armor-description"
+    ". armor-close armor-close .";
+}
+.charsheet .form-container.armor .armor-name {
+  display: flex;
+  flex-direction: column;
+  grid-area: armor-name;
+  width: 100%;
+}
+.charsheet .form-container.armor .armor-burden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: armor-burden;
+  width: 100%;
+}
+.charsheet .form-container.armor .armor-guard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: armor-guard;
+  width: 100%;
+}
+.charsheet .form-container.armor .armor-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: armor-block;
+  width: 100%;
+}
+.charsheet .form-container.armor .armor-evasion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: armor-evasion;
+  width: 100%;
+}
+.charsheet .form-container.armor .armor-dodge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: armor-dodge;
+  width: 100%;
+}
+.charsheet .form-container.armor .armor-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: armor-description;
+  width: 100%;
+}
+/* .charsheet .form-container.armor .armor-close {
+  grid-area: armor-close;
+}
+.charsheet .weapon-form-container .weapon-close {
+  grid-area: weapon-close;
+}
+.charsheet .class-form-container .class-close {
+  grid-area: close;
+} */
+/* .charsheet .form-container .close .create-form-btn {
+  width: 70px;
+  height: 20px;
+}
+.charsheet .form-container .close input[type="checkbox"] {
+  width: 70px !important;
+  height: 20px;
+} */
+/* .charsheet .form-container .armor-close span {
+  font-size: 10px;
+  width: 70px;
+  height: 20px;
+  box-sizing: border-box;
+} */
+.charsheet .form-container.weapon{
+  /* display: grid; */
+  grid-template-areas:
+    "weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-burden  weapon-burden"
+    "weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-focus weapon-focus weapon-power weapon-power"
+    "weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description "
+    "weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close";
+  /* width: 100%; */
+  /* min-height: 100px;
+  padding: 10px;
+  border: #717171 1px solid;
+  border-radius: 5px;
+  align-items: center;
+  margin: 5px;
+  gap: 5px; */
+}
+.charsheet .form-container .weapon-name {
+  display: flex;
+  flex-direction: column;
+  grid-area: weapon-name;
+  width: 100%;
+}
+.charsheet .form-container .weapon-burden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: weapon-burden;
+  width: 100%;
+}
+.charsheet .form-container .weapon-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: weapon-type;
+  width: 100%;
+}
+.charsheet .form-container .weapon-type select{
+  margin-bottom: 0;
+  border: none;
+  border-bottom: #cccccc 1px solid;
+  border-radius: 0%;
+  height: 15px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+.charsheet .form-container .weapon-focus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: weapon-focus;
+  width: 100%;
+}
+.charsheet .form-container .weapon-power {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: weapon-power;
+  width: 100%;
+}
+.charsheet .form-container .weapon-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: weapon-description;
+  width: 100%;
+}
+
+/* .charsheet .form-container .class-name input,
+.charsheet .form-container .weapon-name input,
+.charsheet .form-container .armor-name input{
+  font-size: 13px;
+  width:100% !important;
+} */
+.charsheet .table-row .class-name,
+.charsheet .table-row .equipment-name,
+.charsheet .table-row .equipment-name {
+  font-size: 10px;
+  flex: 8;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-row .equipment-burden,
+.charsheet .table-row .equipment-burden {
+  flex: 2;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-row .weapon-status,
+.charsheet .table-row .armor-status{
+  flex:3;
+  margin-bottom: 0;
+  border: none;
+  height: 19px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+.charsheet .table-row  select{
+  margin-bottom: 0;
+  border: none;
+  height: 20px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+.charsheet .table-row .class-actions,
+.charsheet .table-row .weapon-actions,
+.charsheet .table-row .armor-actions{
+  flex: 2;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+/* .charsheet .armor-row .ability-value{
+  flex-direction: row;
+} */
+
+/* INVENTORY TABLE END */
+
+.charsheet .row-details .burden{
+  grid-area: armor-burden;
+}
+.charsheet .row-details .evasion{
+  grid-area: armor-evasion;
+}
+.charsheet .row-details .initiative{
+  grid-area: armor-initiative;
+}
+.charsheet .row-details .guard{
+  grid-area: armor-guard;
+}
+.charsheet .row-details .block{
+  grid-area: armor-block;
+}
+.charsheet .row-details .description{
+  grid-area: armor-description;
+}
+.charsheet .row-details .description span{
+  flex:3
+}
+
