@@ -484,6 +484,30 @@
   width: 350px;
   gap: 5px;
 }
+.charsheet .skills-left-column{
+  display: flex;
+  flex-direction: column;
+  /* height: 600px; */
+  width: 400px;
+  gap: 5px;
+
+}
+.charsheet .notes-left-column{
+  display: flex;
+  flex-direction: column;
+  /* height: 600px; */
+  width: 300px;
+  gap: 5px;
+
+}
+.charsheet .notes-right-column{
+  display: flex;
+  flex-direction: column;
+  /* height: 600px; */
+  width: 500px;
+  gap: 5px;
+
+}
 
 /* ATTRIBUTES START */
 .charsheet .main-stats-container {
@@ -771,29 +795,29 @@
   justify-content: space-around;
   align-items: center;
   grid-template-areas:
-    "basic-light-attack basic-heavy-attack"
-    "basic-precision-attack basic-HEAVY-attack";
+    "main-weapon-attack"
+    "generic-attack";
   gap: 5px;
 }
-.charsheet .light {
-  grid-area: basic-light-attack;
+.charsheet .basic-attack.mwp {
+  grid-area: main-weapon-attack;
 }
-.charsheet .heavy {
-  grid-area: basic-heavy-attack;
+.charsheet .basic-attack.generic {
+  grid-area: generic-attack;
 }
-.charsheet .heavy2 {
+/* .charsheet .heavy2 {
   grid-area: basic-HEAVY-attack;
 }
 .charsheet .precision {
   grid-area: basic-precision-attack;
-}
+} */
 
 .charsheet .attribute-container .label.basic-attack {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0px;
-  width: 180px;
+  width: 230px;
 }
 .charsheet .attribute-container .label.basic-attack button {
   font-size: 14px !important;
@@ -888,65 +912,6 @@
 /* TABLES START */
 
 /* SKILLS TABLE START*/
-.charsheet .table-container .headers .skill-name {
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-}
-.charsheet .table-container .headers .skill-bonus {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .table-container .headers .skill-points {
-  flex: 2;
-  text-align: center;
-}
-.charsheet .table-container .skill-row {
-  font-size: 10px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-top: #717171 1px solid;
-}
-.charsheet .table-container .skill-row.no-top {
-  border-top: none !important;
-}
-.charsheet .table-container .skill-row .skill-name {
-  font-size: inherit;
-  flex: 6;
-  text-align: left;
-  padding-left: 5px;
-}
-.charsheet .table-container .skill-row .skill-name button[type="action"],
-.charsheet .table-container .skill-row .skill-name button[type="roll"] {
-  font-size: inherit;
-  font-weight: normal;
-  text-transform: capitalize;
-  margin-left: -5px;
-  margin-right: -2px;
-  line-height: 0.1;
-  text-align: start;
-}
-.charsheet .table-container .skill-row .skill-bonus {
-  font-size: inherit;
-  flex: 2;
-  text-align: center;
-}
-.charsheet .table-container .skill-row .skill-points {
-  font-size: inherit;
-  flex: 2;
-  text-align: center;
-}
-.charsheet .table-container .skill-row .skill-bonus input,
-.charsheet .table-container .skill-row .skill-points input {
-  border: 0;
-  background: transparent;
-  width: 30px !important;
-  text-align: center;
-  font-weight: bold;
-  padding: 0;
-  color: black;
-}
 /* SKILLS TABLE END */
 
 /* INJURIES TABLE START*/
@@ -1426,6 +1391,7 @@
 /* THIS IS TO HANDLE THE AUTO GENERATED REPEATING TABLE CONTROLS */
 .charsheet .table-container .repcontrol {
   margin-top: auto;
+  padding-top: 5px;
 }
 .charsheet .table-container .repcontrol_del{
     z-index: 100;
@@ -2058,255 +2024,521 @@
 /* WEAPONS REVAMPED STYLES END  */
 
 
+/* MISC ITEMS REVAMPED STYLES START  */
 
-
-
-/* INVENTORY TABLE */
-.charsheet .headers .inventory-name {
-  flex: 8;
+.charsheet .section-container.misc-inventory {
+  min-height: 740px;
+}
+.charsheet .table-container.misc-inventory {
+  height: 100%;
+}
+.charsheet .table-container .headers-container .header2.name6 {
+  flex: 10;
   text-align: left;
   padding-left: 5px;
 }
-.charsheet .headers .inventory-burden {
+.charsheet .table-container .headers-container .header2.burden6 {
   flex: 2;
   text-align: center;
 }
-.charsheet .headers .inventory-status {
-  flex: 3;
+.charsheet .table-container .headers-container .header2.status6 {
+  flex: 4;
   text-align: center;
 }
-.charsheet .headers .inventory-slot {
-  flex: 3;
-  text-align: center;
-}
-.charsheet .headers .inventory-delete {
+.charsheet .table-container .headers-container .header2.actions6 {
   flex: 2;
   text-align: center;
-}
-.charsheet .form-container.armor {
-  grid-template-areas:
-    "armor-name armor-name armor-name armor-burden"
-    "armor-guard armor-block armor-evasion armor-dodge"
-    "armor-description armor-description armor-description armor-description"
-    ". armor-close armor-close .";
-}
-.charsheet .form-container.armor .armor-name {
-  display: flex;
-  flex-direction: column;
-  grid-area: armor-name;
-  width: 100%;
-}
-.charsheet .form-container.armor .armor-burden {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-burden;
-  width: 100%;
-}
-.charsheet .form-container.armor .armor-guard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-guard;
-  width: 100%;
-}
-.charsheet .form-container.armor .armor-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-block;
-  width: 100%;
-}
-.charsheet .form-container.armor .armor-evasion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-evasion;
-  width: 100%;
-}
-.charsheet .form-container.armor .armor-dodge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-dodge;
-  width: 100%;
-}
-.charsheet .form-container.armor .armor-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: armor-description;
-  width: 100%;
-}
-/* .charsheet .form-container.armor .armor-close {
-  grid-area: armor-close;
-}
-.charsheet .weapon-form-container .weapon-close {
-  grid-area: weapon-close;
-}
-.charsheet .class-form-container .class-close {
-  grid-area: close;
-} */
-/* .charsheet .form-container .close .create-form-btn {
-  width: 70px;
-  height: 20px;
-}
-.charsheet .form-container .close input[type="checkbox"] {
-  width: 70px !important;
-  height: 20px;
-} */
-/* .charsheet .form-container .armor-close span {
-  font-size: 10px;
-  width: 70px;
-  height: 20px;
-  box-sizing: border-box;
-} */
-.charsheet .form-container.weapon{
-  /* display: grid; */
-  grid-template-areas:
-    "weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-name weapon-burden  weapon-burden"
-    "weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-type weapon-focus weapon-focus weapon-power weapon-power"
-    "weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description weapon-description "
-    "weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close weapon-close";
-  /* width: 100%; */
-  /* min-height: 100px;
-  padding: 10px;
-  border: #717171 1px solid;
-  border-radius: 5px;
-  align-items: center;
-  margin: 5px;
-  gap: 5px; */
-}
-.charsheet .form-container .weapon-name {
-  display: flex;
-  flex-direction: column;
-  grid-area: weapon-name;
-  width: 100%;
-}
-.charsheet .form-container .weapon-burden {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-burden;
-  width: 100%;
-}
-.charsheet .form-container .weapon-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-type;
-  width: 100%;
-}
-.charsheet .form-container .weapon-type select{
-  margin-bottom: 0;
-  border: none;
-  border-bottom: #cccccc 1px solid;
-  border-radius: 0%;
-  height: 15px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-}
-.charsheet .form-container .weapon-focus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-focus;
-  width: 100%;
-}
-.charsheet .form-container .weapon-power {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-power;
-  width: 100%;
-}
-.charsheet .form-container .weapon-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: weapon-description;
-  width: 100%;
 }
 
-/* .charsheet .form-container .class-name input,
-.charsheet .form-container .weapon-name input,
-.charsheet .form-container .armor-name input{
-  font-size: 13px;
-  width:100% !important;
-} */
-.charsheet .table-row .class-name,
-.charsheet .table-row .equipment-name,
-.charsheet .table-row .equipment-name {
+.charsheet .table-container .table-row .name6{
   font-size: 10px;
-  flex: 8;
+  flex: 10;
   text-align: left;
   padding-left: 5px;
   font-weight: bold;
   cursor: default;
 }
-.charsheet .table-row .equipment-burden,
-.charsheet .table-row .equipment-burden {
+.charsheet .table-container .table-row .burden6 {
   flex: 2;
   text-align: center;
   cursor: default;
 }
-.charsheet .table-row .weapon-status,
-.charsheet .table-row .armor-status{
-  flex:3;
-  margin-bottom: 0;
-  border: none;
-  height: 19px;
-  padding: 0;
-  width: 100%;
+.charsheet .table-container .table-row .status6 {
+  flex: 4;
   text-align: center;
-  font-size: 10px;
+  cursor: default;
 }
-.charsheet .table-row  select{
-  margin-bottom: 0;
-  border: none;
-  height: 20px;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 11px;
+
+.charsheet .table-container .form-container.misc-grid{
+  grid-template-areas:
+    "name name burden status"
+    "description description description description"
+    "close close close close";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:10px;
 }
-.charsheet .table-row .class-actions,
-.charsheet .table-row .weapon-actions,
-.charsheet .table-row .armor-actions{
-  flex: 2;
+.charsheet .form-container.misc-grid .picker {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
   align-items: center;
-  gap: 5px;
+  grid-area: dropdown;
+  width: 100%;
+}
+.charsheet .form-container.misc-grid .name {
+  display: flex;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container.misc-grid .burden {
+  flex-direction: column;
+  grid-area: burden;
+  width: 100%;
+}
+.charsheet .form-container.misc-grid .status {
+  flex-direction: column;
+  grid-area: status;
+  width: 100%;
+}
+.charsheet .form-container.misc-grid .description {
+  display: flex;
+  flex-direction: column;
+  grid-area: description;
+  width: 100%;
+}
+.charsheet .form-container.misc-grid .description textarea{
+  margin-bottom: 0px;
+}
+.charsheet .table-container input:checked + .details-container.misc-item {
+  display: flex;
 }
 
-/* .charsheet .armor-row .ability-value{
+
+/* MISC ITEMS REVAMPED STYLES END  */
+
+
+/* SKILLS REVAMPED STYLES START */
+.charsheet .table-container .headers-container .header2.name7 {
+  flex: 9;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .table-container .headers-container .header2.total7 {
+  flex: 2;
+  text-align: center;
+  /* padding-left: 5px; */
+}
+.charsheet .table-container .headers-container .header2.stat7 {
+  flex: 2;
+  text-align: center;
+  /* padding-left: 5px; */
+}
+.charsheet .table-container .headers-container .header2.points7 {
+  flex: 2;
+  text-align: center;
+  /* padding-left: 5px; */
+}
+.charsheet .table-container .headers-container .header2.misc7 {
+  flex: 2;
+  text-align: center;
+  /* padding-left: 5px; */
+}
+
+.charsheet .table-container .skill-row {
+  font-size: 10px;
+  display: flex;
   flex-direction: row;
-} */
+  width: 100%;
+  border-top: #717171 1px solid;
+}
+.charsheet .table-container .skill-row.no-top {
+  border-top: none !important;
+}
+.charsheet .table-container .skill-row .name {
+  font-size: inherit;
+  flex: 9;
+  text-align: left;
+  padding-left: 5px;
+  /* padding-left: 5px; */
+}
+.charsheet .table-container .skill-row .name button[type="action"],
+.charsheet .table-container .skill-row .name button[type="roll"] {
+  font-size: inherit;
+  font-weight: bold;
+  text-transform: capitalize;
+  /* line-height: 0.1; */
+  height: 20px;
+  text-align: start;
+  width: 150px;
+}
+.charsheet .table-container .skill-row .total {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .skill-row .total input{
+  font-weight: bold;
+}
+.charsheet .table-container .skill-row .stat {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .skill-row .points {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .skill-row .misc {
+  font-size: inherit;
+  flex: 2;
+  text-align: center;
+}
+.charsheet .table-container .skill-row input[type="number"] {
+  border: 0;
+  font-size: 11px;
+  background: transparent;
+  width: 30px !important;
+  text-align: center;
+  padding: 0;
+  color: black;
+}
+/* SKILLS REVAMPED STYLES END */
 
-/* INVENTORY TABLE END */
 
-.charsheet .row-details .burden{
-  grid-area: armor-burden;
+/* EXPERTISE STYLES START */
+.charsheet .table-container .headers-container .header2.name8 {
+  flex: 9;
+  text-align: left;
+  padding-left: 5px;
 }
-.charsheet .row-details .evasion{
-  grid-area: armor-evasion;
+.charsheet .table-container .headers-container .header2.total8,
+.charsheet .table-container .headers-container .header2.skill8,
+.charsheet .table-container .headers-container .header2.points8,
+.charsheet .table-container .headers-container .header2.misc8{
+  flex: 2;
+  text-align: center;
 }
-.charsheet .row-details .initiative{
-  grid-area: armor-initiative;
-}
-.charsheet .row-details .guard{
-  grid-area: armor-guard;
-}
-.charsheet .row-details .block{
-  grid-area: armor-block;
-}
-.charsheet .row-details .description{
-  grid-area: armor-description;
-}
-.charsheet .row-details .description span{
-  flex:3
+.charsheet .table-container .headers-container .header2.actions8 {
+  flex: 1;
+  text-align: center;
 }
 
+.charsheet .table-container .table-row .name8{
+  font-size: 10px;
+  flex: 9;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row .total8 input,
+.charsheet .table-container .table-row .skill8 input,
+.charsheet .table-container .table-row .points8 input,
+.charsheet .table-container .table-row .misc8  input{
+  border: 0;
+  font-size: 11px;
+  background: transparent;
+  width: 100% !important;
+  text-align: center;
+  padding: 0;
+  color: black;
+}
+.charsheet .table-container .table-row .total8,
+.charsheet .table-container .table-row .skill8,
+.charsheet .table-container .table-row .points8,
+.charsheet .table-container .table-row .misc8 {
+  flex: 2;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .actions.action8 {
+  flex: 1;
+}
+.charsheet .table-container .table-row  .name-button.name8 button{
+  width: 160px;
+}
+.charsheet .table-container .table-row  .name-button.name8 span{
+  width: 160px;
+  text-align: start;
+  justify-content: start;
+}
+
+.charsheet .table-container .form-container.expertise-grid{
+  grid-template-areas:
+    "name name skill"
+    "close close close";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+}
+.charsheet .form-container.expertise-grid .name {
+  display: flex;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container.expertise-grid .skill {
+  flex-direction: column;
+  grid-area: skill;
+  width: 100%;
+}
+/* EXPERTISE STYLES END */
+
+
+/* CRAFTING AND GATHERING STYLES START  */
+
+.charsheet .table-container.artabilities {
+  min-height:300px;
+}
+.charsheet .table-container.artabilities .item-container{
+  margin-bottom: 0px;
+} 
+
+.charsheet .table-container .headers-container .header2.name9 {
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+}
+.charsheet .table-container .headers-container .header2.cost9 {
+  flex: 4;
+  text-align: center;
+}
+.charsheet .table-container .headers-container .header2.actions9 {
+  flex: 2;
+  text-align: center;
+}
+
+.charsheet .table-container .table-row .name9{
+  font-size: 10px;
+  flex: 10;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: bold;
+  cursor: default;
+}
+.charsheet .table-container .table-row  .name-button.name9 button{
+  width: 150px;
+}
+.charsheet .table-container .table-row  .name-button.name9 span{
+  width: 150px;
+}
+.charsheet .table-container .table-row .cost9 {
+  flex: 4;
+  text-align: center;
+  cursor: default;
+}
+.charsheet .table-container .table-row .actions9{
+  flex: 2;
+}
+
+.charsheet .table-container input:checked + .details-container.artability {
+  display: flex;
+}
+
+.charsheet .table-container .form-container.ability-grid{
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "rolls rolls rolls rolls"
+    "close close close close";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:10px;
+}
+.charsheet .table-container .custom-enabler:checked ~ .ability-grid {
+  grid-template-areas:
+    "dropdown dropdown dropdown dropdown"
+    "name name name name"
+    "atype atype costs costs"
+    "requirements requirements requirements requirements"
+    "description description description description"
+    "rolls rolls rolls rolls"
+    "close close close close";
+}
+.charsheet .form-container .picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: dropdown;
+  width: 100%;
+}
+.charsheet .form-container .name {
+  display: none;
+  flex-direction: column;
+  grid-area: name;
+  width: 100%;
+}
+.charsheet .form-container .picker.atype {
+  display: none;
+  grid-area: atype;
+  width: 100%;
+}
+.charsheet .form-container input:checked + .picker.atype {
+  display: flex;
+}
+.charsheet .form-container .block-textarea.requirements-ba {
+  min-height: 25px;
+  height: 25px;
+}
+.charsheet .form-container .costs {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: costs;
+  width: 100%;
+}
+.charsheet .form-container .requirements {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: requirements;
+  width: 100%;
+}
+.charsheet .form-container .description {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  grid-area: description;
+  width: 100%;
+}
+.charsheet .form-container .picker.rolls {
+  display: flex;
+  grid-area: rolls;
+  width: 100%;
+  flex-direction: column;
+}
+.charsheet .form-container .custom-macro {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 5px;
+}
+.charsheet .form-container input:checked + .custom-macro {
+  display: flex;
+}
+.charsheet .form-container .custom-macro .block-textarea {
+  font-size: 10px;
+  margin:0px;
+  min-height: 60px;
+  height: 60px;
+}
+/* CRAFTING AND GATHERING STYLES END  */
+
+
+/* LANGUAGE AND PROFICIENCIES STYLES START */
+
+.charsheet .table-container.lang-prof textarea{
+  width: 100%;
+  min-height: 100px;
+  height: 100px;
+  resize: vertical;      /* Allows user to resize vertically */
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.charsheet .table-container.npc-notes textarea{
+  width: 100%;
+  min-height: 400px;
+  height: 400px;
+  resize: vertical;      /* Allows user to resize vertically */
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.charsheet .table-container.general-notes textarea{
+  width: 100%;
+  min-height: 590px;
+  height: 590px;
+  resize: vertical;      /* Allows user to resize vertically */
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* LANGUAGE AND PROFICIENCIES STYLES END */
+
+
+/* SETUP STYLES START */
+.charsheet .table-container.setup .table-body {
+  display: flex;
+  flex-direction: column;
+  padding:5px;
+}
+.charsheet .table-container.setup .table-body .setup-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.charsheet .table-container.setup .table-body .setup-pair{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.charsheet .table-container.setup .table-body .setup-row label{
+  font-size: 15px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 0px;
+  width: auto;
+}
+.charsheet .table-container.setup .table-body .setup-row input[type="number"]{
+  width: 40px;
+  font-size: 14px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.charsheet .table-container.setup .table-body .setup-row input[type="number"].disabled{
+  background: #f0f0f0;
+  pointer-events: none;
+  color: #a0a0a0;
+  border: none;
+}
+
+
+
+
+/* SETUP STYLES END */
+
+
+/* FOOTER */
+.charsheet .footer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: -30px;
+}
+
+.charsheet .footer-stamp img{
+  width: 50px;
+  height: 50px;
+  /* opacity: 0.5; */
+  /* filter: grayscale(100%); */
+}
+
+/* FOOTER */
+
+
+/* DEFAULT TEMPLATE STYLES START */
+.sheet-rolltemplate-default td{
+  line-height:2;
+}
+/* DEFAULT TEMPLATE STYLES END */

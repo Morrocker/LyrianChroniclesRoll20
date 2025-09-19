@@ -13,7 +13,15 @@ The HTML will be un-indented for simplicity, but you may want to format it for b
 ## Prerequisites
 - Go programming language installed on your machine.
 - A CSV file named `classes.csv` in the same directory as the Go program, containing the class data.
-- A CSV file named `items.csv` in the same directory as the Go program, containing the item data.
-- A CSV file named `processed_abilities.csv` in the same directory as the Go program, containing the ability data that was pre-processed by chat GPT to recognize from the description which abilities contains attacks. The query was as follows:
-- Here I got a .csv for you. The data that is relevant is on the 3rd and 6th columns. the third has one of three values. If the value is true_ability then the 6th column must be processed. The 6th column describes a TTRPG mechanic where there can be Light, Heavy and/or Precise attacks. I want you to return an .xls from this .csv that would add at the end whether a Light, Heavy or Precise attacks are performed and if more than one is stated whether it must be decided between the two or if both happen simultaneously.
-- ok, so the first attempt was quite good. I'd like you to try again (from scratch) but pay special attention to the cases where there is more than 1 type of attack in order to not confuse simultaneous with choosing. Also pay attention to not confuse Light with Lightning. Besides that there may be cases where there are attributes like Focus, Power, Toughness and Agility mentioned. Sometimes indicating a multiplication. I'd like you to also isolate those cases in a separate column.
+- A CSV file named `abilities.csv` in the same directory as the Go program, containing the item data.
+- A CSV file named `breakthroughs.csv` in the same directory as the Go program, containing the breakthrough data.
+
+## Usage
+1. Place the `classes.csv`, `abilities.csv`, and `breakthroughs.csv` files in the same directory as the Go program.
+2. Open a terminal and navigate to the directory containing the Go program.
+3. Run the program using the command:
+   ```bash
+   go run sheet-scrapper.go
+   ```
+4. The program will read the CSV files and output the generated HTML code to the terminal.
+5. Copy the output HTML code and paste it into the appropriate section of your Roll20 character sheet HTML.
