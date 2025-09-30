@@ -1,0 +1,682 @@
+{
+   "abjurer": {
+     "Name": "Abjurer",
+     "ID": "abjurer",
+     "Tier": 2
+   },
+   "acolyte": {
+     "Name": "Acolyte",
+     "ID": "acolyte",
+     "Tier": 1
+   },
+   "adventurer": {
+     "Name": "Adventurer",
+     "ID": "adventurer",
+     "Tier": 1
+   },
+   "aeromancer": {
+     "Name": "Aeromancer",
+     "ID": "aeromancer",
+     "Tier": 2
+   },
+   "aeromaster": {
+     "Name": "Aeromaster",
+     "ID": "aeromaster",
+     "Tier": 3
+   },
+   "aetherie": {
+     "Name": "Aetherie",
+     "ID": "aetherie",
+     "Tier": 2
+   },
+   "alchemeister": {
+     "Name": "Alchemeister",
+     "ID": "alchemeister",
+     "Tier": 2
+   },
+   "alchemist": {
+     "Name": "Alchemist",
+     "ID": "alchemist",
+     "Tier": 1
+   },
+   "alkahest": {
+     "Name": "Alkahest",
+     "ID": "alkahest",
+     "Tier": 2
+   },
+   "amanita": {
+     "Name": "Amanita",
+     "ID": "amanita",
+     "Tier": 3
+   },
+   "angelblooded": {
+     "Name": "Angelblooded",
+     "ID": "angelblooded",
+     "Tier": 2
+   },
+   "animal-summoner": {
+     "Name": "Animal Summoner",
+     "ID": "animal-summoner",
+     "Tier": 2
+   },
+   "anti-mage": {
+     "Name": "Anti-Mage",
+     "ID": "anti-mage",
+     "Tier": 2
+   },
+   "arcanist": {
+     "Name": "Arcanist",
+     "ID": "arcanist",
+     "Tier": 2
+   },
+   "archer": {
+     "Name": "Archer",
+     "ID": "archer",
+     "Tier": 2
+   },
+   "archsage": {
+     "Name": "Archsage",
+     "ID": "archsage",
+     "Tier": 3
+   },
+   "armiger": {
+     "Name": "Armiger",
+     "ID": "armiger",
+     "Tier": 2
+   },
+   "armorsmith": {
+     "Name": "Armorsmith",
+     "ID": "armorsmith",
+     "Tier": 1
+   },
+   "artificer": {
+     "Name": "Artificer",
+     "ID": "artificer",
+     "Tier": 1
+   },
+   "assassin": {
+     "Name": "Assassin",
+     "ID": "assassin",
+     "Tier": 3
+   },
+   "bajiquan-style": {
+     "Name": "Bajiquan Style",
+     "ID": "bajiquan-style",
+     "Tier": 2
+   },
+   "bard": {
+     "Name": "Bard",
+     "ID": "bard",
+     "Tier": 2
+   },
+   "battle-mage": {
+     "Name": "Battle Mage",
+     "ID": "battle-mage",
+     "Tier": 2
+   },
+   "battlemaster": {
+     "Name": "Battlemaster",
+     "ID": "battlemaster",
+     "Tier": 2
+   },
+   "berserker": {
+     "Name": "Berserker",
+     "ID": "berserker",
+     "Tier": 2
+   },
+   "blacksmith": {
+     "Name": "Blacksmith",
+     "ID": "blacksmith",
+     "Tier": 1
+   },
+   "bloodbinder": {
+     "Name": "Bloodbinder",
+     "ID": "bloodbinder",
+     "Tier": 2
+   },
+   "bodyguard": {
+     "Name": "Bodyguard",
+     "ID": "bodyguard",
+     "Tier": 2
+   },
+   "botanist": {
+     "Name": "Botanist",
+     "ID": "botanist",
+     "Tier": 2
+   },
+   "brawler": {
+     "Name": "Brawler",
+     "ID": "brawler",
+     "Tier": 2
+   },
+   "carpenter": {
+     "Name": "Carpenter",
+     "ID": "carpenter",
+     "Tier": 1
+   },
+   "cavalier": {
+     "Name": "Cavalier",
+     "ID": "cavalier",
+     "Tier": 1
+   },
+   "chronofighter": {
+     "Name": "Chronofighter",
+     "ID": "chronofighter",
+     "Tier": 2
+   },
+   "chronomancer": {
+     "Name": "Chronomancer",
+     "ID": "chronomancer",
+     "Tier": 2
+   },
+   "colossus": {
+     "Name": "Colossus",
+     "ID": "colossus",
+     "Tier": 3
+   },
+   "cryomancer": {
+     "Name": "Cryomancer",
+     "ID": "cryomancer",
+     "Tier": 2
+   },
+   "culinarian": {
+     "Name": "Culinarian",
+     "ID": "culinarian",
+     "Tier": 1
+   },
+   "cultivator": {
+     "Name": "Cultivator",
+     "ID": "cultivator",
+     "Tier": 2
+   },
+   "curse-knight": {
+     "Name": "Curse Knight",
+     "ID": "curse-knight",
+     "Tier": 2
+   },
+   "dark-priest": {
+     "Name": "Dark Priest",
+     "ID": "dark-priest",
+     "Tier": 2
+   },
+   "deadeye": {
+     "Name": "Deadeye",
+     "ID": "deadeye",
+     "Tier": 3
+   },
+   "death-knight": {
+     "Name": "Death Knight",
+     "ID": "death-knight",
+     "Tier": 3
+   },
+   "dragoon": {
+     "Name": "Dragoon",
+     "ID": "dragoon",
+     "Tier": 3
+   },
+   "duelist": {
+     "Name": "Duelist",
+     "ID": "duelist",
+     "Tier": 3
+   },
+   "electromancer": {
+     "Name": "Electromancer",
+     "ID": "electromancer",
+     "Tier": 2
+   },
+   "electromaster": {
+     "Name": "Electromaster",
+     "ID": "electromaster",
+     "Tier": 3
+   },
+   "eremancer": {
+     "Name": "Eremancer",
+     "ID": "eremancer",
+     "Tier": 2
+   },
+   "evil-eye": {
+     "Name": "Evil Eye",
+     "ID": "evil-eye",
+     "Tier": 2
+   },
+   "exalted-blade": {
+     "Name": "Exalted Blade",
+     "ID": "exalted-blade",
+     "Tier": 3
+   },
+   "exalted-shield": {
+     "Name": "Exalted Shield",
+     "ID": "exalted-shield",
+     "Tier": 3
+   },
+   "excavator": {
+     "Name": "Excavator",
+     "ID": "excavator",
+     "Tier": 2
+   },
+   "executor": {
+     "Name": "Executor",
+     "ID": "executor",
+     "Tier": 2
+   },
+   "faerie-light-eyes": {
+     "Name": "Faerie Light Eyes",
+     "ID": "faerie-light-eyes",
+     "Tier": 2
+   },
+   "farmer": {
+     "Name": "Farmer",
+     "ID": "farmer",
+     "Tier": 1
+   },
+   "fencer": {
+     "Name": "Fencer",
+     "ID": "fencer",
+     "Tier": 2
+   },
+   "fighter": {
+     "Name": "Fighter",
+     "ID": "fighter",
+     "Tier": 1
+   },
+   "flame-sentinel": {
+     "Name": "Flame Sentinel",
+     "ID": "flame-sentinel",
+     "Tier": 2
+   },
+   "flash-star-blade-style-": {
+     "Name": "Flash Star Blade Style",
+     "ID": "flash-star-blade-style-",
+     "Tier": 2
+   },
+   "forager": {
+     "Name": "Forager",
+     "ID": "forager",
+     "Tier": 1
+   },
+   "forgemaster": {
+     "Name": "Forgemaster",
+     "ID": "forgemaster",
+     "Tier": 2
+   },
+   "geomancer": {
+     "Name": "Geomancer",
+     "ID": "geomancer",
+     "Tier": 2
+   },
+   "great-berserker": {
+     "Name": "Great Berserker",
+     "ID": "great-berserker",
+     "Tier": 3
+   },
+   "great-knight": {
+     "Name": "Great Knight",
+     "ID": "great-knight",
+     "Tier": 2
+   },
+   "guardian": {
+     "Name": "Guardian",
+     "ID": "guardian",
+     "Tier": 2
+   },
+   "gunfu": {
+     "Name": "Gunfu",
+     "ID": "gunfu",
+     "Tier": 3
+   },
+   "gunslinger": {
+     "Name": "Gunslinger",
+     "ID": "gunslinger",
+     "Tier": 2
+   },
+   "high-priest": {
+     "Name": "High Priest",
+     "ID": "high-priest",
+     "Tier": 3
+   },
+   "highlander": {
+     "Name": "Highlander",
+     "ID": "highlander",
+     "Tier": 2
+   },
+   "hoarfrost": {
+     "Name": "Hoarfrost",
+     "ID": "hoarfrost",
+     "Tier": 3
+   },
+   "hussar": {
+     "Name": "Hussar",
+     "ID": "hussar",
+     "Tier": 2
+   },
+   "hydromancer": {
+     "Name": "Hydromancer",
+     "ID": "hydromancer",
+     "Tier": 2
+   },
+   "iai-style": {
+     "Name": "Iai Style",
+     "ID": "iai-style",
+     "Tier": 2
+   },
+   "lancer": {
+     "Name": "Lancer",
+     "ID": "lancer",
+     "Tier": 2
+   },
+   "mage": {
+     "Name": "Mage",
+     "ID": "mage",
+     "Tier": 1
+   },
+   "mage-knight": {
+     "Name": "Mage Knight",
+     "ID": "mage-knight",
+     "Tier": 2
+   },
+   "magitechnician-": {
+     "Name": "Magitechnician",
+     "ID": "magitechnician-",
+     "Tier": 2
+   },
+   "marksman": {
+     "Name": "Marksman",
+     "ID": "marksman",
+     "Tier": 2
+   },
+   "martial-artist": {
+     "Name": "Martial Artist",
+     "ID": "martial-artist",
+     "Tier": 1
+   },
+   "master-armorer": {
+     "Name": "Master Armorer",
+     "ID": "master-armorer",
+     "Tier": 2
+   },
+   "miner": {
+     "Name": "Miner",
+     "ID": "miner",
+     "Tier": 1
+   },
+   "mist-veil-elegy": {
+     "Name": "Mist Veil Elegy",
+     "ID": "mist-veil-elegy",
+     "Tier": 2
+   },
+   "monk": {
+     "Name": "Monk",
+     "ID": "monk",
+     "Tier": 2
+   },
+   "mycomancer": {
+     "Name": "Mycomancer",
+     "ID": "mycomancer",
+     "Tier": 2
+   },
+   "necromancer": {
+     "Name": "Necromancer",
+     "ID": "necromancer",
+     "Tier": 2
+   },
+   "ninja": {
+     "Name": "Ninja",
+     "ID": "ninja",
+     "Tier": 2
+   },
+   "nomad": {
+     "Name": "Nomad",
+     "ID": "nomad",
+     "Tier": 2
+   },
+   "onmyoji-": {
+     "Name": "Onmyoji",
+     "ID": "onmyoji-",
+     "Tier": 2
+   },
+   "oracle": {
+     "Name": "Oracle",
+     "ID": "oracle",
+     "Tier": 2
+   },
+   "peltast": {
+     "Name": "Peltast",
+     "ID": "peltast",
+     "Tier": 2
+   },
+   "phantom-thief": {
+     "Name": "Phantom Thief",
+     "ID": "phantom-thief",
+     "Tier": 3
+   },
+   "phosphomancer": {
+     "Name": "Phosphomancer",
+     "ID": "phosphomancer",
+     "Tier": 2
+   },
+   "priest": {
+     "Name": "Priest",
+     "ID": "priest",
+     "Tier": 2
+   },
+   "protector": {
+     "Name": "Protector",
+     "ID": "protector",
+     "Tier": 3
+   },
+   "pyromancer": {
+     "Name": "Pyromancer",
+     "ID": "pyromancer",
+     "Tier": 2
+   },
+   "pyromaster": {
+     "Name": "Pyromaster",
+     "ID": "pyromaster",
+     "Tier": 3
+   },
+   "ranger": {
+     "Name": "Ranger",
+     "ID": "ranger",
+     "Tier": 1
+   },
+   "reaver": {
+     "Name": "Reaver",
+     "ID": "reaver",
+     "Tier": 3
+   },
+   "rogue": {
+     "Name": "Rogue",
+     "ID": "rogue",
+     "Tier": 1
+   },
+   "saboteur": {
+     "Name": "Saboteur",
+     "ID": "saboteur",
+     "Tier": 2
+   },
+   "sage": {
+     "Name": "Sage",
+     "ID": "sage",
+     "Tier": 2
+   },
+   "scout": {
+     "Name": "Scout",
+     "ID": "scout",
+     "Tier": 2
+   },
+   "shadow-thief": {
+     "Name": "Shadow Thief",
+     "ID": "shadow-thief",
+     "Tier": 2
+   },
+   "shadowbringer": {
+     "Name": "Shadowbringer",
+     "ID": "shadowbringer",
+     "Tier": 3
+   },
+   "shield-paladin": {
+     "Name": "Shield Paladin",
+     "ID": "shield-paladin",
+     "Tier": 2
+   },
+   "shield-saint": {
+     "Name": "Shield Saint",
+     "ID": "shield-saint",
+     "Tier": 3
+   },
+   "shieldwarden": {
+     "Name": "Shieldwarden",
+     "ID": "shieldwarden",
+     "Tier": 2
+   },
+   "shinigami-eyes": {
+     "Name": "Shinigami Eyes",
+     "ID": "shinigami-eyes",
+     "Tier": 2
+   },
+   "sky-knight": {
+     "Name": "Sky Knight",
+     "ID": "sky-knight",
+     "Tier": 2
+   },
+   "sky-talon-style": {
+     "Name": "Sky Talon Style",
+     "ID": "sky-talon-style",
+     "Tier": 2
+   },
+   "sniper": {
+     "Name": "Sniper",
+     "ID": "sniper",
+     "Tier": 3
+   },
+   "spearmaster": {
+     "Name": "Spearmaster",
+     "ID": "spearmaster",
+     "Tier": 3
+   },
+   "spell-blademaster": {
+     "Name": "Spell Blademaster",
+     "ID": "spell-blademaster",
+     "Tier": 3
+   },
+   "spellblade": {
+     "Name": "Spellblade",
+     "ID": "spellblade",
+     "Tier": 2
+   },
+   "still-stone-style": {
+     "Name": "Still Stone Style",
+     "ID": "still-stone-style",
+     "Tier": 2
+   },
+   "strategist": {
+     "Name": "Strategist",
+     "ID": "strategist",
+     "Tier": 3
+   },
+   "summoner": {
+     "Name": "Summoner",
+     "ID": "summoner",
+     "Tier": 2
+   },
+   "sword-paladin": {
+     "Name": "Sword Paladin",
+     "ID": "sword-paladin",
+     "Tier": 2
+   },
+   "sword-saint": {
+     "Name": "Sword Saint",
+     "ID": "sword-saint",
+     "Tier": 3
+   },
+   "tactician": {
+     "Name": "Tactician",
+     "ID": "tactician",
+     "Tier": 2
+   },
+   "tavern-brawler": {
+     "Name": "Tavern Brawler",
+     "ID": "tavern-brawler",
+     "Tier": 2
+   },
+   "thief": {
+     "Name": "Thief",
+     "ID": "thief",
+     "Tier": 2
+   },
+   "timberwright": {
+     "Name": "Timberwright",
+     "ID": "timberwright",
+     "Tier": 2
+   },
+   "time-thief": {
+     "Name": "Time Thief",
+     "ID": "time-thief",
+     "Tier": 2
+   },
+   "transmuter": {
+     "Name": "Transmuter",
+     "ID": "transmuter",
+     "Tier": 1
+   },
+   "trapper": {
+     "Name": "Trapper",
+     "ID": "trapper",
+     "Tier": 2
+   },
+   "trickster": {
+     "Name": "Trickster",
+     "ID": "trickster",
+     "Tier": 3
+   },
+   "true-shinigami-eyes": {
+     "Name": "True Shinigami Eyes",
+     "ID": "true-shinigami-eyes",
+     "Tier": 3
+   },
+   "vampire": {
+     "Name": "Vampire",
+     "ID": "vampire",
+     "Tier": 1
+   },
+   "vampire-lord": {
+     "Name": "Vampire Lord",
+     "ID": "vampire-lord",
+     "Tier": 2
+   },
+   "veilguard": {
+     "Name": "Veilguard",
+     "ID": "veilguard",
+     "Tier": 3
+   },
+   "warding-mage": {
+     "Name": "Warding Mage",
+     "ID": "warding-mage",
+     "Tier": 2
+   },
+   "wave-palm-style": {
+     "Name": "Wave Palm Style",
+     "ID": "wave-palm-style",
+     "Tier": 2
+   },
+   "wildheart": {
+     "Name": "Wildheart",
+     "ID": "wildheart",
+     "Tier": 3
+   },
+   "windbringer": {
+     "Name": "Windbringer",
+     "ID": "windbringer",
+     "Tier": 2
+   },
+   "zen-warrior": {
+     "Name": "Zen Warrior",
+     "ID": "zen-warrior",
+     "Tier": 3
+   },
+   "zephyr-warder": {
+     "Name": "Zephyr Warder",
+     "ID": "zephyr-warder",
+     "Tier": 2
+   }
+ }
