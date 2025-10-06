@@ -3,10 +3,47 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"maps"
 	"os"
 	"sort"
 	"strings"
 )
+
+var otherCraftingAbilities []string = []string{
+	"detailed_finish",
+	"light_work",
+	"siphon_material",
+	"repair_armor",
+	"thermal_quench",
+	"repair_artifice",
+	"overclock",
+	"repair_weapon",
+	"steady_craft_ii",
+	"memory_of_the_grove",
+	"stalks_of_comparison",
+	"repair_wood_weapon",
+	"in_the_zone",
+	"perfect_seasoning",
+	"craft_pemmican",
+	"four_field_system",
+	"focused_detonation",
+	"take_it_easy",
+	"pull_the_weeds",
+	"verdant_instinct",
+	"divining_petalfall",
+	"inspired_finish",
+	"expertise_study_(armorsmithing)",
+	"expertise_study_(blacksmithing)",
+	"expertise_study_(artificing)",
+	"expertise_study_(carpentry)",
+	"craft_artificers_glove",
+	"reverse_polarity",
+	"grindstone_echo",
+	"power_rock_strike",
+	"efficient_strike",
+	"stable_foundation",
+	"deconstruction",
+}
 
 type ClassInfo struct {
 	Name string
@@ -30,6 +67,7 @@ type TrueAbility struct {
 	RPcost      string
 	APcost      string
 	MPcost      string
+	Othercost   string
 }
 
 type CraftingAbility struct {
@@ -49,12 +87,25 @@ type Breakthrough struct {
 	Description  string
 }
 
+type Race struct {
+	ID   string
+	Name string
+}
+
+type Subrace struct {
+	ID   string
+	Name string
+}
+
 func main() {
 	breakthroughsMap := make(map[string]Breakthrough)
 	trueAbilities := make(map[string]TrueAbility)
 	craftingAbilities := make(map[string]CraftingAbility)
+	racesAbilities := make(map[string]TrueAbility)
 	keyAbilities := make(map[string]KeyAbility)
 	classesMap := make(map[string]ClassInfo)
+	racesMap := make(map[string]string)
+	subracesMap := make(map[string]string)
 
 	// Loading all JSONS
 
@@ -97,6 +148,139 @@ func main() {
 	if err = json.Unmarshal(bytes, &classesMap); err != nil {
 		panic(err)
 	}
+
+	bytes, err = os.ReadFile("./webscrapper/subraces.json")
+	if err != nil {
+		panic(err)
+	}
+	if err = json.Unmarshal(bytes, &subracesMap); err != nil {
+		panic(err)
+	}
+
+	bytes, err = os.ReadFile("./webscrapper/races.json")
+	if err != nil {
+		panic(err)
+	}
+	if err = json.Unmarshal(bytes, &racesMap); err != nil {
+		panic(err)
+	}
+
+	bytes, err = os.ReadFile("./webscrapper/races_true_abilities.json")
+	if err != nil {
+		panic(err)
+	}
+	if err = json.Unmarshal(bytes, &racesAbilities); err != nil {
+		panic(err)
+	}
+
+	newTrueAbilities := make(map[string]TrueAbility)
+	maps.Copy(newTrueAbilities, trueAbilities)
+
+	// now we must "FIX" the crafting abilities that are missing from the webscrapper
+	for _, id := range otherCraftingAbilities {
+		if _, ok := trueAbilities[id]; ok {
+			delete(newTrueAbilities, id)
+			var cost string = ""
+			if trueAbilities[id].APcost != "" {
+				cost = trueAbilities[id].APcost
+			}
+			if trueAbilities[id].MPcost != "" {
+				if cost != "" {
+					cost += ", "
+				}
+				cost += trueAbilities[id].MPcost
+			}
+			if trueAbilities[id].RPcost != "" {
+				if cost != "" {
+					cost += ", "
+				}
+				cost += trueAbilities[id].RPcost
+			}
+			if trueAbilities[id].Othercost != "" {
+				if cost != "" {
+					cost += ", "
+				}
+				cost += trueAbilities[id].Othercost
+			}
+			if cost == "" {
+				cost = "--"
+			}
+
+			craftingAbilities[id] = CraftingAbility{
+				ID:          trueAbilities[id].ID,
+				Name:        trueAbilities[id].Name,
+				Keywords:    trueAbilities[id].Keywords,
+				Description: trueAbilities[id].Description,
+				Cost:        cost,
+			}
+		} else {
+			fmt.Println("Crafting ability not found as true ability:", id)
+		}
+	}
+
+	trueAbilities = newTrueAbilities
+
+	// Create the HTML file
+	htmlFile, err := os.Create("update-data.html")
+	if err != nil {
+		panic(err)
+	}
+	defer htmlFile.Close()
+
+	// ============================= RACES START =============================
+
+	var races []Race
+	for raceID, race := range racesMap {
+		r := Race{
+			ID:   raceID,
+			Name: race,
+		}
+		races = append(races, r)
+		fmt.Printf("id: %s, name: %s\n", r.ID, r.Name)
+	}
+
+	sort.Slice(races, func(i, j int) bool {
+		return races[i].ID < races[j].ID
+	})
+
+	fmt.Fprintln(htmlFile, "<!-- All RACES Picker List START -->")
+
+	fmt.Fprintln(htmlFile, `<option value="">--Choose--</option>`)
+	for _, race := range races {
+		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, race.ID, race.Name)
+	}
+	fmt.Fprintln(htmlFile, "<!-- All RACES Picker List END -->")
+
+	// ============================= RACES END =============================
+
+	// ============================= SUBRACES START =============================
+
+	var subraces []Subrace
+	for subraceID, subrace := range subracesMap {
+		sr := Subrace{
+			ID:   subraceID,
+			Name: subrace,
+		}
+		subraces = append(subraces, sr)
+		fmt.Printf("id: %s, name: %s\n", sr.ID, sr.Name)
+	}
+
+	sort.Slice(subraces, func(i, j int) bool {
+		return subraces[i].ID < subraces[j].ID
+	})
+
+	fmt.Fprintln(htmlFile, "<!-- All SUBRACES Picker List START -->")
+
+	fmt.Fprintln(htmlFile, `<option value="">--Choose--</option>`)
+	for _, subrace := range subraces {
+		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, subrace.ID, subrace.Name)
+	}
+	fmt.Fprintln(htmlFile, "<!-- All SUBRACES Picker List END -->")
+
+	// ============================= SUBRACES END =============================
+
+	// ============================= CLASSES START =============================
+
 	var classes []ClassInfo
 
 	for _, class := range classesMap {
@@ -114,22 +298,16 @@ func main() {
 		return classes[i].ID < classes[j].ID
 	})
 
-	// Create the HTML file
-	htmlFile, err := os.Create("update-data.html")
-	if err != nil {
-		panic(err)
-	}
-	defer htmlFile.Close()
-
 	fmt.Fprintln(htmlFile, "<!-- All Clases Picker List START -->")
 
 	fmt.Fprintln(htmlFile, `<option value="">--Select--</option>`)
 	fmt.Fprintln(htmlFile, `<option value="custom">Custom</option>`)
-	for _, class := range classesMap {
+	for _, class := range classes {
 		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, class.ID, class.Name)
 	}
 	fmt.Fprintln(htmlFile, "<!-- All Clases Picker List END -->")
 
+	// ============================= CLASSES END =============================
 	// ============================= BREAKTHROUGHS =============================
 
 	var breakthroughs []Breakthrough
@@ -202,6 +380,36 @@ func main() {
 	})
 
 	for _, ab := range trueAbilities {
+		var costs string = ""
+		if ab.APcost != "" {
+			costs += ab.APcost
+		}
+		if ab.MPcost != "" {
+			if costs != "" {
+				costs += ", "
+			}
+			costs += ab.MPcost
+		}
+		if ab.RPcost != "" {
+			if costs != "" {
+				costs += ", "
+			}
+			costs += ab.RPcost
+		}
+
+		ability := Ability{
+			ID:           ab.ID,
+			Name:         ab.Name,
+			Type:         "true_ability",
+			Keywords:     ab.Keywords,
+			Range:        ab.Range,
+			Description:  strings.TrimSpace(strings.ReplaceAll(ab.Description, `"`, "'")),
+			Requirements: strings.ReplaceAll(ab.Requirement, `"`, "'"),
+			Costs:        strings.ReplaceAll(costs, `"`, "'"),
+		}
+		regularAbilitiesArray = append(regularAbilitiesArray, ability)
+	}
+	for _, ab := range racesAbilities {
 		var costs string = ""
 		if ab.APcost != "" {
 			costs += ab.APcost

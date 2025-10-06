@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path"
 	"strings"
 	"time"
 
@@ -36,6 +37,7 @@ type TrueAbility struct {
 	RPcost      string
 	APcost      string
 	MPcost      string
+	Othercost   string
 }
 
 type CraftingAbility struct {
@@ -54,9 +56,20 @@ type Breakthrough struct {
 	Description string
 }
 
+type Race struct {
+	ID   string
+	Name string
+}
+
+type Subrace struct {
+	ID   string
+	Name string
+}
+
 func main() {
 	getBreakthroughs()
 	getClassesAndAbilities()
+	getRacesAndAbilities()
 }
 
 func stringBeforeAfter(s string, sep string) (string, string, bool) {
@@ -78,6 +91,74 @@ func stringBeforeAfter(s string, sep string) (string, string, bool) {
 // 		return fmt.Sprintln(s[:n] + "...")
 // 	}
 // }
+
+func getBreakthroughs() {
+	fmt.Println("Getting Breakthroughs...")
+	ctx, cancel := chromedp.NewContext(context.Background())
+	defer cancel()
+
+	var abilitySegments []string
+	err := chromedp.Run(ctx,
+		chromedp.Navigate(baseURL+"/breakthroughs"),
+		chromedp.WaitVisible(`mat-expansion-panel`, chromedp.ByQuery),
+		chromedp.Sleep(10*time.Second),
+		chromedp.Evaluate(` Array.from(document.querySelectorAll('mat-expansion-panel')).map(panel => panel.outerHTML) `, &abilitySegments),
+	)
+	if err != nil {
+		fmt.Println("Error getting hrefs:", err)
+		return
+	}
+	breakthroughs := make(map[string]Breakthrough, 0)
+
+	for _, html := range abilitySegments {
+		doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
+		if err != nil {
+			fmt.Println("Error parsing segment:", err)
+			continue
+		}
+
+		var breakthrough Breakthrough
+
+		rawName := doc.Find("mat-panel-title span").Text()
+
+		abilityName := strings.Split(rawName, "○ ")[1]
+		abilityID := strings.ToLower(strings.ReplaceAll(strings.ReplaceAll(abilityName, " ", "_"), "'", ""))
+		breakthrough.ID = abilityID
+		breakthrough.Name = abilityName
+
+		// fmt.Printf("Breakthrough %d: %s [%s]\n", i+1, abilityName, abilityID)
+
+		doc.Find("app-breakthrough mat-card-content li").Each(func(j int, s *goquery.Selection) {
+			text := s.Text()
+			if j == 0 {
+				arr := strings.Split(text, "Cost")
+				breakthrough.Cost = strings.TrimSpace(arr[1])
+			} else if j == 1 {
+				arr := strings.Split(text, "Requirements")
+				breakthrough.Requirement = strings.TrimSpace(arr[1])
+			}
+		})
+		doc.Find("app-breakthrough mat-card-content .description").Each(func(j int, s *goquery.Selection) {
+			text := s.Text()
+			breakthrough.Description = strings.TrimSpace(text)
+		})
+
+		breakthroughs[abilityID] = breakthrough
+	}
+
+	breakthroughsJSON, err := json.MarshalIndent(breakthroughs, "", "  ")
+	if err != nil {
+		fmt.Println("Error marshaling breakthroughs to JSON:", err)
+		return
+	}
+
+	err = os.WriteFile("breakthroughs.json", breakthroughsJSON, 0644)
+	if err != nil {
+		fmt.Println("Error writing breakthroughs.json file:", err)
+		return
+	}
+	fmt.Printf("Wrote %d breakthroughs to breakthroughs.json\n", len(breakthroughs))
+}
 
 func getClassesAndAbilities() {
 	fmt.Println("Getting Classes and Abilities...")
@@ -426,70 +507,293 @@ func getClassesAndAbilities() {
 
 }
 
-func getBreakthroughs() {
-	fmt.Println("Getting Breakthroughs...")
+func getRacesAndAbilities() {
+	fmt.Println("Getting Races and Abilities...")
 	ctx, cancel := chromedp.NewContext(context.Background())
 	defer cancel()
 
-	var abilitySegments []string
+	var outerHTML string
+	var outerHTML2 string
 	err := chromedp.Run(ctx,
-		chromedp.Navigate(baseURL+"/breakthroughs"),
-		chromedp.WaitVisible(`mat-expansion-panel`, chromedp.ByQuery),
-		chromedp.Sleep(10*time.Second),
-		chromedp.Evaluate(` Array.from(document.querySelectorAll('mat-expansion-panel')).map(panel => panel.outerHTML) `, &abilitySegments),
+		chromedp.Navigate(baseURL+"/races"),
+		chromedp.WaitVisible(`app-ancestry-card`, chromedp.ByQuery),
+		chromedp.Sleep(5*time.Second),
+		chromedp.OuterHTML("app-races", &outerHTML),
+		chromedp.Click(`app-races .mat-mdc-tab-labels > div[role="tab"]:nth-child(2)`, chromedp.ByQuery),
+		chromedp.Sleep(2*time.Second),
+		chromedp.OuterHTML("app-races", &outerHTML2),
 	)
 	if err != nil {
 		fmt.Println("Error getting hrefs:", err)
 		return
 	}
-	breakthroughs := make(map[string]Breakthrough, 0)
 
-	for _, html := range abilitySegments {
-		doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
+	doc, err := goquery.NewDocumentFromReader(strings.NewReader(outerHTML))
+	if err != nil {
+		fmt.Println("Error parsing segment:", err)
+		return
+	}
+
+	var hrefs []string
+
+	doc.Find("app-ancestry-card a").Each(func(i int, s *goquery.Selection) {
+		href, exists := s.Attr("href")
+		if exists {
+			hrefs = append(hrefs, href)
+		}
+	})
+
+	doc2, err := goquery.NewDocumentFromReader(strings.NewReader(outerHTML2))
+	if err != nil {
+		fmt.Println("Error parsing segment:", err)
+		return
+	}
+
+	var hrefs2 []string
+
+	doc2.Find("app-ancestry-card a").Each(func(i int, s *goquery.Selection) {
+		href, exists := s.Attr("href")
+		if exists {
+			hrefs2 = append(hrefs2, href)
+		}
+	})
+
+	var races = make(map[string]string, 0)
+	var subraces = make(map[string]string, 0)
+	var trueAbilities = make(map[string]TrueAbility, 0)
+	for _, href := range hrefs {
+		// Create a new tab/context for each navigation
+		tabCtx, tabCancel := chromedp.NewContext(ctx)
+
+		race := path.Base(href)
+		fmt.Println("Processing race:", race)
+
+		var outerHTML string
+		var abilitySegments []string
+		err := chromedp.Run(tabCtx,
+			chromedp.Navigate("https://rpg.angelssword.com"+href),
+			chromedp.WaitVisible(`app-primary-details`, chromedp.ByQuery),
+			chromedp.Sleep(5*time.Second),
+			chromedp.OuterHTML("app-primary-details", &outerHTML),
+			chromedp.Evaluate(` Array.from(document.querySelectorAll('mat-expansion-panel')).map(panel => panel.outerHTML) `, &abilitySegments),
+		)
+		tabCancel()
+		if err != nil {
+			fmt.Println("Error getting details from", href, ":", err)
+			continue
+		}
+
+		docx, err := goquery.NewDocumentFromReader(strings.NewReader(outerHTML))
 		if err != nil {
 			fmt.Println("Error parsing segment:", err)
 			continue
 		}
+		rawRaceName := docx.Find("h2").Text()
 
-		var breakthrough Breakthrough
+		races[race] = rawRaceName
 
-		rawName := doc.Find("mat-panel-title span").Text()
+		if race == "demon" {
+			fmt.Println("Found Demon Race, extra processing...")
+			docx.Find("app-primary-details mat-panel-title").Each(func(j int, s *goquery.Selection) {
+				text := s.Text()
+				if strings.Contains(text, "-") {
+					text = strings.Split(text, " ")[1]
+					subraces[strings.ReplaceAll(strings.ToLower(text), "'", "x")] = text
+				}
+			})
+		}
 
-		abilityName := strings.Split(rawName, "○ ")[1]
-		abilityID := strings.ToLower(strings.ReplaceAll(strings.ReplaceAll(abilityName, " ", "_"), "'", ""))
-		breakthrough.ID = abilityID
-		breakthrough.Name = abilityName
-
-		// fmt.Printf("Breakthrough %d: %s [%s]\n", i+1, abilityName, abilityID)
-
-		doc.Find("app-breakthrough mat-card-content li").Each(func(j int, s *goquery.Selection) {
-			text := s.Text()
-			if j == 0 {
-				arr := strings.Split(text, "Cost")
-				breakthrough.Cost = strings.TrimSpace(arr[1])
-			} else if j == 1 {
-				arr := strings.Split(text, "Requirements")
-				breakthrough.Requirement = strings.TrimSpace(arr[1])
+		for _, html := range abilitySegments {
+			doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
+			if err != nil {
+				fmt.Println("Error parsing segment:", err)
+				continue
 			}
-		})
-		doc.Find("app-breakthrough mat-card-content .description").Each(func(j int, s *goquery.Selection) {
-			text := s.Text()
-			breakthrough.Description = strings.TrimSpace(text)
-		})
 
-		breakthroughs[abilityID] = breakthrough
+			rawName := doc.Find("mat-panel-title span").Text()
+			abilityName := strings.Split(rawName, "○ ")[1]
+			abilityID := strings.ToLower(strings.ReplaceAll(strings.ReplaceAll(abilityName, " ", "_"), "'", ""))
+
+			var trueAbility TrueAbility
+			trueAbility.ID = abilityID
+			trueAbility.Name = abilityName
+
+			doc.Find("app-true-ability mat-card-content li").Each(func(j int, s *goquery.Selection) {
+				text := s.Text()
+
+				if strings.Contains(text, "Keywords") {
+					keywords := ""
+					doc.Find("app-true-ability mat-card-content mat-chip").Each(func(j int, s *goquery.Selection) {
+						if j != 0 {
+							keywords += ", "
+						}
+						keywords += s.Text()
+					})
+					trueAbility.Keywords = keywords
+				} else if strings.Contains(text, "Range") {
+					rng := strings.Split(text, "Range")[1]
+					trueAbility.Range = strings.TrimSpace(rng)
+				} else if strings.Contains(text, "Description") {
+					desc := strings.Split(text, "Description")[1]
+					trueAbility.Description = strings.TrimSpace(desc)
+				} else if strings.Contains(text, "Requirement") {
+					req := strings.Split(text, "Requirement")[1]
+					trueAbility.Requirement = strings.TrimSpace(req)
+				} else if strings.Contains(text, "RP cost") {
+					rp := strings.Split(text, "RP cost")[1]
+					trueAbility.RPcost = strings.TrimSpace(rp)
+				} else if strings.Contains(text, "AP cost") {
+					ap := strings.Split(text, "AP cost")[1]
+					trueAbility.APcost = strings.TrimSpace(ap)
+				} else if strings.Contains(text, "MP cost") {
+					mp := strings.Split(text, "MP cost")[1]
+					trueAbility.MPcost = strings.TrimSpace(mp)
+				} else if strings.Contains(text, "Mana cost") {
+					mp := strings.Split(text, "Mana cost")[1]
+					trueAbility.MPcost = strings.TrimSpace(mp)
+				} else if strings.Contains(text, "Other costs") {
+					mp := strings.Split(text, "Other costs")[1]
+					trueAbility.MPcost = strings.TrimSpace(mp)
+				} else {
+					fmt.Printf("    Unrecognized line: %s\n", text)
+				}
+			})
+
+			trueAbilities[abilityID] = trueAbility
+		}
+
 	}
 
-	breakthroughsJSON, err := json.MarshalIndent(breakthroughs, "", "  ")
+	for _, href := range hrefs2 {
+
+		// Create a new tab/context for each navigation
+		tabCtx, tabCancel := chromedp.NewContext(ctx)
+
+		subrace := strings.ReplaceAll(path.Base(href), ";returnTo=secondary", "")
+		fmt.Println("Processing sub-race:", subrace)
+
+		var abilitySegments []string
+		var outerHTML string
+		url := "https://rpg.angelssword.com/game/latest/races/secondary/" + subrace
+		err := chromedp.Run(tabCtx,
+			chromedp.Navigate(url),
+			chromedp.WaitVisible(`app-race-details`, chromedp.ByQuery),
+			chromedp.Sleep(5*time.Second),
+			chromedp.OuterHTML("app-race-details", &outerHTML),
+			chromedp.Evaluate(` Array.from(document.querySelectorAll('mat-expansion-panel')).map(panel => panel.outerHTML) `, &abilitySegments),
+		)
+		tabCancel()
+		if err != nil {
+			fmt.Println("Error getting details from", href, ":", err)
+			continue
+		}
+
+		docx, err := goquery.NewDocumentFromReader(strings.NewReader(outerHTML))
+		if err != nil {
+			fmt.Println("Error parsing segment:", err)
+			continue
+		}
+		rawSubRaceName := docx.Find("h2").Text()
+
+		subraces[subrace] = rawSubRaceName
+
+		for _, html := range abilitySegments {
+			doc, err := goquery.NewDocumentFromReader(strings.NewReader(html))
+			if err != nil {
+				fmt.Println("Error parsing segment:", err)
+				continue
+			}
+
+			rawName := doc.Find("mat-panel-title span").Text()
+			abilityName := strings.Split(rawName, "○ ")[1]
+			abilityID := strings.ToLower(strings.ReplaceAll(strings.ReplaceAll(abilityName, " ", "_"), "'", ""))
+			// fmt.Printf("Ability %d: %s [%s]\n", i+1, abilityName, abilityID)
+
+			var trueAbility TrueAbility
+			trueAbility.ID = abilityID
+			trueAbility.Name = abilityName
+
+			// fmt.Printf("  Processing True Ability: %s [%s]\n", abilityName, abilityID)
+			doc.Find("app-true-ability mat-card-content li").Each(func(j int, s *goquery.Selection) {
+				text := s.Text()
+
+				if strings.Contains(text, "Keywords") {
+					keywords := ""
+					doc.Find("app-true-ability mat-card-content mat-chip").Each(func(j int, s *goquery.Selection) {
+						if j != 0 {
+							keywords += ", "
+						}
+						keywords += s.Text()
+					})
+					// fmt.Println("    Processing line with Keywords:", text)
+					// keywords := strings.Split(text, "Keywords")[1]
+					trueAbility.Keywords = keywords
+				} else if strings.Contains(text, "Range") {
+					rng := strings.Split(text, "Range")[1]
+					trueAbility.Range = strings.TrimSpace(rng)
+				} else if strings.Contains(text, "Description") {
+					desc := strings.Split(text, "Description")[1]
+					trueAbility.Description = strings.TrimSpace(desc)
+				} else if strings.Contains(text, "Requirement") {
+					req := strings.Split(text, "Requirement")[1]
+					trueAbility.Requirement = strings.TrimSpace(req)
+				} else if strings.Contains(text, "RP cost") {
+					rp := strings.Split(text, "RP cost")[1]
+					trueAbility.RPcost = strings.TrimSpace(rp)
+				} else if strings.Contains(text, "AP cost") {
+					ap := strings.Split(text, "AP cost")[1]
+					trueAbility.APcost = strings.TrimSpace(ap)
+				} else if strings.Contains(text, "MP cost") {
+					mp := strings.Split(text, "MP cost")[1]
+					trueAbility.MPcost = strings.TrimSpace(mp)
+				} else if strings.Contains(text, "Mana cost") {
+					mp := strings.Split(text, "Mana cost")[1]
+					trueAbility.MPcost = strings.TrimSpace(mp)
+				} else if strings.Contains(text, "Other costs") {
+					oc := strings.Split(text, "Other costs")[1]
+					trueAbility.Othercost = strings.TrimSpace(oc)
+				} else {
+					fmt.Printf("    Unrecognized line: %s\n", text)
+				}
+			})
+
+			trueAbilities[abilityID] = trueAbility
+
+		}
+
+	}
+
+	racesBytes, err := json.MarshalIndent(races, " ", "  ")
 	if err != nil {
-		fmt.Println("Error marshaling breakthroughs to JSON:", err)
+		fmt.Println("Error marshalling")
+		return
+	}
+	if err = os.WriteFile("races.json", racesBytes, 0644); err != nil {
+		fmt.Println("Error writing")
 		return
 	}
 
-	err = os.WriteFile("breakthroughs.json", breakthroughsJSON, 0644)
+	subracesBytes, err := json.MarshalIndent(subraces, " ", "  ")
 	if err != nil {
-		fmt.Println("Error writing breakthroughs.json file:", err)
+		fmt.Println("Error marshalling")
 		return
 	}
-	fmt.Printf("Wrote %d breakthroughs to breakthroughs.json\n", len(breakthroughs))
+	if err = os.WriteFile("subraces.json", subracesBytes, 0644); err != nil {
+		fmt.Println("Error writing")
+		return
+	}
+
+	abilitiesBytes, err := json.MarshalIndent(trueAbilities, " ", "  ")
+	if err != nil {
+		fmt.Println("Error marshalling true abilities to JSON:", err)
+		return
+	}
+	if err = os.WriteFile("races_true_abilities.json", abilitiesBytes, 0644); err != nil {
+		fmt.Println("Error writing true_abilities.json file:", err)
+		return
+	}
+
+	fmt.Printf("Wrote %d true abilities to class_true_abilities.json\n", len(trueAbilities))
+	fmt.Printf("Wrote %d races to races.json\n", len(races))
+	fmt.Printf("Wrote %d subraces to subraces.json\n", len(subraces))
 }
