@@ -530,6 +530,31 @@ func main() {
 	fmt.Fprintf(htmlFile, `const abilityList =%s;`, arraystring3)
 	fmt.Fprintln(htmlFile, "\n")
 
+	// Abilities macros map
+	var arraystring5 string
+	bytes, err = os.ReadFile("csvfetcher/true_abilities_macros.json")
+	if err != nil {
+		panic(err)
+	}
+
+	abilityMMap := make(map[string]string)
+	if err = json.Unmarshal(bytes, &abilityMMap); err != nil {
+		panic(err)
+	}
+	arraystring5 = "{"
+	i := 0
+	for id, macro := range abilityMMap {
+		if i > 0 {
+			arraystring5 += ","
+		}
+		arraystring5 += fmt.Sprintf(`"%s": "%s"`, id, strings.ReplaceAll(macro, `"`, `\"`))
+		i++
+	}
+	arraystring5 += "}"
+
+	fmt.Fprintf(htmlFile, `const abilityMacroMap =%s;`, arraystring5)
+	fmt.Fprintln(htmlFile, "\n")
+
 	// Crafting Abilities array
 	var arraystring4 string
 	arraystring4 = "{"

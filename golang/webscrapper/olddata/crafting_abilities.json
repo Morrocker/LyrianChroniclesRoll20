@@ -41,6 +41,13 @@
      "Cost": "Errand",
      "Description": "You spend some time connecting the artifice to a weapon with an open artifice slot."
    },
+   "barrel_length_optimization": {
+     "ID": "barrel_length_optimization",
+     "Name": "Barrel Length Optimization",
+     "Keywords": "",
+     "Cost": "10 crafting points",
+     "Description": "A firearm or artifice weapon gains +1 Power Artisan Bonus. Only works with actual weapons, not attachments."
+   },
    "blacksmiths_modification_a": {
      "ID": "blacksmiths_modification_a",
      "Name": "Blacksmith’s Modification A",
@@ -146,13 +153,6 @@
      "Cost": "10 Crafting Points",
      "Description": "You carefully add an alchemical compound to a pressurized Flask. If the Flask has an area of effect, increases the area by another 5ft (example a 10ft radius becomes 15ft radius)."
    },
-   "firearm_alloy": {
-     "ID": "firearm_alloy",
-     "Name": "Firearm Alloy",
-     "Keywords": "",
-     "Cost": "X Crafting Points",
-     "Description": "You mix a special material into the firearm or artifice weapon. Each material has its own crafting point cost."
-   },
    "fish_stock": {
      "ID": "fish_stock",
      "Name": "Fish Stock",
@@ -166,6 +166,13 @@
      "Keywords": "Rapid",
      "Cost": "",
      "Description": "You infuse one of the planted herbs with Qi, upgrading it from rare to mystic and adding 20 to its difficulty."
+   },
+   "grip_design": {
+     "ID": "grip_design",
+     "Name": "Grip Design",
+     "Keywords": "",
+     "Cost": "10 crafting points",
+     "Description": "A firearm or artifice weapon gains +1 Focus Artisan Bonus. Only works with actual weapons, not attachments."
    },
    "harvest": {
      "ID": "harvest",
@@ -313,12 +320,5 @@
      "Keywords": "",
      "Cost": "X Crafting Points",
      "Description": "You mix a special material into the smithing weapon. Each material has its own crafting point cost."
-   },
-   "weapon_modification_a": {
-     "ID": "weapon_modification_a",
-     "Name": "Weapon Modification A",
-     "Keywords": "",
-     "Cost": "X Crafting Points",
-     "Description": "You add an A-Type modification to the weapon. See the Universal Weapon or Crafting mods page as well as the individual weapon page for details. Each modification has its own cost."
    }
  }

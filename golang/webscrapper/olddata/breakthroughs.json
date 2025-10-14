@@ -381,7 +381,7 @@
     "ID": "racial_flight",
     "Name": "Racial Flight",
     "Cost": "300",
-    "Requirement": "Must be Phoenix, Mothfolk, Lizardfolk or Willowisp race.",
+    "Requirement": "Must be Phoenix, Mothfolk or Lizardfolk race.",
     "Description": "You may use Flight."
   },
   "rapid_flash": {
@@ -438,7 +438,7 @@
     "Name": "Summon Contract: Fortuna, Lady Luck",
     "Cost": "0",
     "Requirement": "Must be a summoner and have visited the eidolon.",
-    "Description": "Appearance: Fortuna appears as a beautiful lady wearing clothing of the highest quality. Her clothes change each time she appears, but she always carries with her a parasol designed like a roulette wheel.Desires: Fortuna desires to see gambling. To have people bet their all on impossible odds.Pact Cost: You can never naturally roll 20 again. Every 20 you roll is reduced to 19.Attunement Cost: NoneRe-Summon Cost: Roll a natural 20 (before the pact cost reduces it) on an attack or skill check with consequences for failure (GM’s decision).When you contract Fortuna, you are able to attune to it. While attuned, you gain access to the Draw Luck ability through your Channel Eidolon ability. You summon the Jack of Hearts for your Lesser Eidolon and Fortuna for your Eidolon (The stats for these are listed under monsters)."
+    "Description": "Appearance: Fortuna appears as a beautiful lady wearing clothing of the highest quality. Her clothes change each time she appears, but she always carries with her a parasol designed like a roulette wheel.Desires: Fortuna desires to see gambling. To have people bet their all on impossible odds.Pact Cost: You can never naturally roll 20 again. Every 20 you roll is reduced to 19.Attunement Cost: NoneRe-Summon Cost: Roll a natural 20 (before the pact cost reduces it) on an attack, save or skill check with consequences for failure (GM’s decision).When you contract Fortuna, you are able to attune to it. While attuned, you gain access to the Draw Luck ability through your Channel Eidolon ability. You summon the Jack of Hearts for your Lesser Eidolon and Fortuna for your Eidolon (The stats for these are listed under monsters)."
   },
   "summon_contract:_ixilune,_the_swarm": {
     "ID": "summon_contract:_ixilune,_the_swarm",

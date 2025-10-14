@@ -299,18 +299,6 @@
      "MPcost": "3 MP",
      "Othercost": ""
    },
-   "artery_cut": {
-     "ID": "artery_cut",
-     "Name": "Artery Cut",
-     "Keywords": "",
-     "Range": "Melee Weapon",
-     "Requirement": "One-Handed weapon only, can be used after a light attack hits and is not reacted against.",
-     "Description": "You change the arc of your weapon and go for a vital spot, turning the hit into a critical hit.",
-     "RPcost": "1 RP",
-     "APcost": "",
-     "MPcost": "",
-     "Othercost": ""
-   },
    "assign_decoy": {
      "ID": "assign_decoy",
      "Name": "Assign Decoy",
@@ -557,7 +545,7 @@
      "Keywords": "Lightning, Rapid, Spell",
      "Range": "360ft",
      "Requirement": "-",
-     "Description": "You may make a Heavy Attack that deals Lightning Damage with a bolt from the sky. On damage, inflict Static X where X equals your Power x 3. As the attack from the sky, any cover is calculated from above the target rather than from your path to the target.",
+     "Description": "You may make a Heavy Attack that deals Wind(Lightning) Damage with a bolt from the sky. On damage, inflict Static X where X equals your Power x 3. As the attack from the sky, any cover is calculated from above the target rather than from your path to the target.",
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "1 MP",
@@ -773,7 +761,7 @@
      "Keywords": "Lightning, Spell",
      "Range": "60ft",
      "Requirement": "-",
-     "Description": "You may make a Heavy Attack against the target dealing Lightning Damage and inflicting Static X where X equals your Power x 3. On damage, you may repeat this attack against another target within 30ft of the target without paying additional costs. This attack may repeat multiple times like this.You cannot target the same creature more than once per use of this ability.",
+     "Description": "You may make a Heavy Attack against the target dealing Wind(Lightning) Damage and inflicting Static X where X equals your Power x 3. On damage, you may repeat this attack against another target within 30ft of the target without paying additional costs. This attack may repeat multiple times like this.You cannot target the same creature more than once per use of this ability.",
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "2 MP",
@@ -1307,18 +1295,6 @@
      "MPcost": "",
      "Othercost": ""
    },
-   "delay_time": {
-     "ID": "delay_time",
-     "Name": "Delay Time",
-     "Keywords": "",
-     "Range": "40ft",
-     "Requirement": "",
-     "Description": "You choose one or more negative effects on the target that would trigger at the start or end of their turn. They trigger on the turn after the turn they would normally trigger instead. You may only delay an effect once, but you are able to delay Stasis even though the target is normally immune to all abilities.Start of turn effects still trigger at the start of the turn and end of turn effects still trigger at the end of the turn.",
-     "RPcost": "0 RP",
-     "APcost": "",
-     "MPcost": "1 MP",
-     "Othercost": ""
-   },
    "delayed_hit": {
      "ID": "delayed_hit",
      "Name": "Delayed Hit",
@@ -1386,18 +1362,6 @@
      "Range": "Melee Weapon",
      "Requirement": "Target must have 0 RP remaining.",
      "Description": "You make a Light attack against the target.",
-     "RPcost": "",
-     "APcost": "1 AP",
-     "MPcost": "",
-     "Othercost": ""
-   },
-   "devastating_strike_ii": {
-     "ID": "devastating_strike_ii",
-     "Name": "Devastating Strike II",
-     "Keywords": "Sure Hit, Full Pierce",
-     "Range": "Melee Weapon",
-     "Requirement": "The target has no RP.",
-     "Description": "You make a Light attack against the target. The dice are maximized instead of rolling.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "",
@@ -1871,18 +1835,6 @@
      "MPcost": "2 MP",
      "Othercost": ""
    },
-   "en-dama": {
-     "ID": "en-dama",
-     "Name": "En-dama",
-     "Keywords": "",
-     "Range": "5ft",
-     "Requirement": "",
-     "Description": "You throw a smoke bomb on the ground within range that blocks line of sight in a 5ft radius (15x15 area total) of where it was thrown. Targets inside or within 5ft of the smoke can only see up to 5ft into or out of the smoke.If you’re inside of it at the point it's thrown, you may immediately take the Hide action.The smoke lasts until the start of your next turn. When it ends, if you are inside your smoke, you may immediately move up to your speed and you are considered hidden up until you finish that movement.",
-     "RPcost": "",
-     "APcost": "2 AP",
-     "MPcost": "1 MP",
-     "Othercost": ""
-   },
    "energy_drain": {
      "ID": "energy_drain",
      "Name": "Energy Drain",
@@ -2039,18 +1991,6 @@
      "MPcost": "2 MP",
      "Othercost": ""
    },
-   "exposing_stab": {
-     "ID": "exposing_stab",
-     "Name": "Exposing Stab",
-     "Keywords": "",
-     "Range": "Melee Weapon",
-     "Requirement": "",
-     "Description": "You make a Light attack against the damage. On damage, you may use your Devastating Strike against the target until the end of your turn as if the target had 0 RP.",
-     "RPcost": "",
-     "APcost": "2 AP",
-     "MPcost": "",
-     "Othercost": ""
-   },
    "extending_spear": {
      "ID": "extending_spear",
      "Name": "Extending Spear",
@@ -2069,7 +2009,7 @@
      "Keywords": "Concentration, Mind Affecting, Illusion",
      "Range": "60ft",
      "Requirement": "Enemy has used the target ability",
-     "Description": "You lock eyes with an enemy, casting an illusion onto the target’s mind. Name an ability that the target had previously used in the current encounter. The target forgets the target ability, being unable to use it completely while the Illusion is in effect. This ability cannot target Secret Arts, Climax Arts or Esoteric Arts. Only one target may be under the effect of this illusion at a time. If the target is non-heroic and under the effect of Faerie Light Eyes: Hold Person, instead the target immediately is rendered insane permanently. An insane target takes no further combat actions.If used on a grunt under the effects of Hold Person, they do not need to meet the normal requirements for this ability.Does not work against Boss type enemies.",
+     "Description": "You lock eyes with an enemy, casting an illusion onto the target’s mind. Name an ability that the target had previously used in the current encounter. The target forgets the target ability, being unable to use it completely while the Illusion is in effect. This ability cannot target Secret Arts, Climax Arts or Esoteric Arts. Only one target may be under the effect of this illusion at a time. If the target is non-heroic and under the effect of Faerie Light Eyes: Hold Person, instead the target immediately is rendered insane permanently. An insane target takes no further combat actions.Does not work against Boss type enemies.",
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "",
@@ -2114,7 +2054,7 @@
    "faithful_shield": {
      "ID": "faithful_shield",
      "Name": "Faithful Shield",
-     "Keywords": "",
+     "Keywords": "Overcharge",
      "Range": "Self",
      "Requirement": "",
      "Description": "You may use Shelter once at 0 RP cost if the target is your Soulmate. This effect lasts until the start of your next turn.Overcharge: You may spend 4 AP on this ability to instead gain 2 free uses of Shelter.These free uses ignore the normal limitation of using an ability only once per turn.",
@@ -2195,18 +2135,6 @@
      "MPcost": "",
      "Othercost": ""
    },
-   "feinting_stab": {
-     "ID": "feinting_stab",
-     "Name": "Feinting Stab",
-     "Keywords": "",
-     "Range": "5ft",
-     "Requirement": "At least two enemies within range.",
-     "Description": "You make a Heavy attack against the target. If they react to it in any way, you may cancel your attack on them and instead make it against a different enemy in range. Any RP spent by the first target is not refunded.",
-     "RPcost": "",
-     "APcost": "2 AP",
-     "MPcost": "1 MP",
-     "Othercost": ""
-   },
    "felling_strike": {
      "ID": "felling_strike",
      "Name": "Felling Strike",
@@ -2273,7 +2201,7 @@
      "Keywords": "Fire, Spell, Type",
      "Range": "30ft",
      "Requirement": "-",
-     "Description": "You surround a willing target in searing flames, changing their typing to Fire II. As a Fire II type, they take half damage from Fire and Frost Damage or attacks with the Fire or Frost keywords unless that attack deals true damage. They take 50% more damage from Water Damage or attacks with the Water keyword. While the ward lasts, they also gain immunity to Burning. The ward lasts until the end of the encounter or until their type is overwritten by a more powerful type.",
+     "Description": "You surround a willing target in searing flames, changing their typing to Fire II. As a Fire II type, they take half damage from Fire and Earth Damage or attacks with the Fire or Earth keywords unless that attack deals true damage. They take 50% more damage from Water Damage or attacks with the Water keyword. While the ward lasts, they also gain immunity to Burning. The ward lasts until the end of the encounter or until their type is overwritten by a more powerful type.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "0 MP",
@@ -2501,7 +2429,7 @@
      "Keywords": "Lightning, Spell",
      "Range": "120ft",
      "Requirement": "-",
-     "Description": "You make a Light Attack against two different targets who can be no further than 20ft apart, dealing Lightning Damage and on damage, inflict Static X where X equals your power + 5.",
+     "Description": "You make a Light Attack against two different targets who can be no further than 20ft apart, dealing Wind(Lightning) Damage and on damage, inflict Static X where X equals your power + 5.",
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "",
@@ -2561,7 +2489,7 @@
      "Keywords": "Frost, Root, Slow, Spell, Combo",
      "Range": "80ft",
      "Requirement": "",
-     "Description": "You send ice spikes along the ground towards a single target, making a Heavy attack that deals Frost Damage. This cannot hit a target higher than 5ft above the ground. On hit, the target is Slowed until the end of their next turn.  If the target is already Slowed, they instead become Rooted, making them unable to move until the end of their next turn.Combo: When used after Icicle Nail hits, reduce the mana cost to 0.",
+     "Description": "You send ice spikes along the ground towards a single target, making a Heavy attack that deals Water(Frost) Damage. This cannot hit a target higher than 5ft above the ground. On hit, the target is Slowed until the end of their next turn.  If the target is already Slowed, they instead become Rooted, making them unable to move until the end of their next turn.Combo:  When used after Icicle Nail hits, reduce the mana cost to 0.",
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "1 MP",
@@ -2601,18 +2529,6 @@
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "",
-     "Othercost": ""
-   },
-   "genjutsu_kai": {
-     "ID": "genjutsu_kai",
-     "Name": "Genjutsu Kai",
-     "Keywords": "Ninjutsu",
-     "Range": "5ft",
-     "Requirement": "Target is under the effects of an Illusion.",
-     "Description": "You focus your internal energies and dispel any Illusions affecting you or an ally within 5ft of you.",
-     "RPcost": "",
-     "APcost": "0 AP",
-     "MPcost": "1 MP",
      "Othercost": ""
    },
    "glacial_bastion": {
@@ -2981,7 +2897,7 @@
      "Keywords": "Frost, Slow, Spell",
      "Range": "60ft",
      "Requirement": "-",
-     "Description": "You fire a shard of ice at a target unit, making a Light Attack that deals Frost Damage. On hit, the target is Slowed until the end of their next turn.",
+     "Description": "You fire a shard of ice at a target unit, making a Light Attack that deals Water(Frost) Damage. On hit, the target is Slowed until the end of their next turn.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "1 MP",
@@ -3179,18 +3095,6 @@
      "MPcost": "1 MP",
      "Othercost": ""
    },
-   "kage_bunshin:_kyomei": {
-     "ID": "kage_bunshin:_kyomei",
-     "Name": "Kage Bunshin: Kyomei",
-     "Keywords": "Ninjutsu",
-     "Range": "5ft",
-     "Requirement": "You must have a Bunshin clone active and within range.",
-     "Description": "Your clone assists in the preparation of your next Ninjutsu, reducing the AP cost of it by 1.",
-     "RPcost": "",
-     "APcost": "0 AP",
-     "MPcost": "",
-     "Othercost": ""
-   },
    "kage_shuriken_no_jutsu": {
      "ID": "kage_shuriken_no_jutsu",
      "Name": "Kage Shuriken no Jutsu",
@@ -3320,18 +3224,6 @@
      "Description": "You may make a Heavy Attack against the target. On damage if the enemy is a Grunt, they immediately drop to 0 HP and fall unconscious.",
      "RPcost": "",
      "APcost": "4 AP",
-     "MPcost": "",
-     "Othercost": ""
-   },
-   "kugeki-zan": {
-     "ID": "kugeki-zan",
-     "Name": "Kugeki-zan",
-     "Keywords": "Ninjutsu, Sure Hit, Full Pierce",
-     "Range": "",
-     "Requirement": "Target must have 0 RP remaining.",
-     "Description": "You make a Light attack against the target.",
-     "RPcost": "",
-     "APcost": "1 AP",
      "MPcost": "",
      "Othercost": ""
    },
@@ -3791,18 +3683,6 @@
      "MPcost": "",
      "Othercost": ""
    },
-   "ougi:_taju_bunshin_no_jutsu": {
-     "ID": "ougi:_taju_bunshin_no_jutsu",
-     "Name": "Ougi: Taju Bunshin no Jutsu",
-     "Keywords": "Secret Art, Ninjutsu, Illusion, Upkeep",
-     "Range": "Self",
-     "Requirement": "",
-     "Description": "You create 3 illusionary copies of yourself within 10ft of yourself or your Bunshin clone. These copies can take actions similar to your Bunshin Tai no Jutsu, but each of them may also act with its own 2 AP from the start of your next turn.Each clone has 1 HP and upon taking any damage, they vanish. You may use RP for these clones as normal.Upkeep: 2 AP",
-     "RPcost": "",
-     "APcost": "2 AP",
-     "MPcost": "3 MP",
-     "Othercost": ""
-   },
    "overclock": {
      "ID": "overclock",
      "Name": "Overclock",
@@ -4029,18 +3909,6 @@
      "RPcost": "1 RP",
      "APcost": "2 AP",
      "MPcost": "",
-     "Othercost": ""
-   },
-   "position_rewind": {
-     "ID": "position_rewind",
-     "Name": "Position Rewind",
-     "Keywords": "",
-     "Range": "2000ft",
-     "Requirement": "",
-     "Description": "You teleport to where you were at the start of your last turn. (Use a token to mark the position)",
-     "RPcost": "0 RP",
-     "APcost": "",
-     "MPcost": "1 MP",
      "Othercost": ""
    },
    "power_jump": {
@@ -4286,7 +4154,7 @@
    "quick_assist": {
      "ID": "quick_assist",
      "Name": "Quick Assist",
-     "Keywords": "",
+     "Keywords": "Teleport",
      "Range": "20ft",
      "Requirement": "Your soulmate is the target of an attack.",
      "Description": "You teleport next to your soulmate and force the triggering attack to resolve against you, gaining the benefit of the Block action against it.Afterwards, if your Soulmate is in range of the attacker, they may make an Attack of Opportunity against it.If you were already next to your Soulmate before you used this ability, the mana cost is reduced by 1.",
@@ -4685,7 +4553,7 @@
      "Keywords": "Healing, Spell, Earth",
      "Range": "60ft",
      "Requirement": "-",
-     "Description": "You may make a Light Attack against the target, dealing Earth damage. On damage, the current host of Spore Symbiote is Healed for your Power + 3.",
+     "Description": "You may make a Light Attack against the target, dealing Earth damage On damage, the current host of Spore Symbiote is Healed for your Power + 3.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "1 MP",
@@ -4907,18 +4775,6 @@
      "MPcost": "",
      "Othercost": ""
    },
-   "secret_art:_double_accel": {
-     "ID": "secret_art:_double_accel",
-     "Name": "Secret Art: Double Accel",
-     "Keywords": "Secret Art",
-     "Range": "Self",
-     "Requirement": "",
-     "Description": "You gain 4 AP. Your AP recovery is lowered by 3 until the end of your next turn.",
-     "RPcost": "",
-     "APcost": "0 AP",
-     "MPcost": "",
-     "Othercost": ""
-   },
    "secret_art:_dragonslaying_jump": {
      "ID": "secret_art:_dragonslaying_jump",
      "Name": "Secret Art: Dragonslaying Jump",
@@ -4934,7 +4790,7 @@
    "secret_art:_dynamic_duo": {
      "ID": "secret_art:_dynamic_duo",
      "Name": "Secret Art: Dynamic Duo",
-     "Keywords": "",
+     "Keywords": "Challenge, Secret Art",
      "Range": "Sight",
      "Requirement": "",
      "Description": "You challenge all enemies in range until the start of your next turn. Any time you would be allowed to make an Attack of Opportunity, your Soulmate may make it instead. They may Sidestep up to their speed before making each Attack of Opportunity.",
@@ -6083,18 +5939,6 @@
      "MPcost": "",
      "Othercost": ""
    },
-   "stasis": {
-     "ID": "stasis",
-     "Name": "Stasis",
-     "Keywords": "",
-     "Range": "40ft",
-     "Requirement": "",
-     "Description": "You put a Grunt level character or any willing ally into Stasis until the start of your next turn. While in Stasis, they cannot be affected by any ability, attack or anything similar but they also cannot take any actions.",
-     "RPcost": "",
-     "APcost": "2 AP",
-     "MPcost": "",
-     "Othercost": ""
-   },
    "static_discharge": {
      "ID": "static_discharge",
      "Name": "Static Discharge",
@@ -6113,7 +5957,7 @@
      "Keywords": "Daze, Lightning, Spell",
      "Range": "60ft",
      "Requirement": "The target must be afflicted with Static you applied.",
-     "Description": "A single target in range must make a save or immediately take Lightning damage equal to their Static and become inflicted with Daze.",
+     "Description": "A single target in range must make a save or immediately take Wind(Lightning) damage equal to their Static and become inflicted with Daze.",
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "",
@@ -6557,7 +6401,7 @@
      "Keywords": "Lightning, Spell",
      "Range": "40ft",
      "Requirement": "",
-     "Description": "You may make a Light Attack that deals Lightning damage against all enemies in range. As the attack comes from the sky, any cover is calculated from above the target rather than from your path to the target.",
+     "Description": "You may make a Light Attack that deals Wind(Lightning) damage against all enemies in range. As the attack comes from the sky, any cover is calculated from above the target rather than from your path to the target.",
      "RPcost": "",
      "APcost": "3 AP",
      "MPcost": "",
@@ -7037,7 +6881,7 @@
      "Keywords": "Frost, Slow, Spell",
      "Range": "80ft",
      "Requirement": "",
-     "Description": "You target a Glacial Wall in range and fire a bolt of Frost energy that requires line of sight. On impact, the wall is destroyed and explodes into blades of ice, attacking all enemies within 5ft of the destroyed wall with a Precise attack that deals Frost damage. On damage, the target is Slowed until the end of their next turn.",
+     "Description": "You target a Glacial Wall in range and fire a bolt of Frost energy that requires line of sight. On impact, the wall is destroyed and explodes into blades of ice, attacking all enemies within 5ft of the destroyed wall with a Precise attack that deals Water(Frost) damage. On damage, the target is Slowed until the end of their next turn.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "",
@@ -7145,7 +6989,7 @@
      "Keywords": "Aid, Shield, Spell",
      "Range": "30ft",
      "Requirement": "Ally is targeted by a ranged attack.",
-     "Description": "You grant the target  1 RP that must be spent on the basic Dodge or Block action against the triggering attack as well as Wind Shield. Wind Shield grants a bonus to Dodge equal to your Focus against the triggering attack. The triggering attack can also no longer benefit from Lock On or Sure Hit",
+     "Description": "You grant the target  1 RP that must be spent on the basic Dodge or Block action against the triggering attack as well as Wind Shield. Wind Shield grants a bonus to Evasion equal to your Focus against the triggering attack. The triggering attack can also no longer benefit from Lock On or Sure Hit",
      "RPcost": "1 RP",
      "APcost": "",
      "MPcost": "",
@@ -7205,7 +7049,7 @@
      "Keywords": "Lightning, Lock On, Spell",
      "Range": "60ft",
      "Requirement": "-",
-     "Description": "You may make a Light attack against the target, dealing Lightning damage. On damage, inflict Static X where X equals your Power X 3. If your Superconductor ability would be valid against the target, this attack gains Sure Hit.",
+     "Description": "You may make a Light attack against the target, dealing Wind(Lightning) damage. On damage, inflict Static X where X equals your Power X 3. If your Superconductor ability would be valid against the target, this attack gains Sure Hit.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "1 MP",
