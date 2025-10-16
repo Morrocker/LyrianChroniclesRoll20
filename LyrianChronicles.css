@@ -3125,7 +3125,7 @@
 
 .charsheet .table-container .table-row .npc-skill-name,
 .charsheet .table-container .table-row .npc-action-name,
-.charsheet .table-container .table-row .npc-ability-name, {
+.charsheet .table-container .table-row .npc-ability-name {
   font-size: 10px;
   font-weight: bold;
   cursor: default;
