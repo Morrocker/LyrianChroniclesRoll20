@@ -2316,7 +2316,8 @@
                           <label>Status:</label>
                           <select name="attr_armor_status" title="@{armor_status}" value="stored">
                             <option value="stored">Stored</option>
-                            <option value="carried">Carried</option>
+                            <option value="carried">Backpack</option>
+                            <option value="armory">Dimensional Armory</option>
                             <option value="worn">Worn</option>
                           </select>
                         </div>
@@ -2359,7 +2360,8 @@
                           <div class="picker status4">
                             <select name="attr_armor_status" title="@{armor_status}" value="stored">
                               <option value="stored">Stored</option>
-                              <option value="carried">Carried</option>
+                            <option value="carried">Backpack</option>
+                            <option value="armory">Dimensional Armory</option>
                               <option value="worn">Worn</option>
                             </select>
                           </div>
@@ -2428,7 +2430,8 @@
                           <label>Status:</label>
                           <select name="attr_weapon_status" title="@{weapon_status}" value="stored">
                             <option value="stored">Stored</option>
-                            <option value="carried">Carried</option>
+                            <option value="carried">Backpack</option>
+                            <option value="armory">Dimensional Armory</option>
                             <option value="off-hand">Off-Hand</option>
                             <option value="main-hand">Main-Hand</option>
                           </select>
@@ -2514,7 +2517,8 @@
                           <div class="picker status5">
                             <select name="attr_weapon_status" title="@{weapon_status}" value="stored">
                               <option value="stored">Stored</option>
-                              <option value="carried">Carried</option>
+                            <option value="carried">Backpack</option>
+                            <option value="armory">Dimensional Armory</option>
                               <option value="off-hand">Off-Hand</option>
                               <option value="main-hand">Main-Hand</option>
                             </select>
@@ -2676,6 +2680,7 @@
                 <div class="table-name2">Misc Inventory</div>
                 <div class="headers-container">
                   <div class="header2 name6">Name</div>
+                  <div class="header2 amount6">Amount</div>
                   <div class="header2 burden6">Burden</div>
                   <div class="header2 status6">Status</div>
                   <div class="header2 actions6"></div>
@@ -2699,7 +2704,11 @@
                           <label>Status:</label>
                           <select name="attr_misc_status" title="@{misc_status}" value="stored">
                             <option value="stored">Stored</option>
-                            <option value="carried">Carried</option>
+                            <option value="carried">Backpack</option>
+                            <option value="armory">Dimensional Armory</option>
+                            <option value="adv-kit">Adventurer's Kit</option>
+                            <option value="fuel-pack">Fuel Cartridge Pack</option>
+                            <option value="alchemy-rig">Alchemy Rig</option>
                           </select>
                         </div>
                         <div class="description">
@@ -2719,13 +2728,20 @@
                           <div class="name6">
                             <span class="" name="attr_misc_name"></span>
                           </div>
+                          <div class="amount6">
+                            <input type="number" name="attr_misc_amount"> </span>
+                          </div>
                           <div class="burden6">
                             <span name="attr_misc_burden"> </span>
                           </div>
                           <div class="picker status6">
                             <select name="attr_misc_status" title="@{misc_status}" value="stored">
                               <option value="stored">Stored</option>
-                              <option value="carried">Carried</option>
+                            <option value="carried">Backpack</option>
+                            <option value="armory">Dimensional Armory</option>
+                            <option value="adv-kit">Adventurer's Kit</option>
+                            <option value="fuel-pack">Fuel Cartridge Pack</option>
+                            <option value="alchemy-rig">Alchemy Rig</option>
                             </select>
                           </div>
                           <div class="actions flex-row">
@@ -3873,7 +3889,7 @@
       <!-- TABS SETUP START -->
       <div class="sheet-tab">
         <input type="radio" name="attr_tab" value="setup" />
-        <span class="sheet-tab-label">Setup & Tunning</span>
+        <span class="sheet-tab-label">Setup & Tuning</span>
         <div class="sheet-tab-content flex-row">
           <div class="section-container flex-column gap-5">
             <div class="table-container setup full-width">
@@ -4201,14 +4217,14 @@
     <input type="number" name="attr_total_dodge" hidden />
     <input type="number" name="attr_total_initiative" hidden />
 
-    <input type="number" name="attr_armors_burden" hidden />
-    <input type="number" name="attr_armors_dodge" hidden />
-    <input type="number" name="attr_armors_evasion" hidden />
-    <input type="number" name="attr_armors_guard" hidden />
-    <input type="number" name="attr_armors_block" hidden />
-    <input type="number" name="attr_armors_initiative" hidden />
+    <input type="number" name="attr_armors_burden" hidden value="0"/>
+    <input type="number" name="attr_armors_dodge" hidden value="0"/>
+    <input type="number" name="attr_armors_evasion" hidden value="0"/>
+    <input type="number" name="attr_armors_guard" hidden value="0"/>
+    <input type="number" name="attr_armors_block" hidden value="0"/>
+    <input type="number" name="attr_armors_initiative" hidden value="0"/>
 
-    <input type="number" name="attr_weapons_burden" hidden />
+    <input type="number" name="attr_weapons_burden" hidden value="0"/>
 
     <input type="text" name="attr_main_weapon_name" hidden />
     <input type="text" name="attr_main_weapon_type" hidden />
@@ -4216,7 +4232,7 @@
     <input type="text" name="attr_main_weapon_power" hidden />
     <!-- UNIVERSAL VARIABLES END-->
     <script>
-      //<script type="text/worker">
+    //<script type="text/worker">
       // Variables
 
       const classList = {
@@ -15596,13 +15612,13 @@
 
       on("change:power change:power_base change:power_race change:power_misc", function () {
         ifPC(["power", "power_base", "power_race", "power_misc", "max_mp_mod"], function (values) {
-          let mana = (parseInt(values.power, 10) || 0) + 6;
-          let totalmana = (parseInt(values.power_base, 10) || 0) + (parseInt(values.max_mp_mod, 10) || 0);
           let powerbase = parseInt(values.power_base, 10) || 0;
           let powermisc = parseInt(values.power_misc, 10) || 0;
           let powerrace = parseInt(values.power_race, 10) || 0;
           let totalpower = powerbase + powerrace + powermisc;
-          setAttrs({ power: totalpower, max_mp: mana + totalmana, max_mp_base: mana });
+
+          let totalmana = 6 + totalpower + (parseInt(values.max_mp_mod, 10) || 0);
+          setAttrs({ power: totalpower, max_mp: totalmana, max_mp_base: 6+totalpower });
         });
       });
 
@@ -16396,15 +16412,17 @@
       });
 
       // Recalculates all armor related values when armor is changed
-      on("change:repeating_miscs:misc_status change:repeating_miscs:misc_burden remove:repeating_miscs", function () {
+      on("change:repeating_miscs:misc_status change:repeating_miscs:misc_burden change:repeating_miscs:misc_amount remove:repeating_miscs", function () {
         getSectionIDs("repeating_miscs", function (ids) {
-          const fields = [].concat(...ids.map((id) => [`repeating_miscs_${id}_misc_status`, `repeating_miscs_${id}_misc_burden`]));
+          const fields = [].concat(...ids.map((id) => [`repeating_miscs_${id}_misc_status`, `repeating_miscs_${id}_misc_burden`,`repeating_miscs_${id}_misc_amount`]));
           ifPC(fields, function (values) {
             // let totalBurden = 0;
             let totalBurden = 0;
             ids.forEach((id) => {
+              let amount = parseInt(values[`repeating_miscs_${id}_misc_amount`]) || 1;
+              if (amount < 1) amount = 1;
               if (values[`repeating_miscs_${id}_misc_status`] === "carried") {
-                totalBurden += parseFloat(values[`repeating_miscs_${id}_misc_burden`]) || 0;
+                totalBurden += amount*parseFloat(values[`repeating_miscs_${id}_misc_burden`]) || 0;
               }
               return;
             });
