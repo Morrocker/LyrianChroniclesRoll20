@@ -2114,7 +2114,7 @@
    "faithful_shield": {
      "ID": "faithful_shield",
      "Name": "Faithful Shield",
-     "Keywords": "",
+     "Keywords": "Overcharge",
      "Range": "Self",
      "Requirement": "",
      "Description": "You may use Shelter once at 0 RP cost if the target is your Soulmate. This effect lasts until the start of your next turn.Overcharge: You may spend 4 AP on this ability to instead gain 2 free uses of Shelter.These free uses ignore the normal limitation of using an ability only once per turn.",
@@ -4286,7 +4286,7 @@
    "quick_assist": {
      "ID": "quick_assist",
      "Name": "Quick Assist",
-     "Keywords": "",
+     "Keywords": "Teleport",
      "Range": "20ft",
      "Requirement": "Your soulmate is the target of an attack.",
      "Description": "You teleport next to your soulmate and force the triggering attack to resolve against you, gaining the benefit of the Block action against it.Afterwards, if your Soulmate is in range of the attacker, they may make an Attack of Opportunity against it.If you were already next to your Soulmate before you used this ability, the mana cost is reduced by 1.",
@@ -4934,7 +4934,7 @@
    "secret_art:_dynamic_duo": {
      "ID": "secret_art:_dynamic_duo",
      "Name": "Secret Art: Dynamic Duo",
-     "Keywords": "",
+     "Keywords": "Challenge, Secret Art",
      "Range": "Sight",
      "Requirement": "",
      "Description": "You challenge all enemies in range until the start of your next turn. Any time you would be allowed to make an Attack of Opportunity, your Soulmate may make it instead. They may Sidestep up to their speed before making each Attack of Opportunity.",
