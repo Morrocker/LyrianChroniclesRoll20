@@ -294,7 +294,7 @@
 .sheet-darkmode .charsheet .sheet-lyrian-chronicles {
   background: #181818;
   color: #eee;
-   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets/LyrianOuterBorder-Dark.png")
+   border-image: url("https://raw.githubusercontent.com/Morrocker/LyrianChroniclesRoll20/refs/heads/main/Assets3/LyrianOuterBorder-Dark.png")
     100 100 100 100 fill stretch; 
 }
 .charsheet .sheet-section-pc {
