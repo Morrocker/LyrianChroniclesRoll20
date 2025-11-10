@@ -194,7 +194,7 @@
               <div class="attribute-container all-hp">
                 <div class="label composite">Max | HP | Temp</div>
                 <div class="value composite">
-                  <input readonly type="number" name="attr_max_hp" title="@{max_hp}" tabindex="-1" value="0" />
+                  <input readonly type="number" name="attr_hp_max" title="@{hp_max}" tabindex="-1" value="0" />
                   <input type="number" name="attr_hp" title="@{hp}" value="0" />
                   <input type="number" name="attr_temp_hp" title="@{temp_hp}" value="0" />
                 </div>
@@ -202,7 +202,7 @@
               <div class="attribute-container all-mp">
                 <div class="label composite">Max | MP | Temp</div>
                 <div class="value composite">
-                  <input readonly type="number" name="attr_max_mp" title="@{max_mp}" tabindex="-1" value="0" />
+                  <input readonly type="number" name="attr_mp_max" title="@{mp_max}" tabindex="-1" value="0" />
                   <input type="number" name="attr_mp" title="@{mp}" value="0" />
                   <input type="number" name="attr_temp_mp" title="@{temp_mp}" value="0" />
                 </div>
@@ -210,7 +210,7 @@
               <div class="attribute-container all-rp">
                 <div class="label composite">Max | RP | Temp</div>
                 <div class="value composite">
-                  <input readonly type="number" name="attr_max_rp" title="@{max_rp}" tabindex="-1" value="0" />
+                  <input readonly type="number" name="attr_rp_max" title="@{rp_max}" tabindex="-1" value="0" />
                   <input type="number" name="attr_rp" title="@{rp}" value="0" />
                   <input type="number" name="attr_temp_rp" title="@{temp_rp}" value="0" />
                 </div>
@@ -221,7 +221,7 @@
               <div class="attribute-container all-mount-hp">
                 <div class="label composite">Max | HP | Temp</div>
                 <div class="value composite">
-                  <input readonly type="number" name="attr_current_mount_max_hp" title="@{current_mount_max_hp}" tabindex="-1" />
+                  <input readonly type="number" name="attr_current_mount_hp_max" title="@{current_mount_hp_max}" tabindex="-1" />
                   <input type="number" name="attr_current_mount_hp" title="@{current_mount_hp}" />
                   <input type="number" name="attr_current_mount_temp_hp" title="@{current_mount_temp_hp}" />
                 </div>
@@ -2589,7 +2589,7 @@
                         </div>
                         <div class="hp">
                           <label>Max HP</label>
-                          <input type="number" name="attr_mount_max_hp" title="@{mount_max_hp}" />
+                          <input type="number" name="attr_mount_hp_max" title="@{mount_hp_max}" />
                         </div>
                         <div class="speed">
                           <label>Speed</label>
@@ -2648,7 +2648,7 @@
                           </div>
                           <div class="details-row">
                             <div class="details-label2 flex-2">HP:</div>
-                            <div class="details-value2"><span name="attr_mount_max_hp"></span></div>
+                            <div class="details-value2"><span name="attr_mount_hp_max"></span></div>
                             <div class="details-label2 flex-2">Speed:</div>
                             <div class="details-value2"><span name="attr_mount_speed"></span></div>
                             <div class="details-label2 flex-2">Focus:</div>
@@ -4081,43 +4081,43 @@
                 <div class="setup-row">
                   <div class="setup-pair">
                     <label>Total Max HP:</label>
-                    <input class="disabled" readonly type="number" name="attr_max_hp" value="0" />
+                    <input class="disabled" readonly type="number" name="attr_hp_max" value="0" />
                   </div>
                   <div class="setup-pair">
                     <label>= Base HP:</label>
-                    <input class="disabled" readonly type="number" name="attr_max_hp_base" value="0" />
+                    <input class="disabled" readonly type="number" name="attr_hp_max_base" value="0" />
                   </div>
                   <div class="setup-pair">
                     <label>+ Max HP Mod:</label>
-                    <input type="number" name="attr_max_hp_mod" value="0" />
+                    <input type="number" name="attr_hp_max_mod" value="0" />
                   </div>
                 </div>
                 <div class="setup-row">
                   <div class="setup-pair">
                     <label>Total Max MP: </label>
-                    <input class="disabled" readonly type="number" name="attr_max_mp" value="0" />
+                    <input class="disabled" readonly type="number" name="attr_mp_max" value="0" />
                   </div>
                   <div class="setup-pair">
                     <label>= Base Max MP </label>
-                    <input class="disabled" readonly type="number" name="attr_max_mp_base" value="0" />
+                    <input class="disabled" readonly type="number" name="attr_mp_max_base" value="0" />
                   </div>
                   <div class="setup-pair">
                     <label>+ Max MP Mod </label>
-                    <input type="number" name="attr_max_mp_mod" value="0" />
+                    <input type="number" name="attr_mp_max_mod" value="0" />
                   </div>
                 </div>
                 <div class="setup-row">
                   <div class="setup-pair">
                     <label>Total Max RP:</label>
-                    <input class="disabled" readonly type="number" name="attr_max_rp" value="0" />
+                    <input class="disabled" readonly type="number" name="attr_rp_max" value="0" />
                   </div>
                   <div class="setup-pair">
                     <label>= Base Max RP</label>
-                    <input class="disabled" readonly type="number" name="attr_max_rp_base" value="0" />
+                    <input class="disabled" readonly type="number" name="attr_rp_max_base" value="0" />
                   </div>
                   <div class="setup-pair">
                     <label>+ Max RP Mod </label>
-                    <input type="number" name="attr_max_rp_mod" value="0" />
+                    <input type="number" name="attr_rp_max_mod" value="0" />
                   </div>
                 </div>
                 <hr />
@@ -4230,8 +4230,11 @@
     <input type="text" name="attr_main_weapon_type" hidden />
     <input type="text" name="attr_main_weapon_focus" hidden />
     <input type="text" name="attr_main_weapon_power" hidden />
+
+    <input type="number" name="attr_hp_max" hidden />
     <!-- UNIVERSAL VARIABLES END-->
-    <script type="text/worker">
+    <script >
+    //<script type="text/worker">
       // Variables
 
       const classList = {
@@ -14847,8 +14850,8 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
         });
       });
 
-      // Automatically update max_hp, max_mp, max_rp and initiative when their mods change
-      const attributesCollective2 = ["max_hp", "max_mp", "max_rp", "initiative"];
+      // Automatically update hp_max, mp_max, rp_max and initiative when their mods change
+      const attributesCollective2 = ["hp_max", "mp_max", "rp_max", "initiative"];
       attributesCollective2.forEach((attr) => {
         on(`change:${attr}_mod`, function () {
           console.log(`Detected change in ${attr}_mod`);
@@ -14908,19 +14911,19 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
       });
 
       on("change:power change:power_base change:power_race change:power_misc", function () {
-        ifPC(["power", "power_base", "power_race", "power_misc", "max_mp_mod"], function (values) {
+        ifPC(["power", "power_base", "power_race", "power_misc", "mp_max_mod"], function (values) {
           let powerbase = parseInt(values.power_base, 10) || 0;
           let powermisc = parseInt(values.power_misc, 10) || 0;
           let powerrace = parseInt(values.power_race, 10) || 0;
           let totalpower = powerbase + powerrace + powermisc;
 
-          let totalmana = 6 + totalpower + (parseInt(values.max_mp_mod, 10) || 0);
-          setAttrs({ power: totalpower, max_mp: totalmana, max_mp_base: 6+totalpower });
+          let totalmana = 6 + totalpower + (parseInt(values.mp_max_mod, 10) || 0);
+          setAttrs({ power: totalpower, mp_max: totalmana, mp_max_base: 6+totalpower });
         });
       });
 
-      on("change:agility change:agility_base change:agility_race change:agility_misc", function () {
-        ifPC(["agility", "agility_base", "agility_race", "agility_misc", "max_rp_mod", "initiative_mod", "armors_initiative"], function (values) {
+      on("change:agility change:agility_base change:agility_race change:agility_misc change:armors_initiative", function () {
+        ifPC(["agility", "agility_base", "agility_race", "agility_misc", "rp_max_mod", "initiative_mod", "armors_initiative"], function (values) {
           let total = (parseInt(values.agility_base, 10) || 0) + (parseInt(values.agility_race, 10) || 0) + (parseInt(values.agility_misc, 10) || 0);
           setAttrs({ agility: total });
           let evasion = total + 7;
@@ -14930,8 +14933,8 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
           setAttrs({
             evasion: evasion,
             dodge: dodge,
-            max_rp_base: maxrp_base,
-            max_rp: maxrp_base + (parseInt(values.max_rp_mod, 10) || 0),
+            rp_max_base: maxrp_base,
+            rp_max: maxrp_base + (parseInt(values.rp_max_mod, 10) || 0),
             initiative_base: total,
             initiative: initiative + (parseInt(values.initiative_mod, 10) || 0) + (parseInt(values.armors_initiative, 10) || 0),
           });
@@ -14939,7 +14942,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
       });
 
       on("change:toughness change:toughness_base change:toughness_race change:toghness_misc", function () {
-        ifPC(["toughness", "toughness_base", "toughness_race", "toughness_misc", "equipment_guard", "max_hp_base", "max_hp_mod"], function (values) {
+        ifPC(["toughness", "toughness_base", "toughness_race", "toughness_misc", "equipment_guard", "hp_max_base", "hp_max_mod"], function (values) {
           total = (parseInt(values.toughness_base, 10) || 0) + (parseInt(values.toughness_race, 10) || 0) + (parseInt(values.toughness_misc, 10) || 0);
           setAttrs({ toughness: total });
           let maxhp = total * 10 + 20;
@@ -14947,8 +14950,8 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
           let guard = total + (parseInt(values.equipment_guard, 10) || 0);
           let block = total * 2 + (parseInt(values.equipment_block, 10) || 0);
           setAttrs({
-            max_hp_base: maxhp,
-            max_hp: maxhp + (parseInt(values.max_hp_mod, 10) || 0),
+            hp_max_base: maxhp,
+            hp_max: maxhp + (parseInt(values.hp_max_mod, 10) || 0),
             save_bonus: save,
             guard: guard,
             block: block,
@@ -15392,6 +15395,8 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
           if (ab.default_roll && ab.default_roll === "missing_macro") {
             console.log("Default roll macro is missing");
             roll2 = `&{template:default} {{name=Missing macro}} {{Description=There is no default macro for this ability or the macro is missing.}}`;
+          } else if (ab.default_roll === "no_macro_needed") {
+            roll2 = "";
           } else {
             roll2 = ab.default_roll;
           }
@@ -15416,15 +15421,12 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
       on("clicked:repeating_abilities", function (eventInfo) {
         const button = eventInfo.htmlAttributes;
         const only_roll = button["data-only-roll"];
-        console.log("A",eventInfo)
 
         // console.log("eventInfo:", eventInfo);
         if (eventInfo.htmlAttributes.name === "act_post_ability_info") {
-        console.log("B")
           getSectionIDs("repeating_abilities", function (ids) {
             ids.forEach((id) => {
 
-        console.log("C")
               if (eventInfo.triggerName.includes(id)) {
                 // console.log("Posting ability info for id:", id);
                 const fields = [].concat(
@@ -15442,12 +15444,10 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
                   ])
                 );
                 getAttrs(fields, function (values) {
-                  console.log("D")
                   const ab = getValuesAsObj(values, `repeating_abilities_${id}_ability_`, [
                     "name", "type", "keywords", "range", "requirements", "description",
                     "costs", "roll_select", "default_roll", "roll_macro",
                   ]);
-                  console.log("F")
                   ab.only_roll = (only_roll === "true")
                   handleAbility(eventInfo, ab);
                 });
@@ -15612,7 +15612,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
 
       // Recalculate all mount related values when mount parameters are changed
       on(
-        "change:repeating_mounts:mount_name change:repeating_mounts:mount_speed change:repeating_mounts:mount_max_hp change:repeating_mounts:mount_focus change:repeating_mounts:mount_power change:repeating_mounts:mount_type remove:repeating_mounts",
+        "change:repeating_mounts:mount_name change:repeating_mounts:mount_speed change:repeating_mounts:mount_hp_max change:repeating_mounts:mount_focus change:repeating_mounts:mount_power change:repeating_mounts:mount_type remove:repeating_mounts",
         function (eventInfo) {
           getSectionIDs("repeating_mounts", function (ids) {
             const fields = [].concat(
@@ -15620,7 +15620,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
                 `repeating_mounts_${id}_mount_speed`,
                 `repeating_mounts_${id}_mount_focus`,
                 `repeating_mounts_${id}_mount_power`,
-                `repeating_mounts_${id}_mount_max_hp`,
+                `repeating_mounts_${id}_mount_hp_max`,
                 `repeating_mounts_${id}_mount_name`,
               ])
             );
@@ -15630,7 +15630,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
                   setAttrs({
                     current_mount_name: values[`repeating_mounts_${id}_mount_name`],
                     current_mount_speed: values[`repeating_mounts_${id}_mount_speed`],
-                    current_mount_max_hp: values[`repeating_mounts_${id}_mount_max_hp`],
+                    current_mount_hp_max: values[`repeating_mounts_${id}_mount_hp_max`],
                     current_mount_focus: values[`repeating_mounts_${id}_mount_focus`],
                     current_mount_power: values[`repeating_mounts_${id}_mount_power`],
                   });
@@ -15656,7 +15656,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
               `repeating_mounts_${id}_mount_power`,
               `repeating_mounts_${id}_mount_focus`,
               `repeating_mounts_${id}_mount_speed`,
-              `repeating_mounts_${id}_mount_max_hp`,
+              `repeating_mounts_${id}_mount_hp_max`,
               `repeating_mounts_${id}_mount_type`,
               `repeating_mounts_${id}_mount_status`,
             ])
@@ -15676,8 +15676,8 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
               let update = {
                 current_mount_name: values[`repeating_mounts_${tID}_mount_name`],
                 current_mount_speed: values[`repeating_mounts_${tID}_mount_speed`],
-                current_mount_max_hp: values[`repeating_mounts_${tID}_mount_max_hp`],
-                current_mount_hp: values[`repeating_mounts_${tID}_mount_max_hp`],
+                current_mount_hp_max: values[`repeating_mounts_${tID}_mount_hp_max`],
+                current_mount_hp: values[`repeating_mounts_${tID}_mount_hp_max`],
                 current_mount_temp_hp: 0,
                 current_mount_focus: values[`repeating_mounts_${tID}_mount_focus`],
                 current_mount_power: values[`repeating_mounts_${tID}_mount_power`],
@@ -15702,7 +15702,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
             if (!mountedFound) {
               setAttrs({ [`current_mount_name`]: "" });
               setAttrs({ [`current_mount_speed`]: 0 });
-              setAttrs({ [`current_mount_max_hp`]: 0 });
+              setAttrs({ [`current_mount_hp_max`]: 0 });
               setAttrs({ [`current_mount_hp`]: 0 });
               setAttrs({ [`current_mount_temp_hp`]: 0 });
               setAttrs({ [`current_mount_focus`]: 0 });
@@ -16195,18 +16195,18 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
             const agility = parseInt(values.agility, 10) || 0;
             const toughness = parseInt(values.toughness, 10) || 0;
 
-            update.max_hp = 20 + toughness * 10;
-            update.max_rp = agility + 2;
-            update.max_mp = power + 6;
+            update.hp_max = 20 + toughness * 10;
+            update.rp_max = agility + 2;
+            update.mp_max = power + 6;
 
             if (rank === "grunt") {
               // hp and mp are vague heuristics here
-              update.max_hp = Math.floor(update.max_hp / 2);
-              update.max_rp = 1;
-              update.max_mp = Math.floor(update.max_mp / 2);
+              update.hp_max = Math.floor(update.hp_max / 2);
+              update.rp_max = 1;
+              update.mp_max = Math.floor(update.mp_max / 2);
             } else if (rank === "boss") {
               // hp is a vague heuristics here
-              update.max_hp = update.max_hp * 3;
+              update.hp_max = update.hp_max * 3;
             }
 
             update.total_evasion = agility + 7;
@@ -16315,19 +16315,19 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
             <div class="attribute-container3">
               <div class="label">HP</div>
               <div class="value">
-                <input type="number" name="attr_max_hp" title="@{max_hp}" value="0" />
+                <input type="number" name="attr_hp_max" title="@{hp_max}" value="0" />
               </div>
             </div>
             <div class="attribute-container3">
               <div class="label">MP</div>
               <div class="value">
-                <input type="number" name="attr_max_mp" title="@{max_mp}" value="0" />
+                <input type="number" name="attr_mp_max" title="@{mp_max}" value="0" />
               </div>
             </div>
             <div class="attribute-container3">
               <div class="label">RP</div>
               <div class="value">
-                <input type="number" name="attr_max_rp" title="@{max_rp}" value="0" />
+                <input type="number" name="attr_rp_max" title="@{rp_max}" value="0" />
               </div>
             </div>
           </div>
@@ -16335,7 +16335,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
             <div class="attribute-container all-hp">
               <div class="label composite">Max | HP | Temp</div>
               <div class="value composite">
-                <input type="number" name="attr_max_hp" title="@{max_hp}" value="0" />
+                <input type="number" name="attr_hp_max" title="@{hp_max}" value="0" />
                 <input type="number" name="attr_hp" title="@{hp}" value="0" />
                 <input type="number" name="attr_temp_hp" title="@{temp_hp}" value="0" />
               </div>
@@ -16343,7 +16343,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
             <div class="attribute-container all-mp">
               <div class="label composite">Max | MP | Temp</div>
               <div class="value composite">
-                <input type="number" name="attr_max_mp" title="@{max_mp}" value="0" />
+                <input type="number" name="attr_mp_max" title="@{mp_max}" value="0" />
                 <input type="number" name="attr_mp" title="@{mp}" value="0" />
                 <input type="number" name="attr_temp_mp" title="@{temp_mp}" value="0" />
               </div>
@@ -16351,7 +16351,7 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
             <div class="attribute-container all-rp">
               <div class="label composite">Max | RP | Temp</div>
               <div class="value composite">
-                <input type="number" name="attr_max_rp" title="@{max_rp}" value="0" />
+                <input type="number" name="attr_rp_max" title="@{rp_max}" value="0" />
                 <input type="number" name="attr_rp" title="@{rp}" value="0" />
                 <input type="number" name="attr_temp_rp" title="@{temp_rp}" value="0" />
               </div>
