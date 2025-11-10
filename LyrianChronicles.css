@@ -1570,7 +1570,7 @@
   margin-top: auto;
   padding-top: 5px;
 }
-.charsheet .table-container .repcontrol_del{
+.charsheet .table-container .repcontrol_del, .charsheet .table-container .repcontrol_move{
     z-index: 100;
   position: relative;
   pointer-events: auto;
@@ -2032,6 +2032,12 @@
 }
 
 .charsheet .table-container.favorite-abilities .repcontrol{
+  /* display: none; */
+}
+.charsheet .table-container.favorite-abilities .repcontrol .repcontrol_add{
+  display: none !important; 
+}
+.charsheet .table-container.favorite-abilities .repitem .repcontrol_del{
   display: none;
 }
 /* FAVORITE ABILITIES REVAMPED STYLES END */

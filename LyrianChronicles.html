@@ -1110,6 +1110,10 @@
                             <span name="attr_class_xp"> </span>
                           </div>
                           <div class="actions flex-row">
+                            <div class="item thin name-button icon">
+                              <button type="action" name="act_add_class_abilities" tabindex="-1"></button>
+                              <span class="pseudo-button">+</span>
+                            </div>
                             <div class="item thin"><input type="checkbox" name="attr_class_form_hide" /><span class="edit">⚙</span></div>
                           </div>
                         </div>
@@ -15235,7 +15239,8 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
       });
 
       // Calculate selected abilities's data when changed in the repeating section
-      on("change:repeating_abilities:ability_select", function () {
+      on("change:repeating_abilities:ability_select", function (eventInfo) {
+        console.log("ability_select changed", eventInfo);
         getSectionIDs("repeating_abilities", function (ids) {
           const fields = [].concat(
             ...ids.map((id) => [
@@ -15252,6 +15257,9 @@ const abilityMacroMap = {"fan_of_knives": "missing_macro","half_restore": "missi
           getAttrs(fields, function (values) {
             let update = {};
             ids.forEach((id) => {
+              if (!eventInfo.triggerName.includes(id)) {
+                return;
+              }
               if (values[`repeating_abilities_${id}_ability_select`] === "custom") {
                 update[`repeating_abilities_${id}_ability_name`] = "";
                 update[`repeating_abilities_${id}_ability_keywords`] = "--";
