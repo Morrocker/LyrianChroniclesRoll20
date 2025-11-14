@@ -1,6 +1,10 @@
 {
    "abjurers_blast": {
      "ID": "abjurers_blast",
+     "ClassID": [
+       "abjurer"
+     ],
+     "LevelRequired": 2,
      "Name": "Abjurer's Blast",
      "Keywords": "Rapid, Spell",
      "Range": "10ft",
@@ -13,6 +17,10 @@
    },
    "accelerando": {
      "ID": "accelerando",
+     "ClassID": [
+       "chronomancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Accelerando",
      "Keywords": "Encounter Start",
      "Range": "120ft",
@@ -25,6 +33,10 @@
    },
    "accelerating_strike": {
      "ID": "accelerating_strike",
+     "ClassID": [
+       "chronofighter"
+     ],
+     "LevelRequired": 2,
      "Name": "Accelerating Strike",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -37,6 +49,10 @@
    },
    "advanced_artificing": {
      "ID": "advanced_artificing",
+     "ClassID": [
+       "magitechnician-"
+     ],
+     "LevelRequired": 1,
      "Name": "Advanced Artificing",
      "Keywords": "",
      "Range": "",
@@ -49,6 +65,10 @@
    },
    "aerial_crashdown": {
      "ID": "aerial_crashdown",
+     "ClassID": [
+       "sky-knight"
+     ],
+     "LevelRequired": 2,
      "Name": "Aerial Crashdown",
      "Keywords": "",
      "Range": "60ft",
@@ -61,6 +81,10 @@
    },
    "aerial_loop": {
      "ID": "aerial_loop",
+     "ClassID": [
+       "sky-knight"
+     ],
+     "LevelRequired": 4,
      "Name": "Aerial Loop",
      "Keywords": "",
      "Range": "Self or Mount",
@@ -73,6 +97,10 @@
    },
    "aftershock": {
      "ID": "aftershock",
+     "ClassID": [
+       "highlander"
+     ],
+     "LevelRequired": 1,
      "Name": "Aftershock",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -85,6 +113,11 @@
    },
    "aimed_shot": {
      "ID": "aimed_shot",
+     "ClassID": [
+       "deadeye",
+       "sniper"
+     ],
+     "LevelRequired": 6,
      "Name": "Aimed Shot",
      "Keywords": "Lock On",
      "Range": "",
@@ -97,6 +130,10 @@
    },
    "alarm_ward": {
      "ID": "alarm_ward",
+     "ClassID": [
+       "warding-mage"
+     ],
+     "LevelRequired": 2,
      "Name": "Alarm Ward",
      "Keywords": "Bounded Field, Spell",
      "Range": "Touch",
@@ -109,6 +146,10 @@
    },
    "alchemical_detonation": {
      "ID": "alchemical_detonation",
+     "ClassID": [
+       "alkahest"
+     ],
+     "LevelRequired": 4,
      "Name": "Alchemical Detonation",
      "Keywords": "Rapid",
      "Range": "5ft",
@@ -121,6 +162,10 @@
    },
    "ambush_trapper": {
      "ID": "ambush_trapper",
+     "ClassID": [
+       "trapper"
+     ],
+     "LevelRequired": 6,
      "Name": "Ambush Trapper",
      "Keywords": "Encounter Start",
      "Range": "Self",
@@ -133,6 +178,10 @@
    },
    "amoxicillin": {
      "ID": "amoxicillin",
+     "ClassID": [
+       "mycomancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Amoxicillin",
      "Keywords": "Concentration, Healing, Spell",
      "Range": "30ft",
@@ -145,6 +194,10 @@
    },
    "anathema": {
      "ID": "anathema",
+     "ClassID": [
+       "priest"
+     ],
+     "LevelRequired": 4,
      "Name": "Anathema",
      "Keywords": "Curse, Spell",
      "Range": "60ft",
@@ -157,6 +210,10 @@
    },
    "angels_embrace": {
      "ID": "angels_embrace",
+     "ClassID": [
+       "acolyte"
+     ],
+     "LevelRequired": 6,
      "Name": "Angel's Embrace",
      "Keywords": "Shield, Spell, Aid",
      "Range": "15ft",
@@ -169,6 +226,10 @@
    },
    "anti-magic_shield": {
      "ID": "anti-magic_shield",
+     "ClassID": [
+       "anti-mage"
+     ],
+     "LevelRequired": 6,
      "Name": "Anti-Magic Shield",
      "Keywords": "Aid, Arcane, Shield, Spell",
      "Range": "60ft",
@@ -181,6 +242,10 @@
    },
    "anti-shield": {
      "ID": "anti-shield",
+     "ClassID": [
+       "anti-mage"
+     ],
+     "LevelRequired": 4,
      "Name": "Anti-Shield",
      "Keywords": "Arcane, Spell",
      "Range": "60ft",
@@ -193,6 +258,10 @@
    },
    "anvil_tactics": {
      "ID": "anvil_tactics",
+     "ClassID": [
+       "strategist"
+     ],
+     "LevelRequired": 6,
      "Name": "Anvil Tactics",
      "Keywords": "",
      "Range": "80ft",
@@ -205,6 +274,10 @@
    },
    "aqua_drill": {
      "ID": "aqua_drill",
+     "ClassID": [
+       "hydromancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Aqua Drill",
      "Keywords": "",
      "Range": "60ft",
@@ -217,6 +290,10 @@
    },
    "arcane_barrier": {
      "ID": "arcane_barrier",
+     "ClassID": [
+       "mage"
+     ],
+     "LevelRequired": 4,
      "Name": "Arcane Barrier",
      "Keywords": "Shield, Spell",
      "Range": "Self",
@@ -229,6 +306,10 @@
    },
    "arcane_barrier_ii": {
      "ID": "arcane_barrier_ii",
+     "ClassID": [
+       "abjurer"
+     ],
+     "LevelRequired": 6,
      "Name": "Arcane Barrier II",
      "Keywords": "Shield, Spell",
      "Range": "Self",
@@ -241,6 +322,10 @@
    },
    "arcane_buster": {
      "ID": "arcane_buster",
+     "ClassID": [
+       "arcanist"
+     ],
+     "LevelRequired": 2,
      "Name": "Arcane Buster",
      "Keywords": "Arcane, Spell, Shieldbreaker",
      "Range": "60ft",
@@ -253,6 +338,10 @@
    },
    "arcane_explosion": {
      "ID": "arcane_explosion",
+     "ClassID": [
+       "arcanist"
+     ],
+     "LevelRequired": 4,
      "Name": "Arcane Explosion",
      "Keywords": "Arcane, Rapid, Spell",
      "Range": "Self",
@@ -265,6 +354,10 @@
    },
    "arcane_power": {
      "ID": "arcane_power",
+     "ClassID": [
+       "arcanist"
+     ],
+     "LevelRequired": 6,
      "Name": "Arcane Power",
      "Keywords": "Arcane",
      "Range": "Self",
@@ -277,6 +370,10 @@
    },
    "arcane_pull": {
      "ID": "arcane_pull",
+     "ClassID": [
+       "abjurer"
+     ],
+     "LevelRequired": 8,
      "Name": "Arcane Pull",
      "Keywords": "Spell",
      "Range": "40ft",
@@ -289,6 +386,10 @@
    },
    "armor_up": {
      "ID": "armor_up",
+     "ClassID": [
+       "master-armorer"
+     ],
+     "LevelRequired": 4,
      "Name": "Armor Up",
      "Keywords": "Shield",
      "Range": "Self",
@@ -299,8 +400,28 @@
      "MPcost": "3 MP",
      "Othercost": ""
    },
+   "armored_blow": {
+     "ID": "armored_blow",
+     "ClassID": [
+       "knight-paramount"
+     ],
+     "LevelRequired": 6,
+     "Name": "Armored Blow",
+     "Keywords": "",
+     "Range": "Melee Weapon",
+     "Requirement": "May only be used after moving at least 20ft in the previous action. Must be mounted.",
+     "Description": "You make a Heavy attack against the target. Your next Block against that target costs 0 RP and gains a +10 bonus.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "1 MP",
+     "Othercost": ""
+   },
    "artery_cut": {
      "ID": "artery_cut",
+     "ClassID": [
+       "cutthroat"
+     ],
+     "LevelRequired": 8,
      "Name": "Artery Cut",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -313,6 +434,10 @@
    },
    "assign_decoy": {
      "ID": "assign_decoy",
+     "ClassID": [
+       "trickster"
+     ],
+     "LevelRequired": 2,
      "Name": "Assign Decoy",
      "Keywords": "Challenge, Quick",
      "Range": "60ft",
@@ -325,6 +450,10 @@
    },
    "at_your_side": {
      "ID": "at_your_side",
+     "ClassID": [
+       "bodyguard"
+     ],
+     "LevelRequired": 8,
      "Name": "At your side",
      "Keywords": "Teleport",
      "Range": "40ft",
@@ -337,6 +466,10 @@
    },
    "attack_in_detail": {
      "ID": "attack_in_detail",
+     "ClassID": [
+       "tactician"
+     ],
+     "LevelRequired": 8,
      "Name": "Attack in Detail",
      "Keywords": "",
      "Range": "120ft",
@@ -349,6 +482,10 @@
    },
    "attacks_from_the_past": {
      "ID": "attacks_from_the_past",
+     "ClassID": [
+       "chronofighter"
+     ],
+     "LevelRequired": 6,
      "Name": "Attacks from the Past",
      "Keywords": "",
      "Range": "Self",
@@ -361,6 +498,10 @@
    },
    "attune_eidolon": {
      "ID": "attune_eidolon",
+     "ClassID": [
+       "summoner"
+     ],
+     "LevelRequired": 1,
      "Name": "Attune Eidolon",
      "Keywords": "Encounter Start",
      "Range": "Self",
@@ -373,6 +514,10 @@
    },
    "aura_of_protection": {
      "ID": "aura_of_protection",
+     "ClassID": [
+       "shield-paladin"
+     ],
+     "LevelRequired": 4,
      "Name": "Aura of Protection",
      "Keywords": "Aura",
      "Range": "Self",
@@ -385,6 +530,10 @@
    },
    "aura_of_resistance": {
      "ID": "aura_of_resistance",
+     "ClassID": [
+       "exalted-shield"
+     ],
+     "LevelRequired": 4,
      "Name": "Aura of Resistance",
      "Keywords": "Aura",
      "Range": "Self",
@@ -397,6 +546,10 @@
    },
    "ave_maría": {
      "ID": "ave_maría",
+     "ClassID": [
+       "executor"
+     ],
+     "LevelRequired": 8,
      "Name": "Ave María",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -409,6 +562,10 @@
    },
    "backlash": {
      "ID": "backlash",
+     "ClassID": [
+       "curse-knight"
+     ],
+     "LevelRequired": 2,
      "Name": "Backlash",
      "Keywords": "Sure Hit, Full Pierce",
      "Range": "Melee Weapon",
@@ -421,6 +578,11 @@
    },
    "battle_cast": {
      "ID": "battle_cast",
+     "ClassID": [
+       "archsage",
+       "battle-mage"
+     ],
+     "LevelRequired": 4,
      "Name": "Battle Cast",
      "Keywords": "",
      "Range": "of an opponent.",
@@ -433,6 +595,10 @@
    },
    "bear_trap": {
      "ID": "bear_trap",
+     "ClassID": [
+       "trapper"
+     ],
+     "LevelRequired": 2,
      "Name": "Bear Trap",
      "Keywords": "Root, Full Pierce",
      "Range": "5ft",
@@ -445,6 +611,10 @@
    },
    "bestial_command": {
      "ID": "bestial_command",
+     "ClassID": [
+       "animal-summoner"
+     ],
+     "LevelRequired": 8,
      "Name": "Bestial Command",
      "Keywords": "",
      "Range": "Sight",
@@ -457,6 +627,10 @@
    },
    "blackbird": {
      "ID": "blackbird",
+     "ClassID": [
+       "artificer"
+     ],
+     "LevelRequired": 4,
      "Name": "Blackbird",
      "Keywords": "",
      "Range": "5ft",
@@ -469,6 +643,10 @@
    },
    "blast_away": {
      "ID": "blast_away",
+     "ClassID": [
+       "marksman"
+     ],
+     "LevelRequired": 2,
      "Name": "Blast Away",
      "Keywords": "",
      "Range": "5ft",
@@ -481,6 +659,10 @@
    },
    "blast_wave": {
      "ID": "blast_wave",
+     "ClassID": [
+       "pyromaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Blast Wave",
      "Keywords": "Fire, Spell",
      "Range": "Self",
@@ -491,8 +673,28 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "blocking_move": {
+     "ID": "blocking_move",
+     "ClassID": [
+       "knight-paramount"
+     ],
+     "LevelRequired": 2,
+     "Name": "Blocking Move",
+     "Keywords": "",
+     "Range": "Self",
+     "Requirement": "You made an opportunity attack against a target moving away from you. Must be mounted.",
+     "Description": "You move in front of the target and their movement action immediately ends. Until the end of their turn, they are Challenged by you and your next Block action against them costs 0 RP. If they willingly move from you through any method (including teleports) you may make a Heavy attack against them with Sure Hit.Your movement may ignore Line Movement restrictions for this ability.",
+     "RPcost": "1 RP",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "blood_drain": {
      "ID": "blood_drain",
+     "ClassID": [
+       "bloodbinder"
+     ],
+     "LevelRequired": 4,
      "Name": "Blood Drain",
      "Keywords": "Healing",
      "Range": "40ft",
@@ -505,6 +707,10 @@
    },
    "blood_frenzy": {
      "ID": "blood_frenzy",
+     "ClassID": [
+       "vampire"
+     ],
+     "LevelRequired": 8,
      "Name": "Blood Frenzy",
      "Keywords": "",
      "Range": "Self",
@@ -517,6 +723,10 @@
    },
    "blood_shield": {
      "ID": "blood_shield",
+     "ClassID": [
+       "bloodbinder"
+     ],
+     "LevelRequired": 6,
      "Name": "Blood Shield",
      "Keywords": "Aid, Healing, Shield",
      "Range": "40ft",
@@ -529,6 +739,10 @@
    },
    "bloodbolt": {
      "ID": "bloodbolt",
+     "ClassID": [
+       "vampire-lord"
+     ],
+     "LevelRequired": 2,
      "Name": "Bloodbolt",
      "Keywords": "Overcharge",
      "Range": "60ft",
@@ -541,6 +755,10 @@
    },
    "blue_tide": {
      "ID": "blue_tide",
+     "ClassID": [
+       "hydromancer"
+     ],
+     "LevelRequired": 1,
      "Name": "Blue Tide",
      "Keywords": "Domain, Spell",
      "Range": "Self",
@@ -553,6 +771,10 @@
    },
    "bolting": {
      "ID": "bolting",
+     "ClassID": [
+       "electromancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Bolting",
      "Keywords": "Lightning, Rapid, Spell",
      "Range": "360ft",
@@ -565,6 +787,10 @@
    },
    "bone_armor": {
      "ID": "bone_armor",
+     "ClassID": [
+       "death-knight"
+     ],
+     "LevelRequired": 1,
      "Name": "Bone Armor",
      "Keywords": "",
      "Range": "30ft",
@@ -577,6 +803,10 @@
    },
    "bottle_smash": {
      "ID": "bottle_smash",
+     "ClassID": [
+       "tavern-brawler"
+     ],
+     "LevelRequired": 2,
      "Name": "Bottle Smash",
      "Keywords": "Daze, Prone",
      "Range": "5ft",
@@ -589,6 +819,10 @@
    },
    "bottle_toss": {
      "ID": "bottle_toss",
+     "ClassID": [
+       "tavern-brawler"
+     ],
+     "LevelRequired": 6,
      "Name": "Bottle Toss",
      "Keywords": "Daze",
      "Range": "20ft",
@@ -601,6 +835,10 @@
    },
    "boundless_wind_stance": {
      "ID": "boundless_wind_stance",
+     "ClassID": [
+       "sky-talon-style"
+     ],
+     "LevelRequired": 2,
      "Name": "Boundless Wind Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -613,6 +851,10 @@
    },
    "break_away": {
      "ID": "break_away",
+     "ClassID": [
+       "hussar"
+     ],
+     "LevelRequired": 4,
      "Name": "Break Away",
      "Keywords": "",
      "Range": "Self",
@@ -625,6 +867,10 @@
    },
    "break_free": {
      "ID": "break_free",
+     "ClassID": [
+       "berserker"
+     ],
+     "LevelRequired": 6,
      "Name": "Break Free",
      "Keywords": "Rage",
      "Range": "Self",
@@ -637,6 +883,10 @@
    },
    "brilliance": {
      "ID": "brilliance",
+     "ClassID": [
+       "phosphomancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Brilliance",
      "Keywords": "Spell, Illumination, Light",
      "Range": "80ft",
@@ -649,6 +899,10 @@
    },
    "bring_out_your_dead": {
      "ID": "bring_out_your_dead",
+     "ClassID": [
+       "necromancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Bring out your dead",
      "Keywords": "Encounter Start",
      "Range": "10ft",
@@ -661,6 +915,10 @@
    },
    "bullet_magnet": {
      "ID": "bullet_magnet",
+     "ClassID": [
+       "protector"
+     ],
+     "LevelRequired": 6,
      "Name": "Bullet Magnet",
      "Keywords": "",
      "Range": "d Weapon Attack made against an ally in range is made against you instead.",
@@ -673,6 +931,10 @@
    },
    "bunshin_tai_no_jutsu": {
      "ID": "bunshin_tai_no_jutsu",
+     "ClassID": [
+       "ninja"
+     ],
+     "LevelRequired": 6,
      "Name": "Bunshin Tai no Jutsu",
      "Keywords": "Ninjutsu",
      "Range": "5ft",
@@ -685,6 +947,10 @@
    },
    "butterfly_effect": {
      "ID": "butterfly_effect",
+     "ClassID": [
+       "chronofighter"
+     ],
+     "LevelRequired": 8,
      "Name": "Butterfly Effect",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -697,6 +963,10 @@
    },
    "call_of_the_grave": {
      "ID": "call_of_the_grave",
+     "ClassID": [
+       "death-knight"
+     ],
+     "LevelRequired": 4,
      "Name": "Call of the Grave",
      "Keywords": "Challenge",
      "Range": "60ft",
@@ -709,6 +979,10 @@
    },
    "cant_escape_death": {
      "ID": "cant_escape_death",
+     "ClassID": [
+       "death-knight"
+     ],
+     "LevelRequired": 6,
      "Name": "Can't Escape Death",
      "Keywords": "Sidestep",
      "Range": "Melee Weapon",
@@ -721,6 +995,10 @@
    },
    "canter": {
      "ID": "canter",
+     "ClassID": [
+       "cavalier"
+     ],
+     "LevelRequired": 2,
      "Name": "Canter",
      "Keywords": "Sidestep",
      "Range": "Self",
@@ -733,6 +1011,10 @@
    },
    "cavalry_charge": {
      "ID": "cavalry_charge",
+     "ClassID": [
+       "hussar"
+     ],
+     "LevelRequired": 2,
      "Name": "Cavalry Charge",
      "Keywords": "",
      "Range": "Self",
@@ -745,6 +1027,10 @@
    },
    "cavalry_heal": {
      "ID": "cavalry_heal",
+     "ClassID": [
+       "mage-knight"
+     ],
+     "LevelRequired": 2,
      "Name": "Cavalry Heal",
      "Keywords": "Spell, Healing",
      "Range": "Touch",
@@ -757,6 +1043,10 @@
    },
    "cave_raider": {
      "ID": "cave_raider",
+     "ClassID": [
+       "excavator"
+     ],
+     "LevelRequired": 6,
      "Name": "Cave Raider",
      "Keywords": "",
      "Range": "Self",
@@ -769,6 +1059,10 @@
    },
    "chain_lightning": {
      "ID": "chain_lightning",
+     "ClassID": [
+       "electromancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Chain Lightning",
      "Keywords": "Lightning, Spell",
      "Range": "60ft",
@@ -781,6 +1075,10 @@
    },
    "chair_grab": {
      "ID": "chair_grab",
+     "ClassID": [
+       "tavern-brawler"
+     ],
+     "LevelRequired": 1,
      "Name": "Chair Grab",
      "Keywords": "Quick",
      "Range": "5ft",
@@ -793,6 +1091,10 @@
    },
    "channel_eidolon": {
      "ID": "channel_eidolon",
+     "ClassID": [
+       "summoner"
+     ],
+     "LevelRequired": 2,
      "Name": "Channel Eidolon",
      "Keywords": "",
      "Range": "",
@@ -805,6 +1107,10 @@
    },
    "charge": {
      "ID": "charge",
+     "ClassID": [
+       "fighter"
+     ],
+     "LevelRequired": 2,
      "Name": "Charge",
      "Keywords": "",
      "Range": "Self",
@@ -817,6 +1123,10 @@
    },
    "chemical_explosive": {
      "ID": "chemical_explosive",
+     "ClassID": [
+       "saboteur"
+     ],
+     "LevelRequired": 8,
      "Name": "Chemical Explosive",
      "Keywords": "Sure Hit",
      "Range": "5ft",
@@ -829,6 +1139,10 @@
    },
    "chiburi_noto": {
      "ID": "chiburi_noto",
+     "ClassID": [
+       "iai-style"
+     ],
+     "LevelRequired": 6,
      "Name": "Chiburi Noto",
      "Keywords": "Encounter Conclusion",
      "Range": "Self (Weapon)",
@@ -841,6 +1155,10 @@
    },
    "chiburi_noto_ii": {
      "ID": "chiburi_noto_ii",
+     "ClassID": [
+       "sword-saint"
+     ],
+     "LevelRequired": 6,
      "Name": "Chiburi Noto II",
      "Keywords": "Encounter Conclusion",
      "Range": "Self (Weapon)",
@@ -853,6 +1171,10 @@
    },
    "circle_swing": {
      "ID": "circle_swing",
+     "ClassID": [
+       "battle-mage"
+     ],
+     "LevelRequired": 8,
      "Name": "Circle Swing",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -865,6 +1187,10 @@
    },
    "clearcasting": {
      "ID": "clearcasting",
+     "ClassID": [
+       "archsage"
+     ],
+     "LevelRequired": 4,
      "Name": "Clearcasting",
      "Keywords": "Encounter Start",
      "Range": "Self",
@@ -877,6 +1203,10 @@
    },
    "cleave": {
      "ID": "cleave",
+     "ClassID": [
+       "highlander"
+     ],
+     "LevelRequired": 6,
      "Name": "Cleave",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -889,6 +1219,10 @@
    },
    "cloak_of_bats": {
      "ID": "cloak_of_bats",
+     "ClassID": [
+       "vampire"
+     ],
+     "LevelRequired": 6,
      "Name": "Cloak of Bats",
      "Keywords": "Teleport",
      "Range": "40ft",
@@ -901,6 +1235,10 @@
    },
    "cloud_piercing_claw": {
      "ID": "cloud_piercing_claw",
+     "ClassID": [
+       "sky-talon-style"
+     ],
+     "LevelRequired": 8,
      "Name": "Cloud Piercing Claw",
      "Keywords": "Unarmed Strike, Sidestep, Combo",
      "Range": "Melee Weapon",
@@ -913,6 +1251,10 @@
    },
    "concealed_shot": {
      "ID": "concealed_shot",
+     "ClassID": [
+       "sniper"
+     ],
+     "LevelRequired": 4,
      "Name": "Concealed Shot",
      "Keywords": "",
      "Range": "Self",
@@ -925,6 +1267,10 @@
    },
    "conduit": {
      "ID": "conduit",
+     "ClassID": [
+       "aetherie"
+     ],
+     "LevelRequired": 4,
      "Name": "Conduit",
      "Keywords": "",
      "Range": "",
@@ -937,6 +1283,10 @@
    },
    "consistent_shot": {
      "ID": "consistent_shot",
+     "ClassID": [
+       "marksman"
+     ],
+     "LevelRequired": 6,
      "Name": "Consistent Shot",
      "Keywords": "",
      "Range": "",
@@ -949,6 +1299,10 @@
    },
    "corpse_explosion": {
      "ID": "corpse_explosion",
+     "ClassID": [
+       "necromancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Corpse Explosion",
      "Keywords": "",
      "Range": "15x15ft area circled on your zombie",
@@ -961,11 +1315,15 @@
    },
    "counter-potion": {
      "ID": "counter-potion",
+     "ClassID": [
+       "alchemeister"
+     ],
+     "LevelRequired": 4,
      "Name": "Counter-Potion",
      "Keywords": "",
      "Range": "Self",
      "Requirement": "",
-     "Description": "You may immediately use a Potion, Elixir, Salve or Flask that is held in your hand.  X is equal to the AP cost of the action.",
+     "Description": "You may immediately use a Potion, Elixir, Salve, Poison or Flask that is held in your hand.  X is equal to the AP cost of the action.",
      "RPcost": "X RP",
      "APcost": "",
      "MPcost": "",
@@ -973,6 +1331,10 @@
    },
    "counter_stance": {
      "ID": "counter_stance",
+     "ClassID": [
+       "brawler"
+     ],
+     "LevelRequired": 2,
      "Name": "Counter Stance",
      "Keywords": "Counter, Stance, Unarmed Strike",
      "Range": "Self",
@@ -985,6 +1347,10 @@
    },
    "countershot": {
      "ID": "countershot",
+     "ClassID": [
+       "deadeye"
+     ],
+     "LevelRequired": 4,
      "Name": "Countershot",
      "Keywords": "",
      "Range": "",
@@ -997,6 +1363,10 @@
    },
    "counterspell": {
      "ID": "counterspell",
+     "ClassID": [
+       "anti-mage"
+     ],
+     "LevelRequired": 8,
      "Name": "Counterspell",
      "Keywords": "Arcane, Counter, Spell",
      "Range": "60ft",
@@ -1009,6 +1379,10 @@
    },
    "craft_artificers_glove": {
      "ID": "craft_artificers_glove",
+     "ClassID": [
+       "magitechnician-"
+     ],
+     "LevelRequired": 2,
      "Name": "Craft Artificer's Glove",
      "Keywords": "",
      "Range": "Self",
@@ -1021,6 +1395,10 @@
    },
    "craft_pemmican": {
      "ID": "craft_pemmican",
+     "ClassID": [
+       "culinarian"
+     ],
+     "LevelRequired": 6,
      "Name": "Craft Pemmican",
      "Keywords": "Errand",
      "Range": "",
@@ -1033,6 +1411,10 @@
    },
    "crashing_foam_wave": {
      "ID": "crashing_foam_wave",
+     "ClassID": [
+       "hydromancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Crashing Foam Wave",
      "Keywords": "",
      "Range": "30 ft",
@@ -1045,11 +1427,15 @@
    },
    "create_talisman": {
      "ID": "create_talisman",
+     "ClassID": [
+       "onmyoji-"
+     ],
+     "LevelRequired": 2,
      "Name": "Create Talisman",
      "Keywords": "",
      "Range": "-",
      "Requirement": "-",
-     "Description": "You may create a talisman or scroll by spending an interlude point. Choose an Spell that you know or choose a specialized talisman, such as a Sealing Talisman. You inscribe that Spell onto a piece of paper. A talisman of a Spell allows you to use the Spell at a different time. When you use it, it is consumed. A Spell talisman costs as much AP and mana to use as the original Spell does. You may craft up to 5 talismans per interlude point. A secret art talisman takes up 3 of these slots. When crafting, you may make no more than 2 of the same spell. A crafted talisman costs 1 burden to carry with you. A Secret Art talisman costs 2 burden.Crafting a talisman costs 100 calligraphy units per AP and Mana of the spell. A spell with no AP or Mana costs 50 units.",
+     "Description": "You may create a talisman or scroll by spending an interlude point. Choose an Spell that you know or choose a specialized talisman, such as a Sealing Talisman. You inscribe that Spell onto a piece of paper. A talisman of a Spell allows you to use the Spell at a different time. When you use it, it is consumed. A Spell talisman costs as much AP and mana to use as the original Spell does. You may craft up to 5 talismans per interlude point. A secret art talisman takes up 3 of these slots. When crafting, you may make no more than 2 of the same spell. A crafted talisman costs 1 burden to carry with you. A Secret Art talisman costs 2 burden and can only be used through the Secret Talisman ability.Crafting a talisman costs 100 calligraphy units per AP and Mana of the spell. A spell with no AP or Mana costs 50 units.",
      "RPcost": "",
      "APcost": "",
      "MPcost": "",
@@ -1057,6 +1443,10 @@
    },
    "crescent_sweep": {
      "ID": "crescent_sweep",
+     "ClassID": [
+       "lancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Crescent Sweep",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1067,8 +1457,28 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "crimson_enmity": {
+     "ID": "crimson_enmity",
+     "ClassID": [
+       "bloodbinder"
+     ],
+     "LevelRequired": 2,
+     "Name": "Crimson Enmity",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "When your HP is at or below 50% of your max HP, you gain increased healing. When you would heal an ally or yourself with an ability from this class (Bloodbinder), you heal for 1.5x that amount.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "crippling_attack": {
      "ID": "crippling_attack",
+     "ClassID": [
+       "ranger"
+     ],
+     "LevelRequired": 6,
      "Name": "Crippling Attack",
      "Keywords": "Slow",
      "Range": "Weapon",
@@ -1081,6 +1491,10 @@
    },
    "crucified_by_radiance": {
      "ID": "crucified_by_radiance",
+     "ClassID": [
+       "phosphomancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Crucified by Radiance",
      "Keywords": "Spell, Light, Illumination",
      "Range": "60ft",
@@ -1093,6 +1507,10 @@
    },
    "crusaders_advance": {
      "ID": "crusaders_advance",
+     "ClassID": [
+       "exalted-blade"
+     ],
+     "LevelRequired": 6,
      "Name": "Crusader's Advance",
      "Keywords": "Teleport",
      "Range": "60ft",
@@ -1105,6 +1523,10 @@
    },
    "cure_touch": {
      "ID": "cure_touch",
+     "ClassID": [
+       "acolyte"
+     ],
+     "LevelRequired": 2,
      "Name": "Cure Touch",
      "Keywords": "Healing, Spell",
      "Range": "Touch",
@@ -1117,6 +1539,10 @@
    },
    "cure_touch_ii": {
      "ID": "cure_touch_ii",
+     "ClassID": [
+       "high-priest"
+     ],
+     "LevelRequired": 2,
      "Name": "Cure Touch II",
      "Keywords": "Healing, Spell",
      "Range": "Touch",
@@ -1129,6 +1555,10 @@
    },
    "cure_water": {
      "ID": "cure_water",
+     "ClassID": [
+       "hydromancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Cure Water",
      "Keywords": "Healing, Spell",
      "Range": "15 ft",
@@ -1141,6 +1571,10 @@
    },
    "cursed_evil_eye": {
      "ID": "cursed_evil_eye",
+     "ClassID": [
+       "evil-eye"
+     ],
+     "LevelRequired": 2,
      "Name": "Cursed Evil Eye",
      "Keywords": "Mystic Eye, Upkeep",
      "Range": "60ft",
@@ -1153,6 +1587,10 @@
    },
    "cut_away": {
      "ID": "cut_away",
+     "ClassID": [
+       "true-shinigami-eyes"
+     ],
+     "LevelRequired": 2,
      "Name": "Cut Away",
      "Keywords": "",
      "Range": "Self",
@@ -1165,6 +1603,10 @@
    },
    "cut_magic": {
      "ID": "cut_magic",
+     "ClassID": [
+       "true-shinigami-eyes"
+     ],
+     "LevelRequired": 6,
      "Name": "Cut Magic",
      "Keywords": "Overcharge",
      "Range": "Melee Weapon",
@@ -1177,6 +1619,10 @@
    },
    "cyclone": {
      "ID": "cyclone",
+     "ClassID": [
+       "aeromaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Cyclone",
      "Keywords": "Spell, Wind",
      "Range": "60ft",
@@ -1189,6 +1635,10 @@
    },
    "dark_barrier": {
      "ID": "dark_barrier",
+     "ClassID": [
+       "dark-priest"
+     ],
+     "LevelRequired": 6,
      "Name": "Dark Barrier",
      "Keywords": "Spell, Dark, Full Pierce, Shield",
      "Range": "40ft",
@@ -1201,6 +1651,10 @@
    },
    "dark_bolt": {
      "ID": "dark_bolt",
+     "ClassID": [
+       "eremancer"
+     ],
+     "LevelRequired": 1,
      "Name": "Dark Bolt",
      "Keywords": "Spell, Dark, Half Pierce, Full Pierce",
      "Range": "60ft",
@@ -1213,6 +1667,10 @@
    },
    "dark_healing": {
      "ID": "dark_healing",
+     "ClassID": [
+       "dark-priest"
+     ],
+     "LevelRequired": 4,
      "Name": "Dark Healing",
      "Keywords": "Spell, Dark, Full Pierce, Healing",
      "Range": "60ft",
@@ -1225,6 +1683,10 @@
    },
    "darkness": {
      "ID": "darkness",
+     "ClassID": [
+       "shadowbringer"
+     ],
+     "LevelRequired": 4,
      "Name": "Darkness",
      "Keywords": "Concentration, Spell",
      "Range": "40ft",
@@ -1237,6 +1699,10 @@
    },
    "darkvision": {
      "ID": "darkvision",
+     "ClassID": [
+       "shadowbringer"
+     ],
+     "LevelRequired": 1,
      "Name": "Darkvision",
      "Keywords": "",
      "Range": "Touch",
@@ -1249,6 +1715,10 @@
    },
    "death_mark": {
      "ID": "death_mark",
+     "ClassID": [
+       "assassin"
+     ],
+     "LevelRequired": 2,
      "Name": "Death Mark",
      "Keywords": "Encounter Start",
      "Range": "Sight",
@@ -1261,6 +1731,10 @@
    },
    "death_perception": {
      "ID": "death_perception",
+     "ClassID": [
+       "shinigami-eyes"
+     ],
+     "LevelRequired": 1,
      "Name": "Death Perception",
      "Keywords": "Mystic Eye",
      "Range": "Sight",
@@ -1273,6 +1747,10 @@
    },
    "decipher_magic": {
      "ID": "decipher_magic",
+     "ClassID": [
+       "mage"
+     ],
+     "LevelRequired": 2,
      "Name": "Decipher Magic",
      "Keywords": "Hacking",
      "Range": "Sight",
@@ -1285,6 +1763,10 @@
    },
    "deconstruction": {
      "ID": "deconstruction",
+     "ClassID": [
+       "transmuter"
+     ],
+     "LevelRequired": 6,
      "Name": "Deconstruction",
      "Keywords": "Errand",
      "Range": "",
@@ -1297,6 +1779,10 @@
    },
    "defensive_flexibility": {
      "ID": "defensive_flexibility",
+     "ClassID": [
+       "fighter"
+     ],
+     "LevelRequired": 8,
      "Name": "Defensive Flexibility",
      "Keywords": "",
      "Range": "Self",
@@ -1309,6 +1795,10 @@
    },
    "delay_time": {
      "ID": "delay_time",
+     "ClassID": [
+       "temporal-trickster"
+     ],
+     "LevelRequired": 6,
      "Name": "Delay Time",
      "Keywords": "",
      "Range": "40ft",
@@ -1321,6 +1811,10 @@
    },
    "delayed_hit": {
      "ID": "delayed_hit",
+     "ClassID": [
+       "chronofighter"
+     ],
+     "LevelRequired": 4,
      "Name": "Delayed Hit",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1333,6 +1827,10 @@
    },
    "despair_of_isolation": {
      "ID": "despair_of_isolation",
+     "ClassID": [
+       "mist-veil-elegy"
+     ],
+     "LevelRequired": 6,
      "Name": "Despair of Isolation",
      "Keywords": "Song, Mind Affecting, Sound",
      "Range": "Self",
@@ -1345,6 +1843,10 @@
    },
    "destroying_angel": {
      "ID": "destroying_angel",
+     "ClassID": [
+       "mycomancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Destroying Angel",
      "Keywords": "Poison, Spell, Healing",
      "Range": "60ft",
@@ -1357,6 +1859,10 @@
    },
    "detailed_finish": {
      "ID": "detailed_finish",
+     "ClassID": [
+       "alchemeister"
+     ],
+     "LevelRequired": 6,
      "Name": "Detailed Finish",
      "Keywords": "",
      "Range": "",
@@ -1369,6 +1875,10 @@
    },
    "deus_vult": {
      "ID": "deus_vult",
+     "ClassID": [
+       "executor"
+     ],
+     "LevelRequired": 6,
      "Name": "Deus Vult",
      "Keywords": "",
      "Range": "Self",
@@ -1381,6 +1891,10 @@
    },
    "devastating_strike": {
      "ID": "devastating_strike",
+     "ClassID": [
+       "rogue"
+     ],
+     "LevelRequired": 8,
      "Name": "Devastating Strike",
      "Keywords": "Full Pierce, Sure Hit",
      "Range": "Melee Weapon",
@@ -1393,6 +1907,10 @@
    },
    "devastating_strike_ii": {
      "ID": "devastating_strike_ii",
+     "ClassID": [
+       "cutthroat"
+     ],
+     "LevelRequired": 6,
      "Name": "Devastating Strike II",
      "Keywords": "Sure Hit, Full Pierce",
      "Range": "Melee Weapon",
@@ -1405,6 +1923,10 @@
    },
    "devastating_strike_iii": {
      "ID": "devastating_strike_iii",
+     "ClassID": [
+       "assassin"
+     ],
+     "LevelRequired": 6,
      "Name": "Devastating Strike III",
      "Keywords": "Full Pierce, Sure Hit",
      "Range": "Melee Weapon",
@@ -1417,6 +1939,10 @@
    },
    "devils_blow": {
      "ID": "devils_blow",
+     "ClassID": [
+       "curse-knight"
+     ],
+     "LevelRequired": 6,
      "Name": "Devil's Blow",
      "Keywords": "Full Pierce",
      "Range": "Melee Weapon",
@@ -1429,6 +1955,10 @@
    },
    "devils_curse": {
      "ID": "devils_curse",
+     "ClassID": [
+       "curse-knight"
+     ],
+     "LevelRequired": 4,
      "Name": "Devil's Curse",
      "Keywords": "",
      "Range": "Self",
@@ -1441,6 +1971,10 @@
    },
    "dimensional_armory_expansion": {
      "ID": "dimensional_armory_expansion",
+     "ClassID": [
+       "armiger"
+     ],
+     "LevelRequired": 6,
      "Name": "Dimensional Armory Expansion",
      "Keywords": "",
      "Range": "",
@@ -1453,6 +1987,10 @@
    },
    "dirge_of_despair": {
      "ID": "dirge_of_despair",
+     "ClassID": [
+       "bard"
+     ],
+     "LevelRequired": 4,
      "Name": "Dirge of Despair",
      "Keywords": "Sound, Song, Upkeep, Mind Affecting",
      "Range": "30ft",
@@ -1465,6 +2003,10 @@
    },
    "disarming_attack": {
      "ID": "disarming_attack",
+     "ClassID": [
+       "battlemaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Disarming Attack",
      "Keywords": "Disarm",
      "Range": "Melee Weapon",
@@ -1477,6 +2019,10 @@
    },
    "disarming_shot": {
      "ID": "disarming_shot",
+     "ClassID": [
+       "deadeye"
+     ],
+     "LevelRequired": 2,
      "Name": "Disarming Shot",
      "Keywords": "Disarm",
      "Range": "",
@@ -1489,6 +2035,10 @@
    },
    "discipline": {
      "ID": "discipline",
+     "ClassID": [
+       "martial-artist"
+     ],
+     "LevelRequired": 1,
      "Name": "Discipline",
      "Keywords": "",
      "Range": "Self",
@@ -1501,6 +2051,10 @@
    },
    "dispel_magic": {
      "ID": "dispel_magic",
+     "ClassID": [
+       "anti-mage"
+     ],
+     "LevelRequired": 2,
      "Name": "Dispel Magic",
      "Keywords": "Arcane, Dispel, Spell",
      "Range": "60ft",
@@ -1513,6 +2067,10 @@
    },
    "disrupt_ki": {
      "ID": "disrupt_ki",
+     "ClassID": [
+       "wave-palm-style"
+     ],
+     "LevelRequired": 6,
      "Name": "Disrupt Ki",
      "Keywords": "Unarmed Strike, Mystic Eye",
      "Range": "Melee Weapon",
@@ -1525,6 +2083,10 @@
    },
    "divine_guard": {
      "ID": "divine_guard",
+     "ClassID": [
+       "angelblooded"
+     ],
+     "LevelRequired": 4,
      "Name": "Divine Guard",
      "Keywords": "",
      "Range": "Self",
@@ -1537,6 +2099,10 @@
    },
    "divine_might": {
      "ID": "divine_might",
+     "ClassID": [
+       "angelblooded"
+     ],
+     "LevelRequired": 6,
      "Name": "Divine Might",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1549,6 +2115,10 @@
    },
    "divine_smite": {
      "ID": "divine_smite",
+     "ClassID": [
+       "sword-paladin"
+     ],
+     "LevelRequired": 8,
      "Name": "Divine Smite",
      "Keywords": "Full Pierce",
      "Range": "Melee Weapon",
@@ -1561,6 +2131,10 @@
    },
    "divine_smite_ii": {
      "ID": "divine_smite_ii",
+     "ClassID": [
+       "shield-paladin"
+     ],
+     "LevelRequired": 8,
      "Name": "Divine Smite II",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1573,6 +2147,10 @@
    },
    "divine_storm": {
      "ID": "divine_storm",
+     "ClassID": [
+       "exalted-blade"
+     ],
+     "LevelRequired": 4,
      "Name": "Divine Storm",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1585,6 +2163,10 @@
    },
    "divining_petalfall": {
      "ID": "divining_petalfall",
+     "ClassID": [
+       "forager"
+     ],
+     "LevelRequired": 6,
      "Name": "Divining Petalfall",
      "Keywords": "",
      "Range": "",
@@ -1597,6 +2179,10 @@
    },
    "doctor_jekyll": {
      "ID": "doctor_jekyll",
+     "ClassID": [
+       "alchemist"
+     ],
+     "LevelRequired": 4,
      "Name": "Doctor Jekyll",
      "Keywords": "Encounter Start",
      "Range": "30ft",
@@ -1609,6 +2195,10 @@
    },
    "double_elements": {
      "ID": "double_elements",
+     "ClassID": [
+       "spell-blademaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Double Elements",
      "Keywords": "Quick",
      "Range": "Self",
@@ -1621,6 +2211,10 @@
    },
    "double_palm_strike": {
      "ID": "double_palm_strike",
+     "ClassID": [
+       "bajiquan-style"
+     ],
+     "LevelRequired": 2,
      "Name": "Double Palm Strike",
      "Keywords": "Bajiquan, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -1633,6 +2227,10 @@
    },
    "double_punch": {
      "ID": "double_punch",
+     "ClassID": [
+       "martial-artist"
+     ],
+     "LevelRequired": 8,
      "Name": "Double Punch",
      "Keywords": "Unarmed Strike",
      "Range": "Melee Weapon",
@@ -1645,6 +2243,10 @@
    },
    "double_slam": {
      "ID": "double_slam",
+     "ClassID": [
+       "colossus"
+     ],
+     "LevelRequired": 4,
      "Name": "Double Slam",
      "Keywords": "Unbalanced",
      "Range": "Melee Weapon",
@@ -1657,6 +2259,10 @@
    },
    "downburst": {
      "ID": "downburst",
+     "ClassID": [
+       "aeromancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Downburst",
      "Keywords": "Lock On, Spell, Wind",
      "Range": "720ft",
@@ -1669,6 +2275,10 @@
    },
    "downburst_ii": {
      "ID": "downburst_ii",
+     "ClassID": [
+       "aeromaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Downburst II",
      "Keywords": "Lock On, Spell, Wind",
      "Range": "720ft",
@@ -1681,6 +2291,10 @@
    },
    "dragon_breaks_the_ranks": {
      "ID": "dragon_breaks_the_ranks",
+     "ClassID": [
+       "battle-mage"
+     ],
+     "LevelRequired": 2,
      "Name": "Dragon Breaks The Ranks",
      "Keywords": "Fire, Spell, Sidestep",
      "Range": "80ft",
@@ -1693,6 +2307,10 @@
    },
    "dragonfire_dive": {
      "ID": "dragonfire_dive",
+     "ClassID": [
+       "dragoon"
+     ],
+     "LevelRequired": 4,
      "Name": "Dragonfire Dive",
      "Keywords": "Fire, Jump",
      "Range": "40ft",
@@ -1705,6 +2323,10 @@
    },
    "draw-in": {
      "ID": "draw-in",
+     "ClassID": [
+       "spearmaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Draw-In",
      "Keywords": "Combo",
      "Range": "Melee Weapon",
@@ -1717,6 +2339,10 @@
    },
    "draw_elements": {
      "ID": "draw_elements",
+     "ClassID": [
+       "spellblade"
+     ],
+     "LevelRequired": 1,
      "Name": "Draw Elements",
      "Keywords": "",
      "Range": "-",
@@ -1729,6 +2355,10 @@
    },
    "draw_elements_ii": {
      "ID": "draw_elements_ii",
+     "ClassID": [
+       "spell-blademaster"
+     ],
+     "LevelRequired": 1,
      "Name": "Draw Elements II",
      "Keywords": "Quick",
      "Range": "Self",
@@ -1741,6 +2371,10 @@
    },
    "dualcast": {
      "ID": "dualcast",
+     "ClassID": [
+       "sage"
+     ],
+     "LevelRequired": 6,
      "Name": "Dualcast",
      "Keywords": "Arcane",
      "Range": "Self",
@@ -1753,6 +2387,10 @@
    },
    "duelist_blow": {
      "ID": "duelist_blow",
+     "ClassID": [
+       "duelist"
+     ],
+     "LevelRequired": 6,
      "Name": "Duelist Blow",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1765,6 +2403,10 @@
    },
    "duplicate": {
      "ID": "duplicate",
+     "ClassID": [
+       "phantom-thief"
+     ],
+     "LevelRequired": 4,
      "Name": "Duplicate",
      "Keywords": "Spell, Arcane",
      "Range": "Sight",
@@ -1777,6 +2419,10 @@
    },
    "eagle_hunt": {
      "ID": "eagle_hunt",
+     "ClassID": [
+       "executor"
+     ],
+     "LevelRequired": 4,
      "Name": "Eagle Hunt",
      "Keywords": "Combo, Jump",
      "Range": "-",
@@ -1789,6 +2435,10 @@
    },
    "earthen_guardian": {
      "ID": "earthen_guardian",
+     "ClassID": [
+       "still-stone-style"
+     ],
+     "LevelRequired": 6,
      "Name": "Earthen Guardian",
      "Keywords": "Sidestep, Jump",
      "Range": "40ft",
@@ -1801,6 +2451,10 @@
    },
    "efficient_strike": {
      "ID": "efficient_strike",
+     "ClassID": [
+       "miner"
+     ],
+     "LevelRequired": 6,
      "Name": "Efficient Strike",
      "Keywords": "",
      "Range": "",
@@ -1813,6 +2467,10 @@
    },
    "elbow_uppercut": {
      "ID": "elbow_uppercut",
+     "ClassID": [
+       "bajiquan-style"
+     ],
+     "LevelRequired": 6,
      "Name": "Elbow Uppercut",
      "Keywords": "Bajiquan, Combo, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -1825,6 +2483,10 @@
    },
    "elemental_strike": {
      "ID": "elemental_strike",
+     "ClassID": [
+       "spellblade"
+     ],
+     "LevelRequired": 4,
      "Name": "Elemental Strike",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1837,6 +2499,10 @@
    },
    "elemental_sweep": {
      "ID": "elemental_sweep",
+     "ClassID": [
+       "spell-blademaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Elemental Sweep",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1849,6 +2515,10 @@
    },
    "emergency_recall": {
      "ID": "emergency_recall",
+     "ClassID": [
+       "animal-summoner"
+     ],
+     "LevelRequired": 2,
      "Name": "Emergency Recall",
      "Keywords": "",
      "Range": "Sight",
@@ -1861,6 +2531,10 @@
    },
    "empty_body": {
      "ID": "empty_body",
+     "ClassID": [
+       "monk"
+     ],
+     "LevelRequired": 1,
      "Name": "Empty Body",
      "Keywords": "",
      "Range": "Self",
@@ -1873,6 +2547,10 @@
    },
    "en-dama": {
      "ID": "en-dama",
+     "ClassID": [
+       "jonin"
+     ],
+     "LevelRequired": 4,
      "Name": "En-dama",
      "Keywords": "",
      "Range": "5ft",
@@ -1885,6 +2563,10 @@
    },
    "energy_drain": {
      "ID": "energy_drain",
+     "ClassID": [
+       "eremancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Energy Drain",
      "Keywords": "Spell, Dark",
      "Range": "60ft",
@@ -1897,6 +2579,10 @@
    },
    "eternal_mirane_cage": {
      "ID": "eternal_mirane_cage",
+     "ClassID": [
+       "hoarfrost"
+     ],
+     "LevelRequired": 1,
      "Name": "Eternal Mirane Cage",
      "Keywords": "Frost, Spell",
      "Range": "Sight",
@@ -1909,6 +2595,10 @@
    },
    "evasive_maneuver": {
      "ID": "evasive_maneuver",
+     "ClassID": [
+       "rogue"
+     ],
+     "LevelRequired": 2,
      "Name": "Evasive Maneuver",
      "Keywords": "Sidestep",
      "Range": "Self",
@@ -1921,6 +2611,10 @@
    },
    "evil_eye_of_death": {
      "ID": "evil_eye_of_death",
+     "ClassID": [
+       "evil-eye"
+     ],
+     "LevelRequired": 8,
      "Name": "Evil Eye of Death",
      "Keywords": "Mystic Eye, Upkeep",
      "Range": "60ft",
@@ -1933,6 +2627,10 @@
    },
    "evil_eye_of_fear": {
      "ID": "evil_eye_of_fear",
+     "ClassID": [
+       "evil-eye"
+     ],
+     "LevelRequired": 6,
      "Name": "Evil Eye of Fear",
      "Keywords": "Mystic Eye, Upkeep, Fear, Mind Affecting",
      "Range": "60ft",
@@ -1945,6 +2643,10 @@
    },
    "evil_eye_of_lethargy": {
      "ID": "evil_eye_of_lethargy",
+     "ClassID": [
+       "evil-eye"
+     ],
+     "LevelRequired": 4,
      "Name": "Evil Eye of Lethargy",
      "Keywords": "Mystic Eye, Upkeep, Slow",
      "Range": "60ft",
@@ -1957,6 +2659,10 @@
    },
    "excavation_crash": {
      "ID": "excavation_crash",
+     "ClassID": [
+       "miner"
+     ],
+     "LevelRequired": 4,
      "Name": "Excavation Crash",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -1969,6 +2675,10 @@
    },
    "execute_heretic": {
      "ID": "execute_heretic",
+     "ClassID": [
+       "exalted-blade"
+     ],
+     "LevelRequired": 1,
      "Name": "Execute Heretic",
      "Keywords": "Sure Hit, Full Pierce",
      "Range": "Melee Weapon",
@@ -1981,6 +2691,10 @@
    },
    "expertise_study_(armorsmithing)": {
      "ID": "expertise_study_(armorsmithing)",
+     "ClassID": [
+       "master-armorer"
+     ],
+     "LevelRequired": 6,
      "Name": "Expertise Study (Armorsmithing)",
      "Keywords": "",
      "Range": "",
@@ -1993,6 +2707,10 @@
    },
    "expertise_study_(artificing)": {
      "ID": "expertise_study_(artificing)",
+     "ClassID": [
+       "magitechnician-"
+     ],
+     "LevelRequired": 6,
      "Name": "Expertise Study (Artificing)",
      "Keywords": "",
      "Range": "",
@@ -2005,6 +2723,10 @@
    },
    "expertise_study_(blacksmithing)": {
      "ID": "expertise_study_(blacksmithing)",
+     "ClassID": [
+       "forgemaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Expertise Study (Blacksmithing)",
      "Keywords": "",
      "Range": "",
@@ -2017,6 +2739,10 @@
    },
    "expertise_study_(carpentry)": {
      "ID": "expertise_study_(carpentry)",
+     "ClassID": [
+       "timberwright"
+     ],
+     "LevelRequired": 6,
      "Name": "Expertise Study (Carpentry)",
      "Keywords": "",
      "Range": "",
@@ -2029,6 +2755,10 @@
    },
    "explosive_ward": {
      "ID": "explosive_ward",
+     "ClassID": [
+       "warding-mage"
+     ],
+     "LevelRequired": 6,
      "Name": "Explosive Ward",
      "Keywords": "Bounded Field, Fire, Spell",
      "Range": "Touch",
@@ -2041,6 +2771,10 @@
    },
    "exposing_stab": {
      "ID": "exposing_stab",
+     "ClassID": [
+       "cutthroat"
+     ],
+     "LevelRequired": 2,
      "Name": "Exposing Stab",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -2053,6 +2787,10 @@
    },
    "extending_spear": {
      "ID": "extending_spear",
+     "ClassID": [
+       "lancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Extending Spear",
      "Keywords": "",
      "Range": "30ft",
@@ -2065,6 +2803,10 @@
    },
    "faerie_light_eyes:__empty": {
      "ID": "faerie_light_eyes:__empty",
+     "ClassID": [
+       "faerie-light-eyes"
+     ],
+     "LevelRequired": 6,
      "Name": "Faerie Light Eyes:  Empty",
      "Keywords": "Concentration, Mind Affecting, Illusion",
      "Range": "60ft",
@@ -2077,6 +2819,10 @@
    },
    "faerie_light_eyes:_golden_illusion": {
      "ID": "faerie_light_eyes:_golden_illusion",
+     "ClassID": [
+       "faerie-light-eyes"
+     ],
+     "LevelRequired": 8,
      "Name": "Faerie Light Eyes: Golden Illusion",
      "Keywords": "Illusion, Mind Affecting",
      "Range": "Self",
@@ -2089,6 +2835,10 @@
    },
    "faerie_light_eyes:_hold_person": {
      "ID": "faerie_light_eyes:_hold_person",
+     "ClassID": [
+       "faerie-light-eyes"
+     ],
+     "LevelRequired": 2,
      "Name": "Faerie Light Eyes: Hold Person",
      "Keywords": "Illusion, Mind Affecting, Stun",
      "Range": "60ft",
@@ -2101,6 +2851,10 @@
    },
    "faerie_light_eyes:_time_dilation": {
      "ID": "faerie_light_eyes:_time_dilation",
+     "ClassID": [
+       "faerie-light-eyes"
+     ],
+     "LevelRequired": 4,
      "Name": "Faerie Light Eyes: Time Dilation",
      "Keywords": "",
      "Range": "Self",
@@ -2113,6 +2867,10 @@
    },
    "faithful_shield": {
      "ID": "faithful_shield",
+     "ClassID": [
+       "shield-saint"
+     ],
+     "LevelRequired": 4,
      "Name": "Faithful Shield",
      "Keywords": "Overcharge",
      "Range": "Self",
@@ -2125,6 +2883,10 @@
    },
    "fan_of_knives": {
      "ID": "fan_of_knives",
+     "ClassID": [
+       "peltast"
+     ],
+     "LevelRequired": 4,
      "Name": "Fan of Knives",
      "Keywords": "",
      "Range": "d Weapon Attack that does not provoke attacks of opportunity.",
@@ -2137,6 +2899,10 @@
    },
    "fast_dimensional_equip": {
      "ID": "fast_dimensional_equip",
+     "ClassID": [
+       "armiger"
+     ],
+     "LevelRequired": 4,
      "Name": "Fast Dimensional Equip",
      "Keywords": "",
      "Range": "Self",
@@ -2149,6 +2915,10 @@
    },
    "fast_hands": {
      "ID": "fast_hands",
+     "ClassID": [
+       "thief"
+     ],
+     "LevelRequired": 2,
      "Name": "Fast Hands",
      "Keywords": "Quick",
      "Range": "-",
@@ -2161,6 +2931,10 @@
    },
    "feeding_frenzy": {
      "ID": "feeding_frenzy",
+     "ClassID": [
+       "vampire-lord"
+     ],
+     "LevelRequired": 4,
      "Name": "Feeding Frenzy",
      "Keywords": "",
      "Range": "Self",
@@ -2173,6 +2947,10 @@
    },
    "feigned_retreat": {
      "ID": "feigned_retreat",
+     "ClassID": [
+       "strategist"
+     ],
+     "LevelRequired": 4,
      "Name": "Feigned Retreat",
      "Keywords": "Sidestep",
      "Range": "40ft",
@@ -2185,6 +2963,10 @@
    },
    "feint": {
      "ID": "feint",
+     "ClassID": [
+       "rogue"
+     ],
+     "LevelRequired": 1,
      "Name": "Feint",
      "Keywords": "",
      "Range": "15ft",
@@ -2197,6 +2979,10 @@
    },
    "feinting_stab": {
      "ID": "feinting_stab",
+     "ClassID": [
+       "cutthroat"
+     ],
+     "LevelRequired": 4,
      "Name": "Feinting Stab",
      "Keywords": "",
      "Range": "5ft",
@@ -2209,6 +2995,10 @@
    },
    "felling_strike": {
      "ID": "felling_strike",
+     "ClassID": [
+       "carpenter"
+     ],
+     "LevelRequired": 8,
      "Name": "Felling Strike",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -2221,6 +3011,10 @@
    },
    "fireball": {
      "ID": "fireball",
+     "ClassID": [
+       "pyromancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Fireball",
      "Keywords": "Fire, Spell",
      "Range": "60ft",
@@ -2233,6 +3027,10 @@
    },
    "fireball_barrage": {
      "ID": "fireball_barrage",
+     "ClassID": [
+       "pyromaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Fireball Barrage",
      "Keywords": "Fire, Spell",
      "Range": "60ft",
@@ -2245,6 +3043,10 @@
    },
    "fireball_ii": {
      "ID": "fireball_ii",
+     "ClassID": [
+       "pyromaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Fireball II",
      "Keywords": "Fire, Overcharge, Spell",
      "Range": "60ft",
@@ -2257,6 +3059,10 @@
    },
    "fissure": {
      "ID": "fissure",
+     "ClassID": [
+       "geomancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Fissure",
      "Keywords": "Spell, Earth",
      "Range": "30ft",
@@ -2269,6 +3075,10 @@
    },
    "flame_infusion": {
      "ID": "flame_infusion",
+     "ClassID": [
+       "flame-sentinel"
+     ],
+     "LevelRequired": 2,
      "Name": "Flame Infusion",
      "Keywords": "Fire, Spell, Type",
      "Range": "30ft",
@@ -2281,6 +3091,10 @@
    },
    "flame_shield": {
      "ID": "flame_shield",
+     "ClassID": [
+       "flame-sentinel"
+     ],
+     "LevelRequired": 4,
      "Name": "Flame Shield",
      "Keywords": "Fire, Full Pierce, Shield, Spell, Aid, Sure Hit",
      "Range": "30ft",
@@ -2293,6 +3107,10 @@
    },
    "flame_wall": {
      "ID": "flame_wall",
+     "ClassID": [
+       "flame-sentinel"
+     ],
+     "LevelRequired": 8,
      "Name": "Flame Wall",
      "Keywords": "Concentration, Fire, Spell",
      "Range": "60ft",
@@ -2305,6 +3123,10 @@
    },
    "flame_weapon": {
      "ID": "flame_weapon",
+     "ClassID": [
+       "flame-sentinel"
+     ],
+     "LevelRequired": 6,
      "Name": "Flame Weapon",
      "Keywords": "Enchantment",
      "Range": "Touch",
@@ -2317,6 +3139,10 @@
    },
    "flash_bomb": {
      "ID": "flash_bomb",
+     "ClassID": [
+       "saboteur"
+     ],
+     "LevelRequired": 2,
      "Name": "Flash Bomb",
      "Keywords": "Daze",
      "Range": "20ft",
@@ -2329,6 +3155,10 @@
    },
    "flash_cut": {
      "ID": "flash_cut",
+     "ClassID": [
+       "sword-saint"
+     ],
+     "LevelRequired": 4,
      "Name": "Flash Cut",
      "Keywords": "Iaijutsu, Sure Hit",
      "Range": "Melee Weapon",
@@ -2341,6 +3171,10 @@
    },
    "flash_star_style:_photon_line": {
      "ID": "flash_star_style:_photon_line",
+     "ClassID": [
+       "flash-star-blade-style-"
+     ],
+     "LevelRequired": 2,
      "Name": "Flash Star Style: Photon Line",
      "Keywords": "Sidestep, Pass",
      "Range": "25ft",
@@ -2353,6 +3187,10 @@
    },
    "flash_star_style:_starlight_crescent_reversal": {
      "ID": "flash_star_style:_starlight_crescent_reversal",
+     "ClassID": [
+       "flash-star-blade-style-"
+     ],
+     "LevelRequired": 6,
      "Name": "Flash Star Style: Starlight Crescent Reversal",
      "Keywords": "Counter",
      "Range": "Melee Weapon",
@@ -2365,6 +3203,10 @@
    },
    "flash_star_style:_thunderbolt_slash": {
      "ID": "flash_star_style:_thunderbolt_slash",
+     "ClassID": [
+       "flash-star-blade-style-"
+     ],
+     "LevelRequired": 4,
      "Name": "Flash Star Style: Thunderbolt Slash",
      "Keywords": "Combo",
      "Range": "Melee Weapon",
@@ -2377,6 +3219,10 @@
    },
    "flash_star_style_secret_art:_twin_nova_pursuit": {
      "ID": "flash_star_style_secret_art:_twin_nova_pursuit",
+     "ClassID": [
+       "flash-star-blade-style-"
+     ],
+     "LevelRequired": 8,
      "Name": "Flash Star Style Secret Art: Twin Nova Pursuit",
      "Keywords": "Teleport, Secret Art",
      "Range": "50ft",
@@ -2389,6 +3235,10 @@
    },
    "flowing_kick": {
      "ID": "flowing_kick",
+     "ClassID": [
+       "monk"
+     ],
+     "LevelRequired": 4,
      "Name": "Flowing Kick",
      "Keywords": "Combo, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -2401,6 +3251,10 @@
    },
    "fly": {
      "ID": "fly",
+     "ClassID": [
+       "windbringer"
+     ],
+     "LevelRequired": 8,
      "Name": "Fly",
      "Keywords": "Spell, Concentration",
      "Range": "Touch",
@@ -2413,6 +3267,10 @@
    },
    "flyby_attack": {
      "ID": "flyby_attack",
+     "ClassID": [
+       "sky-knight"
+     ],
+     "LevelRequired": 6,
      "Name": "Flyby Attack",
      "Keywords": "Sidestep",
      "Range": "Self",
@@ -2425,6 +3283,10 @@
    },
    "flying_kick": {
      "ID": "flying_kick",
+     "ClassID": [
+       "zen-warrior"
+     ],
+     "LevelRequired": 2,
      "Name": "Flying Kick",
      "Keywords": "Combo, Unarmed Strike",
      "Range": "40ft",
@@ -2437,6 +3299,10 @@
    },
    "focused_detonation": {
      "ID": "focused_detonation",
+     "ClassID": [
+       "excavator"
+     ],
+     "LevelRequired": 2,
      "Name": "Focused Detonation",
      "Keywords": "",
      "Range": "",
@@ -2449,6 +3315,10 @@
    },
    "foragers_eye": {
      "ID": "foragers_eye",
+     "ClassID": [
+       "botanist"
+     ],
+     "LevelRequired": 8,
      "Name": "Forager's Eye",
      "Keywords": "",
      "Range": "120ft",
@@ -2461,6 +3331,10 @@
    },
    "foretell": {
      "ID": "foretell",
+     "ClassID": [
+       "oracle"
+     ],
+     "LevelRequired": 4,
      "Name": "Foretell",
      "Keywords": "Divination",
      "Range": "Self",
@@ -2473,6 +3347,10 @@
    },
    "forged_knowledge": {
      "ID": "forged_knowledge",
+     "ClassID": [
+       "blacksmith"
+     ],
+     "LevelRequired": 4,
      "Name": "Forged Knowledge",
      "Keywords": "",
      "Range": "Self",
@@ -2485,6 +3363,10 @@
    },
    "forged_knowledge_ii": {
      "ID": "forged_knowledge_ii",
+     "ClassID": [
+       "forgemaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Forged Knowledge II",
      "Keywords": "",
      "Range": "Sight",
@@ -2497,6 +3379,10 @@
    },
    "forked_lightning": {
      "ID": "forked_lightning",
+     "ClassID": [
+       "electromancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Forked Lightning",
      "Keywords": "Lightning, Spell",
      "Range": "120ft",
@@ -2509,6 +3395,10 @@
    },
    "forward_momentum": {
      "ID": "forward_momentum",
+     "ClassID": [
+       "duelist"
+     ],
+     "LevelRequired": 2,
      "Name": "Forward Momentum",
      "Keywords": "Quick",
      "Range": "Self",
@@ -2521,6 +3411,10 @@
    },
    "four_field_system": {
      "ID": "four_field_system",
+     "ClassID": [
+       "cultivator"
+     ],
+     "LevelRequired": 6,
      "Name": "Four Field System",
      "Keywords": "",
      "Range": "",
@@ -2533,6 +3427,10 @@
    },
    "four_point_strike": {
      "ID": "four_point_strike",
+     "ClassID": [
+       "wave-palm-style"
+     ],
+     "LevelRequired": 8,
      "Name": "Four Point Strike",
      "Keywords": "Combo, Unarmed Strike, Mystic Eye",
      "Range": "Melee Weapon",
@@ -2545,6 +3443,10 @@
    },
    "frost_coffin": {
      "ID": "frost_coffin",
+     "ClassID": [
+       "cryomancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Frost Coffin",
      "Keywords": "Frost, Spell",
      "Range": "30ft",
@@ -2557,6 +3459,10 @@
    },
    "frost_driver": {
      "ID": "frost_driver",
+     "ClassID": [
+       "hoarfrost"
+     ],
+     "LevelRequired": 2,
      "Name": "Frost Driver",
      "Keywords": "Frost, Root, Slow, Spell, Combo",
      "Range": "80ft",
@@ -2569,6 +3475,10 @@
    },
    "full_dimensional_equip": {
      "ID": "full_dimensional_equip",
+     "ClassID": [
+       "armiger"
+     ],
+     "LevelRequired": 8,
      "Name": "Full Dimensional Equip",
      "Keywords": "",
      "Range": "Self",
@@ -2581,6 +3491,10 @@
    },
    "full_power_swing": {
      "ID": "full_power_swing",
+     "ClassID": [
+       "reaver"
+     ],
+     "LevelRequired": 4,
      "Name": "Full Power Swing",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -2593,6 +3507,10 @@
    },
    "gale-wind_aura": {
      "ID": "gale-wind_aura",
+     "ClassID": [
+       "windbringer"
+     ],
+     "LevelRequired": 2,
      "Name": "Gale-Wind Aura",
      "Keywords": "Aura, Upkeep",
      "Range": "Self",
@@ -2605,6 +3523,10 @@
    },
    "genjutsu_kai": {
      "ID": "genjutsu_kai",
+     "ClassID": [
+       "jonin"
+     ],
+     "LevelRequired": 1,
      "Name": "Genjutsu Kai",
      "Keywords": "Ninjutsu",
      "Range": "5ft",
@@ -2617,6 +3539,10 @@
    },
    "glacial_bastion": {
      "ID": "glacial_bastion",
+     "ClassID": [
+       "hoarfrost"
+     ],
+     "LevelRequired": 6,
      "Name": "Glacial Bastion",
      "Keywords": "Frost, Spell",
      "Range": "Self",
@@ -2629,6 +3555,10 @@
    },
    "glacial_wall": {
      "ID": "glacial_wall",
+     "ClassID": [
+       "cryomancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Glacial Wall",
      "Keywords": "Frost, Spell",
      "Range": "30ft",
@@ -2641,6 +3571,10 @@
    },
    "gleaming_cut": {
      "ID": "gleaming_cut",
+     "ClassID": [
+       "phosphomancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Gleaming Cut",
      "Keywords": "Spell, Light, Rapid, Illumination",
      "Range": "60ft",
@@ -2653,6 +3587,12 @@
    },
    "glide": {
      "ID": "glide",
+     "ClassID": [
+       "aeromancer",
+       "windbringer",
+       "zephyr-warder"
+     ],
+     "LevelRequired": 1,
      "Name": "Glide",
      "Keywords": "Spell",
      "Range": "Self",
@@ -2665,6 +3605,10 @@
    },
    "glittershards": {
      "ID": "glittershards",
+     "ClassID": [
+       "mage"
+     ],
+     "LevelRequired": 6,
      "Name": "Glittershards",
      "Keywords": "Concentration, Spell",
      "Range": "40ft range, 5ft radius",
@@ -2677,6 +3621,10 @@
    },
    "gloom_infusion": {
      "ID": "gloom_infusion",
+     "ClassID": [
+       "dark-priest"
+     ],
+     "LevelRequired": 2,
      "Name": "Gloom Infusion",
      "Keywords": "Spell, Dark, Type",
      "Range": "30ft",
@@ -2689,6 +3637,10 @@
    },
    "gods_blessing": {
      "ID": "gods_blessing",
+     "ClassID": [
+       "angelblooded"
+     ],
+     "LevelRequired": 8,
      "Name": "God's Blessing",
      "Keywords": "",
      "Range": "-",
@@ -2701,6 +3653,10 @@
    },
    "grand_theft_horse": {
      "ID": "grand_theft_horse",
+     "ClassID": [
+       "phantom-thief"
+     ],
+     "LevelRequired": 6,
      "Name": "Grand Theft Horse",
      "Keywords": "",
      "Range": "5ft",
@@ -2713,6 +3669,10 @@
    },
    "greater_imbue_weapon": {
      "ID": "greater_imbue_weapon",
+     "ClassID": [
+       "spellblade"
+     ],
+     "LevelRequired": 6,
      "Name": "Greater Imbue Weapon",
      "Keywords": "Enchantment",
      "Range": "Self",
@@ -2725,6 +3685,10 @@
    },
    "grindstone_echo": {
      "ID": "grindstone_echo",
+     "ClassID": [
+       "master-armorer"
+     ],
+     "LevelRequired": 2,
      "Name": "Grindstone Echo",
      "Keywords": "",
      "Range": "",
@@ -2737,6 +3701,10 @@
    },
    "guided_aim": {
      "ID": "guided_aim",
+     "ClassID": [
+       "ranger"
+     ],
+     "LevelRequired": 4,
      "Name": "Guided Aim",
      "Keywords": "",
      "Range": "Self",
@@ -2749,6 +3717,10 @@
    },
    "half_restore": {
      "ID": "half_restore",
+     "ClassID": [
+       "animal-summoner"
+     ],
+     "LevelRequired": 4,
      "Name": "Half Restore",
      "Keywords": "Healing",
      "Range": "5ft",
@@ -2761,6 +3733,10 @@
    },
    "hammer_and_nail": {
      "ID": "hammer_and_nail",
+     "ClassID": [
+       "carpenter"
+     ],
+     "LevelRequired": 4,
      "Name": "Hammer and Nail",
      "Keywords": "Sure Hit, Full Pierce",
      "Range": "Melee Weapon",
@@ -2773,11 +3749,15 @@
    },
    "hardening_fist": {
      "ID": "hardening_fist",
+     "ClassID": [
+       "still-stone-style"
+     ],
+     "LevelRequired": 4,
      "Name": "Hardening Fist",
-     "Keywords": "Unarmed Strike",
+     "Keywords": "Unarmed Strike, Combo",
      "Range": "Melee Weapon",
      "Requirement": "In the Steadfast Earth Stance.",
-     "Description": "You make a Light attack against the target. Afterwards, you gain +2 guard and +8 Block, but lose 4 evasion (including dodge) until the start of your next turn.",
+     "Description": "You make a Light attack against the target. Afterwards, you gain +2 guard and +8 Block, but lose 4 evasion (including dodge) until the start of your next turn.Combo: If used after Steadfast Earth Stance, the mana cost is reduced by 1.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "1 MP",
@@ -2785,6 +3765,10 @@
    },
    "harvest_moon": {
      "ID": "harvest_moon",
+     "ClassID": [
+       "cultivator"
+     ],
+     "LevelRequired": 8,
      "Name": "Harvest Moon",
      "Keywords": "Slow, Healing, Killing Blow, Concentration, Upkeep",
      "Range": "Self",
@@ -2797,6 +3781,10 @@
    },
    "haste": {
      "ID": "haste",
+     "ClassID": [
+       "chronomancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Haste",
      "Keywords": "Spell",
      "Range": "60ft",
@@ -2809,6 +3797,10 @@
    },
    "headwind": {
      "ID": "headwind",
+     "ClassID": [
+       "windbringer"
+     ],
+     "LevelRequired": 6,
      "Name": "Headwind",
      "Keywords": "Aura, Upkeep",
      "Range": "Self",
@@ -2821,6 +3813,10 @@
    },
    "heavenfall_descent": {
      "ID": "heavenfall_descent",
+     "ClassID": [
+       "sky-talon-style"
+     ],
+     "LevelRequired": 4,
      "Name": "Heavenfall Descent",
      "Keywords": "Unarmed Strike",
      "Range": "Self",
@@ -2831,8 +3827,44 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "heavenly_lightning_stance": {
+     "ID": "heavenly_lightning_stance",
+     "ClassID": [
+       "transcendent-lightning-style"
+     ],
+     "LevelRequired": 2,
+     "Name": "Heavenly Lightning Stance",
+     "Keywords": "Stance",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "You enter the Heavenly Lightning Stance, a stance that lets you move with the unpredictability of the heavens. For your first movement of your turn, you may pass through enemies and your movement becomes a Sidestep.If you have mastered Sky Talon Style, entering this stance also counts as your Wind Stance.This stance lasts until you enter a different stance or make an attack with anything other than a melee attack or an ability with the Unarmed Strike keyword.",
+     "RPcost": "",
+     "APcost": "0 AP",
+     "MPcost": "1 MP",
+     "Othercost": ""
+   },
+   "heavy_trample": {
+     "ID": "heavy_trample",
+     "ClassID": [
+       "knight-paramount"
+     ],
+     "LevelRequired": 4,
+     "Name": "Heavy Trample",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "When using Trample, you may use your Toughness for the damage roll instead of your mount’s power.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "hidden_wards": {
      "ID": "hidden_wards",
+     "ClassID": [
+       "warding-mage"
+     ],
+     "LevelRequired": 4,
      "Name": "Hidden Wards",
      "Keywords": "",
      "Range": "-",
@@ -2845,6 +3877,10 @@
    },
    "hide_in_bush": {
      "ID": "hide_in_bush",
+     "ClassID": [
+       "scout"
+     ],
+     "LevelRequired": 6,
      "Name": "Hide in bush",
      "Keywords": "",
      "Range": "Self",
@@ -2857,6 +3893,10 @@
    },
    "hide_in_shadows": {
      "ID": "hide_in_shadows",
+     "ClassID": [
+       "shadowbringer"
+     ],
+     "LevelRequired": 2,
      "Name": "Hide in Shadows",
      "Keywords": "Teleport, Full Pierce",
      "Range": "40ft",
@@ -2869,6 +3909,10 @@
    },
    "hit_\u0026_run": {
      "ID": "hit_\u0026_run",
+     "ClassID": [
+       "nomad"
+     ],
+     "LevelRequired": 2,
      "Name": "Hit \u0026 Run",
      "Keywords": "",
      "Range": "Weapon",
@@ -2881,6 +3925,10 @@
    },
    "hold_the_line": {
      "ID": "hold_the_line",
+     "ClassID": [
+       "guardian"
+     ],
+     "LevelRequired": 4,
      "Name": "Hold the line",
      "Keywords": "",
      "Range": "Self",
@@ -2893,6 +3941,10 @@
    },
    "holy_declaration": {
      "ID": "holy_declaration",
+     "ClassID": [
+       "exalted-shield"
+     ],
+     "LevelRequired": 6,
      "Name": "Holy Declaration",
      "Keywords": "Challenge",
      "Range": "Self",
@@ -2905,6 +3957,10 @@
    },
    "holy_light": {
      "ID": "holy_light",
+     "ClassID": [
+       "priest"
+     ],
+     "LevelRequired": 6,
      "Name": "Holy Light",
      "Keywords": "Healing, Spell",
      "Range": "60ft",
@@ -2917,6 +3973,10 @@
    },
    "holy_orders": {
      "ID": "holy_orders",
+     "ClassID": [
+       "executor"
+     ],
+     "LevelRequired": 1,
      "Name": "Holy Orders",
      "Keywords": "Sidestep",
      "Range": "60ft",
@@ -2929,6 +3989,10 @@
    },
    "holy_shield": {
      "ID": "holy_shield",
+     "ClassID": [
+       "shield-paladin"
+     ],
+     "LevelRequired": 6,
      "Name": "Holy Shield",
      "Keywords": "Overcharge",
      "Range": "Self",
@@ -2941,6 +4005,10 @@
    },
    "horse_whistle": {
      "ID": "horse_whistle",
+     "ClassID": [
+       "cavalier"
+     ],
+     "LevelRequired": 4,
      "Name": "Horse Whistle",
      "Keywords": "Sidestep",
      "Range": "Sight",
@@ -2953,6 +4021,10 @@
    },
    "hyphal_force": {
      "ID": "hyphal_force",
+     "ClassID": [
+       "amanita"
+     ],
+     "LevelRequired": 4,
      "Name": "Hyphal Force",
      "Keywords": "Earth, Spell",
      "Range": "Sight",
@@ -2965,6 +4037,10 @@
    },
    "iai_strike": {
      "ID": "iai_strike",
+     "ClassID": [
+       "iai-style"
+     ],
+     "LevelRequired": 2,
      "Name": "Iai Strike",
      "Keywords": "Iaijutsu, Lock On",
      "Range": "Melee Weapon",
@@ -2977,6 +4053,10 @@
    },
    "icicle_nail": {
      "ID": "icicle_nail",
+     "ClassID": [
+       "cryomancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Icicle Nail",
      "Keywords": "Frost, Slow, Spell",
      "Range": "60ft",
@@ -2989,6 +4069,10 @@
    },
    "ignite": {
      "ID": "ignite",
+     "ClassID": [
+       "pyromancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Ignite",
      "Keywords": "Fire, Overcharge, Spell",
      "Range": "40ft",
@@ -3001,6 +4085,10 @@
    },
    "illuminating_flash": {
      "ID": "illuminating_flash",
+     "ClassID": [
+       "phosphomancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Illuminating Flash",
      "Keywords": "Spell, Light, Blinded, Illumination",
      "Range": "60ft.",
@@ -3013,6 +4101,10 @@
    },
    "imbue_weapon": {
      "ID": "imbue_weapon",
+     "ClassID": [
+       "spellblade"
+     ],
+     "LevelRequired": 2,
      "Name": "Imbue Weapon",
      "Keywords": "Enchantment",
      "Range": "Self",
@@ -3025,6 +4117,10 @@
    },
    "improvised_defense": {
      "ID": "improvised_defense",
+     "ClassID": [
+       "tavern-brawler"
+     ],
+     "LevelRequired": 4,
      "Name": "Improvised Defense",
      "Keywords": "",
      "Range": "Self",
@@ -3037,6 +4133,10 @@
    },
    "in_the_zone": {
      "ID": "in_the_zone",
+     "ClassID": [
+       "carpenter"
+     ],
+     "LevelRequired": 6,
      "Name": "In The Zone",
      "Keywords": "",
      "Range": "",
@@ -3049,6 +4149,10 @@
    },
    "incendiary_ray": {
      "ID": "incendiary_ray",
+     "ClassID": [
+       "pyromancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Incendiary Ray",
      "Keywords": "Fire, Spell",
      "Range": "40ft",
@@ -3061,6 +4165,10 @@
    },
    "increased_reach": {
      "ID": "increased_reach",
+     "ClassID": [
+       "sage"
+     ],
+     "LevelRequired": 1,
      "Name": "Increased Reach",
      "Keywords": "",
      "Range": "Self",
@@ -3073,6 +4181,10 @@
    },
    "independent_action": {
      "ID": "independent_action",
+     "ClassID": [
+       "animal-summoner"
+     ],
+     "LevelRequired": 6,
      "Name": "Independent Action",
      "Keywords": "",
      "Range": "Sight",
@@ -3085,6 +4197,10 @@
    },
    "infuse_potion": {
      "ID": "infuse_potion",
+     "ClassID": [
+       "alchemeister"
+     ],
+     "LevelRequired": 2,
      "Name": "Infuse Potion",
      "Keywords": "Quick",
      "Range": "Self",
@@ -3097,6 +4213,10 @@
    },
    "inspired_finish": {
      "ID": "inspired_finish",
+     "ClassID": [
+       "forgemaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Inspired Finish",
      "Keywords": "",
      "Range": "",
@@ -3109,6 +4229,10 @@
    },
    "inspiring_song": {
      "ID": "inspiring_song",
+     "ClassID": [
+       "bard"
+     ],
+     "LevelRequired": 2,
      "Name": "Inspiring Song",
      "Keywords": "Song, Sound, Upkeep",
      "Range": "30ft",
@@ -3121,6 +4245,10 @@
    },
    "intercept": {
      "ID": "intercept",
+     "ClassID": [
+       "great-knight"
+     ],
+     "LevelRequired": 4,
      "Name": "Intercept",
      "Keywords": "",
      "Range": "Your movement speed.",
@@ -3133,6 +4261,10 @@
    },
    "into_the_fray": {
      "ID": "into_the_fray",
+     "ClassID": [
+       "berserker"
+     ],
+     "LevelRequired": 4,
      "Name": "Into the Fray",
      "Keywords": "Rage",
      "Range": "Self",
@@ -3145,6 +4277,10 @@
    },
    "jump": {
      "ID": "jump",
+     "ClassID": [
+       "dragoon"
+     ],
+     "LevelRequired": 1,
      "Name": "Jump",
      "Keywords": "Jump, Sidestep",
      "Range": "-",
@@ -3157,6 +4293,10 @@
    },
    "jump_back": {
      "ID": "jump_back",
+     "ClassID": [
+       "dragoon"
+     ],
+     "LevelRequired": 6,
      "Name": "Jump Back",
      "Keywords": "Jump, Quick",
      "Range": "120ft",
@@ -3169,6 +4309,10 @@
    },
    "justice_blade": {
      "ID": "justice_blade",
+     "ClassID": [
+       "sword-paladin"
+     ],
+     "LevelRequired": 4,
      "Name": "Justice Blade",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -3181,6 +4325,10 @@
    },
    "kage_bunshin:_kyomei": {
      "ID": "kage_bunshin:_kyomei",
+     "ClassID": [
+       "jonin"
+     ],
+     "LevelRequired": 6,
      "Name": "Kage Bunshin: Kyomei",
      "Keywords": "Ninjutsu",
      "Range": "5ft",
@@ -3193,6 +4341,10 @@
    },
    "kage_shuriken_no_jutsu": {
      "ID": "kage_shuriken_no_jutsu",
+     "ClassID": [
+       "ninja"
+     ],
+     "LevelRequired": 8,
      "Name": "Kage Shuriken no Jutsu",
      "Keywords": "Ninjutsu",
      "Range": "Weapon",
@@ -3205,6 +4357,10 @@
    },
    "kawarimi_no_jutsu": {
      "ID": "kawarimi_no_jutsu",
+     "ClassID": [
+       "ninja"
+     ],
+     "LevelRequired": 4,
      "Name": "Kawarimi no Jutsu",
      "Keywords": "Ninjutsu",
      "Range": "Self",
@@ -3217,6 +4373,10 @@
    },
    "ki_blast": {
      "ID": "ki_blast",
+     "ClassID": [
+       "monk"
+     ],
+     "LevelRequired": 2,
      "Name": "Ki Blast",
      "Keywords": "Arcane, Rapid",
      "Range": "120ft",
@@ -3229,6 +4389,10 @@
    },
    "ki_blast_ii": {
      "ID": "ki_blast_ii",
+     "ClassID": [
+       "zen-warrior"
+     ],
+     "LevelRequired": 1,
      "Name": "Ki Blast II",
      "Keywords": "Arcane, Rapid",
      "Range": "120ft",
@@ -3241,6 +4405,10 @@
    },
    "ki_burst": {
      "ID": "ki_burst",
+     "ClassID": [
+       "zen-warrior"
+     ],
+     "LevelRequired": 4,
      "Name": "Ki Burst",
      "Keywords": "",
      "Range": "Self",
@@ -3253,6 +4421,10 @@
    },
    "kibaku_fuda_shuriken": {
      "ID": "kibaku_fuda_shuriken",
+     "ClassID": [
+       "ninja"
+     ],
+     "LevelRequired": 2,
      "Name": "Kibaku Fuda Shuriken",
      "Keywords": "Ninjutsu",
      "Range": "60ft",
@@ -3265,6 +4437,10 @@
    },
    "killshot": {
      "ID": "killshot",
+     "ClassID": [
+       "sniper"
+     ],
+     "LevelRequired": 8,
      "Name": "Killshot",
      "Keywords": "Trick Attack",
      "Range": "",
@@ -3277,6 +4453,10 @@
    },
    "kiri-tsuke": {
      "ID": "kiri-tsuke",
+     "ClassID": [
+       "iai-style"
+     ],
+     "LevelRequired": 4,
      "Name": "Kiri-tsuke",
      "Keywords": "Killing Blow",
      "Range": "Melee Weapon",
@@ -3289,6 +4469,10 @@
    },
    "kiri-tsuke_ii": {
      "ID": "kiri-tsuke_ii",
+     "ClassID": [
+       "sword-saint"
+     ],
+     "LevelRequired": 2,
      "Name": "Kiri-tsuke II",
      "Keywords": "Combo, Killing Blow",
      "Range": "Melee Weapon",
@@ -3301,6 +4485,10 @@
    },
    "knockdown_swing": {
      "ID": "knockdown_swing",
+     "ClassID": [
+       "highlander"
+     ],
+     "LevelRequired": 4,
      "Name": "Knockdown Swing",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -3313,6 +4501,10 @@
    },
    "knockout_punch": {
      "ID": "knockout_punch",
+     "ClassID": [
+       "brawler"
+     ],
+     "LevelRequired": 8,
      "Name": "Knockout Punch",
      "Keywords": "Unarmed Strike",
      "Range": "Melee Weapon",
@@ -3325,6 +4517,10 @@
    },
    "kugeki-zan": {
      "ID": "kugeki-zan",
+     "ClassID": [
+       "jonin"
+     ],
+     "LevelRequired": 2,
      "Name": "Kugeki-zan",
      "Keywords": "Ninjutsu, Sure Hit, Full Pierce",
      "Range": "",
@@ -3337,6 +4533,10 @@
    },
    "last_stand": {
      "ID": "last_stand",
+     "ClassID": [
+       "guardian"
+     ],
+     "LevelRequired": 8,
      "Name": "Last Stand",
      "Keywords": "Stance",
      "Range": "Self",
@@ -3349,6 +4549,10 @@
    },
    "lay_on_hands": {
      "ID": "lay_on_hands",
+     "ClassID": [
+       "shield-paladin"
+     ],
+     "LevelRequired": 2,
      "Name": "Lay on Hands",
      "Keywords": "Healing, Overcharge",
      "Range": "Touch",
@@ -3361,6 +4565,10 @@
    },
    "leashing": {
      "ID": "leashing",
+     "ClassID": [
+       "wildheart"
+     ],
+     "LevelRequired": 6,
      "Name": "Leashing",
      "Keywords": "Teleport",
      "Range": "Sight",
@@ -3373,6 +4581,10 @@
    },
    "leg_sweep": {
      "ID": "leg_sweep",
+     "ClassID": [
+       "martial-artist"
+     ],
+     "LevelRequired": 2,
      "Name": "Leg Sweep",
      "Keywords": "Unarmed Strike",
      "Range": "Melee Weapon",
@@ -3385,6 +4597,10 @@
    },
    "lengthened_incantation": {
      "ID": "lengthened_incantation",
+     "ClassID": [
+       "sage"
+     ],
+     "LevelRequired": 2,
      "Name": "Lengthened Incantation",
      "Keywords": "Arcane",
      "Range": "Self",
@@ -3397,6 +4613,10 @@
    },
    "lifebeat_sense": {
      "ID": "lifebeat_sense",
+     "ClassID": [
+       "forager"
+     ],
+     "LevelRequired": 4,
      "Name": "Lifebeat Sense",
      "Keywords": "Expose, Analyze",
      "Range": "30ft",
@@ -3409,6 +4629,10 @@
    },
    "lifesense": {
      "ID": "lifesense",
+     "ClassID": [
+       "shield-saint"
+     ],
+     "LevelRequired": 2,
      "Name": "Lifesense",
      "Keywords": "",
      "Range": "Unlimited",
@@ -3421,6 +4645,10 @@
    },
    "light_work": {
      "ID": "light_work",
+     "ClassID": [
+       "alchemist"
+     ],
+     "LevelRequired": 6,
      "Name": "Light Work",
      "Keywords": "",
      "Range": "",
@@ -3431,8 +4659,28 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "lightning_lariat": {
+     "ID": "lightning_lariat",
+     "ClassID": [
+       "transcendent-lightning-style"
+     ],
+     "LevelRequired": 4,
+     "Name": "Lightning Lariat",
+     "Keywords": "Unarmed Strike, Overcharge, Combo, Trick Attack",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "You gather lightning energy and move up to twice your speed in a direct line and make a Heavy attack against a target. If you moved more than 60ft before making the attack, your attack gains the Trick Attack keyword.Overcharge: You may spend X mana to move an additional 2 x X times your speed. Combo: If used after Heavenly Lightning Stance or Secret Art: Lightning Release, the mana cost is reduced by 1.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "1 MP",
+     "Othercost": ""
+   },
    "lights_care": {
      "ID": "lights_care",
+     "ClassID": [
+       "acolyte"
+     ],
+     "LevelRequired": 4,
      "Name": "Light's Care",
      "Keywords": "Encounter Conclusion, Healing",
      "Range": "Touch",
@@ -3445,6 +4693,10 @@
    },
    "line_of_death": {
      "ID": "line_of_death",
+     "ClassID": [
+       "shinigami-eyes"
+     ],
+     "LevelRequired": 4,
      "Name": "Line of Death",
      "Keywords": "Half Pierce, Overcharge",
      "Range": "Melee Weapon",
@@ -3455,8 +4707,28 @@
      "MPcost": "1 MP",
      "Othercost": ""
    },
+   "living_lightning": {
+     "ID": "living_lightning",
+     "ClassID": [
+       "transcendent-lightning-style"
+     ],
+     "LevelRequired": 6,
+     "Name": "Living Lightning",
+     "Keywords": "Sure Hit, Full Pierce",
+     "Range": "Self",
+     "Requirement": "Not mounted and must move entirely in a straight line.",
+     "Description": "You turn into a spark of lightning as you move. For this movement action, you deal Light Lightning damage to all creatures you pass through.",
+     "RPcost": "1 RP",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "long_toss": {
      "ID": "long_toss",
+     "ClassID": [
+       "peltast"
+     ],
+     "LevelRequired": 2,
      "Name": "Long Toss",
      "Keywords": "",
      "Range": "",
@@ -3469,6 +4741,11 @@
    },
    "lunge": {
      "ID": "lunge",
+     "ClassID": [
+       "fencer",
+       "lancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Lunge",
      "Keywords": "",
      "Range": "Self",
@@ -3481,6 +4758,10 @@
    },
    "mage_armor": {
      "ID": "mage_armor",
+     "ClassID": [
+       "battle-mage"
+     ],
+     "LevelRequired": 1,
      "Name": "Mage Armor",
      "Keywords": "Arcane, Encounter Start, Spell",
      "Range": "Self",
@@ -3493,6 +4774,10 @@
    },
    "magic_missile": {
      "ID": "magic_missile",
+     "ClassID": [
+       "mage"
+     ],
+     "LevelRequired": 8,
      "Name": "Magic Missile",
      "Keywords": "Arcane, Lock On, Spell",
      "Range": "60ft",
@@ -3505,6 +4790,10 @@
    },
    "magic_missile_ii": {
      "ID": "magic_missile_ii",
+     "ClassID": [
+       "arcanist"
+     ],
+     "LevelRequired": 8,
      "Name": "Magic Missile II",
      "Keywords": "Arcane, Lock On, Rapid, Spell",
      "Range": "60ft",
@@ -3517,6 +4806,10 @@
    },
    "malevolent_phantasm": {
      "ID": "malevolent_phantasm",
+     "ClassID": [
+       "eremancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Malevolent Phantasm",
      "Keywords": "Spell, Dark",
      "Range": "60ft",
@@ -3529,6 +4822,10 @@
    },
    "mana_razor": {
      "ID": "mana_razor",
+     "ClassID": [
+       "adventurer"
+     ],
+     "LevelRequired": 4,
      "Name": "Mana Razor",
      "Keywords": "",
      "Range": "Self",
@@ -3541,6 +4838,10 @@
    },
    "mana_shield": {
      "ID": "mana_shield",
+     "ClassID": [
+       "abjurer"
+     ],
+     "LevelRequired": 4,
      "Name": "Mana Shield",
      "Keywords": "",
      "Range": "",
@@ -3553,6 +4854,10 @@
    },
    "mana_sight": {
      "ID": "mana_sight",
+     "ClassID": [
+       "wave-palm-style"
+     ],
+     "LevelRequired": 1,
      "Name": "Mana Sight",
      "Keywords": "Quick",
      "Range": "Sight",
@@ -3565,6 +4870,10 @@
    },
    "mark_of_justice": {
      "ID": "mark_of_justice",
+     "ClassID": [
+       "sword-paladin"
+     ],
+     "LevelRequired": 2,
      "Name": "Mark of Justice",
      "Keywords": "",
      "Range": "120ft",
@@ -3577,6 +4886,10 @@
    },
    "memory_of_the_grove": {
      "ID": "memory_of_the_grove",
+     "ClassID": [
+       "botanist"
+     ],
+     "LevelRequired": 2,
      "Name": "Memory of the Grove",
      "Keywords": "",
      "Range": "",
@@ -3589,6 +4902,10 @@
    },
    "mighty_leap": {
      "ID": "mighty_leap",
+     "ClassID": [
+       "colossus"
+     ],
+     "LevelRequired": 2,
      "Name": "Mighty Leap",
      "Keywords": "Unbalanced",
      "Range": "20ft",
@@ -3601,6 +4918,10 @@
    },
    "mind_connection": {
      "ID": "mind_connection",
+     "ClassID": [
+       "aetherie"
+     ],
+     "LevelRequired": 1,
      "Name": "Mind Connection",
      "Keywords": "",
      "Range": "Touch",
@@ -3613,6 +4934,10 @@
    },
    "miracle:_sanctuary": {
      "ID": "miracle:_sanctuary",
+     "ClassID": [
+       "acolyte"
+     ],
+     "LevelRequired": 8,
      "Name": "Miracle: Sanctuary",
      "Keywords": "Concentration, Miracle, Spell, Upkeep",
      "Range": "5ft radius centered on self",
@@ -3625,6 +4950,10 @@
    },
    "misdirected_blow": {
      "ID": "misdirected_blow",
+     "ClassID": [
+       "trickster"
+     ],
+     "LevelRequired": 6,
      "Name": "Misdirected Blow",
      "Keywords": "",
      "Range": "Self",
@@ -3637,6 +4966,10 @@
    },
    "mist_of_the_vale": {
      "ID": "mist_of_the_vale",
+     "ClassID": [
+       "mist-veil-elegy"
+     ],
+     "LevelRequired": 2,
      "Name": "Mist of the Vale",
      "Keywords": "Song, Upkeep",
      "Range": "Self",
@@ -3649,6 +4982,10 @@
    },
    "momentum": {
      "ID": "momentum",
+     "ClassID": [
+       "hussar"
+     ],
+     "LevelRequired": 6,
      "Name": "Momentum",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -3661,6 +4998,10 @@
    },
    "mordschlag": {
      "ID": "mordschlag",
+     "ClassID": [
+       "battlemaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Mordschlag",
      "Keywords": "Block Crush",
      "Range": "Melee Weapon",
@@ -3673,6 +5014,10 @@
    },
    "mountain_slayer": {
      "ID": "mountain_slayer",
+     "ClassID": [
+       "excavator"
+     ],
+     "LevelRequired": 4,
      "Name": "Mountain Slayer",
      "Keywords": "Shieldbreaker",
      "Range": "Melee Weapon",
@@ -3685,6 +5030,10 @@
    },
    "mounted_casting": {
      "ID": "mounted_casting",
+     "ClassID": [
+       "mage-knight"
+     ],
+     "LevelRequired": 4,
      "Name": "Mounted Casting",
      "Keywords": "",
      "Range": "Self",
@@ -3697,6 +5046,10 @@
    },
    "movement_burst": {
      "ID": "movement_burst",
+     "ClassID": [
+       "rogue"
+     ],
+     "LevelRequired": 4,
      "Name": "Movement Burst",
      "Keywords": "",
      "Range": "Self",
@@ -3709,6 +5062,10 @@
    },
    "mud_wall": {
      "ID": "mud_wall",
+     "ClassID": [
+       "geomancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Mud Wall",
      "Keywords": "Spell, Earth",
      "Range": "40ft",
@@ -3721,6 +5078,10 @@
    },
    "multishot": {
      "ID": "multishot",
+     "ClassID": [
+       "archer"
+     ],
+     "LevelRequired": 8,
      "Name": "Multishot",
      "Keywords": "Overcharge",
      "Range": "",
@@ -3733,6 +5094,10 @@
    },
    "mystic_eyes_of_life_perception": {
      "ID": "mystic_eyes_of_life_perception",
+     "ClassID": [
+       "wave-palm-style"
+     ],
+     "LevelRequired": 4,
      "Name": "Mystic Eyes of Life Perception",
      "Keywords": "Mystic Eye",
      "Range": "Self",
@@ -3745,6 +5110,10 @@
    },
    "ninja_run": {
      "ID": "ninja_run",
+     "ClassID": [
+       "ninja"
+     ],
+     "LevelRequired": 1,
      "Name": "Ninja Run",
      "Keywords": "Ninjutsu, Quick",
      "Range": "Self",
@@ -3757,11 +5126,15 @@
    },
    "no_getting_past!": {
      "ID": "no_getting_past!",
+     "ClassID": [
+       "protector"
+     ],
+     "LevelRequired": 2,
      "Name": "No getting past!",
      "Keywords": "Sure Hit",
      "Range": "Melee Weapon",
      "Requirement": "Only usable when you would be able to make an attack of opportunity.",
-     "Description": "You may make a Light (0 RP) or Heavy (1 RP) attack against the target. On damage, the target becomes Slowed. If the target is already Slowed, they become Rooted. This ability is treated as an attack of opportunity.",
+     "Description": "You may make a Light (0 RP) or Heavy (1 RP) attack against the target. On damage, the target becomes Slowed until the end of their turn. If the target is already Slowed, they become Rooted. This ability is treated as an attack of opportunity.",
      "RPcost": "0 RP",
      "APcost": "",
      "MPcost": "",
@@ -3769,6 +5142,10 @@
    },
    "oil_slick": {
      "ID": "oil_slick",
+     "ClassID": [
+       "culinarian"
+     ],
+     "LevelRequired": 4,
      "Name": "Oil Slick",
      "Keywords": "",
      "Range": "30ft",
@@ -3781,6 +5158,10 @@
    },
    "order:_retreat": {
      "ID": "order:_retreat",
+     "ClassID": [
+       "tactician"
+     ],
+     "LevelRequired": 4,
      "Name": "Order: Retreat",
      "Keywords": "",
      "Range": "60ft",
@@ -3793,6 +5174,10 @@
    },
    "ougi:_taju_bunshin_no_jutsu": {
      "ID": "ougi:_taju_bunshin_no_jutsu",
+     "ClassID": [
+       "jonin"
+     ],
+     "LevelRequired": 8,
      "Name": "Ougi: Taju Bunshin no Jutsu",
      "Keywords": "Secret Art, Ninjutsu, Illusion, Upkeep",
      "Range": "Self",
@@ -3805,6 +5190,10 @@
    },
    "overclock": {
      "ID": "overclock",
+     "ClassID": [
+       "artificer"
+     ],
+     "LevelRequired": 6,
      "Name": "Overclock",
      "Keywords": "",
      "Range": "",
@@ -3817,6 +5206,10 @@
    },
    "overpower": {
      "ID": "overpower",
+     "ClassID": [
+       "highlander"
+     ],
+     "LevelRequired": 8,
      "Name": "Overpower",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -3829,6 +5222,10 @@
    },
    "paragon_of_virtue": {
      "ID": "paragon_of_virtue",
+     "ClassID": [
+       "sword-paladin"
+     ],
+     "LevelRequired": 6,
      "Name": "Paragon of Virtue",
      "Keywords": "",
      "Range": "Self",
@@ -3841,6 +5238,10 @@
    },
    "parry": {
      "ID": "parry",
+     "ClassID": [
+       "fencer"
+     ],
+     "LevelRequired": 2,
      "Name": "Parry",
      "Keywords": "",
      "Range": "-",
@@ -3853,6 +5254,10 @@
    },
    "pathfinder": {
      "ID": "pathfinder",
+     "ClassID": [
+       "scout"
+     ],
+     "LevelRequired": 4,
      "Name": "Pathfinder",
      "Keywords": "",
      "Range": "Self",
@@ -3865,6 +5270,10 @@
    },
    "penetrating_shot": {
      "ID": "penetrating_shot",
+     "ClassID": [
+       "sniper"
+     ],
+     "LevelRequired": 2,
      "Name": "Penetrating Shot",
      "Keywords": "",
      "Range": "",
@@ -3877,6 +5286,10 @@
    },
    "pepper_spray": {
      "ID": "pepper_spray",
+     "ClassID": [
+       "culinarian"
+     ],
+     "LevelRequired": 8,
      "Name": "Pepper Spray",
      "Keywords": "Blinded",
      "Range": "5ft",
@@ -3889,6 +5302,10 @@
    },
    "perfect_seasoning": {
      "ID": "perfect_seasoning",
+     "ClassID": [
+       "culinarian"
+     ],
+     "LevelRequired": 2,
      "Name": "Perfect Seasoning",
      "Keywords": "Rapid",
      "Range": "",
@@ -3901,6 +5318,10 @@
    },
    "perfect_shot": {
      "ID": "perfect_shot",
+     "ClassID": [
+       "marksman"
+     ],
+     "LevelRequired": 8,
      "Name": "Perfect Shot",
      "Keywords": "Full Pierce, Prone, Setup, Sure Hit",
      "Range": "",
@@ -3913,6 +5334,10 @@
    },
    "persistent_spell": {
      "ID": "persistent_spell",
+     "ClassID": [
+       "archsage"
+     ],
+     "LevelRequired": 1,
      "Name": "Persistent Spell",
      "Keywords": "",
      "Range": "Self",
@@ -3925,6 +5350,10 @@
    },
    "phantoms_of_the_mist": {
      "ID": "phantoms_of_the_mist",
+     "ClassID": [
+       "mist-veil-elegy"
+     ],
+     "LevelRequired": 4,
      "Name": "Phantoms of the Mist",
      "Keywords": "Song",
      "Range": "Self",
@@ -3937,6 +5366,10 @@
    },
    "piercing_stab": {
      "ID": "piercing_stab",
+     "ClassID": [
+       "lancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Piercing Stab",
      "Keywords": "",
      "Range": "A target in melee weapon range and a target directly behind the first target in melee weapon range.",
@@ -3949,6 +5382,10 @@
    },
    "pistol_whip": {
      "ID": "pistol_whip",
+     "ClassID": [
+       "gunfu"
+     ],
+     "LevelRequired": 6,
      "Name": "Pistol Whip",
      "Keywords": "Unarmed Strike",
      "Range": "Melee Weapon",
@@ -3961,6 +5398,10 @@
    },
    "place_trap": {
      "ID": "place_trap",
+     "ClassID": [
+       "trapper"
+     ],
+     "LevelRequired": 4,
      "Name": "Place Trap",
      "Keywords": "Root",
      "Range": "",
@@ -3973,6 +5414,10 @@
    },
    "plow_the_fields": {
      "ID": "plow_the_fields",
+     "ClassID": [
+       "farmer"
+     ],
+     "LevelRequired": 2,
      "Name": "Plow the fields",
      "Keywords": "",
      "Range": "15ft",
@@ -3985,6 +5430,10 @@
    },
    "point_blank_shot": {
      "ID": "point_blank_shot",
+     "ClassID": [
+       "gunfu"
+     ],
+     "LevelRequired": 4,
      "Name": "Point Blank Shot",
      "Keywords": "Sure Hit",
      "Range": "5ft",
@@ -3997,6 +5446,10 @@
    },
    "point_of_death": {
      "ID": "point_of_death",
+     "ClassID": [
+       "shinigami-eyes"
+     ],
+     "LevelRequired": 6,
      "Name": "Point of Death",
      "Keywords": "Full Pierce",
      "Range": "Melee Weapon",
@@ -4009,6 +5462,10 @@
    },
    "point_of_death_ii": {
      "ID": "point_of_death_ii",
+     "ClassID": [
+       "true-shinigami-eyes"
+     ],
+     "LevelRequired": 4,
      "Name": "Point of Death II",
      "Keywords": "Full Pierce",
      "Range": "Melee Weapon",
@@ -4021,6 +5478,10 @@
    },
    "poison_spore": {
      "ID": "poison_spore",
+     "ClassID": [
+       "mycomancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Poison Spore",
      "Keywords": "Concentration, Poison, Full Pierce",
      "Range": "Self or The Host of Poison Spore. 15ft x 15ft Area with the target at the center.",
@@ -4033,6 +5494,10 @@
    },
    "position_rewind": {
      "ID": "position_rewind",
+     "ClassID": [
+       "temporal-trickster"
+     ],
+     "LevelRequired": 2,
      "Name": "Position Rewind",
      "Keywords": "",
      "Range": "2000ft",
@@ -4045,6 +5510,10 @@
    },
    "power_jump": {
      "ID": "power_jump",
+     "ClassID": [
+       "adventurer"
+     ],
+     "LevelRequired": 2,
      "Name": "Power Jump",
      "Keywords": "Jump",
      "Range": "Self",
@@ -4057,6 +5526,10 @@
    },
    "power_rock_strike": {
      "ID": "power_rock_strike",
+     "ClassID": [
+       "miner"
+     ],
+     "LevelRequired": 2,
      "Name": "Power Rock Strike",
      "Keywords": "",
      "Range": "",
@@ -4069,6 +5542,10 @@
    },
    "power_strike": {
      "ID": "power_strike",
+     "ClassID": [
+       "fighter"
+     ],
+     "LevelRequired": 4,
      "Name": "Power Strike",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -4081,6 +5558,10 @@
    },
    "power_word:_barrier": {
      "ID": "power_word:_barrier",
+     "ClassID": [
+       "shieldwarden"
+     ],
+     "LevelRequired": 4,
      "Name": "Power Word: Barrier",
      "Keywords": "Shield, Spell",
      "Range": "40ft",
@@ -4093,6 +5574,10 @@
    },
    "power_word:_guardian_shield": {
      "ID": "power_word:_guardian_shield",
+     "ClassID": [
+       "veilguard"
+     ],
+     "LevelRequired": 8,
      "Name": "Power Word: Guardian Shield",
      "Keywords": "Spell, Shield",
      "Range": "40ft",
@@ -4105,6 +5590,10 @@
    },
    "power_word:_reinforce": {
      "ID": "power_word:_reinforce",
+     "ClassID": [
+       "shieldwarden"
+     ],
+     "LevelRequired": 6,
      "Name": "Power Word: Reinforce",
      "Keywords": "Aid",
      "Range": "40ft",
@@ -4117,6 +5606,10 @@
    },
    "power_word:_shield": {
      "ID": "power_word:_shield",
+     "ClassID": [
+       "shieldwarden"
+     ],
+     "LevelRequired": 2,
      "Name": "Power Word: Shield",
      "Keywords": "Shield, Spell",
      "Range": "40ft",
@@ -4129,6 +5622,10 @@
    },
    "precise_thrust": {
      "ID": "precise_thrust",
+     "ClassID": [
+       "fencer"
+     ],
+     "LevelRequired": 8,
      "Name": "Precise Thrust",
      "Keywords": "Full Pierce",
      "Range": "Melee Weapon",
@@ -4141,6 +5638,10 @@
    },
    "prediction": {
      "ID": "prediction",
+     "ClassID": [
+       "oracle"
+     ],
+     "LevelRequired": 6,
      "Name": "Prediction",
      "Keywords": "Aid, Divination",
      "Range": "60ft",
@@ -4153,6 +5654,10 @@
    },
    "preparedness": {
      "ID": "preparedness",
+     "ClassID": [
+       "onmyoji-"
+     ],
+     "LevelRequired": 4,
      "Name": "Preparedness",
      "Keywords": "",
      "Range": "-",
@@ -4165,6 +5670,11 @@
    },
    "presence_concealment": {
      "ID": "presence_concealment",
+     "ClassID": [
+       "adventurer",
+       "saboteur"
+     ],
+     "LevelRequired": 1,
      "Name": "Presence Concealment",
      "Keywords": "Presence Concealment",
      "Range": "Self",
@@ -4177,6 +5687,10 @@
    },
    "presence_of_mind": {
      "ID": "presence_of_mind",
+     "ClassID": [
+       "archsage"
+     ],
+     "LevelRequired": 6,
      "Name": "Presence of Mind",
      "Keywords": "",
      "Range": "Self",
@@ -4189,6 +5703,10 @@
    },
    "prone_cover": {
      "ID": "prone_cover",
+     "ClassID": [
+       "marksman"
+     ],
+     "LevelRequired": 4,
      "Name": "Prone Cover",
      "Keywords": "Stance",
      "Range": "d Weapon Attacks gain the Prone keyword.",
@@ -4201,6 +5719,10 @@
    },
    "provoke": {
      "ID": "provoke",
+     "ClassID": [
+       "guardian"
+     ],
+     "LevelRequired": 2,
      "Name": "Provoke",
      "Keywords": "Challenge",
      "Range": "5ft",
@@ -4213,6 +5735,10 @@
    },
    "provoke_ii": {
      "ID": "provoke_ii",
+     "ClassID": [
+       "protector"
+     ],
+     "LevelRequired": 4,
      "Name": "Provoke II",
      "Keywords": "Challenge",
      "Range": "60ft",
@@ -4225,6 +5751,10 @@
    },
    "psychometry": {
      "ID": "psychometry",
+     "ClassID": [
+       "aetherie"
+     ],
+     "LevelRequired": 2,
      "Name": "Psychometry",
      "Keywords": "Aura",
      "Range": "Touch",
@@ -4237,6 +5767,10 @@
    },
    "pull_the_weeds": {
      "ID": "pull_the_weeds",
+     "ClassID": [
+       "farmer"
+     ],
+     "LevelRequired": 6,
      "Name": "Pull the weeds",
      "Keywords": "",
      "Range": "",
@@ -4249,6 +5783,10 @@
    },
    "purify": {
      "ID": "purify",
+     "ClassID": [
+       "high-priest"
+     ],
+     "LevelRequired": 4,
      "Name": "Purify",
      "Keywords": "Spell",
      "Range": "40ft",
@@ -4261,6 +5799,10 @@
    },
    "purifying_shields": {
      "ID": "purifying_shields",
+     "ClassID": [
+       "veilguard"
+     ],
+     "LevelRequired": 6,
      "Name": "Purifying Shields",
      "Keywords": "",
      "Range": "40ft",
@@ -4273,6 +5815,10 @@
    },
    "quick_artifice_reload": {
      "ID": "quick_artifice_reload",
+     "ClassID": [
+       "artificer"
+     ],
+     "LevelRequired": 8,
      "Name": "Quick Artifice Reload",
      "Keywords": "",
      "Range": "5ft",
@@ -4285,6 +5831,10 @@
    },
    "quick_assist": {
      "ID": "quick_assist",
+     "ClassID": [
+       "shield-saint"
+     ],
+     "LevelRequired": 6,
      "Name": "Quick Assist",
      "Keywords": "Teleport",
      "Range": "20ft",
@@ -4297,6 +5847,10 @@
    },
    "quick_getaway": {
      "ID": "quick_getaway",
+     "ClassID": [
+       "thief"
+     ],
+     "LevelRequired": 6,
      "Name": "Quick Getaway",
      "Keywords": "Combo",
      "Range": "-",
@@ -4309,6 +5863,10 @@
    },
    "quick_revive": {
      "ID": "quick_revive",
+     "ClassID": [
+       "wildheart"
+     ],
+     "LevelRequired": 4,
      "Name": "Quick Revive",
      "Keywords": "",
      "Range": "40ft",
@@ -4321,6 +5879,10 @@
    },
    "quickdraw": {
      "ID": "quickdraw",
+     "ClassID": [
+       "gunslinger"
+     ],
+     "LevelRequired": 6,
      "Name": "Quickdraw",
      "Keywords": "Encounter Start",
      "Range": "",
@@ -4333,6 +5895,10 @@
    },
    "quickdraw_alchemy": {
      "ID": "quickdraw_alchemy",
+     "ClassID": [
+       "alchemist"
+     ],
+     "LevelRequired": 8,
      "Name": "Quickdraw Alchemy",
      "Keywords": "",
      "Range": "Self",
@@ -4345,6 +5911,10 @@
    },
    "radiant_halo": {
      "ID": "radiant_halo",
+     "ClassID": [
+       "high-priest"
+     ],
+     "LevelRequired": 6,
      "Name": "Radiant Halo",
      "Keywords": "Healing, Spell",
      "Range": "120ft",
@@ -4357,6 +5927,10 @@
    },
    "rage_stance": {
      "ID": "rage_stance",
+     "ClassID": [
+       "berserker"
+     ],
+     "LevelRequired": 2,
      "Name": "Rage Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -4369,6 +5943,10 @@
    },
    "raise_undead": {
      "ID": "raise_undead",
+     "ClassID": [
+       "necromancer"
+     ],
+     "LevelRequired": 1,
      "Name": "Raise Undead",
      "Keywords": "Summon",
      "Range": "30ft",
@@ -4381,6 +5959,10 @@
    },
    "rappelling_dagger": {
      "ID": "rappelling_dagger",
+     "ClassID": [
+       "peltast"
+     ],
+     "LevelRequired": 6,
      "Name": "Rappelling Dagger",
      "Keywords": "",
      "Range": "30ft",
@@ -4393,6 +5975,10 @@
    },
    "receive_oracle": {
      "ID": "receive_oracle",
+     "ClassID": [
+       "oracle"
+     ],
+     "LevelRequired": 1,
      "Name": "Receive Oracle",
      "Keywords": "Divination",
      "Range": "Self",
@@ -4405,6 +5991,10 @@
    },
    "reckless_strike": {
      "ID": "reckless_strike",
+     "ClassID": [
+       "berserker"
+     ],
+     "LevelRequired": 8,
      "Name": "Reckless Strike",
      "Keywords": "Rage",
      "Range": "Melee Weapon",
@@ -4417,6 +6007,10 @@
    },
    "redirected_force": {
      "ID": "redirected_force",
+     "ClassID": [
+       "zen-warrior"
+     ],
+     "LevelRequired": 6,
      "Name": "Redirected Force",
      "Keywords": "Counter",
      "Range": "Melee Weapon",
@@ -4429,6 +6023,10 @@
    },
    "redistribute": {
      "ID": "redistribute",
+     "ClassID": [
+       "veilguard"
+     ],
+     "LevelRequired": 4,
      "Name": "Redistribute",
      "Keywords": "",
      "Range": "80ft",
@@ -4441,6 +6039,10 @@
    },
    "refreshing_stream": {
      "ID": "refreshing_stream",
+     "ClassID": [
+       "hydromancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Refreshing Stream",
      "Keywords": "Spell",
      "Range": "15 ft",
@@ -4453,6 +6055,10 @@
    },
    "reinforce_armor": {
      "ID": "reinforce_armor",
+     "ClassID": [
+       "armorsmith"
+     ],
+     "LevelRequired": 8,
      "Name": "Reinforce Armor",
      "Keywords": "",
      "Range": "Self",
@@ -4465,6 +6071,10 @@
    },
    "repair_armor": {
      "ID": "repair_armor",
+     "ClassID": [
+       "armorsmith"
+     ],
+     "LevelRequired": 2,
      "Name": "Repair Armor",
      "Keywords": "Interlude, Errand",
      "Range": "",
@@ -4477,6 +6087,10 @@
    },
    "repair_artifice": {
      "ID": "repair_artifice",
+     "ClassID": [
+       "artificer"
+     ],
+     "LevelRequired": 2,
      "Name": "Repair Artifice",
      "Keywords": "Interlude, Errand",
      "Range": "",
@@ -4489,6 +6103,10 @@
    },
    "repair_weapon": {
      "ID": "repair_weapon",
+     "ClassID": [
+       "blacksmith"
+     ],
+     "LevelRequired": 2,
      "Name": "Repair Weapon",
      "Keywords": "Interlude, Errand",
      "Range": "",
@@ -4501,6 +6119,10 @@
    },
    "repair_wood_weapon": {
      "ID": "repair_wood_weapon",
+     "ClassID": [
+       "carpenter"
+     ],
+     "LevelRequired": 2,
      "Name": "Repair Wood Weapon",
      "Keywords": "Interlude, Errand",
      "Range": "",
@@ -4513,6 +6135,10 @@
    },
    "rescue": {
      "ID": "rescue",
+     "ClassID": [
+       "mage-knight"
+     ],
+     "LevelRequired": 6,
      "Name": "Rescue",
      "Keywords": "Spell, Teleport",
      "Range": "60ft",
@@ -4525,6 +6151,10 @@
    },
    "rescue_\u0026_drop": {
      "ID": "rescue_\u0026_drop",
+     "ClassID": [
+       "great-knight"
+     ],
+     "LevelRequired": 2,
      "Name": "Rescue \u0026 Drop",
      "Keywords": "",
      "Range": "5ft",
@@ -4537,6 +6167,10 @@
    },
    "resheathe": {
      "ID": "resheathe",
+     "ClassID": [
+       "sword-saint"
+     ],
+     "LevelRequired": 1,
      "Name": "Resheathe",
      "Keywords": "",
      "Range": "Self",
@@ -4549,6 +6183,10 @@
    },
    "reverse_polarity": {
      "ID": "reverse_polarity",
+     "ClassID": [
+       "magitechnician-"
+     ],
+     "LevelRequired": 4,
      "Name": "Reverse Polarity",
      "Keywords": "",
      "Range": "",
@@ -4561,6 +6199,10 @@
    },
    "ricochet": {
      "ID": "ricochet",
+     "ClassID": [
+       "gunslinger"
+     ],
+     "LevelRequired": 2,
      "Name": "Ricochet",
      "Keywords": "",
      "Range": "",
@@ -4573,6 +6215,10 @@
    },
    "rider_\u0026_mount_as_one": {
      "ID": "rider_\u0026_mount_as_one",
+     "ClassID": [
+       "cavalier"
+     ],
+     "LevelRequired": 6,
      "Name": "Rider \u0026 Mount As One",
      "Keywords": "",
      "Range": "Self",
@@ -4585,6 +6231,10 @@
    },
    "riposte": {
      "ID": "riposte",
+     "ClassID": [
+       "fencer"
+     ],
+     "LevelRequired": 6,
      "Name": "Riposte",
      "Keywords": "Counter",
      "Range": "Melee Weapon",
@@ -4597,6 +6247,10 @@
    },
    "riposte_ii": {
      "ID": "riposte_ii",
+     "ClassID": [
+       "duelist"
+     ],
+     "LevelRequired": 4,
      "Name": "Riposte II",
      "Keywords": "Counter",
      "Range": "Melee Weapon",
@@ -4609,6 +6263,10 @@
    },
    "rock_fang": {
      "ID": "rock_fang",
+     "ClassID": [
+       "miner"
+     ],
+     "LevelRequired": 8,
      "Name": "Rock Fang",
      "Keywords": "Sunder",
      "Range": "Melee Weapon",
@@ -4621,6 +6279,10 @@
    },
    "running_shot": {
      "ID": "running_shot",
+     "ClassID": [
+       "nomad"
+     ],
+     "LevelRequired": 4,
      "Name": "Running Shot",
      "Keywords": "",
      "Range": "",
@@ -4633,6 +6295,10 @@
    },
    "rushing_knee_drop": {
      "ID": "rushing_knee_drop",
+     "ClassID": [
+       "martial-artist"
+     ],
+     "LevelRequired": 6,
      "Name": "Rushing Knee Drop",
      "Keywords": "Sure Hit, Unarmed Strike, Jump",
      "Range": "15ft",
@@ -4645,6 +6311,10 @@
    },
    "sable_grace": {
      "ID": "sable_grace",
+     "ClassID": [
+       "shadowbringer"
+     ],
+     "LevelRequired": 6,
      "Name": "Sable Grace",
      "Keywords": "",
      "Range": "",
@@ -4657,6 +6327,10 @@
    },
    "sacrament": {
      "ID": "sacrament",
+     "ClassID": [
+       "priest"
+     ],
+     "LevelRequired": 2,
      "Name": "Sacrament",
      "Keywords": "Enchantment",
      "Range": "Touch",
@@ -4669,6 +6343,10 @@
    },
    "sapping_ward": {
      "ID": "sapping_ward",
+     "ClassID": [
+       "warding-mage"
+     ],
+     "LevelRequired": 8,
      "Name": "Sapping Ward",
      "Keywords": "Bounded Field, Spell",
      "Range": "Touch",
@@ -4681,6 +6359,10 @@
    },
    "saprophytic_bolt": {
      "ID": "saprophytic_bolt",
+     "ClassID": [
+       "mycomancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Saprophytic Bolt",
      "Keywords": "Healing, Spell, Earth",
      "Range": "60ft",
@@ -4693,6 +6375,10 @@
    },
    "scarecrows_gaze": {
      "ID": "scarecrows_gaze",
+     "ClassID": [
+       "farmer"
+     ],
+     "LevelRequired": 8,
      "Name": "Scarecrow's Gaze",
      "Keywords": "Fear, Mind Affecting",
      "Range": "40ft",
@@ -4705,6 +6391,10 @@
    },
    "schadenfreude": {
      "ID": "schadenfreude",
+     "ClassID": [
+       "eremancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Schadenfreude",
      "Keywords": "Dark",
      "Range": "Self",
@@ -4717,6 +6407,10 @@
    },
    "scouting_ahead": {
      "ID": "scouting_ahead",
+     "ClassID": [
+       "saboteur"
+     ],
+     "LevelRequired": 4,
      "Name": "Scouting Ahead",
      "Keywords": "",
      "Range": "-",
@@ -4729,6 +6423,10 @@
    },
    "scouts_retreat": {
      "ID": "scouts_retreat",
+     "ClassID": [
+       "scout"
+     ],
+     "LevelRequired": 1,
      "Name": "Scout's Retreat",
      "Keywords": "",
      "Range": "Self",
@@ -4741,6 +6439,10 @@
    },
    "scry": {
      "ID": "scry",
+     "ClassID": [
+       "oracle"
+     ],
+     "LevelRequired": 2,
      "Name": "Scry",
      "Keywords": "Divination, Spell, Concentration",
      "Range": "5000ft",
@@ -4753,6 +6455,10 @@
    },
    "sealing_talisman": {
      "ID": "sealing_talisman",
+     "ClassID": [
+       "onmyoji-"
+     ],
+     "LevelRequired": 6,
      "Name": "Sealing Talisman",
      "Keywords": "Stun",
      "Range": "5ft",
@@ -4765,6 +6471,10 @@
    },
    "secret_art:_7_points_of_death": {
      "ID": "secret_art:_7_points_of_death",
+     "ClassID": [
+       "true-shinigami-eyes"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: 7 Points of Death",
      "Keywords": "Full Pierce, Secret Art",
      "Range": "Melee Weapon",
@@ -4777,6 +6487,10 @@
    },
    "secret_art:__revitalize": {
      "ID": "secret_art:__revitalize",
+     "ClassID": [
+       "priest"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art:  Revitalize",
      "Keywords": "Healing, Overcharge, Secret Art, Spell",
      "Range": "60ft",
@@ -4789,6 +6503,10 @@
    },
    "secret_art:_all_of_creation": {
      "ID": "secret_art:_all_of_creation",
+     "ClassID": [
+       "alchemeister"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: All of Creation",
      "Keywords": "Secret Art",
      "Range": "",
@@ -4801,6 +6519,10 @@
    },
    "secret_art:_ambush_shot": {
      "ID": "secret_art:_ambush_shot",
+     "ClassID": [
+       "scout"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Ambush Shot",
      "Keywords": "Secret Art, Sure Hit, Full Pierce",
      "Range": "",
@@ -4813,6 +6535,10 @@
    },
    "secret_art:_assassinate": {
      "ID": "secret_art:_assassinate",
+     "ClassID": [
+       "assassin"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Assassinate",
      "Keywords": "Full Pierce, Secret Art, Sure Hit",
      "Range": "Melee Weapon",
@@ -4825,6 +6551,10 @@
    },
    "secret_art:_beaver_timber_fang": {
      "ID": "secret_art:_beaver_timber_fang",
+     "ClassID": [
+       "timberwright"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Beaver Timber Fang",
      "Keywords": "Sure Hit, Secret Art",
      "Range": "Melee Weapon",
@@ -4837,6 +6567,10 @@
    },
    "secret_art:_bestial_wrath": {
      "ID": "secret_art:_bestial_wrath",
+     "ClassID": [
+       "wildheart"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Bestial Wrath",
      "Keywords": "Secret Art",
      "Range": "Sight",
@@ -4849,6 +6583,10 @@
    },
    "secret_art:_bladestorm": {
      "ID": "secret_art:_bladestorm",
+     "ClassID": [
+       "reaver"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Bladestorm",
      "Keywords": "Secret Art, Stance, Upkeep",
      "Range": "Self",
@@ -4861,6 +6599,10 @@
    },
    "secret_art:_bloody_ritual": {
      "ID": "secret_art:_bloody_ritual",
+     "ClassID": [
+       "vampire-lord"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Bloody Ritual",
      "Keywords": "Secret Art, Slow",
      "Range": "40ft",
@@ -4873,6 +6615,10 @@
    },
    "secret_art:_chase_the_horizon": {
      "ID": "secret_art:_chase_the_horizon",
+     "ClassID": [
+       "nomad"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Chase the Horizon",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -4885,6 +6631,10 @@
    },
    "secret_art:_divine_judgement": {
      "ID": "secret_art:_divine_judgement",
+     "ClassID": [
+       "exalted-blade"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Divine Judgement",
      "Keywords": "Secret Art, Sure Hit, Full Pierce",
      "Range": "Melee Weapon",
@@ -4897,6 +6647,10 @@
    },
    "secret_art:_divine_shield": {
      "ID": "secret_art:_divine_shield",
+     "ClassID": [
+       "exalted-shield"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Divine Shield",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -4909,6 +6663,10 @@
    },
    "secret_art:_double_accel": {
      "ID": "secret_art:_double_accel",
+     "ClassID": [
+       "temporal-trickster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Double Accel",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -4921,6 +6679,10 @@
    },
    "secret_art:_dragonslaying_jump": {
      "ID": "secret_art:_dragonslaying_jump",
+     "ClassID": [
+       "dragoon"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Dragonslaying Jump",
      "Keywords": "Full Pierce, Jump, Overcharge, Secret Art, Sure Hit",
      "Range": "120ft",
@@ -4933,6 +6695,10 @@
    },
    "secret_art:_dynamic_duo": {
      "ID": "secret_art:_dynamic_duo",
+     "ClassID": [
+       "shield-saint"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Dynamic Duo",
      "Keywords": "Challenge, Secret Art",
      "Range": "Sight",
@@ -4945,6 +6711,10 @@
    },
    "secret_art:_earthquake": {
      "ID": "secret_art:_earthquake",
+     "ClassID": [
+       "geomancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Earthquake",
      "Keywords": "Spell, Earth, Secret Art",
      "Range": "160ft",
@@ -4957,6 +6727,10 @@
    },
    "secret_art:_efficient_spirit_control": {
      "ID": "secret_art:_efficient_spirit_control",
+     "ClassID": [
+       "adventurer"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Efficient Spirit Control",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -4969,6 +6743,10 @@
    },
    "secret_art:_endless_waltz": {
      "ID": "secret_art:_endless_waltz",
+     "ClassID": [
+       "duelist"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Endless Waltz",
      "Keywords": "Killing Blow, Secret Art",
      "Range": "Melee Weapon",
@@ -4981,6 +6759,10 @@
    },
    "secret_art:_entropic_magic_pulse": {
      "ID": "secret_art:_entropic_magic_pulse",
+     "ClassID": [
+       "magitechnician-"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Entropic Magic Pulse",
      "Keywords": "Secret Art, Dispel",
      "Range": "200ft",
@@ -4993,6 +6775,10 @@
    },
    "secret_art:_fan_the_hammer": {
      "ID": "secret_art:_fan_the_hammer",
+     "ClassID": [
+       "gunslinger"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Fan the hammer",
      "Keywords": "Secret Art",
      "Range": "20ft",
@@ -5005,6 +6791,10 @@
    },
    "secret_art:_gae_bolg": {
      "ID": "secret_art:_gae_bolg",
+     "ClassID": [
+       "spearmaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Gae Bolg",
      "Keywords": "Secret Art, Sure Hit",
      "Range": "Melee Weapon",
@@ -5017,6 +6807,10 @@
    },
    "secret_art:_galaxy_stop": {
      "ID": "secret_art:_galaxy_stop",
+     "ClassID": [
+       "chronomancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Galaxy Stop",
      "Keywords": "Secret Art",
      "Range": "2000ft Radius",
@@ -5029,6 +6823,10 @@
    },
    "secret_art:_gate_of_fate": {
      "ID": "secret_art:_gate_of_fate",
+     "ClassID": [
+       "oracle"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Gate of Fate",
      "Keywords": "Divination, Secret Art, Aid",
      "Range": "120ft",
@@ -5041,6 +6839,10 @@
    },
    "secret_art:_guiding_shot": {
      "ID": "secret_art:_guiding_shot",
+     "ClassID": [
+       "trapper"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Guiding Shot",
      "Keywords": "Secret Art, Sure Hit",
      "Range": "",
@@ -5053,6 +6855,10 @@
    },
    "secret_art:_jade_skin": {
      "ID": "secret_art:_jade_skin",
+     "ClassID": [
+       "still-stone-style"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Jade Skin",
      "Keywords": "Secret Art, Disarm",
      "Range": "Self",
@@ -5065,6 +6871,10 @@
    },
    "secret_art:_life_bet": {
      "ID": "secret_art:_life_bet",
+     "ClassID": [
+       "curse-knight"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Life Bet",
      "Keywords": "Secret Art",
      "Range": "Melee Weapon",
@@ -5077,6 +6887,10 @@
    },
    "secret_art:_life_sacrifice": {
      "ID": "secret_art:_life_sacrifice",
+     "ClassID": [
+       "bloodbinder"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Life Sacrifice",
      "Keywords": "Healing, Secret Art, Aid",
      "Range": "40ft",
@@ -5089,6 +6903,10 @@
    },
    "secret_art:_lifesaver": {
      "ID": "secret_art:_lifesaver",
+     "ClassID": [
+       "shieldwarden"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Lifesaver",
      "Keywords": "Secret Art, Shield, Spell",
      "Range": "40ft",
@@ -5101,6 +6919,10 @@
    },
    "secret_art:_lightning_field": {
      "ID": "secret_art:_lightning_field",
+     "ClassID": [
+       "electromaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Lightning Field",
      "Keywords": "Lightning, Secret Art, Spell, Upkeep",
      "Range": "30ft",
@@ -5111,8 +6933,28 @@
      "MPcost": "3 MP",
      "Othercost": ""
    },
+   "secret_art:_lightning_release": {
+     "ID": "secret_art:_lightning_release",
+     "ClassID": [
+       "transcendent-lightning-style"
+     ],
+     "LevelRequired": 8,
+     "Name": "Secret Art: Lightning Release",
+     "Keywords": "Secret Art, Transformation",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "You infuse yourself with Lightning until the end of the encounter, allowing you to deal Lightning damage with your unarmed attacks and immediately enter the Heavenly Lightning Stance. While this lasts, you also gain the following benefits: Your movement speed is doubled.You can make an additional attack when you use Double Punch. When making an unarmed attack, your critical threshold is lowered by 1 (19-20 base). Whenever you land a critical hit with an unarmed attack, the attack arcs to a different target within 20ft of the original target. This attack uses the same attack roll and damage, but cannot arc again.If you ever leave the Lightning Stance, you lose the benefit of this.",
+     "RPcost": "",
+     "APcost": "0 AP",
+     "MPcost": "3 MP",
+     "Othercost": ""
+   },
    "secret_art:_meteor": {
      "ID": "secret_art:_meteor",
+     "ClassID": [
+       "pyromaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Meteor",
      "Keywords": "Fire, Overcharge, Spell, Sure Hit, Secret Art",
      "Range": "120ft",
@@ -5125,6 +6967,10 @@
    },
    "secret_art:_moving_castle": {
      "ID": "secret_art:_moving_castle",
+     "ClassID": [
+       "great-knight"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Moving Castle",
      "Keywords": "Secret Art, Aura, Upkeep",
      "Range": "Self",
@@ -5137,6 +6983,10 @@
    },
    "secret_art:_mushroomize": {
      "ID": "secret_art:_mushroomize",
+     "ClassID": [
+       "amanita"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Mushroomize",
      "Keywords": "Healing, Spell, Upkeep, Concentration",
      "Range": "Sight",
@@ -5149,6 +6999,10 @@
    },
    "secret_art:_mythical_awakening": {
      "ID": "secret_art:_mythical_awakening",
+     "ClassID": [
+       "sky-knight"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Mythical Awakening",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -5161,6 +7015,10 @@
    },
    "secret_art:_nightcaller": {
      "ID": "secret_art:_nightcaller",
+     "ClassID": [
+       "shadowbringer"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Nightcaller",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -5173,6 +7031,10 @@
    },
    "secret_art:_overcharge": {
      "ID": "secret_art:_overcharge",
+     "ClassID": [
+       "sage"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Overcharge",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -5185,6 +7047,10 @@
    },
    "secret_art:_override": {
      "ID": "secret_art:_override",
+     "ClassID": [
+       "hussar"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Override",
      "Keywords": "Secret Art, Sure Hit, Pass",
      "Range": "Self",
@@ -5197,6 +7063,10 @@
    },
    "secret_art:_perfect_repetition": {
      "ID": "secret_art:_perfect_repetition",
+     "ClassID": [
+       "deadeye"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Perfect Repetition",
      "Keywords": "Secret Art",
      "Range": "",
@@ -5209,6 +7079,10 @@
    },
    "secret_art:_pyroblast": {
      "ID": "secret_art:_pyroblast",
+     "ClassID": [
+       "pyromancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Pyroblast",
      "Keywords": "Fire, Secret Art, Spell",
      "Range": "60ft",
@@ -5221,6 +7095,10 @@
    },
    "secret_art:_razor_hurricane": {
      "ID": "secret_art:_razor_hurricane",
+     "ClassID": [
+       "aeromaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Razor Hurricane",
      "Keywords": "Concentration, Full Pierce, Secret Art, Spell, Wind",
      "Range": "30ft",
@@ -5233,6 +7111,10 @@
    },
    "secret_art:_rewind": {
      "ID": "secret_art:_rewind",
+     "ClassID": [
+       "time-thief"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Rewind",
      "Keywords": "Secret Art",
      "Range": "Self",
@@ -5245,6 +7127,10 @@
    },
    "secret_art:_ride_of_the_valkyrie": {
      "ID": "secret_art:_ride_of_the_valkyrie",
+     "ClassID": [
+       "mage-knight"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Ride of the Valkyrie",
      "Keywords": "Secret Art, Sidestep, Healing, Pass",
      "Range": "Self",
@@ -5257,6 +7143,10 @@
    },
    "secret_art:_seventeen_dissection": {
      "ID": "secret_art:_seventeen_dissection",
+     "ClassID": [
+       "shinigami-eyes"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Seventeen Dissection",
      "Keywords": "Full Pierce, Secret Art, Sure Hit",
      "Range": "Melee Weapon",
@@ -5269,6 +7159,10 @@
    },
    "secret_art:_shatter": {
      "ID": "secret_art:_shatter",
+     "ClassID": [
+       "forgemaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Shatter",
      "Keywords": "Secret Art, Sure Hit",
      "Range": "Melee Weapon",
@@ -5281,6 +7175,10 @@
    },
    "secret_art:_shield_wall": {
      "ID": "secret_art:_shield_wall",
+     "ClassID": [
+       "protector"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Shield Wall",
      "Keywords": "Secret Art",
      "Range": "20ft",
@@ -5293,6 +7191,10 @@
    },
    "secret_art:_shock_\u0026_awe": {
      "ID": "secret_art:_shock_\u0026_awe",
+     "ClassID": [
+       "strategist"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Shock \u0026 Awe",
      "Keywords": "Secret Art",
      "Range": "40ft",
@@ -5305,6 +7207,10 @@
    },
    "secret_art:_spectrum_blade": {
      "ID": "secret_art:_spectrum_blade",
+     "ClassID": [
+       "spell-blademaster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Spectrum Blade",
      "Keywords": "Enchantment, Secret Art",
      "Range": "Self",
@@ -5317,6 +7223,10 @@
    },
    "secret_art:_spirit_stigma": {
      "ID": "secret_art:_spirit_stigma",
+     "ClassID": [
+       "eremancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Spirit Stigma",
      "Keywords": "Secret Art, Spell, Dark",
      "Range": "60ft",
@@ -5329,6 +7239,10 @@
    },
    "secret_art:_summon_eidolon": {
      "ID": "secret_art:_summon_eidolon",
+     "ClassID": [
+       "summoner"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Summon Eidolon",
      "Keywords": "Summon, Spell, Upkeep, Secret Art",
      "Range": "30ft",
@@ -5341,6 +7255,10 @@
    },
    "secret_art:_the_grand_theater": {
      "ID": "secret_art:_the_grand_theater",
+     "ClassID": [
+       "trickster"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: The Grand Theater",
      "Keywords": "Secret Art",
      "Range": "40ft",
@@ -5353,6 +7271,10 @@
    },
    "secret_art:_titan_blade": {
      "ID": "secret_art:_titan_blade",
+     "ClassID": [
+       "colossus"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Titan Blade",
      "Keywords": "Sure Hit, Full Pierce, Secret Art",
      "Range": "40ft",
@@ -5365,6 +7287,10 @@
    },
    "secret_art:_transmute_proto_armatae": {
      "ID": "secret_art:_transmute_proto_armatae",
+     "ClassID": [
+       "alkahest"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Transmute Proto Armatae",
      "Keywords": "Secret Art",
      "Range": ": 40ftDescription:  Fires a mini transmutation cannon of deconstructive energy making a light attack against a target.  Doesn’t provoke attacks of opportunity. Humanoid Gripper (Left Arm)Description: Humanoid Gripper can make all basic attacks.  It is proficient in any transmuted weapon it holds.  Its regular melee attacks deal light weapon damage and any transmuted weapon it wields gains the benefit of that weapon category.",
@@ -5377,6 +7303,10 @@
    },
    "secret_art:_true_serenity": {
      "ID": "secret_art:_true_serenity",
+     "ClassID": [
+       "zen-warrior"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: True Serenity",
      "Keywords": "Secret Art, Stance",
      "Range": "Self",
@@ -5389,6 +7319,10 @@
    },
    "secret_art:_tsubame_gaeshi": {
      "ID": "secret_art:_tsubame_gaeshi",
+     "ClassID": [
+       "sword-saint"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Tsubame Gaeshi",
      "Keywords": "Lock On, Secret Art, Sure Hit",
      "Range": "Melee Weapon",
@@ -5401,6 +7335,10 @@
    },
    "secret_art:_ultimate_spell": {
      "ID": "secret_art:_ultimate_spell",
+     "ClassID": [
+       "archsage"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Ultimate Spell",
      "Keywords": "",
      "Range": "Self",
@@ -5413,6 +7351,10 @@
    },
    "secret_art:_unholy_strength": {
      "ID": "secret_art:_unholy_strength",
+     "ClassID": [
+       "death-knight"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Unholy Strength",
      "Keywords": "Secret Art, Upkeep",
      "Range": "Self",
@@ -5423,8 +7365,28 @@
      "MPcost": "3 MP",
      "Othercost": ""
    },
+   "secret_art:_unstoppable_onslaught": {
+     "ID": "secret_art:_unstoppable_onslaught",
+     "ClassID": [
+       "knight-paramount"
+     ],
+     "LevelRequired": 8,
+     "Name": "Secret Art: Unstoppable Onslaught",
+     "Keywords": "Secret Art, Sure Hit, Mind Affecting, Fear, Challenge, Shaken",
+     "Range": "Self",
+     "Requirement": "Must be mounted.",
+     "Description": "You may move up to your speed in a line. All enemies you pass through and all enemies within 15ft of your ending position take Light damage, become Challenged and Shaken until the start of your next turn.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "secret_art:_walking_church": {
      "ID": "secret_art:_walking_church",
+     "ClassID": [
+       "high-priest"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Walking Church",
      "Keywords": "Secret Art",
      "Range": "120ft",
@@ -5437,6 +7399,10 @@
    },
    "secret_art:_whirling_death": {
      "ID": "secret_art:_whirling_death",
+     "ClassID": [
+       "gunfu"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Whirling Death",
      "Keywords": "Secret Art, Stance",
      "Range": "Self",
@@ -5449,6 +7415,10 @@
    },
    "secret_art:_whiteout": {
      "ID": "secret_art:_whiteout",
+     "ClassID": [
+       "hoarfrost"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Art: Whiteout",
      "Keywords": "Encounter Start, Frost, Spell, Upkeep, Concentration",
      "Range": "2500ft radius on self",
@@ -5461,6 +7431,10 @@
    },
    "secret_talisman": {
      "ID": "secret_talisman",
+     "ClassID": [
+       "onmyoji-"
+     ],
+     "LevelRequired": 8,
      "Name": "Secret Talisman",
      "Keywords": "Special",
      "Range": "Special",
@@ -5473,6 +7447,10 @@
    },
    "seismic_shove": {
      "ID": "seismic_shove",
+     "ClassID": [
+       "geomancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Seismic Shove",
      "Keywords": "Spell, Earth",
      "Range": "80ft",
@@ -5485,6 +7463,10 @@
    },
    "selective_casting": {
      "ID": "selective_casting",
+     "ClassID": [
+       "sage"
+     ],
+     "LevelRequired": 4,
      "Name": "Selective Casting",
      "Keywords": "",
      "Range": "Self",
@@ -5497,6 +7479,10 @@
    },
    "send_to_armory": {
      "ID": "send_to_armory",
+     "ClassID": [
+       "armiger"
+     ],
+     "LevelRequired": 2,
      "Name": "Send To Armory",
      "Keywords": "Spell",
      "Range": "Touch",
@@ -5509,6 +7495,10 @@
    },
    "sense_magic": {
      "ID": "sense_magic",
+     "ClassID": [
+       "mage"
+     ],
+     "LevelRequired": 1,
      "Name": "Sense Magic",
      "Keywords": "Sensory, Spell",
      "Range": "60ft radius centered on self",
@@ -5521,6 +7511,10 @@
    },
    "separate_wheat_from_chaff": {
      "ID": "separate_wheat_from_chaff",
+     "ClassID": [
+       "cultivator"
+     ],
+     "LevelRequired": 2,
      "Name": "Separate wheat from chaff",
      "Keywords": "Killing Blow, Fear, Mind Affecting",
      "Range": "10ft",
@@ -5533,6 +7527,10 @@
    },
    "serene_water_stance": {
      "ID": "serene_water_stance",
+     "ClassID": [
+       "monk"
+     ],
+     "LevelRequired": 6,
      "Name": "Serene Water Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -5545,6 +7543,10 @@
    },
    "shade_form": {
      "ID": "shade_form",
+     "ClassID": [
+       "shadow-thief"
+     ],
+     "LevelRequired": 4,
      "Name": "Shade Form",
      "Keywords": "Shadow",
      "Range": "Self",
@@ -5557,6 +7559,10 @@
    },
    "shadow_cloak": {
      "ID": "shadow_cloak",
+     "ClassID": [
+       "shadow-thief"
+     ],
+     "LevelRequired": 8,
      "Name": "Shadow Cloak",
      "Keywords": "Shadow",
      "Range": "Self",
@@ -5569,6 +7575,10 @@
    },
    "shadow_step": {
      "ID": "shadow_step",
+     "ClassID": [
+       "shadow-thief"
+     ],
+     "LevelRequired": 2,
      "Name": "Shadow Step",
      "Keywords": "Shadow, Teleport",
      "Range": "Self",
@@ -5581,6 +7591,10 @@
    },
    "share_armor": {
      "ID": "share_armor",
+     "ClassID": [
+       "armorsmith"
+     ],
+     "LevelRequired": 4,
      "Name": "Share Armor",
      "Keywords": "Aid",
      "Range": "30ft",
@@ -5593,6 +7607,10 @@
    },
    "shared_defense": {
      "ID": "shared_defense",
+     "ClassID": [
+       "great-knight"
+     ],
+     "LevelRequired": 6,
      "Name": "Shared Defense",
      "Keywords": "",
      "Range": "120ft",
@@ -5605,6 +7623,10 @@
    },
    "shatter": {
      "ID": "shatter",
+     "ClassID": [
+       "bard"
+     ],
+     "LevelRequired": 6,
      "Name": "Shatter",
      "Keywords": "Sound",
      "Range": "30ft",
@@ -5617,6 +7639,10 @@
    },
    "shatter_time": {
      "ID": "shatter_time",
+     "ClassID": [
+       "time-thief"
+     ],
+     "LevelRequired": 6,
      "Name": "Shatter Time",
      "Keywords": "Encounter Start",
      "Range": "Self",
@@ -5629,6 +7655,10 @@
    },
    "sheet_ice": {
      "ID": "sheet_ice",
+     "ClassID": [
+       "cryomancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Sheet Ice",
      "Keywords": "Frost, Spell, Upkeep",
      "Range": "120ft",
@@ -5641,6 +7671,10 @@
    },
    "shelter": {
      "ID": "shelter",
+     "ClassID": [
+       "bodyguard"
+     ],
+     "LevelRequired": 2,
      "Name": "Shelter",
      "Keywords": "",
      "Range": "5ft",
@@ -5653,6 +7687,10 @@
    },
    "shield_burst": {
      "ID": "shield_burst",
+     "ClassID": [
+       "veilguard"
+     ],
+     "LevelRequired": 2,
      "Name": "Shield Burst",
      "Keywords": "Spell",
      "Range": "40ft",
@@ -5665,6 +7703,10 @@
    },
    "shield_the_fallen": {
      "ID": "shield_the_fallen",
+     "ClassID": [
+       "exalted-shield"
+     ],
+     "LevelRequired": 1,
      "Name": "Shield the Fallen",
      "Keywords": "Aid",
      "Range": "30ft",
@@ -5677,6 +7719,10 @@
    },
    "shieldcrusher": {
      "ID": "shieldcrusher",
+     "ClassID": [
+       "reaver"
+     ],
+     "LevelRequired": 6,
      "Name": "Shieldcrusher",
      "Keywords": "Broken",
      "Range": "Melee Weapon",
@@ -5689,6 +7735,10 @@
    },
    "shooting_form": {
      "ID": "shooting_form",
+     "ClassID": [
+       "battle-mage"
+     ],
+     "LevelRequired": 6,
      "Name": "Shooting Form",
      "Keywords": "Rapid",
      "Range": "-",
@@ -5701,6 +7751,10 @@
    },
    "silentium": {
      "ID": "silentium",
+     "ClassID": [
+       "executor"
+     ],
+     "LevelRequired": 2,
      "Name": "Silentium",
      "Keywords": "Combo, Holy",
      "Range": "Weapon",
@@ -5713,6 +7767,10 @@
    },
    "single-minded_fury": {
      "ID": "single-minded_fury",
+     "ClassID": [
+       "great-berserker"
+     ],
+     "LevelRequired": 4,
      "Name": "Single-Minded Fury",
      "Keywords": "Quick",
      "Range": "Sight",
@@ -5725,6 +7783,10 @@
    },
    "siphon_material": {
      "ID": "siphon_material",
+     "ClassID": [
+       "alkahest"
+     ],
+     "LevelRequired": 6,
      "Name": "Siphon Material",
      "Keywords": "Interlude, Errand",
      "Range": "",
@@ -5737,6 +7799,10 @@
    },
    "siren_song": {
      "ID": "siren_song",
+     "ClassID": [
+       "bard"
+     ],
+     "LevelRequired": 8,
      "Name": "Siren Song",
      "Keywords": "Song, Sound",
      "Range": "60ft",
@@ -5749,6 +7815,10 @@
    },
    "skillfull_blow": {
      "ID": "skillfull_blow",
+     "ClassID": [
+       "battlemaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Skillfull Blow",
      "Keywords": "Lock On",
      "Range": "Melee Weapon",
@@ -5761,6 +7831,10 @@
    },
    "skydive": {
      "ID": "skydive",
+     "ClassID": [
+       "dragoon"
+     ],
+     "LevelRequired": 2,
      "Name": "Skydive",
      "Keywords": "Jump",
      "Range": "Special",
@@ -5773,6 +7847,10 @@
    },
    "slam": {
      "ID": "slam",
+     "ClassID": [
+       "fighter"
+     ],
+     "LevelRequired": 6,
      "Name": "Slam",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -5785,6 +7863,10 @@
    },
    "slide_\u0026_shoot": {
      "ID": "slide_\u0026_shoot",
+     "ClassID": [
+       "gunfu"
+     ],
+     "LevelRequired": 2,
      "Name": "Slide \u0026 Shoot",
      "Keywords": "Pass, Sidestep, Combo",
      "Range": "",
@@ -5797,6 +7879,10 @@
    },
    "slow": {
      "ID": "slow",
+     "ClassID": [
+       "chronomancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Slow",
      "Keywords": "Spell, Slow",
      "Range": "60ft",
@@ -5809,6 +7895,10 @@
    },
    "smash_through_the_pain": {
      "ID": "smash_through_the_pain",
+     "ClassID": [
+       "great-berserker"
+     ],
+     "LevelRequired": 6,
      "Name": "Smash through the pain",
      "Keywords": "Rage",
      "Range": "Self",
@@ -5821,6 +7911,10 @@
    },
    "snap_shot": {
      "ID": "snap_shot",
+     "ClassID": [
+       "ranger"
+     ],
+     "LevelRequired": 8,
      "Name": "Snap Shot",
      "Keywords": "",
      "Range": "",
@@ -5833,6 +7927,10 @@
    },
    "snap_shot_ii": {
      "ID": "snap_shot_ii",
+     "ClassID": [
+       "archer"
+     ],
+     "LevelRequired": 6,
      "Name": "Snap Shot II",
      "Keywords": "",
      "Range": "",
@@ -5845,6 +7943,10 @@
    },
    "snatch": {
      "ID": "snatch",
+     "ClassID": [
+       "thief"
+     ],
+     "LevelRequired": 4,
      "Name": "Snatch",
      "Keywords": "",
      "Range": "5ft",
@@ -5857,6 +7959,10 @@
    },
    "sneak_attack": {
      "ID": "sneak_attack",
+     "ClassID": [
+       "rogue"
+     ],
+     "LevelRequired": 6,
      "Name": "Sneak Attack",
      "Keywords": "Trick Attack",
      "Range": "Melee Weapon",
@@ -5869,6 +7975,10 @@
    },
    "soul_absorption": {
      "ID": "soul_absorption",
+     "ClassID": [
+       "dark-priest"
+     ],
+     "LevelRequired": 1,
      "Name": "Soul Absorption",
      "Keywords": "Spell, Dark, Full Pierce, Sure Hit",
      "Range": "20ft",
@@ -5881,6 +7991,10 @@
    },
    "soulreap": {
      "ID": "soulreap",
+     "ClassID": [
+       "necromancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Soulreap",
      "Keywords": "Killing Blow",
      "Range": "Melee Weapon",
@@ -5893,6 +8007,10 @@
    },
    "sound_the_retreat": {
      "ID": "sound_the_retreat",
+     "ClassID": [
+       "strategist"
+     ],
+     "LevelRequired": 1,
      "Name": "Sound the retreat",
      "Keywords": "Sidestep",
      "Range": "Self",
@@ -5905,6 +8023,10 @@
    },
    "speak_with_dead": {
      "ID": "speak_with_dead",
+     "ClassID": [
+       "necromancer"
+     ],
+     "LevelRequired": 4,
      "Name": "Speak with dead",
      "Keywords": "",
      "Range": "-",
@@ -5917,6 +8039,10 @@
    },
    "spear_charge": {
      "ID": "spear_charge",
+     "ClassID": [
+       "spearmaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Spear Charge",
      "Keywords": "",
      "Range": "Self",
@@ -5929,6 +8055,10 @@
    },
    "spellblades_preparation": {
      "ID": "spellblades_preparation",
+     "ClassID": [
+       "spell-blademaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Spellblade's Preparation",
      "Keywords": "Enchantment, Encounter Start",
      "Range": "Self",
@@ -5941,6 +8071,10 @@
    },
    "spellsteal": {
      "ID": "spellsteal",
+     "ClassID": [
+       "thief"
+     ],
+     "LevelRequired": 8,
      "Name": "Spellsteal",
      "Keywords": "",
      "Range": "5ft",
@@ -5953,6 +8087,10 @@
    },
    "spellstrike": {
      "ID": "spellstrike",
+     "ClassID": [
+       "spellblade"
+     ],
+     "LevelRequired": 8,
      "Name": "Spellstrike",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -5965,6 +8103,10 @@
    },
    "spiked_armor": {
      "ID": "spiked_armor",
+     "ClassID": [
+       "master-armorer"
+     ],
+     "LevelRequired": 8,
      "Name": "Spiked Armor",
      "Keywords": "Counter",
      "Range": "Self",
@@ -5977,6 +8119,10 @@
    },
    "spirit_circuit_crash": {
      "ID": "spirit_circuit_crash",
+     "ClassID": [
+       "aetherie"
+     ],
+     "LevelRequired": 8,
      "Name": "Spirit Circuit Crash",
      "Keywords": "",
      "Range": "45ft",
@@ -5989,6 +8135,10 @@
    },
    "spirit_jump": {
      "ID": "spirit_jump",
+     "ClassID": [
+       "cavalier"
+     ],
+     "LevelRequired": 1,
      "Name": "Spirit Jump",
      "Keywords": "",
      "Range": "Self",
@@ -6001,6 +8151,10 @@
    },
    "spore_burst": {
      "ID": "spore_burst",
+     "ClassID": [
+       "amanita"
+     ],
+     "LevelRequired": 6,
      "Name": "Spore Burst",
      "Keywords": "Earth, Spell",
      "Range": "5ft",
@@ -6013,6 +8167,10 @@
    },
    "spore_symbiote": {
      "ID": "spore_symbiote",
+     "ClassID": [
+       "mycomancer"
+     ],
+     "LevelRequired": 1,
      "Name": "Spore Symbiote",
      "Keywords": "Quick",
      "Range": "60ft",
@@ -6025,6 +8183,10 @@
    },
    "squadsight": {
      "ID": "squadsight",
+     "ClassID": [
+       "scout"
+     ],
+     "LevelRequired": 2,
      "Name": "Squadsight",
      "Keywords": "",
      "Range": "300ft",
@@ -6037,6 +8199,10 @@
    },
    "stab_\u0026_throw": {
      "ID": "stab_\u0026_throw",
+     "ClassID": [
+       "peltast"
+     ],
+     "LevelRequired": 8,
      "Name": "Stab \u0026 Throw",
      "Keywords": "",
      "Range": "Special",
@@ -6049,6 +8215,10 @@
    },
    "stable_foundation": {
      "ID": "stable_foundation",
+     "ClassID": [
+       "timberwright"
+     ],
+     "LevelRequired": 2,
      "Name": "Stable Foundation",
      "Keywords": "",
      "Range": "",
@@ -6061,6 +8231,10 @@
    },
    "stalks_of_comparison": {
      "ID": "stalks_of_comparison",
+     "ClassID": [
+       "botanist"
+     ],
+     "LevelRequired": 6,
      "Name": "Stalks of Comparison",
      "Keywords": "",
      "Range": "",
@@ -6073,6 +8247,10 @@
    },
    "start_dash": {
      "ID": "start_dash",
+     "ClassID": [
+       "time-thief"
+     ],
+     "LevelRequired": 2,
      "Name": "Start Dash",
      "Keywords": "Quick",
      "Range": "Self",
@@ -6085,6 +8263,10 @@
    },
    "stasis": {
      "ID": "stasis",
+     "ClassID": [
+       "temporal-trickster"
+     ],
+     "LevelRequired": 4,
      "Name": "Stasis",
      "Keywords": "",
      "Range": "40ft",
@@ -6097,6 +8279,10 @@
    },
    "static_discharge": {
      "ID": "static_discharge",
+     "ClassID": [
+       "electromaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Static Discharge",
      "Keywords": "Lightning, Spell",
      "Range": "40ft",
@@ -6109,6 +8295,10 @@
    },
    "static_overload": {
      "ID": "static_overload",
+     "ClassID": [
+       "electromaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Static Overload",
      "Keywords": "Daze, Lightning, Spell",
      "Range": "60ft",
@@ -6121,6 +8311,10 @@
    },
    "status_assessment": {
      "ID": "status_assessment",
+     "ClassID": [
+       "ranger"
+     ],
+     "LevelRequired": 1,
      "Name": "Status Assessment",
      "Keywords": "Analyze, Quick",
      "Range": "Sight",
@@ -6133,6 +8327,11 @@
    },
    "status_assessment_ii": {
      "ID": "status_assessment_ii",
+     "ClassID": [
+       "archer",
+       "marksman"
+     ],
+     "LevelRequired": 1,
      "Name": "Status Assessment II",
      "Keywords": "Analyze, Quick",
      "Range": "Sight",
@@ -6145,6 +8344,10 @@
    },
    "status_assessment_iii": {
      "ID": "status_assessment_iii",
+     "ClassID": [
+       "deadeye"
+     ],
+     "LevelRequired": 1,
      "Name": "Status Assessment III",
      "Keywords": "Analyze",
      "Range": "Sight",
@@ -6157,6 +8360,10 @@
    },
    "steadfast_earth_stance": {
      "ID": "steadfast_earth_stance",
+     "ClassID": [
+       "still-stone-style"
+     ],
+     "LevelRequired": 2,
      "Name": "Steadfast Earth Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -6169,6 +8376,10 @@
    },
    "steady_craft_ii": {
      "ID": "steady_craft_ii",
+     "ClassID": [
+       "blacksmith"
+     ],
+     "LevelRequired": 6,
      "Name": "Steady Craft II",
      "Keywords": "",
      "Range": "",
@@ -6181,6 +8392,10 @@
    },
    "steady_stance": {
      "ID": "steady_stance",
+     "ClassID": [
+       "highlander"
+     ],
+     "LevelRequired": 2,
      "Name": "Steady Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -6193,6 +8408,10 @@
    },
    "steal_heart": {
      "ID": "steal_heart",
+     "ClassID": [
+       "phantom-thief"
+     ],
+     "LevelRequired": 8,
      "Name": "Steal Heart",
      "Keywords": "Spell, Charm",
      "Range": "40ft",
@@ -6205,6 +8424,10 @@
    },
    "steal_time": {
      "ID": "steal_time",
+     "ClassID": [
+       "time-thief"
+     ],
+     "LevelRequired": 4,
      "Name": "Steal Time",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -6217,6 +8440,10 @@
    },
    "steel_aura": {
      "ID": "steel_aura",
+     "ClassID": [
+       "adventurer"
+     ],
+     "LevelRequired": 6,
      "Name": "Steel Aura",
      "Keywords": "Aura",
      "Range": "Self",
@@ -6229,6 +8456,10 @@
    },
    "stolen_power": {
      "ID": "stolen_power",
+     "ClassID": [
+       "phantom-thief"
+     ],
+     "LevelRequired": 2,
      "Name": "Stolen Power",
      "Keywords": "Spell",
      "Range": "60ft",
@@ -6241,6 +8472,10 @@
    },
    "stolen_skill": {
      "ID": "stolen_skill",
+     "ClassID": [
+       "phantom-thief"
+     ],
+     "LevelRequired": 1,
      "Name": "Stolen Skill",
      "Keywords": "Spell",
      "Range": "40ft",
@@ -6253,6 +8488,10 @@
    },
    "store_time": {
      "ID": "store_time",
+     "ClassID": [
+       "chronomancer"
+     ],
+     "LevelRequired": 1,
      "Name": "Store Time",
      "Keywords": "",
      "Range": "Self",
@@ -6265,6 +8504,10 @@
    },
    "stratagem:_lightning": {
      "ID": "stratagem:_lightning",
+     "ClassID": [
+       "tactician"
+     ],
+     "LevelRequired": 6,
      "Name": "Stratagem: Lightning",
      "Keywords": "Encounter Start",
      "Range": "All allies in sight, including yourself.",
@@ -6277,6 +8520,10 @@
    },
    "strengthening_the_bond": {
      "ID": "strengthening_the_bond",
+     "ClassID": [
+       "timberwright"
+     ],
+     "LevelRequired": 4,
      "Name": "Strengthening the Bond",
      "Keywords": "",
      "Range": "5ft",
@@ -6289,6 +8536,10 @@
    },
    "strike_of_still_water": {
      "ID": "strike_of_still_water",
+     "ClassID": [
+       "monk"
+     ],
+     "LevelRequired": 8,
      "Name": "Strike of Still Water",
      "Keywords": "Full Pierce, Sure Hit, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -6301,6 +8552,10 @@
    },
    "study_target": {
      "ID": "study_target",
+     "ClassID": [
+       "assassin"
+     ],
+     "LevelRequired": 4,
      "Name": "Study Target",
      "Keywords": "Lock On, Setup, Full Pierce, Sure Hit, Overcharge",
      "Range": "Sight",
@@ -6313,6 +8568,10 @@
    },
    "stygian_screen": {
      "ID": "stygian_screen",
+     "ClassID": [
+       "dark-priest"
+     ],
+     "LevelRequired": 8,
      "Name": "Stygian Screen",
      "Keywords": "Spell, Dark, Concentration",
      "Range": "30ft",
@@ -6325,6 +8584,10 @@
    },
    "suckerpunch": {
      "ID": "suckerpunch",
+     "ClassID": [
+       "brawler"
+     ],
+     "LevelRequired": 6,
      "Name": "Suckerpunch",
      "Keywords": "Encounter Start, Sure Hit, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -6337,6 +8600,10 @@
    },
    "summon_animal": {
      "ID": "summon_animal",
+     "ClassID": [
+       "animal-summoner"
+     ],
+     "LevelRequired": 1,
      "Name": "Summon Animal",
      "Keywords": "Summon",
      "Range": "40ft",
@@ -6349,6 +8616,10 @@
    },
    "summon_lesser_eidolon": {
      "ID": "summon_lesser_eidolon",
+     "ClassID": [
+       "summoner"
+     ],
+     "LevelRequired": 4,
      "Name": "Summon Lesser Eidolon",
      "Keywords": "Summon, Spell, Upkeep",
      "Range": "30ft",
@@ -6361,6 +8632,10 @@
    },
    "swap": {
      "ID": "swap",
+     "ClassID": [
+       "trickster"
+     ],
+     "LevelRequired": 4,
      "Name": "Swap",
      "Keywords": "Rapid, Teleport",
      "Range": "20ft",
@@ -6373,6 +8648,10 @@
    },
    "sweeping_stance": {
      "ID": "sweeping_stance",
+     "ClassID": [
+       "reaver"
+     ],
+     "LevelRequired": 2,
      "Name": "Sweeping Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -6385,6 +8664,10 @@
    },
    "swift_wind_palm": {
      "ID": "swift_wind_palm",
+     "ClassID": [
+       "sky-talon-style"
+     ],
+     "LevelRequired": 6,
      "Name": "Swift Wind Palm",
      "Keywords": "Unarmed Strike, Sidestep, Lock On",
      "Range": "Melee Weapon",
@@ -6397,6 +8680,10 @@
    },
    "tackle": {
      "ID": "tackle",
+     "ClassID": [
+       "tavern-brawler"
+     ],
+     "LevelRequired": 8,
      "Name": "Tackle",
      "Keywords": "",
      "Range": "5ft",
@@ -6409,6 +8696,10 @@
    },
    "tag_rotation": {
      "ID": "tag_rotation",
+     "ClassID": [
+       "tactician"
+     ],
+     "LevelRequired": 2,
      "Name": "Tag Rotation",
      "Keywords": "",
      "Range": "Two ally units, or yourself and an ally unit  that are adjacent to each other that you can see.",
@@ -6421,6 +8712,10 @@
    },
    "tailwind": {
      "ID": "tailwind",
+     "ClassID": [
+       "windbringer"
+     ],
+     "LevelRequired": 4,
      "Name": "Tailwind",
      "Keywords": "Encounter Start",
      "Range": "40ft",
@@ -6433,6 +8728,10 @@
    },
    "take_cover!": {
      "ID": "take_cover!",
+     "ClassID": [
+       "tactician"
+     ],
+     "LevelRequired": 1,
      "Name": "Take Cover!",
      "Keywords": "",
      "Range": "Light cover in sight",
@@ -6445,6 +8744,10 @@
    },
    "take_it_easy": {
      "ID": "take_it_easy",
+     "ClassID": [
+       "excavator"
+     ],
+     "LevelRequired": 8,
      "Name": "Take it easy",
      "Keywords": "",
      "Range": "",
@@ -6457,6 +8760,10 @@
    },
    "tap_cracker": {
      "ID": "tap_cracker",
+     "ClassID": [
+       "aetherie"
+     ],
+     "LevelRequired": 6,
      "Name": "Tap Cracker",
      "Keywords": "Overcharge",
      "Range": "45ft",
@@ -6469,6 +8776,10 @@
    },
    "tempestuous_fire_stance": {
      "ID": "tempestuous_fire_stance",
+     "ClassID": [
+       "bajiquan-style"
+     ],
+     "LevelRequired": 1,
      "Name": "Tempestuous Fire Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -6481,6 +8792,10 @@
    },
    "temporary_protection": {
      "ID": "temporary_protection",
+     "ClassID": [
+       "bodyguard"
+     ],
+     "LevelRequired": 4,
      "Name": "Temporary Protection",
      "Keywords": "",
      "Range": "30ft",
@@ -6493,6 +8808,10 @@
    },
    "terracing": {
      "ID": "terracing",
+     "ClassID": [
+       "cultivator"
+     ],
+     "LevelRequired": 4,
      "Name": "Terracing",
      "Keywords": "",
      "Range": "Self",
@@ -6505,6 +8824,10 @@
    },
    "tetsuzanko": {
      "ID": "tetsuzanko",
+     "ClassID": [
+       "bajiquan-style"
+     ],
+     "LevelRequired": 8,
      "Name": "Tetsuzanko",
      "Keywords": "Bajiquan, Combo, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -6517,6 +8840,10 @@
    },
    "thermal_quench": {
      "ID": "thermal_quench",
+     "ClassID": [
+       "armorsmith"
+     ],
+     "LevelRequired": 6,
      "Name": "Thermal Quench",
      "Keywords": "",
      "Range": "",
@@ -6529,6 +8856,10 @@
    },
    "threatening_aura": {
      "ID": "threatening_aura",
+     "ClassID": [
+       "guardian"
+     ],
+     "LevelRequired": 6,
      "Name": "Threatening Aura",
      "Keywords": "Challenge",
      "Range": "Self",
@@ -6541,6 +8872,10 @@
    },
    "throw_potion": {
      "ID": "throw_potion",
+     "ClassID": [
+       "alchemist"
+     ],
+     "LevelRequired": 2,
      "Name": "Throw Potion",
      "Keywords": "",
      "Range": "30ft",
@@ -6553,6 +8888,10 @@
    },
    "thunderstorm": {
      "ID": "thunderstorm",
+     "ClassID": [
+       "electromaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Thunderstorm",
      "Keywords": "Lightning, Spell",
      "Range": "40ft",
@@ -6565,6 +8904,10 @@
    },
    "track": {
      "ID": "track",
+     "ClassID": [
+       "ranger"
+     ],
+     "LevelRequired": 2,
      "Name": "Track",
      "Keywords": "",
      "Range": "Self",
@@ -6577,6 +8920,10 @@
    },
    "trail_mix": {
      "ID": "trail_mix",
+     "ClassID": [
+       "botanist"
+     ],
+     "LevelRequired": 4,
      "Name": "Trail Mix",
      "Keywords": "",
      "Range": "",
@@ -6589,6 +8936,10 @@
    },
    "trailblazer": {
      "ID": "trailblazer",
+     "ClassID": [
+       "nomad"
+     ],
+     "LevelRequired": 6,
      "Name": "Trailblazer",
      "Keywords": "",
      "Range": "Self",
@@ -6601,6 +8952,10 @@
    },
    "trample": {
      "ID": "trample",
+     "ClassID": [
+       "cavalier"
+     ],
+     "LevelRequired": 8,
      "Name": "Trample",
      "Keywords": "Sure Hit",
      "Range": "Self",
@@ -6613,6 +8968,10 @@
    },
    "transfusion": {
      "ID": "transfusion",
+     "ClassID": [
+       "bloodbinder"
+     ],
+     "LevelRequired": 1,
      "Name": "Transfusion",
      "Keywords": "Healing, Aid",
      "Range": "40ft",
@@ -6625,6 +8984,10 @@
    },
    "transmute_effective_implement": {
      "ID": "transmute_effective_implement",
+     "ClassID": [
+       "alkahest"
+     ],
+     "LevelRequired": 2,
      "Name": "Transmute Effective Implement",
      "Keywords": "Overcharge",
      "Range": "5ft",
@@ -6637,6 +9000,10 @@
    },
    "transmute_terrain": {
      "ID": "transmute_terrain",
+     "ClassID": [
+       "transmuter"
+     ],
+     "LevelRequired": 8,
      "Name": "Transmute Terrain",
      "Keywords": "",
      "Range": "5ft",
@@ -6649,6 +9016,10 @@
    },
    "transmute_wall": {
      "ID": "transmute_wall",
+     "ClassID": [
+       "transmuter"
+     ],
+     "LevelRequired": 4,
      "Name": "Transmute Wall",
      "Keywords": "",
      "Range": "5ft",
@@ -6661,6 +9032,10 @@
    },
    "transmute_weapon": {
      "ID": "transmute_weapon",
+     "ClassID": [
+       "transmuter"
+     ],
+     "LevelRequired": 2,
      "Name": "Transmute Weapon",
      "Keywords": "",
      "Range": "30ft",
@@ -6673,6 +9048,10 @@
    },
    "transmuter_tricks": {
      "ID": "transmuter_tricks",
+     "ClassID": [
+       "alkahest"
+     ],
+     "LevelRequired": 1,
      "Name": "Transmuter Tricks",
      "Keywords": "",
      "Range": "",
@@ -6685,6 +9064,10 @@
    },
    "travelers_end": {
      "ID": "travelers_end",
+     "ClassID": [
+       "mist-veil-elegy"
+     ],
+     "LevelRequired": 8,
      "Name": "Traveler's End",
      "Keywords": "Song, Upkeep, Sound",
      "Range": "Self",
@@ -6697,6 +9080,10 @@
    },
    "tremorsense": {
      "ID": "tremorsense",
+     "ClassID": [
+       "geomancer"
+     ],
+     "LevelRequired": 1,
      "Name": "Tremorsense",
      "Keywords": "Overcharge",
      "Range": "40ft",
@@ -6709,6 +9096,10 @@
    },
    "true_death": {
      "ID": "true_death",
+     "ClassID": [
+       "shinigami-eyes"
+     ],
+     "LevelRequired": 2,
      "Name": "True Death",
      "Keywords": "",
      "Range": "-",
@@ -6721,6 +9112,10 @@
    },
    "true_divine_release": {
      "ID": "true_divine_release",
+     "ClassID": [
+       "angelblooded"
+     ],
+     "LevelRequired": 2,
      "Name": "True Divine Release",
      "Keywords": "Transformation, Upkeep",
      "Range": "Self",
@@ -6733,6 +9128,10 @@
    },
    "two_point_strike": {
      "ID": "two_point_strike",
+     "ClassID": [
+       "wave-palm-style"
+     ],
+     "LevelRequired": 2,
      "Name": "Two Point Strike",
      "Keywords": "Unarmed Strike, Mystic Eye",
      "Range": "Melee Weapon",
@@ -6745,6 +9144,10 @@
    },
    "two_sword_crush": {
      "ID": "two_sword_crush",
+     "ClassID": [
+       "colossus"
+     ],
+     "LevelRequired": 6,
      "Name": "Two Sword Crush",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -6757,6 +9160,10 @@
    },
    "uke_nagashi": {
      "ID": "uke_nagashi",
+     "ClassID": [
+       "iai-style"
+     ],
+     "LevelRequired": 8,
      "Name": "Uke Nagashi",
      "Keywords": "Counter, Iaijutsu",
      "Range": "Melee Weapon",
@@ -6769,6 +9176,10 @@
    },
    "unconventional_weapon": {
      "ID": "unconventional_weapon",
+     "ClassID": [
+       "battlemaster"
+     ],
+     "LevelRequired": 6,
      "Name": "Unconventional Weapon",
      "Keywords": "Quick",
      "Range": "Self",
@@ -6781,6 +9192,11 @@
    },
    "undying_justice": {
      "ID": "undying_justice",
+     "ClassID": [
+       "exalted-blade",
+       "exalted-shield"
+     ],
+     "LevelRequired": 2,
      "Name": "Undying Justice",
      "Keywords": "",
      "Range": "Self",
@@ -6793,6 +9209,10 @@
    },
    "unerring_aim": {
      "ID": "unerring_aim",
+     "ClassID": [
+       "archer"
+     ],
+     "LevelRequired": 2,
      "Name": "Unerring Aim",
      "Keywords": "",
      "Range": "",
@@ -6805,6 +9225,10 @@
    },
    "unholy_pact": {
      "ID": "unholy_pact",
+     "ClassID": [
+       "death-knight"
+     ],
+     "LevelRequired": 2,
      "Name": "Unholy Pact",
      "Keywords": "Healing",
      "Range": "Self",
@@ -6817,6 +9241,10 @@
    },
    "unrelenting_assault": {
      "ID": "unrelenting_assault",
+     "ClassID": [
+       "great-berserker"
+     ],
+     "LevelRequired": 2,
      "Name": "Unrelenting Assault",
      "Keywords": "Rage",
      "Range": "Melee Weapon",
@@ -6829,6 +9257,10 @@
    },
    "unsummon": {
      "ID": "unsummon",
+     "ClassID": [
+       "summoner"
+     ],
+     "LevelRequired": 6,
      "Name": "Unsummon",
      "Keywords": "Encounter Conclusion",
      "Range": "Self",
@@ -6841,6 +9273,10 @@
    },
    "vampire_bite": {
      "ID": "vampire_bite",
+     "ClassID": [
+       "vampire"
+     ],
+     "LevelRequired": 1,
      "Name": "Vampire Bite",
      "Keywords": "Unarmed Strike",
      "Range": "5ft",
@@ -6853,6 +9289,10 @@
    },
    "vampire_shapeshift": {
      "ID": "vampire_shapeshift",
+     "ClassID": [
+       "vampire"
+     ],
+     "LevelRequired": 4,
      "Name": "Vampire Shapeshift",
      "Keywords": "Concentration",
      "Range": "Self",
@@ -6865,6 +9305,10 @@
    },
    "vampiric_domination": {
      "ID": "vampiric_domination",
+     "ClassID": [
+       "vampire-lord"
+     ],
+     "LevelRequired": 6,
      "Name": "Vampiric Domination",
      "Keywords": "",
      "Range": "20ft",
@@ -6877,6 +9321,10 @@
    },
    "vampiric_fascination": {
      "ID": "vampiric_fascination",
+     "ClassID": [
+       "vampire"
+     ],
+     "LevelRequired": 2,
      "Name": "Vampiric Fascination",
      "Keywords": "",
      "Range": "40ft",
@@ -6889,6 +9337,10 @@
    },
    "vanish": {
      "ID": "vanish",
+     "ClassID": [
+       "shadow-thief"
+     ],
+     "LevelRequired": 6,
      "Name": "Vanish",
      "Keywords": "Shadow",
      "Range": "Self",
@@ -6901,6 +9353,10 @@
    },
    "vengeance": {
      "ID": "vengeance",
+     "ClassID": [
+       "bodyguard"
+     ],
+     "LevelRequired": 6,
      "Name": "Vengeance",
      "Keywords": "Lock On, Block Crush",
      "Range": "Weapon",
@@ -6913,6 +9369,10 @@
    },
    "verdant_instinct": {
      "ID": "verdant_instinct",
+     "ClassID": [
+       "forager"
+     ],
+     "LevelRequired": 2,
      "Name": "Verdant Instinct",
      "Keywords": "",
      "Range": "",
@@ -6925,6 +9385,10 @@
    },
    "victory_or_death": {
      "ID": "victory_or_death",
+     "ClassID": [
+       "great-berserker"
+     ],
+     "LevelRequired": 8,
      "Name": "Victory or Death",
      "Keywords": "",
      "Range": "Self",
@@ -6937,6 +9401,10 @@
    },
    "vital_drain": {
      "ID": "vital_drain",
+     "ClassID": [
+       "amanita"
+     ],
+     "LevelRequired": 2,
      "Name": "Vital Drain",
      "Keywords": "Earth, Full Pierce, Healing, Spell",
      "Range": "20ft",
@@ -6949,6 +9417,10 @@
    },
    "vital_drive": {
      "ID": "vital_drive",
+     "ClassID": [
+       "martial-artist"
+     ],
+     "LevelRequired": 4,
      "Name": "Vital Drive",
      "Keywords": "Healing",
      "Range": "Self",
@@ -6961,6 +9433,10 @@
    },
    "vital_drive_ii": {
      "ID": "vital_drive_ii",
+     "ClassID": [
+       "brawler"
+     ],
+     "LevelRequired": 1,
      "Name": "Vital Drive II",
      "Keywords": "Healing",
      "Range": "Self",
@@ -6973,6 +9449,10 @@
    },
    "vivisect": {
      "ID": "vivisect",
+     "ClassID": [
+       "forager"
+     ],
+     "LevelRequired": 8,
      "Name": "Vivisect",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -6985,6 +9465,10 @@
    },
    "volley": {
      "ID": "volley",
+     "ClassID": [
+       "archer"
+     ],
+     "LevelRequired": 4,
      "Name": "Volley",
      "Keywords": "",
      "Range": "",
@@ -6997,6 +9481,10 @@
    },
    "wall_formation": {
      "ID": "wall_formation",
+     "ClassID": [
+       "strategist"
+     ],
+     "LevelRequired": 2,
      "Name": "Wall Formation",
      "Keywords": "",
      "Range": "40ft",
@@ -7009,6 +9497,10 @@
    },
    "warning_shot": {
      "ID": "warning_shot",
+     "ClassID": [
+       "gunslinger"
+     ],
+     "LevelRequired": 4,
      "Name": "Warning Shot",
      "Keywords": "",
      "Range": "",
@@ -7021,6 +9513,10 @@
    },
    "weapon_maintenance": {
      "ID": "weapon_maintenance",
+     "ClassID": [
+       "blacksmith"
+     ],
+     "LevelRequired": 8,
      "Name": "Weapon Maintenance",
      "Keywords": "Encounter Start, Flashback",
      "Range": "",
@@ -7033,6 +9529,10 @@
    },
    "white_thunder": {
      "ID": "white_thunder",
+     "ClassID": [
+       "hoarfrost"
+     ],
+     "LevelRequired": 4,
      "Name": "White Thunder",
      "Keywords": "Frost, Slow, Spell",
      "Range": "80ft",
@@ -7045,6 +9545,10 @@
    },
    "wild_thrusts": {
      "ID": "wild_thrusts",
+     "ClassID": [
+       "spearmaster"
+     ],
+     "LevelRequired": 4,
      "Name": "Wild Thrusts",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -7057,6 +9561,10 @@
    },
    "wind-empowered_aim": {
      "ID": "wind-empowered_aim",
+     "ClassID": [
+       "zephyr-warder"
+     ],
+     "LevelRequired": 6,
      "Name": "Wind-Empowered Aim",
      "Keywords": "Aura, Upkeep",
      "Range": "Self",
@@ -7069,6 +9577,10 @@
    },
    "wind-up_punch": {
      "ID": "wind-up_punch",
+     "ClassID": [
+       "brawler"
+     ],
+     "LevelRequired": 4,
      "Name": "Wind-up Punch",
      "Keywords": "Overcharge, Unarmed Strike",
      "Range": "Melee Weapon",
@@ -7081,6 +9593,10 @@
    },
    "wind_blast": {
      "ID": "wind_blast",
+     "ClassID": [
+       "aeromancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Wind Blast",
      "Keywords": "Spell, Wind",
      "Range": "120ft",
@@ -7093,6 +9609,10 @@
    },
    "wind_blast_ii": {
      "ID": "wind_blast_ii",
+     "ClassID": [
+       "aeromaster"
+     ],
+     "LevelRequired": 2,
      "Name": "Wind Blast II",
      "Keywords": "Spell, Wind",
      "Range": "120ft",
@@ -7105,6 +9625,10 @@
    },
    "wind_buffet": {
      "ID": "wind_buffet",
+     "ClassID": [
+       "aeromancer"
+     ],
+     "LevelRequired": 8,
      "Name": "Wind Buffet",
      "Keywords": "Spell, Wind",
      "Range": "30ft cone",
@@ -7117,6 +9641,10 @@
    },
    "wind_infusion": {
      "ID": "wind_infusion",
+     "ClassID": [
+       "zephyr-warder"
+     ],
+     "LevelRequired": 2,
      "Name": "Wind Infusion",
      "Keywords": "Spell, Type, Wind",
      "Range": "30ft",
@@ -7129,6 +9657,10 @@
    },
    "wind_scatter": {
      "ID": "wind_scatter",
+     "ClassID": [
+       "aeromancer"
+     ],
+     "LevelRequired": 6,
      "Name": "Wind Scatter",
      "Keywords": "Spell, Wind",
      "Range": "60ft",
@@ -7141,6 +9673,10 @@
    },
    "wind_shield": {
      "ID": "wind_shield",
+     "ClassID": [
+       "zephyr-warder"
+     ],
+     "LevelRequired": 8,
      "Name": "Wind Shield",
      "Keywords": "Aid, Shield, Spell",
      "Range": "30ft",
@@ -7153,6 +9689,10 @@
    },
    "wind_wall": {
      "ID": "wind_wall",
+     "ClassID": [
+       "zephyr-warder"
+     ],
+     "LevelRequired": 4,
      "Name": "Wind Wall",
      "Keywords": "Concentration, Spell, Wind",
      "Range": "60ft",
@@ -7165,6 +9705,10 @@
    },
    "wire_sweep": {
      "ID": "wire_sweep",
+     "ClassID": [
+       "saboteur"
+     ],
+     "LevelRequired": 6,
      "Name": "Wire Sweep",
      "Keywords": "",
      "Range": "20ft",
@@ -7177,6 +9721,10 @@
    },
    "wither_the_stalk": {
      "ID": "wither_the_stalk",
+     "ClassID": [
+       "farmer"
+     ],
+     "LevelRequired": 4,
      "Name": "Wither the Stalk",
      "Keywords": "",
      "Range": "Melee Weapon",
@@ -7189,6 +9737,10 @@
    },
    "x-attack": {
      "ID": "x-attack",
+     "ClassID": [
+       "wildheart"
+     ],
+     "LevelRequired": 2,
      "Name": "X-Attack",
      "Keywords": "",
      "Range": "Sight",
@@ -7201,6 +9753,10 @@
    },
    "zap": {
      "ID": "zap",
+     "ClassID": [
+       "electromancer"
+     ],
+     "LevelRequired": 2,
      "Name": "Zap",
      "Keywords": "Lightning, Lock On, Spell",
      "Range": "60ft",
@@ -7213,6 +9769,10 @@
    },
    "zhen_jiao": {
      "ID": "zhen_jiao",
+     "ClassID": [
+       "bajiquan-style"
+     ],
+     "LevelRequired": 4,
      "Name": "Zhen Jiao",
      "Keywords": "",
      "Range": "",

@@ -369,6 +369,11 @@
      "ID": "jonin",
      "Tier": 3
    },
+   "knight-paramount": {
+     "Name": "Knight-Paramount",
+     "ID": "knight-paramount",
+     "Tier": 3
+   },
    "lancer": {
      "Name": "Lancer",
      "ID": "lancer",
@@ -628,6 +633,11 @@
      "Name": "Time Thief",
      "ID": "time-thief",
      "Tier": 2
+   },
+   "transcendent-lightning-style": {
+     "Name": "Transcendent Lightning Style",
+     "ID": "transcendent-lightning-style",
+     "Tier": 3
    },
    "transmuter": {
      "Name": "Transmuter",

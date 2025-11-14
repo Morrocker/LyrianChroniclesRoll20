@@ -137,7 +137,7 @@
      "Name": "Efficient Dilution",
      "Keywords": "",
      "Cost": "10 Crafting Points",
-     "Description": "By diluting the contents to the perfect required amounts, you gain an additional Elixir, Potion, Flask or Salve upon crafting success."
+     "Description": "By diluting the contents to the perfect required amounts, you gain an additional Elixir, Potion, Flask, Poison or Salve upon crafting success."
    },
    "explosive_lining": {
      "ID": "explosive_lining",
@@ -200,7 +200,7 @@
      "Name": "Masterful Dilution",
      "Keywords": "",
      "Cost": "40 Crafting Points",
-     "Description": "By diluting the contents to the perfect required amounts, you gain an additional Elixir, Potion, Flask or Salve upon crafting success. Stacks with Efficient Dilution."
+     "Description": "By diluting the contents to the perfect required amounts, you gain an additional Elixir, Potion, Flask, Potion or Salve upon crafting success. Stacks with Efficient Dilution."
    },
    "meaty_stock": {
      "ID": "meaty_stock",

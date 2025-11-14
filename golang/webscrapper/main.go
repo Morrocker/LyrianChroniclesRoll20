@@ -23,21 +23,24 @@ type ClassInfo struct {
 
 type KeyAbility struct {
 	ID       string
+	ClassID  []string
 	Name     string
 	Benefits []string
 }
 
 type TrueAbility struct {
-	ID          string
-	Name        string
-	Keywords    string
-	Range       string
-	Requirement string
-	Description string
-	RPcost      string
-	APcost      string
-	MPcost      string
-	Othercost   string
+	ID            string
+	ClassID       []string
+	LevelRequired int
+	Name          string
+	Keywords      string
+	Range         string
+	Requirement   string
+	Description   string
+	RPcost        string
+	APcost        string
+	MPcost        string
+	Othercost     string
 }
 
 type CraftingAbility struct {
@@ -161,6 +164,7 @@ func getBreakthroughs() {
 }
 
 func getClassesAndAbilities() {
+	levelAbilities := []int{1, 2, 4, 6, 8}
 	fmt.Println("Getting Classes and Abilities...")
 	ctx, cancel := chromedp.NewContext(context.Background())
 	defer cancel()
@@ -248,11 +252,22 @@ func getClassesAndAbilities() {
 						benefits = append(benefits, li.Text())
 					})
 				})
-				keyAbilities[abilityID] = KeyAbility{
-					ID:       abilityID,
-					Name:     abilityName,
-					Benefits: benefits,
+				if val, ok := keyAbilities[abilityID]; !ok {
+					keyAbilities[abilityID] = KeyAbility{
+						ID:       abilityID,
+						ClassID:  []string{classID},
+						Name:     abilityName,
+						Benefits: benefits,
+					}
+				} else {
+					keyAbilities[abilityID] = KeyAbility{
+						ID:       abilityID,
+						ClassID:  append(val.ClassID, classID),
+						Name:     abilityName,
+						Benefits: benefits,
+					}
 				}
+
 				// fmt.Printf("Ability %d: %s [%s] with %d benefits\n", i+1, abilityName, abilityID, len(benefits))
 				doc.Find("app-true-ability mat-card-title").Each(func(j int, s *goquery.Selection) {
 					associatedAbilityName := s.Text()
@@ -335,6 +350,8 @@ func getClassesAndAbilities() {
 
 							var trueAbility TrueAbility
 							trueAbility.ID = abilityID
+							trueAbility.LevelRequired = levelAbilities[i]
+							trueAbility.ClassID = []string{classID}
 							trueAbility.Name = abilityName
 
 							// fmt.Printf("  Processing True Ability: %s [%s]\n", abilityName, abilityID)
@@ -381,6 +398,12 @@ func getClassesAndAbilities() {
 								}
 							})
 
+							if val, ok := trueAbilities[abilityID]; ok {
+								trueAbility.ClassID = append(val.ClassID, classID)
+							} else {
+								trueAbility.ClassID = []string{classID}
+							}
+
 							trueAbilities[abilityID] = trueAbility
 						}
 					}
@@ -388,6 +411,8 @@ func getClassesAndAbilities() {
 			} else {
 				var trueAbility TrueAbility
 				trueAbility.ID = abilityID
+				trueAbility.ClassID = []string{classID}
+				trueAbility.LevelRequired = levelAbilities[i]
 				trueAbility.Name = abilityName
 
 				// fmt.Printf("  Processing True Ability: %s [%s]\n", abilityName, abilityID)
@@ -433,6 +458,12 @@ func getClassesAndAbilities() {
 						fmt.Printf("    Unrecognized line: %s\n", text)
 					}
 				})
+
+				if val, ok := trueAbilities[abilityID]; ok {
+					trueAbility.ClassID = append(val.ClassID, classID)
+				} else {
+					trueAbility.ClassID = []string{classID}
+				}
 
 				trueAbilities[abilityID] = trueAbility
 

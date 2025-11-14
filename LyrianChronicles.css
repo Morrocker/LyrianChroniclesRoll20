@@ -1820,7 +1820,10 @@
 /* ABILITIES REVAMPED STYLES START */
 
 .charsheet .table-container.abilities {
-  min-height: 635px;
+  min-height: 450px;
+}
+.charsheet .table-container.abilities.keyab {
+  min-height: 150px;
 }
 .charsheet .table-container .headers-container .header2.name3 {
   flex: 9;

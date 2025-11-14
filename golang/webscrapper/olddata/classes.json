@@ -194,6 +194,11 @@
      "ID": "curse-knight",
      "Tier": 2
    },
+   "cutthroat": {
+     "Name": "Cutthroat",
+     "ID": "cutthroat",
+     "Tier": 2
+   },
    "dark-priest": {
      "Name": "Dark Priest",
      "ID": "dark-priest",
@@ -358,6 +363,11 @@
      "Name": "Iai Style",
      "ID": "iai-style",
      "Tier": 2
+   },
+   "jonin": {
+     "Name": "Jonin",
+     "ID": "jonin",
+     "Tier": 3
    },
    "lancer": {
      "Name": "Lancer",
@@ -598,6 +608,11 @@
      "Name": "Tavern Brawler",
      "ID": "tavern-brawler",
      "Tier": 2
+   },
+   "temporal-trickster": {
+     "Name": "Temporal Trickster",
+     "ID": "temporal-trickster",
+     "Tier": 3
    },
    "thief": {
      "Name": "Thief",

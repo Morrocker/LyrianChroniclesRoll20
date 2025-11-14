@@ -53,21 +53,24 @@ type ClassInfo struct {
 
 type KeyAbility struct {
 	ID       string
+	ClassID  []string
 	Name     string
 	Benefits []string
 }
 
 type TrueAbility struct {
-	ID          string
-	Name        string
-	Keywords    string
-	Range       string
-	Requirement string
-	Description string
-	RPcost      string
-	APcost      string
-	MPcost      string
-	Othercost   string
+	ID            string
+	ClassID       []string
+	LevelRequired int
+	Name          string
+	Keywords      string
+	Range         string
+	Requirement   string
+	Description   string
+	RPcost        string
+	APcost        string
+	MPcost        string
+	Othercost     string
 }
 
 type CraftingAbility struct {
@@ -348,19 +351,22 @@ func main() {
 	// ============================= ABILITIES START =============================
 
 	type Ability struct {
-		ID           string
-		Name         string
-		Type         string
-		Keywords     string
-		Range        string
-		Description  string
-		Requirements string
-		Costs        string
-		OtherCosts   string
-		Benefits     string
-		AtkTypes     string
+		ID            string
+		ClassID       []string
+		LevelRequired int
+		Name          string
+		Type          string
+		Keywords      string
+		Range         string
+		Description   string
+		Requirements  string
+		Costs         string
+		OtherCosts    string
+		Benefits      string
+		AtkTypes      string
 	}
 
+	var keyAbilitiesArray []Ability
 	var regularAbilitiesArray []Ability
 	var craftingAbilitiesArray []Ability
 
@@ -398,14 +404,16 @@ func main() {
 		}
 
 		ability := Ability{
-			ID:           ab.ID,
-			Name:         ab.Name,
-			Type:         "true_ability",
-			Keywords:     ab.Keywords,
-			Range:        ab.Range,
-			Description:  strings.TrimSpace(strings.ReplaceAll(ab.Description, `"`, "'")),
-			Requirements: strings.ReplaceAll(ab.Requirement, `"`, "'"),
-			Costs:        strings.ReplaceAll(costs, `"`, "'"),
+			ID:            ab.ID,
+			ClassID:       ab.ClassID,
+			LevelRequired: ab.LevelRequired,
+			Name:          ab.Name,
+			Type:          "true_ability",
+			Keywords:      ab.Keywords,
+			Range:         ab.Range,
+			Description:   strings.TrimSpace(strings.ReplaceAll(ab.Description, `"`, "'")),
+			Requirements:  strings.ReplaceAll(ab.Requirement, `"`, "'"),
+			Costs:         strings.ReplaceAll(costs, `"`, "'"),
 		}
 		regularAbilitiesArray = append(regularAbilitiesArray, ability)
 	}
@@ -429,6 +437,7 @@ func main() {
 
 		ability := Ability{
 			ID:           ab.ID,
+			ClassID:      []string{},
 			Name:         ab.Name,
 			Type:         "true_ability",
 			Keywords:     ab.Keywords,
@@ -437,6 +446,18 @@ func main() {
 			Requirements: strings.ReplaceAll(ab.Requirement, `"`, "'"),
 			Costs:        strings.ReplaceAll(costs, `"`, "'"),
 		}
+
+		found := false
+		for _, a := range regularAbilitiesArray {
+			if a.ID == ability.ID {
+				found = true
+				break
+			}
+		}
+		if found {
+			continue
+		}
+
 		regularAbilitiesArray = append(regularAbilitiesArray, ability)
 	}
 
@@ -446,16 +467,28 @@ func main() {
 
 		ability := Ability{
 			ID:       ab.ID,
+			ClassID:  ab.ClassID,
 			Name:     ab.Name,
 			Type:     "key_ability",
 			Benefits: strings.TrimSpace(strings.ReplaceAll(benefits2, `"`, "'")),
 		}
-		regularAbilitiesArray = append(regularAbilitiesArray, ability)
+		keyAbilitiesArray = append(keyAbilitiesArray, ability)
 	}
 
 	sort.Slice(regularAbilitiesArray, func(i, j int) bool {
 		return regularAbilitiesArray[i].ID < regularAbilitiesArray[j].ID
 	})
+	sort.Slice(keyAbilitiesArray, func(i, j int) bool {
+		return keyAbilitiesArray[i].ID < keyAbilitiesArray[j].ID
+	})
+
+	fmt.Fprintln(htmlFile, "<!-- All Key Abilities Picker List START -->")
+
+	fmt.Fprintln(htmlFile, "<!-- All Key abilities Picker List END -->")
+
+	for _, ability := range keyAbilitiesArray {
+		fmt.Fprintf(htmlFile, `<option value="%s">%s</option>`, ability.ID, ability.Name)
+	}
 
 	fmt.Fprintln(htmlFile, "<!-- All Abilities Picker List START -->")
 
@@ -484,12 +517,14 @@ func main() {
 
 	fmt.Fprintln(htmlFile, "<!-- SCRIPTS TO REPLACE START -->")
 
+	fmt.Fprintln(htmlFile, "<script>\n")
+
 	// Classes array
 	var arraystring string
 	arraystring = "{"
 	for i, class := range classes {
 		if i > 0 {
-			arraystring += ","
+			arraystring += ",\n"
 		}
 		arraystring += fmt.Sprintf(`"%s": {name: "%s",tier:%d}`, class.ID, class.Name, class.Tier)
 	}
@@ -503,15 +538,40 @@ func main() {
 	arraystring2 = "{"
 	for i, breakthrough := range breakthroughs {
 		if i > 0 {
-			arraystring2 += ","
+			arraystring2 += ",\n"
 		}
 		description := strings.Replace(breakthrough.Description, "\n", " ", -1)
 		arraystring2 += fmt.Sprintf(`"%s": {name: "%s",cost:%s,requirements:"%s",description:"%s"}`, breakthrough.ID, breakthrough.Name, breakthrough.Cost, breakthrough.Requirements, description)
-		arraystring2 += "\n"
+		// if i > 0 {
+		// 	arraystring2 += "\n"
+		// }
 	}
 	arraystring2 += "}"
 
 	fmt.Fprintf(htmlFile, `const breakthroughList =%s;`, arraystring2)
+	fmt.Fprintln(htmlFile, "\n")
+
+	// Key Abilities array
+	var arraystring6 string
+	arraystring6 = "{"
+	for i, ability := range keyAbilitiesArray {
+		if i > 0 {
+			arraystring6 += ",\n"
+		}
+		description := strings.Replace(ability.Description, "\n", " ", -1)
+		classesArray := "["
+		for j, classID := range ability.ClassID {
+			if j > 0 {
+				classesArray += ","
+			}
+			classesArray += `"` + classID + `"`
+		}
+		classesArray += "]"
+		arraystring6 += fmt.Sprintf(`"%s": {name: "%s", class:%v,description:"%s",benefits:"%s"}`, ability.ID, ability.Name, classesArray, description, ability.Benefits)
+	}
+	arraystring6 += "}"
+
+	fmt.Fprintf(htmlFile, `const keyAbilityList =%s;`, arraystring6)
 	fmt.Fprintln(htmlFile, "\n")
 
 	// Abilities array
@@ -519,11 +579,18 @@ func main() {
 	arraystring3 = "{"
 	for i, ability := range regularAbilitiesArray {
 		if i > 0 {
-			arraystring3 += ","
+			arraystring3 += ",\n"
 		}
 		description := strings.Replace(ability.Description, "\n", " ", -1)
-		arraystring3 += fmt.Sprintf(`"%s": {name: "%s",type:"%s",keywords:"%s",range:"%s",description:"%s",requirements:"%s",costs:"%s",benefits:"%s"}`, ability.ID, ability.Name, ability.Type, ability.Keywords, ability.Range, description, ability.Requirements, ability.Costs, ability.Benefits)
-		arraystring3 += "\n"
+		classesArray := "["
+		for j, classID := range ability.ClassID {
+			if j > 0 {
+				classesArray += ","
+			}
+			classesArray += `"` + classID + `"`
+		}
+		classesArray += "]"
+		arraystring3 += fmt.Sprintf(`"%s": {name: "%s", class:%v, level:"%d",type:"%s",keywords:"%s",range:"%s",description:"%s",requirements:"%s",costs:"%s",benefits:"%s"}`, ability.ID, ability.Name, classesArray, ability.LevelRequired, ability.Type, ability.Keywords, ability.Range, description, ability.Requirements, ability.Costs, ability.Benefits)
 	}
 	arraystring3 += "}"
 
@@ -545,7 +612,7 @@ func main() {
 	i := 0
 	for id, macro := range abilityMMap {
 		if i > 0 {
-			arraystring5 += ","
+			arraystring5 += ",\n"
 		}
 		arraystring5 += fmt.Sprintf(`"%s": "%s"`, id, strings.ReplaceAll(macro, `"`, `\"`))
 		i++
@@ -560,11 +627,10 @@ func main() {
 	arraystring4 = "{"
 	for i, ability := range craftingAbilitiesArray {
 		if i > 0 {
-			arraystring4 += ","
+			arraystring4 += ",\n"
 		}
 		description := strings.Replace(ability.Description, "\n", " ", -1)
 		arraystring4 += fmt.Sprintf(`"%s": {name: "%s",type:"%s",description:"%s",requirements:"%s",costs:"%s",othercosts:"%s"}`, ability.ID, ability.Name, ability.Type, description, ability.Requirements, ability.Costs, ability.OtherCosts)
-		arraystring4 += "\n"
 	}
 	arraystring4 += "}"
 
@@ -573,5 +639,6 @@ func main() {
 
 	// End of scripts to replace
 
+	fmt.Fprintln(htmlFile, "</script>\n")
 	fmt.Fprintln(htmlFile, `<!-- SCRIPTS TO REPLACE END -->`)
 }

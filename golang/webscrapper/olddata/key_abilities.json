@@ -173,7 +173,8 @@
      "Benefits": [
        "You gain Blacksmith Core Crafting Abilities.",
        "You can craft using the Iron and Tamahagane base materials, as well as any alloys.",
-       "You can use a Smith’s Hammer as a crafting tool for blacksmithing crafts. You may also use it as a Bludgeoning weapon in which you are proficient."
+       "You can use a Smith’s Hammer as a crafting tool for blacksmithing crafts. You may also use it as a Bludgeoning weapon in which you are proficient.",
+       "You gain proficiency in 1 smithing weapon. "
      ]
    },
    "crimson_enmity": {
@@ -395,7 +396,7 @@
      "ID": "giant_strength",
      "Name": "Giant Strength",
      "Benefits": [
-       "While in Rage Stance, your size is treated as one size bigger than it actually is and you get an additional +5 bonus to Fitness checks."
+       "While in Rage Stance, you may choose to have your size be treated as one size bigger than it actually is. You get an additional +5 bonus to Fitness checks during Rage stance regardless."
      ]
    },
    "greatshield_master": {
@@ -530,7 +531,7 @@
      "ID": "lightning_weapon",
      "Name": "Lightning Weapon",
      "Benefits": [
-       "When attacking with a weapon, you may choose to have the weapon deal Wind(Lightning) Damage instead of its normal damage type. You must declare you chosen damage type before making the accuracy roll."
+       "When attacking with a weapon, you may choose to have the weapon deal Lightning Damage instead of its normal damage type. You must declare you chosen damage type before making the accuracy roll."
      ]
    },
    "lords_dominion": {
@@ -605,6 +606,13 @@
        "When flying and not benefiting from cover, you gain +2 Evasion and Dodge."
      ]
    },
+   "mending": {
+     "ID": "mending",
+     "Name": "Mending",
+     "Benefits": [
+       "You may spend an EP to restore a Broken item. Some items (such as consumables) cannot be repaired (GM’s discretion)."
+     ]
+   },
    "mission_control": {
      "ID": "mission_control",
      "Name": "Mission Control",
@@ -636,6 +644,14 @@
      "Benefits": [
        "You gain proficiency in both Small Weapons and Sets of Missiles.",
        "You may use Ninja Run."
+     ]
+   },
+   "ninja_techniques": {
+     "ID": "ninja_techniques",
+     "Name": "Ninja Techniques",
+     "Benefits": [
+       "Your Ninja Run now lasts for the entire turn.",
+       "You may use Genjutsu Kai"
      ]
    },
    "on_my_terms": {
@@ -895,7 +911,7 @@
      "ID": "superconductor",
      "Name": "Superconductor",
      "Benefits": [
-       "Your Electromancer and Electromaster abilities that deal Wind(Lightning) Damage gain Lock On and Half Pierce when used against a target in natural water, with water typing or with the Soaked debuff.",
+       "Your Electromancer and Electromaster abilities that deal Lightning Damage gain Lock On and Half Pierce when used against a target in natural water, with water typing or with the Soaked debuff.",
        "You gain Elemental Mastery: Lightning."
      ]
    },
@@ -904,6 +920,13 @@
      "Name": "Superior Assessment",
      "Benefits": [
        "You may use Status Assessment III."
+     ]
+   },
+   "surgical_precision": {
+     "ID": "surgical_precision",
+     "Name": "Surgical Precision",
+     "Benefits": [
+       "When you deal damage with a one-handed melee weapon that is both Sure Hit and Full Pierce or a critical hit, you inflict Bleeding on the target for 1 turn. This effect stacks with other Bleeds effects and itself up to 3 times."
      ]
    },
    "terrifying_charge": {
