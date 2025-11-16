@@ -799,6 +799,56 @@
           <div class="flex-column core-right-column">
             <!-- FRONT ATTACKS START -->
             <div class="section-container basic-attacks">
+              <div class="table-container misc-bonuses full-width">
+                        <div class="picker">
+                          <label>Focus Bonus:</label>
+                          <select name="attr_attack_extra_focus_bonus" title="@{attack_extra_focus_bonus}" value="0">
+<option value="-5">-5</option>
+<option value="-4">-4</option>
+<option value="-3">-3</option>
+<option value="-2">-2</option>
+<option value="-1">-1</option>
+<option value="0" selected>0</option>
+<option value="1">+1</option>
+<option value="2">+2</option>
+<option value="3">+3</option>
+<option value="4">+4</option>
+<option value="5">+5</option>
+                          </select>
+                        </div>
+                        <div class="picker">
+                          <label>Power Bonus:</label>
+                          <select name="attr_attack_extra_power_bonus" title="@{attack_extra_power_bonus}" value="0">
+<option value="-5">-5</option>
+<option value="-4">-4</option>
+<option value="-3">-3</option>
+<option value="-2">-2</option>
+<option value="-1">-1</option>
+<option value="0" selected>0</option>
+<option value="1">+1</option>
+<option value="2">+2</option>
+<option value="3">+3</option>
+<option value="4">+4</option>
+<option value="5">+5</option>
+                          </select>
+                        </div>
+                        <div class="picker">
+                          <label>Crit Range:</label>
+                          <select name="attr_attack_extra_crit" title="@{attack_extra_crit}">
+<option value="20" selected>20</option>
+<option value="19">19-20</option>
+<option value="18">18-20</option>
+<option value="17">17-20</option>
+<option value="16">16-20</option>
+<option value="15">15-20</option>
+<option value="14">14-20</option>
+<option value="13">13-20</option>
+<option value="12">12-20</option>
+<option value="11">11-20</option>
+<option value="10">10-20</option>
+                          </select>
+                        </div>
+              </div>
               <div class="attribute-container basic-attack mwp">
                 <div class="label basic-attack">
                   <button type="action" name="act_main_weapon_attack" data-roll-label="Basic Light Attack" tabindex="-1">Main Weapon Attack</button>
@@ -1473,6 +1523,26 @@
                           <label>Power Bonus</label>
                           <input type="number" name="attr_weapon_power" title="@{weapon_power}" />
                         </div>
+                        <div class="picker critrange">
+                          <label>Crit Range:</label>
+                          <select name="attr_weapon_crit" title="@{weapon_crit}" value="20">
+<option value="20">20</option>
+<option value="19">19-20</option>
+<option value="18">18-20</option>
+<option value="17">17-20</option>
+<option value="16">16-20</option>
+<option value="15">15-20</option>
+<option value="14">14-20</option>
+<option value="13">13-20</option>
+<option value="12">12-20</option>
+<option value="11">11-20</option>
+<option value="10">10-20</option>
+                          </select>
+                        </div>
+                        <!-- <div class="critrange">
+                          <label>Crit Range+</label>
+                          <input type="number" name="attr_weapon_crit" title="@{weapon_crit}" />
+                        </div> -->
                         <div class="picker wpn-type">
                           <label>Weapon Type:</label>
                           <select name="attr_weapon_type" title="@{weapon_type}" value="stored">
@@ -1519,9 +1589,17 @@
                             <option value="whip">Whip</option>
                           </select>
                         </div>
+                        <div class="dmgtype">
+                          <label>Damage Type</label>
+                          <input type="text" name="attr_weapon_dmgtype" title="@{weapon_dmgtype}" />
+                        </div>
                         <div class="description">
                           <label>Description</label>
                           <textarea name="attr_weapon_description" class="block-textarea"></textarea>
+                        </div>
+                        <div class="customroll">
+                          <label>Custom Weapon Roll (Replaces Normal Roll)</label>
+                          <textarea name="attr_weapon_customroll" class="block-textarea"></textarea>
                         </div>
                         <div class="form-close">
                           <input type="checkbox" name="attr_weapon_form_hide" />
@@ -1562,8 +1640,16 @@
                             <div class="details-value"><span name="attr_weapon_type"></span></div>
                           </div>
                           <div class="details-row">
+                            <div class="details-label">Damage Type:</div>
+                            <div class="details-value"><span name="attr_weapon_dmgtype"></span></div>
+                          </div>
+                          <div class="details-row">
                             <div class="details-label2 flex-2">Burden:</div>
                             <div class="details-value2"><span name="attr_weapon_burden"></span></div>
+                            <div class="details-label2 flex-2">Crit Range+:</div>
+                            <div class="details-value2"><span name="attr_weapon_crit"></span></div>
+                          </div>
+                          <div class="details-row">
                             <div class="details-label2 flex-2">Focus Bonus:</div>
                             <div class="details-value2"><span name="attr_weapon_focus"></span></div>
                             <div class="details-label2 flex-2">Power Bonus:</div>
@@ -3255,6 +3341,8 @@
     <input type="text" name="attr_main_weapon_type" hidden />
     <input type="text" name="attr_main_weapon_focus" hidden />
     <input type="text" name="attr_main_weapon_power" hidden />
+    <input type="text" name="attr_main_weapon_crit" hidden />
+    <input type="text" name="attr_main_weapon_dmgtype" hidden />
 
     <input type="number" name="attr_hp_max" hidden />
     <!-- UNIVERSAL VARIABLES END-->
@@ -5913,7 +6001,8 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
           const armors_initiative = parseInt(values.armors_initiative, 10) || 0;
           const bonus = parseInt(values[rawbonus], 10) || 0;
           const name = values.name || "Unnamed";
-          const roll = `&{template:default} {{name=${name} ❖ ${label}}} {{Roll=[[1d4+@{initiative_base}+@{initiative_mod}+@{armors_initiative}&{tracker}]]}}`;
+          const roll = `&{template:default} {{name=${name} ❖ ${label}}} {{Roll=[[1d4 + ${stat} + ${armors_initiative} + ?{Extra Initiative Bonus|0}]]}}`;
+          
           startRoll(roll, function (results) {
             finishRoll(results.rollId);
           });
@@ -5954,18 +6043,26 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
           "main_weapon_type",
           "main_weapon_focus",
           "main_weapon_power",
+          "main_weapon_crit",
+          "main_weapon_dmgtype",
+          "main_weapon_customroll",
           "power_base",
           "power_race",
           "power_misc",
           "focus_base",
           "focus_race",
           "focus_misc",
+          "attack_extra_crit"
         ];
         getAttrs(fields, function (values) {
           let wpn_Name = values.main_weapon_name || "Unnamed";
           let wpn_Type = values.main_weapon_type || "Melee";
           let wpn_focus = parseInt(values.main_weapon_focus, 10) || 0;
           let wpn_power = parseInt(values.main_weapon_power, 10) || 0;
+          let wpn_crit = parseInt(values.main_weapon_crit, 10) || 0;
+          let wpn_extra_crit = parseInt(values.attack_extra_crit, 10) || 0;
+          let weapon_dmgtype= values.main_weapon_dmgtype || "Undefined";
+          let weapon_customroll= values.main_weapon_customroll || "";
           let power_base = parseInt(values.power_base, 10) || 0;
           let focus_base = parseInt(values.focus_base, 10) || 0;
           let power_race = parseInt(values.power_race, 10) || 0;
@@ -6142,12 +6239,20 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
               realMaxHeavyDmg = maxHeavyAtkDmg;
           }
 
-          let regularAtk = `[[${d20Roll}+${focus_base}+${focus_race}+${focus_misc}+${wpn_focus}]]`;
-          let preciseAtk = `[[${d20Roll}+(2*(${focus_base}+${focus_race}+${focus_misc}+${wpn_focus}))]]`;
-          let regularDmg = `[[${lightAtkDmg}+${power_base}+${power_race}+${power_misc}+${wpn_power}]]
-                      Max Dmg: [[${maxLightAtkDmg}+${power_base}+${power_race}+${power_misc}+${wpn_power}]]`;
-          let heavyDmg = `[[${realHeavyDmg}+(2*(${power_base}+${power_race}+${power_misc}+${wpn_power}))]]
-                      Max Dmg: [[${realMaxHeavyDmg}+(2*(${power_base}+${power_race}+${power_misc}+${wpn_power}))]]`;
+          console.log("weapon crit:", wpn_crit);
+          if (wpn_extra_crit !== 0 && wpn_extra_crit < 20) {
+            d20Roll = `1d20cs>${wpn_extra_crit}`;
+          } else if (wpn_crit !== 0 && wpn_crit < 20) {
+            d20Roll = `1d20cs>${wpn_crit}`;
+          }
+
+          let regularAtk = `[[${d20Roll}+${focus_base}+${focus_race}+${focus_misc}+${wpn_focus}+@{attack_extra_focus_bonus}]]`;
+          let preciseAtk = `[[${d20Roll}+(2*(${focus_base}+${focus_race}+${focus_misc}+${wpn_focus}+@{attack_extra_focus_bonus}))]]`;
+          let regularDmg = `[[${lightAtkDmg}+${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}]]
+                      Max Dmg: [[${maxLightAtkDmg}+${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}]]`;
+          let heavyDmg = `[[${realHeavyDmg}+(2*(${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}))]]
+                      Max Dmg: [[${realMaxHeavyDmg}+(2*(${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}))]]`;
+
 
           roll = `&{template:default} {{name=@{name} ❖ Main Weapon Attack: ${wpn_Name}}} {{?{Light, Heavy, or Precise?
                         |Light,Light Attack=Atk:${regularAtk}
@@ -6157,6 +6262,18 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                         |Precise,Precise Attack=Atk: ${preciseAtk}
                         Damage: ${regularDmg} ${critLightExtraDmg}
                         }}}`;
+
+          if (wpn_extra_crit !== 0 && wpn_extra_crit < 20) {
+            roll += ` {{Critical on: ${wpn_extra_crit}+}}`;
+          } else if (wpn_crit !== 0 && wpn_crit < 20) {
+            roll += ` {{Critical on: ${wpn_crit}+}}`;
+          }
+          if (weapon_dmgtype && weapon_dmgtype !== "Undefined") {
+            roll += ` {{Damage Type: ${weapon_dmgtype}}}`;
+          }
+          if (weapon_customroll && weapon_customroll !== "") {
+            roll = weapon_customroll;
+          }
           if (hidden) {
             roll = `/w gm ${roll}`;
           }
@@ -6172,28 +6289,33 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
       });
 
       function universalAttackRoll(eventInfo, hidden) {
-        getAttrs(["is_npc"], function(values) {
+        getAttrs(["is_npc","attack_extra_crit"], function(values) {
           // PC values
-          let power = `@{power_base}+@{power_race}+@{power_misc}`;
-          let focus = `@{focus_base}+@{focus_race}+@{focus_misc}`;
+          let power = `@{power_base}+@{power_race}+@{power_misc}+@{attack_extra_power_bonus}`;
+          let focus = `@{focus_base}+@{focus_race}+@{focus_misc}+@{attack_extra_focus_bonus}`;
 
           // NPC values
           if (values.is_npc === "1") {
             power = `@{total_damage}`;
             focus = `@{total_accuracy}`;
           }
+          let wpn_extra_crit = parseInt(values.attack_extra_crit, 10) || 0;
+          let d20Roll = "1d20";
+          if (wpn_extra_crit !== 0 && wpn_extra_crit < 20) {
+            d20Roll = `1d20cs>${values.attack_extra_crit}`;
+          }
 
           let roll = `&{template:default} {{name=@{name} ❖ Offensive Options}} {{?{Light, Heavy, HEAVY, or Precise?
-          |Light, Light Attack= Atk:[[1d20+${focus}]]
+          |Light, Light Attack= Atk:[[${d20Roll}+${focus}]]
           Damage: [[2d4+${power}]]
           Max Dmg: [[2*4+${power}]]
-          |Heavy, Heavy Attack= Atk:[[1d20+${focus}]]
+          |Heavy, Heavy Attack= Atk:[[${d20Roll}+${focus}]]
           Damage: [[4d6+(2*(${power}))]]
           Max Dmg: [[4*6+(2*(${power}))]]
-          |HEAVY, HEAVY-Melee Attack= Atk[[1d20+@{focus_base}+@{focus_race}]]
+          |HEAVY, HEAVY-Melee Attack= Atk[[${d20Roll}+@{focus_base}+@{focus_race}]]
           Damage: [[5d6+(2*(${power}))]]
           Max Dmg: [[5*6+(2*(${power}))]]
-          |Precise, Precise Attack= Atk[[1d20+(2*(${focus}))]]
+          |Precise, Precise Attack= Atk[[${d20Roll}+(2*(${focus}))]]
           Damage: [[2d4+(${power})]]
           Max Dmg: [[2*4+(${power})]]
           }}}`;
@@ -6591,9 +6713,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                         fields.push(`repeating_abilities_${abid}_ability_reequirements`)
                         fields.push(`repeating_abilities_${abid}_ability_costs`)
                       })
-                      console.log("ability fields:",fields)
                       getAttrs(fields, function (abilities_values) {
-                        console.log("abilities values:",abilities_values)
                         getSectionIDs("repeating_keyabilities", function(keyabids){
                           let fields2 = []
                           keyabids.forEach((keyabid) => {
@@ -6603,7 +6723,6 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                           fields2.push(`repeating_keyabilities_${keyabid}_ability_description`)
                           })
                           getAttrs(fields2, function(keyabilities_values){
-                            console.log("key abilities values:",keyabilities_values) 
                             // now we need to build abilityList and keyAbilityList from these values
                             let existingAbilityList = {}
                             abids.forEach((abid) => {
@@ -6627,11 +6746,6 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                               newAbility.description = keyabilities_values[`repeating_keyabilities_${keyabid}_ability_description`]
                               existingKeyAbilityList[newAbility.select] = newAbility
                             })  
-
-                            console.log(`Class Name: ${classID}, Class Level: ${classLevel}`);
-
-                            console.log("abilityList:",existingAbilityList)
-                            console.log("keyAbilityList:",existingKeyAbilityList)
 
                             // now we have all abilities and key abilities, we can check them against the class and level
                             let classAbilities = {}
@@ -7119,7 +7233,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
 
       // Recalculate all weapon related values when weapon parameters are changed
       on(
-        "change:repeating_weapons:weapon_burden change:repeating_weapons:weapon_focus change:repeating_weapons:weapon_power change:repeating_weapons:weapon_type remove:repeating_weapons",
+        "change:repeating_weapons:weapon_burden change:repeating_weapons:weapon_focus change:repeating_weapons:weapon_power change:repeating_weapons:weapon_type change:repeating_weapons:weapon_crit change:repeating_weapons:weapon_dmgtype change:repeating_weapons:weapon_customroll remove:repeating_weapons",
         function (eventInfo) {
           getSectionIDs("repeating_weapons", function (ids) {
             const fields = [].concat(
@@ -7130,6 +7244,9 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                 `repeating_weapons_${id}_weapon_power`,
                 `repeating_weapons_${id}_weapon_type`,
                 `repeating_weapons_${id}_weapon_name`,
+                `repeating_weapons_${id}_weapon_dmgtype`,
+                `repeating_weapons_${id}_weapon_crit`,
+                `repeating_weapons_${id}_weapon_customroll`,
               ])
             );
             ifPC(fields, function (values) {
@@ -7146,6 +7263,9 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                     main_weapon_type: values[`repeating_weapons_${id}_weapon_type`],
                     main_weapon_focus: values[`repeating_weapons_${id}_weapon_focus`],
                     main_weapon_power: values[`repeating_weapons_${id}_weapon_power`],
+                    main_weapon_dmgtype: values[`repeating_weapons_${id}_weapon_dmgtype`],
+                    main_weapon_crit: values[`repeating_weapons_${id}_weapon_crit`],
+                    main_weapon_customroll: values[`repeating_weapons_${id}_weapon_customroll`],
                   });
                 }
                 return;
@@ -7171,6 +7291,9 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
               `repeating_weapons_${id}_weapon_type`,
               `repeating_weapons_${id}_weapon_focus`,
               `repeating_weapons_${id}_weapon_power`,
+              `repeating_weapons_${id}_weapon_crit`,
+              `repeating_weapons_${id}_weapon_dmgtype`,
+              `repeating_weapons_${id}_weapon_customroll`,
             ])
           );
           ifPC(fields, function (values) {
@@ -7189,6 +7312,9 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                 main_weapon_type: values[`repeating_weapons_${tID}_weapon_type`],
                 main_weapon_focus: values[`repeating_weapons_${tID}_weapon_focus`],
                 main_weapon_power: values[`repeating_weapons_${tID}_weapon_power`],
+                main_weapon_crit: values[`repeating_weapons_${tID}_weapon_crit`],
+                main_weapon_dmgtype: values[`repeating_weapons_${tID}_weapon_dmgtype`],
+                main_weapon_power: values[`repeating_weapons_${tID}_weapon_customroll`],
               };
 
               setAttrs(update);
@@ -7217,6 +7343,9 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
               setAttrs({ [`main_weapon_type`]: "" });
               setAttrs({ [`main_weapon_focus`]: "" });
               setAttrs({ [`main_weapon_power`]: "" });
+              setAttrs({ [`main_weapon_crit`]: "" });
+              setAttrs({ [`main_weapon_dmgtype`]: "" });
+              setAttrs({ [`main_weapon_customroll`]: "" });
             }
 
             setAttrs({ weapons_burden: totalBurden });
