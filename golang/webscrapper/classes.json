@@ -199,6 +199,11 @@
      "ID": "cutthroat",
      "Tier": 2
    },
+   "daionmyoji": {
+     "Name": "Daionmyoji",
+     "ID": "daionmyoji",
+     "Tier": 3
+   },
    "dark-priest": {
      "Name": "Dark Priest",
      "ID": "dark-priest",
@@ -283,6 +288,11 @@
      "Name": "Fighter",
      "ID": "fighter",
      "Tier": 1
+   },
+   "five-harmonies-style": {
+     "Name": "Five Harmonies Style",
+     "ID": "five-harmonies-style",
+     "Tier": 2
    },
    "flame-sentinel": {
      "Name": "Flame Sentinel",

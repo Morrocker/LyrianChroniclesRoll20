@@ -408,7 +408,8 @@
      ],
      "Name": "Expert Alchemist",
      "Benefits": [
-       "You gain Alchemeister Core Crafting Abilities."
+       "You gain Alchemeister Core Crafting Abilities.",
+       "When using Throw Potion, you may infuse it using your own mana. You spend X mana and the mana cost the target needs to pay to benefit from the potion is reduced by X (the mana cost cannot go below 0)."
      ]
    },
    "expert_farmer": {
@@ -495,6 +496,16 @@
      "Name": "Fire Stance",
      "Benefits": [
        "You may use Tempestuous Fire Stance"
+     ]
+   },
+   "five_harmonies_": {
+     "ID": "five_harmonies_",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "Name": "Five Harmonies ",
+     "Benefits": [
+       "You may use Luminous Form Stance."
      ]
    },
    "focused_weapons": {
@@ -617,7 +628,7 @@
      "Benefits": [
        "Enemies don't gain Trick Attack against you when you're surprised.",
        "You may sheathe and draw katanas for 0 AP once per turn per katana.",
-       "You start each battle in the 'Iai' state, which is used for Iai abilities. Making an attack with a katana removes the Iai state for that weapon. Using a skill that requires the Iai state will remove the Iai state for ALL your weapons, unless specified otherwise."
+       "You start each battle in the 'Iai' state, which is used for Iai abilities. Making an attack with a katana removes the Iai state for that weapon. Using a skill that requires the Iai state requires the weapon to be sheathed and will remove the Iai state for ALL your weapons, unless specified otherwise."
      ]
    },
    "ice_cold": {
@@ -1188,8 +1199,18 @@
      ],
      "Name": "Spell Challenge",
      "Benefits": [
-       "Targeting or damaging an enemy with a spell inflicts Challenge on them until the end of your next turn.",
+       "When targeting or damaging an enemy with a spell, you may choose to inflict Challenge on them until the end of your next turn.",
        "When an enemy that is Challenged by you provokes an attack of opportunity from you, you may instead use Abjurer's Blast against them. The heavy and precise version of this cost 1 RP, while the light version costs 0 RP."
+     ]
+   },
+   "spell_transfer": {
+     "ID": "spell_transfer",
+     "ClassID": [
+       "daionmyoji"
+     ],
+     "Name": "Spell Transfer",
+     "Benefits": [
+       "When you use the Create Talisman ability, an ally may spend their Errand action to use one of their spells to put on the talisman instead of your own. You only create 1 copy of this talisman per Errand action and cannot use Secret Art spells with it."
      ]
    },
    "spore_symbiote": {

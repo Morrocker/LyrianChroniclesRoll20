@@ -1249,6 +1249,22 @@
      "MPcost": "2 MP",
      "Othercost": ""
    },
+   "combat_chemistry": {
+     "ID": "combat_chemistry",
+     "ClassID": [
+       "alchemeister"
+     ],
+     "LevelRequired": 2,
+     "Name": "Combat Chemistry",
+     "Keywords": "",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "Can only be used once per encounter. Using your knowledge of alchemy, you jury-rig a special item that has the effect of an an elixir, poison, flask or potion with a cost of 300c or lower. You can only make the base version of the item with no mods. The item doesn't take up burden, but must be used before the start of your next turn or it is lost. This item can only be used by you.",
+     "RPcost": "0 RP",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "concealed_shot": {
      "ID": "concealed_shot",
      "ClassID": [
@@ -1967,6 +1983,22 @@
      "RPcost": "0 RP",
      "APcost": "",
      "MPcost": "2 MP",
+     "Othercost": ""
+   },
+   "dharani:_blooming_conciousness": {
+     "ID": "dharani:_blooming_conciousness",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "LevelRequired": 8,
+     "Name": "Dharani: Blooming Conciousness",
+     "Keywords": "Secret Art, Healing",
+     "Range": "20ft",
+     "Requirement": "Must be in Luminous Form Stance and have 5 stacks of Harmony.",
+     "Description": "You release all gathered harmony as petals of radiant light that spiral outward from your body.You consume all Harmony stacks and 1 mana per stack to heal all allies within range for (6 + Your focus) / 2 for each stack consumed.If you do not have enough mana for all stacks, this ability instead consumes stacks equal to the mana you can spend.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "",
      "Othercost": ""
    },
    "dimensional_armory_expansion": {
@@ -3035,7 +3067,7 @@
      "Keywords": "Fire, Spell",
      "Range": "60ft",
      "Requirement": "-",
-     "Description": "You hurl three Fireballs at three separate 15x15ft areas, making a Light Attack that deals Fire Damage against all units in each area. These three areas may not overlap.",
+     "Description": "You hurl three Fireballs at three separate 15x15ft areas, making a Light Attack that deals Fire Damage against all units in each area. Each unit can only be attacked once per use of this ability, even if hit by multiple fireballs.",
      "RPcost": "",
      "APcost": "3 AP",
      "MPcost": "",
@@ -4195,22 +4227,6 @@
      "MPcost": "",
      "Othercost": ""
    },
-   "infuse_potion": {
-     "ID": "infuse_potion",
-     "ClassID": [
-       "alchemeister"
-     ],
-     "LevelRequired": 2,
-     "Name": "Infuse Potion",
-     "Keywords": "Quick",
-     "Range": "Self",
-     "Requirement": "You are using Throw Potion.",
-     "Description": "You infuse the Potion with your own mana. The mana cost the target needs to pay to benefit from the potion is reduced by X (the mana cost cannot go below 0).",
-     "RPcost": "0 RP",
-     "APcost": "",
-     "MPcost": "X MP",
-     "Othercost": ""
-   },
    "inspired_finish": {
      "ID": "inspired_finish",
      "ClassID": [
@@ -4269,7 +4285,7 @@
      "Keywords": "Rage",
      "Range": "Self",
      "Requirement": "-",
-     "Description": "You gain 2 AP that you must immediately spend on movement. Any unused movement is lost after this action. You must end this movement in range to make a melee attack against an enemy.\n\nCan only be used on your turn.",
+     "Description": "You may move up to twice your movement speed. You must end this movement in range to make a melee attack against an enemy. Can only be used on your turn.",
      "RPcost": "1 RP",
      "APcost": "",
      "MPcost": "",
@@ -4739,6 +4755,22 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "luminous_form_stance": {
+     "ID": "luminous_form_stance",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "LevelRequired": 1,
+     "Name": "Luminous Form Stance",
+     "Keywords": "Stance, Stacking",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "You enter the Luminous Form Stance and create the Threads of Light. These manifest spiritual cloth, spectral arms or something similar that enhances your reach.While in this stance, you gain an additional 10ft range on your unarmed attacks and your threatened range becomes 5-15ft. Whenever you deal damage to an enemy with an unarmed strike ability (not basic attacks), you gain 1 stack of Harmony up to a maximum of 5. You cannot gain more than 1 Harmony per use of ability.When you leave this stance all stacks are lost.This stance lasts until you enter a different stance or you willingly move, with the exception of movement abilities with the unarmed strike keyword. Abilities from allies that allow you to move, such as Gravitional Ki, count as willing movement.",
+     "RPcost": "",
+     "APcost": "0 AP",
+     "MPcost": "1 MP",
+     "Othercost": ""
+   },
    "lunge": {
      "ID": "lunge",
      "ClassID": [
@@ -4868,6 +4900,38 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "mantra:_flowing_perception": {
+     "ID": "mantra:_flowing_perception",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "LevelRequired": 6,
+     "Name": "Mantra: Flowing Perception",
+     "Keywords": "Unarmed Strike, Sidestep",
+     "Range": "30ft",
+     "Requirement": "Must be in Luminous Form Stance.",
+     "Description": "You extend your Threads of Light and make an unarmed light attack against a target within range. On damage, you may pull yourself towards the target and sidestep to the nearest square within 5ft of them.You may also use this on ally. If you do, this always hits and deals no damage. It still gives you a stack of Harmony.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "",
+     "Othercost": ""
+   },
+   "mantra:_pure_intentions": {
+     "ID": "mantra:_pure_intentions",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "LevelRequired": 2,
+     "Name": "Mantra: Pure Intentions",
+     "Keywords": "Healing",
+     "Range": "15ft",
+     "Requirement": "Must have at least 1 stack of Harmony.",
+     "Description": "You wrap your Threads of Light around the chosen ally and channel your Harmony into them.You may spend up to 5 stacks of Harmony and 1 mana per stack you consume to heal an ally within range for 3+Focus for each stack.",
+     "RPcost": "",
+     "APcost": "1 AP",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "mark_of_justice": {
      "ID": "mark_of_justice",
      "ClassID": [
@@ -4878,7 +4942,7 @@
      "Keywords": "",
      "Range": "120ft",
      "Requirement": "-",
-     "Description": "You mark a single enemy, inflicting Mark of Justice on them. A marked enemy’s movement speed is reduced to 20ft. Abilities that allow for movement cannot move the target for more than 20ft per use. Secret Arts and Esoteric Arts are not affected by this. You can only have a single enemy marked by this at the same time. It lasts until the end of the encounter. Does not work on vehicles.",
+     "Description": "You mark a single enemy, inflicting Mark of Justice on them. A marked enemy’s movement speed is reduced to 20ft. Abilities that allow for movement cannot move the target for more than 20ft per use. Secret Arts and Esoteric Arts are not affected by this. You can only have a single enemy marked by this at the same time. It lasts until the end of the encounter. Does not work on vehicles.A marked target may spend 1 mana to temporarily ignore the restricting effect for a movement action.",
      "RPcost": "",
      "APcost": "1 AP",
      "MPcost": "",
@@ -5074,6 +5138,22 @@
      "RPcost": "",
      "APcost": "2 AP",
      "MPcost": "",
+     "Othercost": ""
+   },
+   "mudra:_first_sensation": {
+     "ID": "mudra:_first_sensation",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "LevelRequired": 4,
+     "Name": "Mudra: First Sensation",
+     "Keywords": "Unarmed Strike, Combo",
+     "Range": "Melee Weapon",
+     "Requirement": "Must be in Luminous Form Stance",
+     "Description": "You deliver the first motion, a graceful strike that awakens awareness in both you and your foe and you make a Light attack against the target. On hit, you gain a Harmony stack (In addition to the one you might get if this deals damage.)Combo: When used after entering Luminous Form Stance, the mana cost is reduced by 1.",
+     "RPcost": "",
+     "APcost": "1 AP",
+     "MPcost": "1 MP",
      "Othercost": ""
    },
    "multishot": {
@@ -5652,6 +5732,22 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "prepared_talisman": {
+     "ID": "prepared_talisman",
+     "ClassID": [
+       "daionmyoji"
+     ],
+     "LevelRequired": 2,
+     "Name": "Prepared Talisman",
+     "Keywords": "",
+     "Range": "5ft",
+     "Requirement": "Special",
+     "Description": "You may place a Talisman on a surface or on a target within range. This costs the same amount of AP and Mana as it would normally cost and placing it on an unwilling target requires an accuracy roll that the target may dodge as normal. A target may spend AP equal to the AP cost of the talisman (before reductions) to remove the talisman from themselves.After placing it, until the end of the encounter or for the next 5 minutes, you may spend 0 RP to instantly trigger the effect of the talisman. You cannot trigger it anymore once a talisman has been removed or is in the process of being removed and a removed talisman loses its power entirely. A talisman placed on a creature gains Sure Hit against the creature it's on when triggered.You can only have 1 talisman prepared in this way at the same time and Sealing Talisman cannot be prepared like this.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "preparedness": {
      "ID": "preparedness",
      "ClassID": [
@@ -6047,7 +6143,7 @@
      "Keywords": "Spell",
      "Range": "15 ft",
      "Requirement": "",
-     "Description": "You cast this ability on water within range, recovering fatigue and granting the target 1 RP.  The target cannot go over their max RP from this.",
+     "Description": "You cast this ability on water within range, recovering fatigue and granting a target within 15ft of that point 1 RP.  The target cannot go over their max RP from this.",
      "RPcost": "1 RP",
      "APcost": "",
      "MPcost": "2 MP",
@@ -7429,6 +7525,22 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "secret_art:_within_this_ink,_the_perfect_answer": {
+     "ID": "secret_art:_within_this_ink,_the_perfect_answer",
+     "ClassID": [
+       "daionmyoji"
+     ],
+     "LevelRequired": 8,
+     "Name": "Secret Art: Within This Ink, The Perfect Answer",
+     "Keywords": "Flashback, Secret Art",
+     "Range": "Special",
+     "Requirement": "",
+     "Description": "You draw and immediately use a special talisman.This talisman may have any spell in the base game on it (meaning it’s on the website), though it cannot be a secret or esoteric art. Any costs for this spell must be paid as normal. You must pay the required calligraphy units as if you made the spell yourself. If you can’t pay the required amount, you go into ‘debt’. While in debt, you cannot create any more talisman or use this ability.To clear the debt, you must pay the required amount of calligraphy units at any point.After you use this ability, you cannot do so again until the end of the arc.",
+     "RPcost": "",
+     "APcost": "0 AP",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "secret_talisman": {
      "ID": "secret_talisman",
      "ClassID": [
@@ -7744,8 +7856,8 @@
      "Range": "-",
      "Requirement": "-",
      "Description": "You transform a melee weapon you’re holding into a Wand Channeling Weapon or return a transformed weapon back to normal. While transformed, the weapon keeps any relevant enchants and functions exactly like how a wand would. You are considered proficient in this wand, even if you normally wouldn’t be and can fire Arcane Elemental shots with it, even if you normally wouldn’t be able to.",
-     "RPcost": "0 RP",
-     "APcost": "",
+     "RPcost": "",
+     "APcost": "0 AP",
      "MPcost": "",
      "Othercost": ""
    },
@@ -8047,7 +8159,7 @@
      "Keywords": "",
      "Range": "Self",
      "Requirement": "Polearm only.",
-     "Description": "You may spend 2 or 4 AP on this ability and move as though you had spent that AP on movement. After you finish moving, you may spend half of the AP you used on this ability on a single Light or Heavy attack.For every 10ft moved, this attack gains +1 damage up to a maximum of +10.If you spent 4 AP on this ability, you may also choose to use Wild Thrusts instead of making a Light or Heavy attack. These attacks do not gain the damage bonus listed above.",
+     "Description": "You may spend 2 or 4 AP on this ability and move as though you had spent that AP on movement. After you finish moving, you may spend half of the AP you used on this ability on a single Light or Heavy attack.For every 10ft moved, this attack gains +1 damage up to a maximum of +10.If you spent 4 AP on this ability, you may also choose to use Wild Thrusts instead of making a Light or Heavy attack. These attacks do not gain the damage bonus listed above, but Wild Thrusts mana cost is reduced to 0 if used in this way.",
      "RPcost": "",
      "APcost": "X AP",
      "MPcost": "",
@@ -8147,6 +8259,22 @@
      "RPcost": "",
      "APcost": "0 AP",
      "MPcost": "2 MP",
+     "Othercost": ""
+   },
+   "spiritual_reading": {
+     "ID": "spiritual_reading",
+     "ClassID": [
+       "daionmyoji"
+     ],
+     "LevelRequired": 4,
+     "Name": "Spiritual Reading",
+     "Keywords": "Analyze",
+     "Range": "120ft",
+     "Requirement": "",
+     "Description": "You are able to check the aura of a creature or object within range. If you check a creature, you can see whether a creature is non-heroic, weaker than you, around the same as you, stronger than you or much stronger than you. The GM may also give you their Spirit Core value if it has one. You also are aware if someone is concealing their spirit core level, but can’t get an accurate reading of their strength if they are. In addition, you are able to see their mana % until the end of the encounter.If you check an item, you can determine whether it’s magical in nature. If it is, you may immediately make a Magic check against it to determine its effect as if you were using Decipher Magic with a +5 bonus.",
+     "RPcost": "",
+     "APcost": "0 AP",
+     "MPcost": "1 MP",
      "Othercost": ""
    },
    "spore_burst": {
@@ -8413,7 +8541,7 @@
      ],
      "LevelRequired": 8,
      "Name": "Steal Heart",
-     "Keywords": "Spell, Charm",
+     "Keywords": "Spell, Charm, Mind Affecting",
      "Range": "40ft",
      "Requirement": "",
      "Description": "The target must make a save or become Charmed until the end of the encounter.If you use this on a Grunt level enemy and you charm them, you may choose their actions when it's their turn in addition to Charm’s normal effect.You may only have 1 target charmed at the same time.",
@@ -8756,6 +8884,22 @@
      "RPcost": "",
      "APcost": "",
      "MPcost": "1 Strike Dice",
+     "Othercost": ""
+   },
+   "talisman_recursion": {
+     "ID": "talisman_recursion",
+     "ClassID": [
+       "daionmyoji"
+     ],
+     "LevelRequired": 6,
+     "Name": "Talisman Recursion",
+     "Keywords": "",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "After using a Talisman, you may immediately spend the cost of that talisman (before reductions) to repeat the effect without consuming another talisman. If the talisman had a target, you must choose the same target.Does not work with Secret Talismans.",
+     "RPcost": "0 RP",
+     "APcost": "",
+     "MPcost": "1 MP",
      "Othercost": ""
    },
    "tap_cracker": {
