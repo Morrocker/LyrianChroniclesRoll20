@@ -1405,8 +1405,12 @@
                           <input type="number" name="attr_armor_block" title="@{armor_block}" />
                         </div>
                         <div class="evasion">
-                          <label>Evasion/Dodge</label>
+                          <label>Evasion</label>
                           <input type="number" name="attr_armor_evasion" title="@{armor_evasion}" />
+                        </div>
+                        <div class="dodge">
+                          <label>Dodge</label>
+                          <input type="number" name="attr_armor_dodge" title="@{armor_dodge}" />
                         </div>
                         <div class="initiative">
                           <label>Initiative</label>
@@ -1460,8 +1464,10 @@
                             <div class="details-value2"><span name="attr_armor_block"></span></div>
                           </div>
                           <div class="details-row">
-                            <div class="details-label2">Evasion/Dodge:</div>
+                            <div class="details-label2">Evasion:</div>
                             <div class="details-value2"><span name="attr_armor_evasion"></span></div>
+                            <div class="details-label2">Dodge:</div>
+                            <div class="details-value2"><span name="attr_armor_dodge"></span></div>
                             <div class="details-label2">Initiative:</div>
                             <div class="details-value2"><span name="attr_armor_initiative"></span></div>
                           </div>
@@ -7187,7 +7193,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
 
       // Recalculates all armor related values when armor is changed
       on(
-        "change:repeating_armors:armor_status change:repeating_armors:armor_burden change:repeating_armors:armor_evasion change:repeating_armors:armor_guard change:repeating_armors:armor_block change:repeating_armors:armor_initiative remove:repeating_armors",
+        "change:repeating_armors:armor_status change:repeating_armors:armor_burden change:repeating_armors:armor_evasion change:repeating_armors:armor_dodge change:repeating_armors:armor_guard change:repeating_armors:armor_block change:repeating_armors:armor_initiative remove:repeating_armors",
         function () {
           getSectionIDs("repeating_armors", function (ids) {
             const fields = [].concat(
@@ -7195,6 +7201,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                 `repeating_armors_${id}_armor_status`,
                 `repeating_armors_${id}_armor_burden`,
                 `repeating_armors_${id}_armor_evasion`,
+                `repeating_armors_${id}_armor_dodge`,
                 `repeating_armors_${id}_armor_guard`,
                 `repeating_armors_${id}_armor_block`,
                 `repeating_armors_${id}_armor_initiative`,
@@ -7203,6 +7210,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
             ifPC(fields, function (values) {
               // let totalBurden = 0;
               let totalEvasion = 0;
+              let totalDodge = 0;
               let totalGuard = 0;
               let totalBlock = 0;
               let totalInitiative = 0;
@@ -7211,6 +7219,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
                 if (values[`repeating_armors_${id}_armor_status`] === "worn") {
                   totalBurden += parseFloat(values[`repeating_armors_${id}_armor_burden`]) || 0;
                   totalEvasion += parseFloat(values[`repeating_armors_${id}_armor_evasion`]) || 0;
+                  totalDodge += parseFloat(values[`repeating_armors_${id}_armor_dodge`]) || 0;
                   totalGuard += parseFloat(values[`repeating_armors_${id}_armor_guard`]) || 0;
                   totalBlock += parseFloat(values[`repeating_armors_${id}_armor_block`]) || 0;
                   totalInitiative += parseFloat(values[`repeating_armors_${id}_armor_initiative`]) || 0;
@@ -7222,6 +7231,7 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
               setAttrs({
                 armors_burden: totalBurden,
                 armors_evasion: totalEvasion,
+                armors_dodge: totalDodge,
                 armors_guard: totalGuard,
                 armors_block: totalBlock,
                 armors_initiative: totalInitiative,
@@ -7505,11 +7515,16 @@ const abilityMacroMap ={"spellblades_preparation": "missing_macro"
       });
 
       // Recalculate total evasion penalty
-      on("change:armors_evasion change:agility", function () {
-        ifPC(["armors_evasion", "agility"], function (values) {
+      on("change:armors_evasion change:armors_dodge change:agility", function () {
+        ifPC(["armors_evasion", "armors_dodge", "agility"], function (values) {
           let totalEvasion = (parseFloat(values.armors_evasion) || 0) + (parseFloat(values.agility) || 0) + 7;
 
-          let totalDodge = (parseFloat(values.agility) || 0) + 20 + (parseFloat(values.armors_evasion) || 0);
+          let totalDodge = (parseFloat(values.agility) || 0) + 20 + (parseFloat(values.armors_dodge) || 0);
+
+          if(values.armors_dodge===""){
+            totalDodge = totalEvasion+13
+          }
+
           setAttrs({ total_evasion: totalEvasion });
           setAttrs({ total_dodge: totalDodge });
         });

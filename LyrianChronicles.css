@@ -2152,8 +2152,8 @@
 
 .charsheet .table-container .form-container.armor-grid{
   grid-template-areas:
-    "name name name status status"
-    "burden guard block evasion initiative"
+    "name name status status burden"
+    "guard block evasion dodge initiative"
     "description description description description description"
     "close close close close close";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -2184,6 +2184,10 @@
 }
 .charsheet .form-container.armor-grid .evasion {
   grid-area: evasion;
+  width: 100%;
+}
+.charsheet .form-container.armor-grid .dodge {
+  grid-area: dodge;
   width: 100%;
 }
 .charsheet .form-container.armor-grid .initiative {
@@ -2255,7 +2259,7 @@
 
 .charsheet .table-container .form-container.weapon-grid{
   grid-template-areas:
-    "name name name status"
+    "name name status status"
     "burden focus power critrange"
     "wpn-type wpn-type wpn-type dmgtype"
     "description description description description"
