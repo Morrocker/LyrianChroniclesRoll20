@@ -1,0 +1,138 @@
+<script>
+      // // Try to trigger a weapon attack roll when the button in the repeating section is clicked
+      // on("clicked:repeating_weapons", function (eventInfo) {
+      //   console.log("Weapon button clicked:", eventInfo);
+      //   const match = eventInfo.sourceAttribute.match(/^repeating_weapons_([a-zA-Z0-9\-]+)_/);
+      //   const tID = match ? match[1] : null;
+      //   let otherIDs = [];
+      //   getSectionIDs("repeating_weapons", function (ids) {
+      //     otherIDs = ids.filter((id) => id !== tID);
+      //     const fields = [].concat(
+      //       ...ids.map((id) => [
+      //         `repeating_weapons_${id}_weapon_status`,
+      //         `repeating_weapons_${id}_weapon_burden`,
+      //         `repeating_weapons_${id}_weapon_name`,
+      //         `repeating_weapons_${id}_weapon_type`,
+      //         `repeating_weapons_${id}_weapon_focus`,
+      //         `repeating_weapons_${id}_weapon_power`,
+      //         `repeating_weapons_${id}_weapon_crit`,
+      //         `repeating_weapons_${id}_weapon_dmgtype`,
+      //         `repeating_weapons_${id}_weapon_customroll`,
+      //         "power_base",
+      //         "power_race",
+      //         "power_misc",
+      //         "focus_base",
+      //         "focus_race",
+      //         "focus_misc",
+      //         "attack_extra_crit",
+      //       ])
+      //     );
+      //     console.log("fields:", fields);
+
+      //     let realHeavyDmg = "";
+      //     let realMaxHeavyDmg = "";
+      //     let critLightExtraDmg = "";
+      //     let critHeavyExtraDmg = "";
+      //     let d20Roll = "1d20";
+      //     switch (wpn_Type) {
+      //       case "two-handed-axe":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         break;
+      //       case "two-handed-bludgeoning":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         break;
+      //       case "one-handed-katana":
+      //         realHeavyDmg = heavyAtkDmg;
+      //         realMaxHeavyDmg = maxHeavyAtkDmg;
+      //         d20Roll = "1d20cs>19";
+      //         break;
+      //       case "two-handed-katana":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         d20Roll = "1d20cs>19";
+      //         break;
+      //         break;
+      //       case "long-sword-two-hands":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         critLightExtraDmg = `
+      //                           Crit Extra Dmg: [[1d4]]`;
+      //         critHeavyExtraDmg = `
+      //                           Crit Extra Dmg: [[1d4]]`;
+      //         break;
+      //       case "two-handed-pickaxe":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         break;
+      //       case "heavy-blade":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         critLightExtraDmg = `
+      //                           Crit Extra Dmg: [[1d4]]`;
+      //         critHeavyExtraDmg = `
+      //                           Crit Extra Dmg: [[1d12]]`;
+      //         break;
+      //       case "two-handed-polearm":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         break;
+      //       case "scythe":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         break;
+      //       case "twinblade":
+      //         realHeavyDmg = veryHeavyAtkDmg;
+      //         realMaxHeavyDmg = maxVeryHeavyAtkDmg;
+      //         break;
+      //       default:
+      //         realHeavyDmg = heavyAtkDmg;
+      //         realMaxHeavyDmg = maxHeavyAtkDmg;
+      //     }
+
+      //     console.log("weapon crit:", wpn_crit);
+      //     if (wpn_extra_crit !== 0 && wpn_extra_crit < 20) {
+      //       d20Roll = `1d20cs>${wpn_extra_crit}`;
+      //     } else if (wpn_crit !== 0 && wpn_crit < 20) {
+      //       d20Roll = `1d20cs>${wpn_crit}`;
+      //     }
+
+      //     let regularAtk = `[[${d20Roll}+${focus_base}+${focus_race}+${focus_misc}+${wpn_focus}+@{attack_extra_focus_bonus}]]`;
+      //     let preciseAtk = `[[${d20Roll}+(2*(${focus_base}+${focus_race}+${focus_misc}+${wpn_focus}+@{attack_extra_focus_bonus}))]]`;
+      //     let regularDmg = `[[${lightAtkDmg}+${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}]]
+      //                       Max Dmg: [[${maxLightAtkDmg}+${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}]]`;
+      //     let heavyDmg = `[[${realHeavyDmg}+(2*(${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}))]]
+      //                       Max Dmg: [[${realMaxHeavyDmg}+(2*(${power_base}+${power_race}+${power_misc}+${wpn_power}+@{attack_extra_power_bonus}))]]`;
+
+      //     roll = `&{template:default} {{name=@{name} ❖ Main Weapon Attack: ${wpn_Name}}} {{?{Light, Heavy, or Precise?
+      //                         |Light,Light Attack=Atk:${regularAtk}
+      //                         Damage: ${regularDmg} ${critLightExtraDmg}
+      //                         |Heavy,Heavy Attack=Atk: ${regularAtk}
+      //                         Damage: ${heavyDmg} ${critHeavyExtraDmg}
+      //                         |Precise,Precise Attack=Atk: ${preciseAtk}
+      //                         Damage: ${regularDmg} ${critLightExtraDmg}
+      //                         }}}`;
+
+      //     if (wpn_extra_crit !== 0 && wpn_extra_crit < 20) {
+      //       roll += ` {{Critical on: ${wpn_extra_crit}+}}`;
+      //     } else if (wpn_crit !== 0 && wpn_crit < 20) {
+      //       roll += ` {{Critical on: ${wpn_crit}+}}`;
+      //     }
+      //     if (weapon_dmgtype && weapon_dmgtype !== "Undefined") {
+      //       roll += ` {{Damage Type: ${weapon_dmgtype}}}`;
+      //     }
+      //     if (weapon_customroll && weapon_customroll !== "") {
+      //       roll = weapon_customroll;
+      //     }
+      //     if (hidden) {
+      //       roll = `/w gm ${roll}`;
+      //     }
+      //     console.log("Final weapon attack roll:", roll);
+      //     // startRoll(roll, function (results) {
+      //     //   finishRoll(results.rollId);
+      //     // });
+      //   });
+      // });
+
+</script>

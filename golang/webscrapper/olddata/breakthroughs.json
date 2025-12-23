@@ -214,7 +214,7 @@
     "Name": "Hide Behind Ally",
     "Cost": "300",
     "Requirement": "Must be a Pixie.",
-    "Description": "When occupying the same space as a conscious ally, you may choose to become untargetable to single target attacks. The ally must be willing to take the hits for you, though they may react to these attacks as normal. While occupying the same space as a conscious ally, any effect that triggers upon not being targeted by an enemy (such as Challenge) will not be triggered. Does not work against Attacks of Opportunity."
+    "Description": "When occupying the same space as a conscious ally that's at least a size bigger than you, you may choose to become untargetable to single target attacks. The ally must be willing to take the hits for you, though they may react to these attacks as normal. While occupying the same space as a conscious ally, any effect that triggers upon not being targeted by an enemy (such as Challenge) will not be triggered. Does not work against Attacks of Opportunity."
   },
   "human-chimera_hybrid_(race)": {
     "ID": "human-chimera_hybrid_(race)",
@@ -235,7 +235,7 @@
     "Name": "In Sync",
     "Cost": "100",
     "Requirement": "Must be a Youkai.",
-    "Description": "After you use Spiritual Sync, you may cancel the effect for 0 RP at any time. If you do, you regain HP or Mana like it is described in the ability.In addition, the maximum mana or HP you can spend on Spiritual Sync is doubled."
+    "Description": "After you use Spiritual Sync, you may cancel the effect for 0 RP at any time. If you do, you regain HP like it is described in the ability or 8 HP for each temporary mana you still had remaining.In addition, the maximum mana or HP you can spend on Spiritual Sync is doubled."
   },
   "kit_expert": {
     "ID": "kit_expert",
@@ -255,7 +255,7 @@
     "ID": "large_specimen",
     "Name": "Large Specimen",
     "Cost": "100",
-    "Requirement": "Must be a Nio.",
+    "Requirement": "Must be a Nio or Bearfolk.",
     "Description": "Your size becomes Large."
   },
   "light_armor_training": {
@@ -473,7 +473,7 @@
     "Name": "The Unknown Paladin",
     "Cost": "200",
     "Requirement": "-",
-    "Description": "Despite not being human, you fulfill the human requirement to become a Paladin. In addition, your Smite skill's damage type changes to one that represents your chosen Divine. The paladin holy weapon key ability also changes its damage type to the one that represents your chosen Divine."
+    "Description": "Despite not being human, you fulfill the human requirement to become a Paladin. In addition, your Smite skill's damage type changes to one that represents your chosen Divine. The paladin holy weapon key ability also changes its damage type to the one that represents your chosen Divine (all physical in the case of Eisen)."
   },
   "touched_by_death": {
     "ID": "touched_by_death",

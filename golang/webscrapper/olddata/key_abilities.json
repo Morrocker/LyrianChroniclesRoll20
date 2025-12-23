@@ -1,6 +1,9 @@
 {
    "acolytes_journey": {
      "ID": "acolytes_journey",
+     "ClassID": [
+       "acolyte"
+     ],
      "Name": "Acolyte's Journey",
      "Benefits": [
        "You gain proficiency in light armor, shields and a single common group of weapons. This group may include Channeling Weapons, even though they aren't consider common weapons.",
@@ -10,6 +13,9 @@
    },
    "advanced_artificing": {
      "ID": "advanced_artificing",
+     "ClassID": [
+       "magitechnician-"
+     ],
      "Name": "Advanced Artificing",
      "Benefits": [
        "You gain Artificer Advanced Crafting Abilities"
@@ -17,15 +23,21 @@
    },
    "adventurer_essentials": {
      "ID": "adventurer_essentials",
+     "ClassID": [
+       "adventurer"
+     ],
      "Name": "Adventurer Essentials",
      "Benefits": [
        "You gain proficiency in 1 common weapon group. In addition, you gain proficiency in 1 common or specialized weapon groups.",
-       "You gain proficiency in 1 armor category of your choosing. You may also pick the shield or greatshield.",
+       "You gain proficiency in 1 armor category of your choosing. Alternatively, you may pick the shield or greatshield.",
        "You may use Presence Concealment."
      ]
    },
    "aftershocks": {
      "ID": "aftershocks",
+     "ClassID": [
+       "highlander"
+     ],
      "Name": "Aftershocks",
      "Benefits": [
        "You may use Aftershock."
@@ -33,6 +45,9 @@
    },
    "air_stability": {
      "ID": "air_stability",
+     "ClassID": [
+       "sky-knight"
+     ],
      "Name": "Air Stability",
      "Benefits": [
        "The cavalier’s Rider \u0026 Mount As One ability applies even while flying. Any damage you take while flying on a flying mount will cause you to lose altitude as if your mount took damage."
@@ -40,6 +55,9 @@
    },
    "angelic_presence": {
      "ID": "angelic_presence",
+     "ClassID": [
+       "angelblooded"
+     ],
      "Name": "Angelic Presence",
      "Benefits": [
        "You gain +1 to Presence."
@@ -47,6 +65,9 @@
    },
    "armorsmith_basics": {
      "ID": "armorsmith_basics",
+     "ClassID": [
+       "armorsmith"
+     ],
      "Name": "Armorsmith Basics",
      "Benefits": [
        "You gain proficiency in light armor, medium armor and shields.",
@@ -57,6 +78,9 @@
    },
    "armorsmithing_expert": {
      "ID": "armorsmithing_expert",
+     "ClassID": [
+       "master-armorer"
+     ],
      "Name": "Armorsmithing Expert",
      "Benefits": [
        "You gain the Master Armorer's core crafting abilities",
@@ -65,6 +89,9 @@
    },
    "arms_mastery": {
      "ID": "arms_mastery",
+     "ClassID": [
+       "battlemaster"
+     ],
      "Name": "Arms Mastery",
      "Benefits": [
        "You are considered proficient with every melee weapon you wield (This does not count as being proficient for class requirements)."
@@ -72,6 +99,9 @@
    },
    "artificer_basics": {
      "ID": "artificer_basics",
+     "ClassID": [
+       "artificer"
+     ],
      "Name": "Artificer Basics",
      "Benefits": [
        "You gain Artificer Core Crafting Abilities",
@@ -82,6 +112,9 @@
    },
    "augmented_casting_-_increased_reach": {
      "ID": "augmented_casting_-_increased_reach",
+     "ClassID": [
+       "sage"
+     ],
      "Name": "Augmented Casting - Increased Reach",
      "Benefits": [
        "You may use Increased Reach."
@@ -89,6 +122,9 @@
    },
    "augmented_casting_-_persistent_spell": {
      "ID": "augmented_casting_-_persistent_spell",
+     "ClassID": [
+       "archsage"
+     ],
      "Name": "Augmented Casting - Persistent Spell",
      "Benefits": [
        "You may use Persistent Spell."
@@ -96,6 +132,9 @@
    },
    "benevolence": {
      "ID": "benevolence",
+     "ClassID": [
+       "phosphomancer"
+     ],
      "Name": "Benevolence",
      "Benefits": [
        "You gain Elemental Mastery: Holy",
@@ -105,6 +144,9 @@
    },
    "bone_armor": {
      "ID": "bone_armor",
+     "ClassID": [
+       "death-knight"
+     ],
      "Name": "Bone Armor",
      "Benefits": [
        "You may use Bone Armor."
@@ -112,6 +154,9 @@
    },
    "boomerang": {
      "ID": "boomerang",
+     "ClassID": [
+       "peltast"
+     ],
      "Name": "Boomerang",
      "Benefits": [
        "When you make an attack with a throwing weapon, or take the thrown attack basic action, you may retrieve the weapon or draw a similar weapon at no cost."
@@ -119,6 +164,9 @@
    },
    "botany_study": {
      "ID": "botany_study",
+     "ClassID": [
+       "botanist"
+     ],
      "Name": "Botany Study",
      "Benefits": [
        "You gain the ability to detect if foraged food is poisonous or unsafe to eat, nearly guaranteeing its safety.  If it is a common poison, you can also identify its effect.",
@@ -129,6 +177,9 @@
    },
    "brace": {
      "ID": "brace",
+     "ClassID": [
+       "lancer"
+     ],
      "Name": "Brace",
      "Benefits": [
        "When using the Prepare action to prepare a melee attack with a polearm, if your target of that prepared attack moved more than 20ft that turn (excluding teleports), your attack gains Full Pierce and does maximum damage. Against a mounted enemy this also gains Sure Hit and on damage, their movement becomes 0 until the start of your turn."
@@ -136,6 +187,9 @@
    },
    "carpenter_basics": {
      "ID": "carpenter_basics",
+     "ClassID": [
+       "carpenter"
+     ],
      "Name": "Carpenter Basics",
      "Benefits": [
        "You can use a carpenters chisel as a crafting tool for carpenters crafts and buildings.",
@@ -146,6 +200,10 @@
    },
    "controlled_blaze": {
      "ID": "controlled_blaze",
+     "ClassID": [
+       "flame-sentinel",
+       "pyromancer"
+     ],
      "Name": "Controlled Blaze",
      "Benefits": [
        "When you deal Fire Damage, you may choose not to ignite flammable objects.",
@@ -154,6 +212,9 @@
    },
    "controlled_opportunities": {
      "ID": "controlled_opportunities",
+     "ClassID": [
+       "guardian"
+     ],
      "Name": "Controlled Opportunities",
      "Benefits": [
        "You gain Heavy Armor proficiency.",
@@ -162,6 +223,9 @@
    },
    "controlled_wind": {
      "ID": "controlled_wind",
+     "ClassID": [
+       "aeromaster"
+     ],
      "Name": "Controlled Wind",
      "Benefits": [
        "When pushing a target back or up with a Wind Spell, you may choose to push up to the maximum distance instead of always pushing the maximum distance."
@@ -169,6 +233,9 @@
    },
    "craft_weapons": {
      "ID": "craft_weapons",
+     "ClassID": [
+       "blacksmith"
+     ],
      "Name": "Craft Weapons",
      "Benefits": [
        "You gain Blacksmith Core Crafting Abilities.",
@@ -177,15 +244,11 @@
        "You gain proficiency in 1 smithing weapon. "
      ]
    },
-   "crimson_enmity": {
-     "ID": "crimson_enmity",
-     "Name": "Crimson Enmity",
-     "Benefits": [
-       "When your HP is at or below 50% of your max HP, you gain increased healing. When you would heal an ally or yourself with an ability from this class, you heal for 1.5x that amount."
-     ]
-   },
    "culinary_basics": {
      "ID": "culinary_basics",
+     "ClassID": [
+       "culinarian"
+     ],
      "Name": "Culinary Basics",
      "Benefits": [
        "You gain Culinarian Core Crafting Abilities",
@@ -196,6 +259,9 @@
    },
    "death_perception": {
      "ID": "death_perception",
+     "ClassID": [
+       "shinigami-eyes"
+     ],
      "Name": "Death Perception",
      "Benefits": [
        "You may use Death Perception.",
@@ -204,6 +270,9 @@
    },
    "deflect_missiles": {
      "ID": "deflect_missiles",
+     "ClassID": [
+       "duelist"
+     ],
      "Name": "Deflect Missiles",
      "Benefits": [
        "You may use your Parry ability against ranged weapon attacks as well. "
@@ -211,6 +280,9 @@
    },
    "dimensional_armory": {
      "ID": "dimensional_armory",
+     "ClassID": [
+       "armiger"
+     ],
      "Name": "Dimensional Armory",
      "Benefits": [
        "You can create a pocket dimension with Dimensional Armory.  Creating the pocket dimension and establishing its door takes 1 week and costs 1 errand point.  The entry point can be any regular door that you fit through.  When the creator opens this door, they can decide instead to access the Dimensional Armory, which is a 15ft x 15ft closet.  This closet can hold up to 6 Burden worth of items.  Some magic items can be rejected by the dimensional armory (GM’s discretion), such as Divine Arms not bonded to you.  If the owner of a Dimensional Armory dies, everything inside of it appears in the next unoccupied space possible next to the owner."
@@ -218,6 +290,9 @@
    },
    "disable_magic": {
      "ID": "disable_magic",
+     "ClassID": [
+       "warding-mage"
+     ],
      "Name": "Disable Magic",
      "Benefits": [
        "When using Decipher Magic, you are able to disable both tier 1 and tier 2 level bounded fields.",
@@ -226,6 +301,9 @@
    },
    "draw_elements": {
      "ID": "draw_elements",
+     "ClassID": [
+       "spellblade"
+     ],
      "Name": "Draw Elements",
      "Benefits": [
        "You may use Draw Elements."
@@ -233,6 +311,9 @@
    },
    "draw_elements_ii": {
      "ID": "draw_elements_ii",
+     "ClassID": [
+       "spell-blademaster"
+     ],
      "Name": "Draw Elements II",
      "Benefits": [
        "You may use Draw Elements II."
@@ -240,6 +321,9 @@
    },
    "emergency_shields": {
      "ID": "emergency_shields",
+     "ClassID": [
+       "veilguard"
+     ],
      "Name": "Emergency Shields",
      "Benefits": [
        "You may cast Power Word: Shield and Power Word: Guardian Shield (when obtained) by spending 1 RP instead of 2 AP."
@@ -247,6 +331,9 @@
    },
    "empty_body": {
      "ID": "empty_body",
+     "ClassID": [
+       "monk"
+     ],
      "Name": "Empty Body",
      "Benefits": [
        "You may use Empty Body."
@@ -254,6 +341,9 @@
    },
    "eternal_flames": {
      "ID": "eternal_flames",
+     "ClassID": [
+       "pyromaster"
+     ],
      "Name": "Eternal Flames",
      "Benefits": [
        "When you would apply Burning, you instead apply Hellfire. Hellfire functions like Burning, but it can no longer be removed the normal way if not removed before the end of the target’s next turn. Hellfire is automatically removed at the end of the encounter.",
@@ -262,6 +352,9 @@
    },
    "eternal_mirane_cage": {
      "ID": "eternal_mirane_cage",
+     "ClassID": [
+       "hoarfrost"
+     ],
      "Name": "Eternal Mirane Cage",
      "Benefits": [
        "You may use Eternal Mirane Cage."
@@ -269,6 +362,9 @@
    },
    "evil_eye": {
      "ID": "evil_eye",
+     "ClassID": [
+       "evil-eye"
+     ],
      "Name": "Evil Eye",
      "Benefits": [
        "While you have a Mystic Eye active, you gain a +10 bonus to perception checks relying on sight.",
@@ -277,6 +373,9 @@
    },
    "execute_the_heretic": {
      "ID": "execute_the_heretic",
+     "ClassID": [
+       "exalted-blade"
+     ],
      "Name": "Execute the Heretic",
      "Benefits": [
        "You may use Execute Heretic"
@@ -284,6 +383,9 @@
    },
    "expanded_circuits": {
      "ID": "expanded_circuits",
+     "ClassID": [
+       "arcanist"
+     ],
      "Name": "Expanded Circuits",
      "Benefits": [
        "You gain +2 maximum mana."
@@ -291,6 +393,9 @@
    },
    "expanded_menagerie": {
      "ID": "expanded_menagerie",
+     "ClassID": [
+       "wildheart"
+     ],
      "Name": "Expanded Menagerie",
      "Benefits": [
        "You may spend 1 mana with using Summon Animal to choose which animal you summon."
@@ -298,13 +403,20 @@
    },
    "expert_alchemist": {
      "ID": "expert_alchemist",
+     "ClassID": [
+       "alchemeister"
+     ],
      "Name": "Expert Alchemist",
      "Benefits": [
-       "You gain Alchemeister Core Crafting Abilities."
+       "You gain Alchemeister Core Crafting Abilities.",
+       "When using Throw Potion, you may infuse it using your own mana. You spend X mana and the mana cost the target needs to pay to benefit from the potion is reduced by X (the mana cost cannot go below 0)."
      ]
    },
    "expert_farmer": {
      "ID": "expert_farmer",
+     "ClassID": [
+       "cultivator"
+     ],
      "Name": "Expert Farmer",
      "Benefits": [
        "You may use the Cultivator's core crafting abilities."
@@ -312,6 +424,9 @@
    },
    "expert_scribe": {
      "ID": "expert_scribe",
+     "ClassID": [
+       "onmyoji-"
+     ],
      "Name": "Expert Scribe",
      "Benefits": [
        "You gain +5 points in Art: Calligraphy expertise skill.",
@@ -320,6 +435,9 @@
    },
    "faerie_light_eyes": {
      "ID": "faerie_light_eyes",
+     "ClassID": [
+       "faerie-light-eyes"
+     ],
      "Name": "Faerie Light Eyes",
      "Benefits": [
        "Faerie Light Eyes provide protection against Illusions, giving you the ability to immediately see the reality warping distortions that illusions cause.  The user is not only notified of illusions, but immune to all but your own.",
@@ -328,6 +446,9 @@
    },
    "fallen_friend": {
      "ID": "fallen_friend",
+     "ClassID": [
+       "berserker"
+     ],
      "Name": "Fallen Friend",
      "Benefits": [
        "When an Heroic tier ally reaches 0 HP, you may immediately enter Rage Stance for 0 AP and RP as well as 0 mana. You can use this even if you don’t have the Rage ability yet."
@@ -335,6 +456,9 @@
    },
    "fancy_footwork": {
      "ID": "fancy_footwork",
+     "ClassID": [
+       "fencer"
+     ],
      "Name": "Fancy Footwork",
      "Benefits": [
        "You gain proficiency with Dueling Weapons. While wielding a dueling weapon, you also gain the light blades' Nimble ability, even if not wielding or proficient with light blades."
@@ -342,6 +466,9 @@
    },
    "farming_basics": {
      "ID": "farming_basics",
+     "ClassID": [
+       "farmer"
+     ],
      "Name": "Farming Basics",
      "Benefits": [
        "You gain proficiency in the scythe specialized weapon and can use it as farming tool. You also gain proficiency in the Sickle and can use it as a farming tool and One-Handed axe.",
@@ -351,6 +478,9 @@
    },
    "fighters_journey": {
      "ID": "fighters_journey",
+     "ClassID": [
+       "fighter"
+     ],
      "Name": "Fighter's Journey",
      "Benefits": [
        "You gain proficiency in 5 common weapons groups.",
@@ -360,13 +490,29 @@
    },
    "fire_stance": {
      "ID": "fire_stance",
+     "ClassID": [
+       "bajiquan-style"
+     ],
      "Name": "Fire Stance",
      "Benefits": [
        "You may use Tempestuous Fire Stance"
      ]
    },
+   "five_harmonies_": {
+     "ID": "five_harmonies_",
+     "ClassID": [
+       "five-harmonies-style"
+     ],
+     "Name": "Five Harmonies ",
+     "Benefits": [
+       "You may use Luminous Form Stance."
+     ]
+   },
    "focused_weapons": {
      "ID": "focused_weapons",
+     "ClassID": [
+       "forgemaster"
+     ],
      "Name": "Focused Weapons",
      "Benefits": [
        "You gain Forgemaster Core Crafting Abilities.",
@@ -375,6 +521,9 @@
    },
    "foragers_path": {
      "ID": "foragers_path",
+     "ClassID": [
+       "forager"
+     ],
      "Name": "Forager's Path",
      "Benefits": [
        "You gain proficiency in Giant Scissors and proficiency in your choice between Axes or Hori. You may use axes for harvesting foraging outcrops.",
@@ -385,6 +534,9 @@
    },
    "fungal_metabolite": {
      "ID": "fungal_metabolite",
+     "ClassID": [
+       "amanita"
+     ],
      "Name": "Fungal Metabolite",
      "Benefits": [
        "Due to symbiotic fungi within your body, you become immune to all commonly known poisons.",
@@ -394,6 +546,9 @@
    },
    "giant_strength": {
      "ID": "giant_strength",
+     "ClassID": [
+       "great-berserker"
+     ],
      "Name": "Giant Strength",
      "Benefits": [
        "While in Rage Stance, you may choose to have your size be treated as one size bigger than it actually is. You get an additional +5 bonus to Fitness checks during Rage stance regardless."
@@ -401,6 +556,9 @@
    },
    "greatshield_master": {
      "ID": "greatshield_master",
+     "ClassID": [
+       "protector"
+     ],
      "Name": "Greatshield Master",
      "Benefits": [
        "You gain proficiency in Greatshields. While wearing a Greatshield, any ally standing behind you that is the target of a ranged attack may treat you as high cover."
@@ -408,6 +566,9 @@
    },
    "gun_martial_arts": {
      "ID": "gun_martial_arts",
+     "ClassID": [
+       "gunfu"
+     ],
      "Name": "Gun Martial Arts",
      "Benefits": [
        "You can fire your pistols while in melee range of an enemy without provoking attacks of opportunity.",
@@ -416,6 +577,9 @@
    },
    "gunslingers_agility": {
      "ID": "gunslingers_agility",
+     "ClassID": [
+       "gunslinger"
+     ],
      "Name": "Gunslinger's Agility",
      "Benefits": [
        "You gain proficiency in pistols.",
@@ -424,6 +588,9 @@
    },
    "heavy_cavalry": {
      "ID": "heavy_cavalry",
+     "ClassID": [
+       "great-knight"
+     ],
      "Name": "Heavy Cavalry",
      "Benefits": [
        "You gain Medium Armor and Heavy Armor proficiency.",
@@ -432,6 +599,9 @@
    },
    "holy_orders": {
      "ID": "holy_orders",
+     "ClassID": [
+       "executor"
+     ],
      "Name": "Holy Orders",
      "Benefits": [
        "You may use Holy Orders."
@@ -439,6 +609,10 @@
    },
    "holy_weapon": {
      "ID": "holy_weapon",
+     "ClassID": [
+       "shield-paladin",
+       "sword-paladin"
+     ],
      "Name": "Holy Weapon",
      "Benefits": [
        "When attacking with a weapon, you may choose to have the weapon deal Holy Damage instead of its normal damage type.",
@@ -447,15 +621,21 @@
    },
    "iaijutsu": {
      "ID": "iaijutsu",
+     "ClassID": [
+       "iai-style"
+     ],
      "Name": "Iaijutsu",
      "Benefits": [
        "Enemies don't gain Trick Attack against you when you're surprised.",
        "You may sheathe and draw katanas for 0 AP once per turn per katana.",
-       "You start each battle in the 'Iai' state, which is used for Iai abilities. Making an attack with a katana removes the Iai state for that weapon. Using a skill that requires the Iai state will remove the Iai state for ALL your weapons, unless specified otherwise."
+       "You start each battle in the 'Iai' state, which is used for Iai abilities. Making an attack with a katana removes the Iai state for that weapon. Using a skill that requires the Iai state requires the weapon to be sheathed and will remove the Iai state for ALL your weapons, unless specified otherwise."
      ]
    },
    "ice_cold": {
      "ID": "ice_cold",
+     "ClassID": [
+       "cryomancer"
+     ],
      "Name": "Ice Cold",
      "Benefits": [
        "You are immune to Slows and difficult terrain effects with the Frost keyword.",
@@ -465,6 +645,9 @@
    },
    "improved_death_perception": {
      "ID": "improved_death_perception",
+     "ClassID": [
+       "true-shinigami-eyes"
+     ],
      "Name": "Improved Death Perception",
      "Benefits": [
        "You can see the death of non-living things allowing you to automatically do maximum, full pierce damage against objects.",
@@ -473,6 +656,9 @@
    },
    "improvised_weaponry": {
      "ID": "improvised_weaponry",
+     "ClassID": [
+       "tavern-brawler"
+     ],
      "Name": "Improvised Weaponry",
      "Benefits": [
        "When using improvised weapons, they deal the same damage as normal weapons would. ",
@@ -482,6 +668,9 @@
    },
    "inconspicuous": {
      "ID": "inconspicuous",
+     "ClassID": [
+       "assassin"
+     ],
      "Name": "Inconspicuous",
      "Benefits": [
        "If the enemies are aware of your allies, but not of you, enemies are treated as surprised as if it was a surprise round to you. This may make them unable to react to you (but not your allies) if you act before them. This only applies on the first round of combat and only affects the person you're attacking.",
@@ -490,6 +679,9 @@
    },
    "independent_actor": {
      "ID": "independent_actor",
+     "ClassID": [
+       "scout"
+     ],
      "Name": "Independent Actor",
      "Benefits": [
        "When working alone (No known allies within 300ft of you) you gain a +10 bonus to Perception, Insight, Survival and Stealth checks.",
@@ -500,6 +692,9 @@
    },
    "infiltrate": {
      "ID": "infiltrate",
+     "ClassID": [
+       "thief"
+     ],
      "Name": "Infiltrate",
      "Benefits": [
        "When you use Decipher Magic, you may use Roguecraft instead of Magic as the skill for it. In addition, you can modify the effect in such a way that it no longer affects you and your allies rather than completely disabling it."
@@ -507,6 +702,9 @@
    },
    "jump": {
      "ID": "jump",
+     "ClassID": [
+       "dragoon"
+     ],
      "Name": "Jump",
      "Benefits": [
        "When using an ability with the Jump keyword, you do not take fall damage.",
@@ -515,6 +713,9 @@
    },
    "light_cavalry": {
      "ID": "light_cavalry",
+     "ClassID": [
+       "nomad"
+     ],
      "Name": "Light Cavalry",
      "Benefits": [
        "While mounted and while you and your mount both wear light armor or no armor, you ignore natural difficult terrain."
@@ -522,6 +723,9 @@
    },
    "lightning_strikes_twice": {
      "ID": "lightning_strikes_twice",
+     "ClassID": [
+       "electromaster"
+     ],
      "Name": "Lightning Strikes Twice",
      "Benefits": [
        "When the Static you apply deals damage to an enemy, that enemy becomes afflicted with Static X, where X is the value of the Static that damaged it."
@@ -529,13 +733,29 @@
    },
    "lightning_weapon": {
      "ID": "lightning_weapon",
+     "ClassID": [
+       "flash-star-blade-style-"
+     ],
      "Name": "Lightning Weapon",
      "Benefits": [
        "When attacking with a weapon, you may choose to have the weapon deal Lightning Damage instead of its normal damage type. You must declare you chosen damage type before making the accuracy roll."
      ]
    },
+   "living_cover": {
+     "ID": "living_cover",
+     "ClassID": [
+       "knight-paramount"
+     ],
+     "Name": "Living Cover",
+     "Benefits": [
+       "While mounted, any ally within 5ft of you may use you as Low Cover. If an attack would miss them because of your cover benefit, the attack instead hits you."
+     ]
+   },
    "lords_dominion": {
      "ID": "lords_dominion",
+     "ClassID": [
+       "vampire-lord"
+     ],
      "Name": "Lord's Dominion",
      "Benefits": [
        "You can partially resist the effect of the sun. You may now spend 1 round in the sun before you start taking damage. Spending a turn outside of the sun resets this effect, giving you another round where you do not suffer the negative effects.",
@@ -544,6 +764,9 @@
    },
    "mage_armor": {
      "ID": "mage_armor",
+     "ClassID": [
+       "battle-mage"
+     ],
      "Name": "Mage Armor",
      "Benefits": [
        "You may use Mage Armor"
@@ -551,6 +774,9 @@
    },
    "mage_knight": {
      "ID": "mage_knight",
+     "ClassID": [
+       "mage-knight"
+     ],
      "Name": "Mage Knight",
      "Benefits": [
        "You may also use Canter after casting a spell."
@@ -558,6 +784,9 @@
    },
    "mage_of_the_tides": {
      "ID": "mage_of_the_tides",
+     "ClassID": [
+       "hydromancer"
+     ],
      "Name": "Mage of the Tides",
      "Benefits": [
        "You can use Blue Tide.",
@@ -567,6 +796,9 @@
    },
    "mages_journey": {
      "ID": "mages_journey",
+     "ClassID": [
+       "mage"
+     ],
      "Name": "Mage's Journey",
      "Benefits": [
        "You gain proficiency in the Channeling weapon group's weapons and gain Arcane Mastery. Mastery of an element allows you to use it in Channeling weapon attacks and use it to perform minor tricks relating to it.",
@@ -576,6 +808,9 @@
    },
    "magic_resistance": {
      "ID": "magic_resistance",
+     "ClassID": [
+       "anti-mage"
+     ],
      "Name": "Magic Resistance",
      "Benefits": [
        "You gain a +2 bonus to your saves against Spells."
@@ -583,6 +818,9 @@
    },
    "mana_sight": {
      "ID": "mana_sight",
+     "ClassID": [
+       "wave-palm-style"
+     ],
      "Name": "Mana Sight",
      "Benefits": [
        "You may use Mana Sight.",
@@ -592,6 +830,9 @@
    },
    "martial_artists_journey": {
      "ID": "martial_artists_journey",
+     "ClassID": [
+       "martial-artist"
+     ],
      "Name": "Martial Artist's Journey",
      "Benefits": [
        "Your unarmed attack damage is treated as a light weapon in which you are proficient.",
@@ -601,6 +842,9 @@
    },
    "master_of_the_empty_sky": {
      "ID": "master_of_the_empty_sky",
+     "ClassID": [
+       "sky-talon-style"
+     ],
      "Name": "Master of the Empty Sky",
      "Benefits": [
        "When flying and not benefiting from cover, you gain +2 Evasion and Dodge."
@@ -608,6 +852,9 @@
    },
    "mending": {
      "ID": "mending",
+     "ClassID": [
+       "temporal-trickster"
+     ],
      "Name": "Mending",
      "Benefits": [
        "You may spend an EP to restore a Broken item. Some items (such as consumables) cannot be repaired (GM’s discretion)."
@@ -615,6 +862,9 @@
    },
    "mission_control": {
      "ID": "mission_control",
+     "ClassID": [
+       "aetherie"
+     ],
      "Name": "Mission Control",
      "Benefits": [
        "You gain proficiency in the Aetherie Sensory Station.",
@@ -623,6 +873,9 @@
    },
    "mounted_basics": {
      "ID": "mounted_basics",
+     "ClassID": [
+       "cavalier"
+     ],
      "Name": "Mounted Basics",
      "Benefits": [
        "You gain proficiency in Polearms, Lances, Light armor, Shields and one other common weapon group of your choice.",
@@ -633,6 +886,9 @@
    },
    "nightstalker": {
      "ID": "nightstalker",
+     "ClassID": [
+       "shadow-thief"
+     ],
      "Name": "Nightstalker",
      "Benefits": [
        "You gain 60ft darkvision, allowing you to see perfectly in the dark even without a source of light. If you already have darkvision, the range of it improves by 60ft."
@@ -640,6 +896,9 @@
    },
    "ninja_style": {
      "ID": "ninja_style",
+     "ClassID": [
+       "ninja"
+     ],
      "Name": "Ninja Style",
      "Benefits": [
        "You gain proficiency in both Small Weapons and Sets of Missiles.",
@@ -648,6 +907,9 @@
    },
    "ninja_techniques": {
      "ID": "ninja_techniques",
+     "ClassID": [
+       "jonin"
+     ],
      "Name": "Ninja Techniques",
      "Benefits": [
        "Your Ninja Run now lasts for the entire turn.",
@@ -656,6 +918,9 @@
    },
    "on_my_terms": {
      "ID": "on_my_terms",
+     "ClassID": [
+       "curse-knight"
+     ],
      "Name": "On my terms",
      "Benefits": [
        "While you are at 1 HP or higher, damage (including true damage) you take during your own turn cannot reduce you below 1 HP.",
@@ -664,6 +929,9 @@
    },
    "ore_hunter": {
      "ID": "ore_hunter",
+     "ClassID": [
+       "excavator"
+     ],
      "Name": "Ore Hunter",
      "Benefits": [
        "You can gather Tier 2 mining outcrops.",
@@ -672,6 +940,9 @@
    },
    "overwhelming_critical": {
      "ID": "overwhelming_critical",
+     "ClassID": [
+       "reaver"
+     ],
      "Name": "Overwhelming Critical",
      "Benefits": [
        "When you roll a critical hit you may use Aftershock even if the attack didn’t miss. This use doesn’t count against the normal use limit of it and this effect still applies even if the critical hit was blocked or otherwise defended against."
@@ -679,6 +950,9 @@
    },
    "past_self": {
      "ID": "past_self",
+     "ClassID": [
+       "chronofighter"
+     ],
      "Name": "Past Self",
      "Benefits": [
        "When you make a weapon attack, you may have the attack come from the position you were at at the start of your previous turn (You should place another token on this location or mark it).",
@@ -687,6 +961,9 @@
    },
    "perfect_mimicry": {
      "ID": "perfect_mimicry",
+     "ClassID": [
+       "trickster"
+     ],
      "Name": "Perfect Mimicry",
      "Benefits": [
        "When given enough preparation time and enough knowledge about the subject, you are able to perfectly impersonate another person (GM’s discretion on what is ‘enough’). When disguised in this way, other people are unable to see through your disguise through normal means unless you act or say things that are strange enough to draw suspicions. This disguise is partially magical in nature, but cannot make up for obvious size or shape differences."
@@ -694,6 +971,9 @@
    },
    "phantom_thief": {
      "ID": "phantom_thief",
+     "ClassID": [
+       "phantom-thief"
+     ],
      "Name": "Phantom Thief",
      "Benefits": [
        "You are able to disable and modify t2 and t3 bounded fields."
@@ -701,6 +981,9 @@
    },
    "raise_undead": {
      "ID": "raise_undead",
+     "ClassID": [
+       "necromancer"
+     ],
      "Name": "Raise Undead",
      "Benefits": [
        "You may use Raise Undead."
@@ -708,6 +991,9 @@
    },
    "rangers_journey": {
      "ID": "rangers_journey",
+     "ClassID": [
+       "ranger"
+     ],
      "Name": "Ranger's Journey",
      "Benefits": [
        "You gain proficiency in light and medium armor, a common ranged weapon group and a common melee weapon group.",
@@ -717,6 +1003,9 @@
    },
    "rapid_blasts": {
      "ID": "rapid_blasts",
+     "ClassID": [
+       "zen-warrior"
+     ],
      "Name": "Rapid Blasts",
      "Benefits": [
        "You may use Ki Blast II."
@@ -724,6 +1013,9 @@
    },
    "receive_oracle": {
      "ID": "receive_oracle",
+     "ClassID": [
+       "oracle"
+     ],
      "Name": "Receive Oracle",
      "Benefits": [
        "You may use Receive Oracle."
@@ -731,6 +1023,9 @@
    },
    "recover_power": {
      "ID": "recover_power",
+     "ClassID": [
+       "shieldwarden"
+     ],
      "Name": "Recover Power",
      "Benefits": [
        "Any temporary HP on you at the end of an encounter is converted into healing. You regain HP equal to half the value of temporary HP you have remaining."
@@ -738,6 +1033,9 @@
    },
    "resheathe": {
      "ID": "resheathe",
+     "ClassID": [
+       "sword-saint"
+     ],
      "Name": "Resheathe",
      "Benefits": [
        "You may use Resheathe."
@@ -745,6 +1043,9 @@
    },
    "rock_and_stone": {
      "ID": "rock_and_stone",
+     "ClassID": [
+       "miner"
+     ],
      "Name": "Rock and Stone",
      "Benefits": [
        "You gain proficiency in 1 armor or in the shield. You also gain proficiency in the Pickaxe specialty weapon.",
@@ -754,6 +1055,9 @@
    },
    "rogues_journey": {
      "ID": "rogues_journey",
+     "ClassID": [
+       "rogue"
+     ],
      "Name": "Rogue's Journey",
      "Benefits": [
        "You gain proficiency with light armor and with a group of One-Handed weapons. This list currently is: Small weapons, Light swords, Dueling weapons and Set of missiles.",
@@ -761,8 +1065,21 @@
        "You can use Feint."
      ]
    },
+   "rolling_thunder": {
+     "ID": "rolling_thunder",
+     "ClassID": [
+       "transcendent-lightning-style"
+     ],
+     "Name": "Rolling Thunder",
+     "Benefits": [
+       "After moving at least 40ft in a turn, your next unarmed strike that turn gains a +2 bonus to accuracy and damage."
+     ]
+   },
    "saboteur": {
      "ID": "saboteur",
+     "ClassID": [
+       "saboteur"
+     ],
      "Name": "Saboteur",
      "Benefits": [
        "You gain proficiency in Saboteur Thread Daggers.",
@@ -771,6 +1088,9 @@
    },
    "scholar_of_tactics": {
      "ID": "scholar_of_tactics",
+     "ClassID": [
+       "tactician"
+     ],
      "Name": "Scholar of Tactics",
      "Benefits": [
        "You gain proficiency in Pistols.",
@@ -779,6 +1099,9 @@
    },
    "shared_darkness": {
      "ID": "shared_darkness",
+     "ClassID": [
+       "shadowbringer"
+     ],
      "Name": "Shared Darkness",
      "Benefits": [
        "The range of your darkvision increases by 60ft.",
@@ -787,6 +1110,9 @@
    },
    "shield_the_fallen": {
      "ID": "shield_the_fallen",
+     "ClassID": [
+       "exalted-shield"
+     ],
      "Name": "Shield the Fallen",
      "Benefits": [
        "You may use Shield the Fallen."
@@ -794,6 +1120,9 @@
    },
    "shielding_fist": {
      "ID": "shielding_fist",
+     "ClassID": [
+       "still-stone-style"
+     ],
      "Name": "Shielding Fist",
      "Benefits": [
        "While you have at least 1 hand empty and aren't wielding a shield, you gain a +4 bonus to your block."
@@ -801,6 +1130,9 @@
    },
    "shrug_it_off": {
      "ID": "shrug_it_off",
+     "ClassID": [
+       "brawler"
+     ],
      "Name": "Shrug it off",
      "Benefits": [
        "You may use Vital Drive II."
@@ -808,6 +1140,9 @@
    },
    "snipe": {
      "ID": "snipe",
+     "ClassID": [
+       "sniper"
+     ],
      "Name": "Snipe",
      "Benefits": [
        "You gain proficiency in Sniper Rifles.",
@@ -816,6 +1151,9 @@
    },
    "song_without_song": {
      "ID": "song_without_song",
+     "ClassID": [
+       "mist-veil-elegy"
+     ],
      "Name": "Song without Song",
      "Benefits": [
        "You may have 1 additional song active at the same time.",
@@ -824,6 +1162,9 @@
    },
    "soul_absorption": {
      "ID": "soul_absorption",
+     "ClassID": [
+       "dark-priest"
+     ],
      "Name": "Soul Absorption",
      "Benefits": [
        "You gain Elemental Mastery: Dark",
@@ -832,6 +1173,9 @@
    },
    "soul_bond": {
      "ID": "soul_bond",
+     "ClassID": [
+       "shield-saint"
+     ],
      "Name": "Soul Bond",
      "Benefits": [
        "When you acquire this ability, choose 1 willing person. That person is treated as your Soulmate and several of the class abilities only work on your Soulmate. This cannot be changed unless your Soulmate dies.",
@@ -840,6 +1184,9 @@
    },
    "sound_the_retreat": {
      "ID": "sound_the_retreat",
+     "ClassID": [
+       "strategist"
+     ],
      "Name": "Sound the retreat",
      "Benefits": [
        "You may use Sound the retreat"
@@ -847,14 +1194,30 @@
    },
    "spell_challenge": {
      "ID": "spell_challenge",
+     "ClassID": [
+       "abjurer"
+     ],
      "Name": "Spell Challenge",
      "Benefits": [
-       "Targeting or damaging an enemy with a spell inflicts Challenge on them until the end of your next turn.",
+       "When targeting or damaging an enemy with a spell, you may choose to inflict Challenge on them until the end of your next turn.",
        "When an enemy that is Challenged by you provokes an attack of opportunity from you, you may instead use Abjurer's Blast against them. The heavy and precise version of this cost 1 RP, while the light version costs 0 RP."
+     ]
+   },
+   "spell_transfer": {
+     "ID": "spell_transfer",
+     "ClassID": [
+       "daionmyoji"
+     ],
+     "Name": "Spell Transfer",
+     "Benefits": [
+       "When you use the Create Talisman ability, an ally may spend their Errand action to use one of their spells to put on the talisman instead of your own. You only create 1 copy of this talisman per Errand action and cannot use Secret Art spells with it."
      ]
    },
    "spore_symbiote": {
      "ID": "spore_symbiote",
+     "ClassID": [
+       "mycomancer"
+     ],
      "Name": "Spore Symbiote",
      "Benefits": [
        "You can use Spore Symbiote.",
@@ -864,6 +1227,10 @@
    },
    "status_assessment_ii": {
      "ID": "status_assessment_ii",
+     "ClassID": [
+       "archer",
+       "marksman"
+     ],
      "Name": "Status Assessment II",
      "Benefits": [
        "You may use Status Assessment II."
@@ -871,6 +1238,9 @@
    },
    "store_time": {
      "ID": "store_time",
+     "ClassID": [
+       "chronomancer"
+     ],
      "Name": "Store Time",
      "Benefits": [
        "You can use Store Time."
@@ -878,6 +1248,9 @@
    },
    "studied_healer": {
      "ID": "studied_healer",
+     "ClassID": [
+       "priest"
+     ],
      "Name": "Studied Healer",
      "Benefits": [
        "You gain +5 skill points in the Religion skill.",
@@ -886,6 +1259,9 @@
    },
    "stygian_comprehension": {
      "ID": "stygian_comprehension",
+     "ClassID": [
+       "eremancer"
+     ],
      "Name": "Stygian Comprehension",
      "Benefits": [
        "You gain Elemental Mastery: Dark",
@@ -894,6 +1270,9 @@
    },
    "summon_animal": {
      "ID": "summon_animal",
+     "ClassID": [
+       "animal-summoner"
+     ],
      "Name": "Summon Animal",
      "Benefits": [
        "You may use Summon Animal."
@@ -901,6 +1280,9 @@
    },
    "summoning_basics": {
      "ID": "summoning_basics",
+     "ClassID": [
+       "summoner"
+     ],
      "Name": "Summoning Basics",
      "Benefits": [
        "You may channel for 10 minutes after which you arrive at the space between worlds, allowing you to interact with Eidolons that wish to meet with you.",
@@ -909,6 +1291,9 @@
    },
    "superconductor": {
      "ID": "superconductor",
+     "ClassID": [
+       "electromancer"
+     ],
      "Name": "Superconductor",
      "Benefits": [
        "Your Electromancer and Electromaster abilities that deal Lightning Damage gain Lock On and Half Pierce when used against a target in natural water, with water typing or with the Soaked debuff.",
@@ -917,6 +1302,9 @@
    },
    "superior_assessment": {
      "ID": "superior_assessment",
+     "ClassID": [
+       "deadeye"
+     ],
      "Name": "Superior Assessment",
      "Benefits": [
        "You may use Status Assessment III."
@@ -924,6 +1312,9 @@
    },
    "surgical_precision": {
      "ID": "surgical_precision",
+     "ClassID": [
+       "cutthroat"
+     ],
      "Name": "Surgical Precision",
      "Benefits": [
        "When you deal damage with a one-handed melee weapon that is both Sure Hit and Full Pierce or a critical hit, you inflict Bleeding on the target for 1 turn. This effect stacks with other Bleeds effects and itself up to 3 times."
@@ -931,6 +1322,9 @@
    },
    "terrifying_charge": {
      "ID": "terrifying_charge",
+     "ClassID": [
+       "hussar"
+     ],
      "Name": "Terrifying Charge",
      "Benefits": [
        "When dealing damage with the trample effect or with your Secret Art: Override, any non-heroic target you damage becomes Shaken until the end of their next turn."
@@ -938,6 +1332,9 @@
    },
    "the_alchemist": {
      "ID": "the_alchemist",
+     "ClassID": [
+       "alchemist"
+     ],
      "Name": "The Alchemist",
      "Benefits": [
        "You gain Alchemist Core Crafting Abilities, and proficiency in 1 basic weapon.",
@@ -948,6 +1345,9 @@
    },
    "thefts_of_the_past": {
      "ID": "thefts_of_the_past",
+     "ClassID": [
+       "time-thief"
+     ],
      "Name": "Thefts of the past",
      "Benefits": [
        "When making a check with the Roguecraft skill, you may treat the object or person you’re interacting with as being up to an hour in the past. This may allow you to steal things not currently carried, open doors before they were locked and more. Does not work in combat and an item that is consumed cannot be stolen.",
@@ -956,6 +1356,9 @@
    },
    "timberwrights_core_crafting": {
      "ID": "timberwrights_core_crafting",
+     "ClassID": [
+       "timberwright"
+     ],
      "Name": "Timberwright's Core Crafting",
      "Benefits": [
        "You may use the Timberwright's Core Crafting abilities",
@@ -964,6 +1367,9 @@
    },
    "titans_grip": {
      "ID": "titans_grip",
+     "ClassID": [
+       "colossus"
+     ],
      "Name": "Titan's Grip",
      "Benefits": [
        "You may wield a Two-Handed weapon in 1 hand allowing you to use a second (Two-Handed) weapon or shield in your offhand. ",
@@ -972,6 +1378,9 @@
    },
    "toss_a_coin": {
      "ID": "toss_a_coin",
+     "ClassID": [
+       "bard"
+     ],
      "Name": "Toss a coin",
      "Benefits": [
        "As an Errand action, you may perform in a city or town and earn Clim equal to your relevant Art roll x 10 up to a maximum of 300 clim."
@@ -979,13 +1388,29 @@
    },
    "tranquil_prayers": {
      "ID": "tranquil_prayers",
+     "ClassID": [
+       "high-priest"
+     ],
      "Name": "Tranquil Prayers",
      "Benefits": [
        "Your Acolyte, Priest and High Priest Healing abilities heal for 2x value when used out of combat."
      ]
    },
+   "transfusion": {
+     "ID": "transfusion",
+     "ClassID": [
+       "bloodbinder"
+     ],
+     "Name": "Transfusion",
+     "Benefits": [
+       "You may use Transfusion."
+     ]
+   },
    "transmutation_basics": {
      "ID": "transmutation_basics",
+     "ClassID": [
+       "transmuter"
+     ],
      "Name": "Transmutation Basics",
      "Benefits": [
        "You gain Transmuter Core Crafting Abilities. You may use one of these abilities in a crafting session. If you use one of these abilities, other transmuters can no longer use their co craft abilities with you. Similarly, if a co crafter uses one of these abilities for you, you can no longer use any of these abilities.",
@@ -996,6 +1421,9 @@
    },
    "transmutation_tricks": {
      "ID": "transmutation_tricks",
+     "ClassID": [
+       "alkahest"
+     ],
      "Name": "Transmutation Tricks",
      "Benefits": [
        "For 1 AP, You can create small items using transmuting to provide temporary comforts and curiosities— a cup to drink out of, a chair to sit down on, a figurine etc.  These items cannot have significant gameplay factors (such as a key or a tool).  If you’d like to create something small to give away or sell, you must utilize x amount of commodities of whatever quantity and type the GM decides.",
@@ -1005,6 +1433,9 @@
    },
    "trap_basics": {
      "ID": "trap_basics",
+     "ClassID": [
+       "trapper"
+     ],
      "Name": "Trap Basics",
      "Benefits": [
        "You may convert 100u of junk into a Trapper's Trap you can use for your abilities. You may do so as a Rest action or as an Errand action. Trapper's Traps are a special item that cost 1 burden.",
@@ -1014,6 +1445,9 @@
    },
    "tremorsense": {
      "ID": "tremorsense",
+     "ClassID": [
+       "geomancer"
+     ],
      "Name": "Tremorsense",
      "Benefits": [
        "You gain Earth Mastery.",
@@ -1022,6 +1456,9 @@
    },
    "vampiric_strength": {
      "ID": "vampiric_strength",
+     "ClassID": [
+       "vampire"
+     ],
      "Name": "Vampiric Strength",
      "Benefits": [
        "Your unarmed attack damage is treated as a light weapon in which you are proficient. Your unarmed attacks cannot deal non-lethal damage.",
@@ -1030,6 +1467,9 @@
    },
    "versatile_range": {
      "ID": "versatile_range",
+     "ClassID": [
+       "spearmaster"
+     ],
      "Name": "Versatile Range",
      "Benefits": [
        "You may treat your polearm’s threatened range as 5ft instead of 5-10ft. You must declare this during your turn and it lasts until the start of your next turn."
@@ -1037,6 +1477,9 @@
    },
    "vip_protection": {
      "ID": "vip_protection",
+     "ClassID": [
+       "bodyguard"
+     ],
      "Name": "VIP Protection",
      "Benefits": [
        "At the start of each arc, choose one person as your VIP for that arc. While within 5ft of your VIP, you may change all attacks that target your VIP and don’t target you to target you instead of your VIP. These attacks automatically hit you and you may not use the Dodge or Block reactions against it. Does not work against Attacks of Opportunity."
@@ -1044,6 +1487,11 @@
    },
    "wind_master": {
      "ID": "wind_master",
+     "ClassID": [
+       "aeromancer",
+       "windbringer",
+       "zephyr-warder"
+     ],
      "Name": "Wind Master",
      "Benefits": [
        "You gain Wind Mastery.",

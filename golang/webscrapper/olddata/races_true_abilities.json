@@ -1,11 +1,13 @@
 {
    "absorb_ice": {
      "ID": "absorb_ice",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Absorb Ice",
      "Keywords": "Rapid",
      "Range": "Self",
      "Requirement": "You're about to take Frost Damage.",
-     "Description": "You gain Damage Reduction 100 Frost against the triggering attack. After the attack resolves, if the caster is not you or someone allied to you, you gain Temporary HP until the end of the encounter equal to the amount of damage this ability reduces.",
+     "Description": "You gain Damage Reduction 100 Frost against the triggering damage. After the damage resolves, if the caster is not you, someone allied to you or from an effect made by you or an ally, you gain Temporary HP until the end of the encounter equal to the amount of damage this ability reduces.",
      "RPcost": "1 RP",
      "APcost": "",
      "MPcost": "",
@@ -13,6 +15,8 @@
    },
    "adaptive_defense": {
      "ID": "adaptive_defense",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Adaptive Defense",
      "Keywords": "Rapid",
      "Range": "Self",
@@ -25,6 +29,8 @@
    },
    "amphibious": {
      "ID": "amphibious",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Amphibious",
      "Keywords": "",
      "Range": "",
@@ -37,6 +43,8 @@
    },
    "antennae": {
      "ID": "antennae",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Antennae",
      "Keywords": "",
      "Range": "",
@@ -49,6 +57,8 @@
    },
    "aqua_drill": {
      "ID": "aqua_drill",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Aqua Drill",
      "Keywords": "",
      "Range": "60ft",
@@ -61,6 +71,8 @@
    },
    "aquatic_fae": {
      "ID": "aquatic_fae",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Aquatic Fae",
      "Keywords": "",
      "Range": "",
@@ -73,6 +85,8 @@
    },
    "ar_-_minds_eye": {
      "ID": "ar_-_minds_eye",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Ar - Mind's Eye",
      "Keywords": "",
      "Range": "Self",
@@ -83,8 +97,38 @@
      "MPcost": "2 MP",
      "Othercost": ""
    },
+   "bear_maul": {
+     "ID": "bear_maul",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Bear Maul",
+     "Keywords": "Unarmed Strike",
+     "Range": "5ft",
+     "Requirement": "",
+     "Description": "You swing your paw at the target and make a Heavy attack against it that deals maximum damage. If the target dodges, this attack automatically misses.You are considered proficient in unarmed attacks for this attack, even if you normally wouldn’t be.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "1 MP",
+     "Othercost": ""
+   },
+   "bear_shock": {
+     "ID": "bear_shock",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Bear Shock",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "You gain a +20 bonus to Deception checks when disguising yourself as something other than a bearfolk.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "blinding_dust": {
      "ID": "blinding_dust",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Blinding Dust",
      "Keywords": "Blind, Sidestep",
      "Range": "5ft",
@@ -97,6 +141,8 @@
    },
    "cat_form": {
      "ID": "cat_form",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Cat Form",
      "Keywords": "Transformation",
      "Range": "",
@@ -109,6 +155,8 @@
    },
    "charge": {
      "ID": "charge",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Charge",
      "Keywords": "",
      "Range": "Self",
@@ -121,6 +169,8 @@
    },
    "chilling_cold": {
      "ID": "chilling_cold",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Chilling Cold",
      "Keywords": "",
      "Range": "",
@@ -133,6 +183,8 @@
    },
    "consume_enemy": {
      "ID": "consume_enemy",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Consume Enemy",
      "Keywords": "Encounter Conclusion",
      "Range": "One dead enemy",
@@ -145,11 +197,13 @@
    },
    "consume_fire": {
      "ID": "consume_fire",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Consume Fire",
      "Keywords": "Fire",
      "Range": "Self",
      "Requirement": "You're about to take Fire Damage.",
-     "Description": "You gain Damage Reduction 100 Fire against the triggering attack. If the attacker is not yourself, you can then spend 2 Mana to heal for the original damage amount, up to 100 HP.",
+     "Description": "You gain Damage Reduction 100 Fire against the triggering damage. If the attacker is not yourself or from an effect caused by you, you can then spend 2 Mana to heal for the original damage amount, up to 100 HP.",
      "RPcost": "1 RP",
      "APcost": "",
      "MPcost": "",
@@ -157,11 +211,13 @@
    },
    "consume_lightning": {
      "ID": "consume_lightning",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Consume Lightning",
      "Keywords": "Rapid",
      "Range": "Self",
-     "Requirement": "You are about to take Lightning damage, Caster is not you.",
-     "Description": "You gain Damage Reduction 100 Lightning for the triggering attack. If you reduce damage in any way from this ability, you gain Lightning Boost. Lightning Boost grants a damage bonus on your next Lightning Elemental Attack equal to the attacker’s power. This damage bonus is doubled on heavy attacks.",
+     "Requirement": "You are about to take Lightning damage",
+     "Description": "You gain Damage Reduction 100 Lightning for the triggering damage. If you reduce damage in any way from this ability and the cause of this damage is not you or from an effect caused by you, you gain Lightning Boost. Lightning Boost grants a damage bonus on your next Lightning Elemental Attack equal to the attacker’s power. This damage bonus is doubled on heavy attacks.",
      "RPcost": "1 RP",
      "APcost": "",
      "MPcost": "",
@@ -169,6 +225,8 @@
    },
    "d_-_mana_burst": {
      "ID": "d_-_mana_burst",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "D' - Mana Burst",
      "Keywords": "",
      "Range": "Self",
@@ -181,6 +239,8 @@
    },
    "darkvision_(passive)": {
      "ID": "darkvision_(passive)",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Darkvision (passive)",
      "Keywords": "",
      "Range": "",
@@ -193,6 +253,8 @@
    },
    "demonblood_regeneration": {
      "ID": "demonblood_regeneration",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Demonblood Regeneration",
      "Keywords": "",
      "Range": "",
@@ -205,6 +267,8 @@
    },
    "destroy_ground": {
      "ID": "destroy_ground",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Destroy Ground",
      "Keywords": "",
      "Range": "5ft",
@@ -217,6 +281,8 @@
    },
    "divine_providence": {
      "ID": "divine_providence",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Divine Providence",
      "Keywords": "Rage",
      "Range": "Self",
@@ -229,6 +295,8 @@
    },
    "divine_release": {
      "ID": "divine_release",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Divine Release",
      "Keywords": "Transformation, Rage",
      "Range": "Self",
@@ -241,6 +309,8 @@
    },
    "downburst": {
      "ID": "downburst",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Downburst",
      "Keywords": "Lock On, Spell, Wind",
      "Range": "720ft",
@@ -251,8 +321,38 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "draconic_presence": {
+     "ID": "draconic_presence",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Draconic Presence",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "You gain a +10 bonus to Negotiation and Intimidation checks against Grunts and against Heroics that have a lower Spirit Core than you.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
+   "dragons_breath": {
+     "ID": "dragons_breath",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Dragon's Breath",
+     "Keywords": "Water, Lightning",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "You exhale a devastating breath attack, making a Light attack against all targets in a 30ft long 60 degree cone. This attack deals the same type of damage as your element chosen in Ryujin's Mastery.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "drink_to_battle": {
      "ID": "drink_to_battle",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Drink to Battle",
      "Keywords": "Encounter Start",
      "Range": "Self",
@@ -265,6 +365,8 @@
    },
    "dullahans_mount": {
      "ID": "dullahans_mount",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Dullahan's Mount",
      "Keywords": "",
      "Range": "Self",
@@ -277,6 +379,8 @@
    },
    "elemental_mastery:_dark": {
      "ID": "elemental_mastery:_dark",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Elemental Mastery: Dark",
      "Keywords": "",
      "Range": "",
@@ -289,6 +393,8 @@
    },
    "elemental_mastery:_fire": {
      "ID": "elemental_mastery:_fire",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Elemental Mastery: Fire",
      "Keywords": "",
      "Range": "",
@@ -299,8 +405,24 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "elemental_mastery:_holy": {
+     "ID": "elemental_mastery:_holy",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Elemental Mastery: Holy",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "You gain Elemental Mastery: Holy",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "elemental_mastery:_lightning": {
      "ID": "elemental_mastery:_lightning",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Elemental Mastery: Lightning",
      "Keywords": "",
      "Range": "",
@@ -313,6 +435,8 @@
    },
    "enduring_warmth": {
      "ID": "enduring_warmth",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Enduring Warmth",
      "Keywords": "",
      "Range": "",
@@ -325,6 +449,8 @@
    },
    "escape_artist": {
      "ID": "escape_artist",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Escape Artist",
      "Keywords": "",
      "Range": "Self",
@@ -337,6 +463,8 @@
    },
    "eternal_vigil": {
      "ID": "eternal_vigil",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Eternal Vigil",
      "Keywords": "",
      "Range": "",
@@ -349,6 +477,8 @@
    },
    "explosive_advance": {
      "ID": "explosive_advance",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Explosive Advance",
      "Keywords": "Encounter Start",
      "Range": "Self",
@@ -361,6 +491,8 @@
    },
    "extra_arms": {
      "ID": "extra_arms",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Extra Arms",
      "Keywords": "Quick",
      "Range": "Self",
@@ -373,6 +505,8 @@
    },
    "fading_counter": {
      "ID": "fading_counter",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Fading Counter",
      "Keywords": "Counter, Illusion",
      "Range": "Self",
@@ -385,6 +519,8 @@
    },
    "faerie_eyes:_calling": {
      "ID": "faerie_eyes:_calling",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Faerie Eyes: Calling",
      "Keywords": "Charm, Illusion",
      "Range": "30ft",
@@ -397,6 +533,8 @@
    },
    "faerie_flash": {
      "ID": "faerie_flash",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Faerie Flash",
      "Keywords": "Teleport, Rage",
      "Range": "-",
@@ -409,6 +547,8 @@
    },
    "faerie_flash_ii": {
      "ID": "faerie_flash_ii",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Faerie Flash II",
      "Keywords": "Teleport",
      "Range": "-",
@@ -421,6 +561,8 @@
    },
    "fast_runner": {
      "ID": "fast_runner",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Fast Runner",
      "Keywords": "",
      "Range": "",
@@ -433,6 +575,8 @@
    },
    "fiery_rebirth": {
      "ID": "fiery_rebirth",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Fiery Rebirth",
      "Keywords": "Downed",
      "Range": "Self",
@@ -445,6 +589,8 @@
    },
    "fight_or_flight": {
      "ID": "fight_or_flight",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Fight or Flight",
      "Keywords": "Rage",
      "Range": "Self",
@@ -457,6 +603,8 @@
    },
    "fireball": {
      "ID": "fireball",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Fireball",
      "Keywords": "Fire, Spell",
      "Range": "60ft",
@@ -469,6 +617,8 @@
    },
    "flight": {
      "ID": "flight",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Flight",
      "Keywords": "",
      "Range": "Self",
@@ -481,6 +631,8 @@
    },
    "forest_walker": {
      "ID": "forest_walker",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Forest Walker",
      "Keywords": "",
      "Range": "",
@@ -493,6 +645,8 @@
    },
    "gnome_claws": {
      "ID": "gnome_claws",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Gnome Claws",
      "Keywords": "",
      "Range": "Self",
@@ -505,6 +659,8 @@
    },
    "graceful_landing": {
      "ID": "graceful_landing",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Graceful Landing",
      "Keywords": "",
      "Range": "Self",
@@ -517,6 +673,8 @@
    },
    "gravitational_ki": {
      "ID": "gravitational_ki",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Gravitational Ki",
      "Keywords": "",
      "Range": "10ft",
@@ -529,6 +687,8 @@
    },
    "guard_dog": {
      "ID": "guard_dog",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Guard Dog",
      "Keywords": "",
      "Range": "5ft",
@@ -541,6 +701,8 @@
    },
    "headless": {
      "ID": "headless",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Headless",
      "Keywords": "",
      "Range": "",
@@ -553,6 +715,8 @@
    },
    "hearthlight": {
      "ID": "hearthlight",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Hearthlight",
      "Keywords": "",
      "Range": "",
@@ -563,8 +727,24 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "hibernate": {
+     "ID": "hibernate",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Hibernate",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "When you take the rest IP action, the temporary HP gained is doubled. When you rest during the night as a rest action, you recover an additional toughness HP.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "hopping_zombie": {
      "ID": "hopping_zombie",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Hopping Zombie",
      "Keywords": "",
      "Range": "",
@@ -577,6 +757,8 @@
    },
    "horse_body": {
      "ID": "horse_body",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Horse Body",
      "Keywords": "",
      "Range": "",
@@ -589,6 +771,8 @@
    },
    "horse_step_acceleration": {
      "ID": "horse_step_acceleration",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Horse Step Acceleration",
      "Keywords": "",
      "Range": "Self",
@@ -601,6 +785,8 @@
    },
    "hover": {
      "ID": "hover",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Hover",
      "Keywords": "",
      "Range": "",
@@ -613,6 +799,8 @@
    },
    "hug_tight": {
      "ID": "hug_tight",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Hug tight",
      "Keywords": "Full Pierce, Sure Hit, Rapid",
      "Range": "10ft",
@@ -625,6 +813,8 @@
    },
    "human_adaptability": {
      "ID": "human_adaptability",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Human Adaptability",
      "Keywords": "Errand",
      "Range": "",
@@ -637,6 +827,8 @@
    },
    "hunting_wolf": {
      "ID": "hunting_wolf",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Hunting Wolf",
      "Keywords": "",
      "Range": "Self",
@@ -649,6 +841,8 @@
    },
    "icicle_nail": {
      "ID": "icicle_nail",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Icicle Nail",
      "Keywords": "Frost, Slow, Spell",
      "Range": "60ft",
@@ -661,6 +855,8 @@
    },
    "instinct": {
      "ID": "instinct",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Instinct",
      "Keywords": "",
      "Range": "",
@@ -673,6 +869,8 @@
    },
    "just_a_hug": {
      "ID": "just_a_hug",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Just a hug",
      "Keywords": "Grapple",
      "Range": "5ft",
@@ -685,6 +883,8 @@
    },
    "last_rites": {
      "ID": "last_rites",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Last Rites",
      "Keywords": "",
      "Range": "",
@@ -697,6 +897,8 @@
    },
    "lightning_weapon": {
      "ID": "lightning_weapon",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Lightning Weapon",
      "Keywords": "",
      "Range": "",
@@ -709,6 +911,8 @@
    },
    "lir_-_predict": {
      "ID": "lir_-_predict",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Lir - Predict",
      "Keywords": "",
      "Range": "Self",
@@ -721,6 +925,8 @@
    },
    "loyalty": {
      "ID": "loyalty",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Loyalty",
      "Keywords": "",
      "Range": "",
@@ -733,6 +939,8 @@
    },
    "lu_-_dense_mana": {
      "ID": "lu_-_dense_mana",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Lu - Dense Mana",
      "Keywords": "",
      "Range": "Self",
@@ -745,6 +953,8 @@
    },
    "lucid_sleep": {
      "ID": "lucid_sleep",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Lucid Sleep",
      "Keywords": "",
      "Range": "",
@@ -757,6 +967,8 @@
    },
    "mana_eater": {
      "ID": "mana_eater",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Mana Eater",
      "Keywords": "",
      "Range": "",
@@ -769,6 +981,8 @@
    },
    "mining_expertise": {
      "ID": "mining_expertise",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Mining Expertise",
      "Keywords": "",
      "Range": "",
@@ -781,6 +995,8 @@
    },
    "natures_grasp": {
      "ID": "natures_grasp",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Nature's Grasp",
      "Keywords": "Root, Earth",
      "Range": "30ft",
@@ -793,6 +1009,8 @@
    },
    "ni_-_emergency_maneuvers": {
      "ID": "ni_-_emergency_maneuvers",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Ni - Emergency Maneuvers",
      "Keywords": "",
      "Range": "Self",
@@ -805,6 +1023,8 @@
    },
    "nightvision": {
      "ID": "nightvision",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Nightvision",
      "Keywords": "",
      "Range": "",
@@ -817,6 +1037,8 @@
    },
    "none_-_instinct": {
      "ID": "none_-_instinct",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "None - Instinct",
      "Keywords": "",
      "Range": "",
@@ -829,6 +1051,8 @@
    },
    "own_mount": {
      "ID": "own_mount",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Own Mount",
      "Keywords": "",
      "Range": "",
@@ -841,6 +1065,8 @@
    },
    "pack_tactics": {
      "ID": "pack_tactics",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Pack Tactics",
      "Keywords": "Quick",
      "Range": "Sight",
@@ -853,6 +1079,8 @@
    },
    "panda_roll": {
      "ID": "panda_roll",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Panda Roll",
      "Keywords": "",
      "Range": "Self",
@@ -865,6 +1093,8 @@
    },
    "panda_stance": {
      "ID": "panda_stance",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Panda Stance",
      "Keywords": "Stance",
      "Range": "Self",
@@ -877,6 +1107,8 @@
    },
    "phoenix_tears": {
      "ID": "phoenix_tears",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Phoenix Tears",
      "Keywords": "Encounter Conclusion",
      "Range": "Touch",
@@ -889,6 +1121,8 @@
    },
    "plaguebringer": {
      "ID": "plaguebringer",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Plaguebringer",
      "Keywords": "",
      "Range": "",
@@ -901,6 +1135,8 @@
    },
    "prehensile_tail": {
      "ID": "prehensile_tail",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Prehensile Tail",
      "Keywords": "",
      "Range": "",
@@ -913,6 +1149,8 @@
    },
    "regrowing_limbs": {
      "ID": "regrowing_limbs",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Regrowing Limbs",
      "Keywords": "",
      "Range": "",
@@ -923,8 +1161,38 @@
      "MPcost": "",
      "Othercost": ""
    },
+   "revealing_light": {
+     "ID": "revealing_light",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Revealing Light",
+     "Keywords": "",
+     "Range": "Self",
+     "Requirement": "",
+     "Description": "You clap your hands and send out a pulse of solar light in a 40ft radius around you. All creatures within that range are immediately revealed, canceling any stealth, invisibility or similar technique to hide themselves. They glow brightly until the start of your next turn, giving them a -20 penalty to stealth checks.",
+     "RPcost": "",
+     "APcost": "2 AP",
+     "MPcost": "2 MP",
+     "Othercost": ""
+   },
+   "ryujins_mastery": {
+     "ID": "ryujins_mastery",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Ryujin's Mastery",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "You gain one of Elemental Mastery of your choice from the following options: Fire, Water, Ice, Wind, Lightning, or Earth.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "scent_of_blood": {
      "ID": "scent_of_blood",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Scent of Blood",
      "Keywords": "Quick",
      "Range": "120ft",
@@ -937,6 +1205,8 @@
    },
    "scurry_away": {
      "ID": "scurry_away",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Scurry Away",
      "Keywords": "",
      "Range": "",
@@ -949,6 +1219,8 @@
    },
    "seal_cloak": {
      "ID": "seal_cloak",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Seal Cloak",
      "Keywords": "Transformation",
      "Range": "Self",
@@ -961,6 +1233,8 @@
    },
    "slime_body": {
      "ID": "slime_body",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Slime Body",
      "Keywords": "",
      "Range": "Self",
@@ -971,8 +1245,24 @@
      "MPcost": "1 MP",
      "Othercost": ""
    },
+   "solar_radiance": {
+     "ID": "solar_radiance",
+     "ClassID": null,
+     "LevelRequired": 0,
+     "Name": "Solar Radiance",
+     "Keywords": "",
+     "Range": "",
+     "Requirement": "",
+     "Description": "You shine brightly like the sun in a 60ft radius around you. You cannot turn this off, but you can lower the range to just 5ft. This light counts as sunlight, though any negative effects a creature suffers from it are halved. It also counts as bright light for creatures weak to light.",
+     "RPcost": "",
+     "APcost": "",
+     "MPcost": "",
+     "Othercost": ""
+   },
    "soul_strike": {
      "ID": "soul_strike",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Soul Strike",
      "Keywords": "Killing Blow, Overcharge",
      "Range": "60ft",
@@ -985,6 +1275,8 @@
    },
    "speak_with_dead": {
      "ID": "speak_with_dead",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Speak with dead",
      "Keywords": "",
      "Range": "-",
@@ -997,6 +1289,8 @@
    },
    "spider_climb": {
      "ID": "spider_climb",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Spider Climb",
      "Keywords": "",
      "Range": "",
@@ -1009,6 +1303,8 @@
    },
    "spirited_bravado": {
      "ID": "spirited_bravado",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Spirited Bravado",
      "Keywords": "",
      "Range": "",
@@ -1021,6 +1317,8 @@
    },
    "spiritual_sync": {
      "ID": "spiritual_sync",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Spiritual Sync",
      "Keywords": "Rage",
      "Range": "Self",
@@ -1033,6 +1331,8 @@
    },
    "statue_form": {
      "ID": "statue_form",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Statue Form",
      "Keywords": "Transformation",
      "Range": "Self",
@@ -1045,6 +1345,8 @@
    },
    "stoneskin": {
      "ID": "stoneskin",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Stoneskin",
      "Keywords": "",
      "Range": "",
@@ -1057,6 +1359,8 @@
    },
    "store/consume_item": {
      "ID": "store/consume_item",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Store/Consume Item",
      "Keywords": "",
      "Range": "Self",
@@ -1069,6 +1373,8 @@
    },
    "swallow_acrobatics": {
      "ID": "swallow_acrobatics",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Swallow Acrobatics",
      "Keywords": "",
      "Range": "Self",
@@ -1081,6 +1387,8 @@
    },
    "tengu_aura_weapon": {
      "ID": "tengu_aura_weapon",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Tengu Aura Weapon",
      "Keywords": "Aura",
      "Range": "",
@@ -1093,6 +1401,8 @@
    },
    "tengu_mask": {
      "ID": "tengu_mask",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Tengu Mask",
      "Keywords": "Presence Concealment",
      "Range": "Self",
@@ -1105,6 +1415,8 @@
    },
    "thermal_vision": {
      "ID": "thermal_vision",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Thermal Vision",
      "Keywords": "",
      "Range": "",
@@ -1117,6 +1429,8 @@
    },
    "tiny_pixie": {
      "ID": "tiny_pixie",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Tiny Pixie",
      "Keywords": "",
      "Range": "",
@@ -1129,6 +1443,8 @@
    },
    "tireless_undead": {
      "ID": "tireless_undead",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Tireless Undead",
      "Keywords": "",
      "Range": "",
@@ -1141,6 +1457,8 @@
    },
    "torture_techniques": {
      "ID": "torture_techniques",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Torture Techniques",
      "Keywords": "Slow, Unbalanced, Bleeding",
      "Range": "Melee Weapon",
@@ -1153,6 +1471,8 @@
    },
    "un_-_graceful_service": {
      "ID": "un_-_graceful_service",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Un - Graceful Service",
      "Keywords": "",
      "Range": "",
@@ -1165,11 +1485,13 @@
    },
    "vi_-_first_response": {
      "ID": "vi_-_first_response",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Vi - First Response",
      "Keywords": "",
      "Range": "",
      "Requirement": "",
-     "Description": "You may use a Medical Kit to give the Second Wind II encounter conclusion effect to someone else. You heal for an additional 1d4 when doing this.",
+     "Description": "If you have a Medical Kit, you may use your encounter conclusion to give the Second Wind encounter conclusion effect to someone else. You heal for an additional 1d6+3 (from your Demonblood Regeneration) when doing this.",
      "RPcost": "",
      "APcost": "",
      "MPcost": "",
@@ -1177,6 +1499,8 @@
    },
    "warm_together": {
      "ID": "warm_together",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Warm Together",
      "Keywords": "",
      "Range": "",
@@ -1189,6 +1513,8 @@
    },
    "weighing_the_heart": {
      "ID": "weighing_the_heart",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Weighing the Heart",
      "Keywords": "",
      "Range": "",
@@ -1201,6 +1527,8 @@
    },
    "wi_-_presence_concealment": {
      "ID": "wi_-_presence_concealment",
+     "ClassID": null,
+     "LevelRequired": 0,
      "Name": "Wi - Presence Concealment",
      "Keywords": "Presence Concealment",
      "Range": "Self",

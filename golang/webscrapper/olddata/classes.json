@@ -199,6 +199,11 @@
      "ID": "cutthroat",
      "Tier": 2
    },
+   "daionmyoji": {
+     "Name": "Daionmyoji",
+     "ID": "daionmyoji",
+     "Tier": 3
+   },
    "dark-priest": {
      "Name": "Dark Priest",
      "ID": "dark-priest",
@@ -284,6 +289,11 @@
      "ID": "fighter",
      "Tier": 1
    },
+   "five-harmonies-style": {
+     "Name": "Five Harmonies Style",
+     "ID": "five-harmonies-style",
+     "Tier": 2
+   },
    "flame-sentinel": {
      "Name": "Flame Sentinel",
      "ID": "flame-sentinel",
@@ -367,6 +377,11 @@
    "jonin": {
      "Name": "Jonin",
      "ID": "jonin",
+     "Tier": 3
+   },
+   "knight-paramount": {
+     "Name": "Knight-Paramount",
+     "ID": "knight-paramount",
      "Tier": 3
    },
    "lancer": {
@@ -628,6 +643,11 @@
      "Name": "Time Thief",
      "ID": "time-thief",
      "Tier": 2
+   },
+   "transcendent-lightning-style": {
+     "Name": "Transcendent Lightning Style",
+     "ID": "transcendent-lightning-style",
+     "Tier": 3
    },
    "transmuter": {
      "Name": "Transmuter",
